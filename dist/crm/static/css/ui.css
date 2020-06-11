@@ -178,7 +178,7 @@ input::-ms-clear { display: none; }
 
 .app-body.login-body .login._find .form-control p { padding-bottom: 26px; font-size: 18px; font-weight: 500; line-height: 1.45; }
 
-.modal-container > div { position: relative; padding: 30px 70px 30px 30px; }
+.modal-container > div { position: relative; padding: 30px; }
 
 .modal-container > div .buttons button { min-width: 60px; }
 
@@ -194,6 +194,6 @@ input::-ms-clear { display: none; }
 
 .modal-container .conts p { line-height: inherit; color: inherit; }
 
-.modal-container.modal-findpwd { min-width: 400px; max-width: 460px; }
+.modal-container.modal-findpwd { min-width: 460px; max-width: 480px; }
 
 @media (min-width: 481px) { .route.left-nav-opened { left: 230px; padding: 0; } }

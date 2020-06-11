@@ -518,7 +518,7 @@ input::-ms-clear { display: none; }
 .modal-container {
   > div {
     position: relative;
-    padding:30px 70px 30px 30px;
+    padding:30px;
     .buttons {
       button {
         min-width: 60px;
@@ -562,8 +562,8 @@ input::-ms-clear { display: none; }
     }
   }
   &.modal-findpwd {
-    min-width:400px;
-    max-width:460px;
+    min-width:460px;
+    max-width:480px;
   }
 }
 
