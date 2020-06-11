@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- page head -->
+  <meta charset="utf-8">
+<link rel="icon" href="/favicon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Web site created using create-react-app">
+<link rel="apple-touch-icon" href="/logo192.png">
+<link rel="manifest" href="/manifest.json">
+<title>CRM - 펜1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+<link href="/crm/static/css/base.css" rel="stylesheet">
+<link href="/crm/static/css/main.css" rel="stylesheet">
+<link href="/crm/static/css/ui.css" rel="stylesheet">
+
+  <!--// page head -->
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+
+    <!-- login-body -->
+    <div class="flex-row app-body login-body">
+      <div class="flex-fill">
+        <div class="login flex _find">
+          <h2 class="title-full">비밀번호 변경</h2>
+          <div class="entrance-wrapper flex-row items-center">
+            <div class="entrance flex-fill">
+              <form>
+                <div class="form-control">
+                  <p><strong>안전한 개인정보보호</strong>를 위해<br>작성규칙에 맞는 비밀번호를 설정해주시기 바랍니다. </p>
+                  <div class="login-input-wrapper">
+                    <div class="input-label">PASSWORD</div>
+                    <input autocomplete="" name="" placeholder="새 비밀번호를 입력하세요.">
+                  </div>
+                  <span class="err">8자 이상, 영문/숫자/특수문자를 포함해주세요.</span>
+                </div>
+                <div class="form-control">
+                  <div class="login-input-wrapper">
+                    <div class="input-label">PASSWORD</div>
+                    <input autocomplete="" name="" placeholder="새 비밀번호를 다시 한 번 입력하세요.">
+                  </div>
+                  <span class="err">비밀번호가 일치하지 않습니다.</span>
+                </div>
+                <button type="button" class="btn btn-basic _full">변경하기</button>
+              </form>
+              <ul class="help">
+                <li>비밀번호를 8자 이상 입력해주세요. (영문/숫자/특수문자 포함)</li>
+                <li>특수문자는 !@#$%^&amp;*()-_ 사용 가능합니다.</li>
+                <li>생년월일, 주민등록번호, 핸드폰번호와  동일한 번호는 가급적 사용을 자제해주세요.</li>
+              </ul>
+              <div class="copyright">
+                COPYRIGHT <span class="c">C</span> UNOBEAUTY ALL RIGHT RESERVED
+                <p>문의하기: <a href="mailto:info@unobeauty.kr">info@unobeauty.kr</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// login-body -->
+
+    <!-- 재로그인 안내 -->
+    <!-- <div class="modal modal-overlay">
+      <div class="modal-container modal-findpwd">
+        <div class="modal-slot">
+          <div class="head flex-row flex-between items-start">
+            <div class="title ">비밀번호를 변경하였습니다.</div><i class="zmdi zmdi-close"></i>
+          </div>
+          <div class="conts">
+            <p>변경된 비밀번호로 새롭게 로그인해주세요.</p>
+          </div>
+          <div class="buttons">
+            <div class="flex-row">
+              <button class="btn btn-basic _small">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- 로그인 실패 -->
+    <div class="modal modal-overlay">
+      <div class="modal-container modal-findpwd">
+        <div class="modal-slot">
+          <div class="head flex-row flex-between items-start">
+            <div class="title ">로그인에 실패하였습니다. (1/5)</div><i class="zmdi zmdi-close"></i>
+          </div>
+          <div class="conts">
+            <p>5회 이상 실패 시, 계정 접근이 차단됩니다.</p>
+          </div>
+          <div class="buttons">
+            <div class="flex-row">
+              <button class="btn btn-basic _small">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 로그인 차단 -->
+    <!-- <div class="modal modal-overlay">
+      <div class="modal-container modal-findpwd">
+        <div class="modal-slot">
+          <div class="head flex-row flex-between items-start">
+            <div class="title ">로그인에 실패하였으며 계정이 차단되었습니다. (5/5)</div><i class="zmdi zmdi-close"></i>
+          </div>
+          <div class="conts">
+            <p>info@unobeauty.kr로 문의 부탁드립니다.</p>
+          </div>
+          <div class="buttons">
+            <div class="flex-row">
+              <button class="btn btn-basic _small">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</body>
+
+</html>

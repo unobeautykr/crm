@@ -1,0 +1,199 @@
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+*, *:active, *:hover { outline: none !important; }
+
+:hover { transition: all 0.35s ease; }
+
+*:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+ol, ul { list-style: none; padding: 0; margin: 0; }
+
+ol li, ul li { list-style-type: none; }
+
+table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+body { color: #273142; font-size: 14px; line-height: normal; font-weight: 500; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-break: break-word; }
+
+html, body { overflow-y: hidden; }
+
+@-webkit-keyframes autofill { to { color: #666;
+    background: transparent; } }
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: background-color ease-in-out 0s; transition-delay: 5000s; }
+
+.a11y { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+
+button { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px !important; }
+
+button.btn, a.btn { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px; }
+
+button.btn-normal, a.btn-normal { font-size: 18px; font-weight: 700; padding: 21px 6px 20px; border: 1px solid #dee2ec !important; background-color: #ffffff; color: #1b73e8; }
+
+button.btn-normal:not(.disabled), a.btn-normal:not(.disabled) { background-color: #ffffff !important; }
+
+button.btn-basic, a.btn-basic { font-size: 18px; font-weight: 700; padding: 21px 6px 20px; border: solid 1px #1b73e8; background-color: #1b73e8; color: #fff; }
+
+button.btn-basic:not(.disabled), a.btn-basic:not(.disabled) { background-color: #1b73e8 !important; }
+
+button._full, a._full { width: 100%; }
+
+button._small, a._small { min-width: 56px !important; padding: 9px 20px !important; font-size: 12.5px !important; font-weight: 700 !important; }
+
+select { border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
+
+input[type=text], input[type=password], input[type=tell], input[type=email] { min-height: 10px; border-radius: 4px; }
+
+input::-ms-clear { display: none; }
+
+::-webkit-input-placeholder { font-size: 14px; color: #9cb2cd !important; }
+
+::-moz-placeholder { font-size: 14px; color: #9cb2cd !important; }
+
+::-moz-placeholder { font-size: 14px; color: #9cb2cd !important; }
+
+/** layout **/
+.header-bar.ui-header { height: 70px; line-height: 70px; color: inherit; background: #fff; box-shadow: none; }
+
+.header-bar.ui-header p, .header-bar.ui-header span, .header-bar.ui-header a { height: auto; line-height: normal; }
+
+.header-bar.ui-header .header-items { position: relative; height: 100%; color: inherit; }
+
+.header-bar.ui-header .header-items.left { width: 230px; padding-left: 33px; background-color: #273142; color: #fff; }
+
+.header-bar.ui-header .header-items.right { padding-right: 0; }
+
+.header-bar.ui-header .header-items h1.title { font-size: 18px; font-weight: 500; }
+
+.header-bar .btn-close { position: absolute; right: 16px; width: 18px; height: 18px; background-image: url("/crm/static/images/icon/ic-sidemenu-close.png"); background-size: 16px; background-repeat: no-repeat; background-position: center center; }
+
+.header-bar .customer-search-bar { margin-left: 10px; }
+
+.header-bar .customer-search-bar input { width: 360px; height: 46px; background-color: #f3f8ff; }
+
+.header-bar .customer-search-bar .btn-accent { min-width: 30px; height: 46px; padding: 0 20px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
+
+.header-bar .me { height: 100%; border-left: 1px solid #d7e3f1; }
+
+.header-bar .me._sched { padding-left: 22px; padding-right: 22px; }
+
+.header-bar .me._sched .btn-sched { padding-top: 30px; font-size: 12px; color: #9cb2cd; background-color: #fff; background-image: url("/crm/static/images/icon/ic-sidemenu-calendar.png"); background-size: 24px; background-repeat: no-repeat; background-position: center top; }
+
+.header-bar .me._info { padding-top: 20px; padding-right: 22px; padding-left: 22px; }
+
+.header-bar .me._info p { font-size: 13px; font-weight: 600; }
+
+.header-bar .me._info p.email { padding-top: 1px; font-size: 12px; color: #9cb2cd; }
+
+.header-bar .me._info p.email a { color: inherit; font-size: inherit; }
+
+.err { display: block; padding-top: 8px; text-align: right; font-size: 12px; font-weight: 500; color: #0060ff; }
+
+.help { clear: both; margin-top: 20px; text-align: left; }
+
+.help li { position: relative; padding-left: 10px; font-size: 14px; font-weight: 500; line-height: 1.5; }
+
+.help li:before { content: ''; position: absolute; left: 0; top: 40%; margin-top: -2px; display: block; width: 4px; height: 4px; background-color: #273142; border-radius: 50%; }
+
+.app-body.ui-body { top: 70px; }
+
+.app-body.ui-body .left-navigation { width: 230px; padding-bottom: 60px; background-color: #273142; }
+
+.app-body.ui-body .left-navigation .menu { background-color: inherit; font-size: 16px; vertical-align: middle; }
+
+.app-body.ui-body .left-navigation .menu .title { padding: 11px 15px 11px 21px; }
+
+.app-body.ui-body .left-navigation .menu.depth-1 { padding-left: 0; }
+
+.app-body.ui-body .left-navigation .menu.depth-1 .title { padding: 9px 15px 9px 53px; }
+
+.app-body.ui-body .ico { display: inline-block; width: 24px; height: 24px; margin-right: 8px; background-size: 24px; background-repeat: no-repeat; background-position: center center; vertical-align: bottom; }
+
+.app-body.ui-body .ico.ic-home { background-image: url("/crm/static/images/icon/ic-sidemenu-home.png"); }
+
+.app-body.ui-body .ico.ic-calender { background-image: url("/crm/static/images/icon/ic-sidemenu-calendar.png"); }
+
+.app-body.ui-body .ico.ic-consult { background-image: url("/crm/static/images/icon/ic-sidemenu-consult.png"); }
+
+.app-body.ui-body .ico.ic-msg { background-image: url("/crm/static/images/icon/ic-sidemenu-message.png"); }
+
+.app-body.ui-body .ico.ic-inq { background-image: url("/crm/static/images/icon/ic-sidemenu-inquiry.png"); }
+
+.app-body.ui-body .ico.ic-stat { background-image: url("/crm/static/images/icon/ic-sidemenu-statistics_2.png"); }
+
+.app-body.ui-body .ico.ic-setting { background-image: url("/crm/static/images/icon/ic-sidemenu-statistics.png"); }
+
+.app-body.ui-body .ico.ic-hospital { background-image: url("/crm/static/images/icon/ic-sidemenu-hospital.png"); }
+
+.app-body .flex-fill.route .home { height: 100%; }
+
+.app-body .flex-fill.route .home .btn-fold { display: block; width: 100%; padding: 9px 9px 9px 30px; border-bottom: 1px solid #d7e3f1; text-align: left; font-size: 11px; font-weight: 700; color: #9cb2cd; background-color: #f9fbff; background-image: url("/crm/static/images/icon/icon-foldarrow.png"); background-repeat: no-repeat; background-size: 11px; background-position: left 9px center; }
+
+.app-body .flex-fill.route .home .flex-row { height: 100%; }
+
+.app-body .flex-fill.route .home .left-panel { width: 340px; margin-right: 0; background-color: #ffffff; }
+
+.app-body .flex-fill.route .home .right-panel { padding: 20px; }
+
+.app-body .flex-fill.route .home .filters.form-control { padding-top: 25px; padding-left: 20px; padding-right: 20px; margin-bottom: 14px; }
+
+.app-body .flex-fill.route .home .filters.form-control > label { display: block; font-size: 17px; font-weight: 600; color: #273142; }
+
+.app-body .flex-fill.route .home .filters.form-control .filter-wrap { display: flex; }
+
+.app-body .flex-fill.route .home .filters.form-control .filter { flex: 1; margin-right: 20px; }
+
+.app-body .flex-fill.route .home .filters.form-control .filter:last-child { margin-right: 0; }
+
+.app-body .flex-fill.route .home .filters.form-control .filter select { padding: 8px 10px 7px; }
+
+.app-body.login-body { top: 0; }
+
+.app-body.login-body .copyright { margin-top: 24.2%; font-size: 14px; line-height: 1.5; color: #273142; text-align: center; }
+
+.app-body.login-body .copyright a { font-size: inherit; line-height: inherit; color: inherit; }
+
+.app-body.login-body .logo { width: 379px; height: 242px; margin: 0 auto; background-image: url("/crm/static/images/common/logo-unocarecrm.png"); background-size: 379px; background-repeat: no-repeat; background-position: center 0; }
+
+.app-body.login-body .login { background-color: #fff; }
+
+.app-body.login-body .login form button { margin-top: 0; font-size: 18px; height: auto; line-height: inherit; border-radius: inherit; }
+
+.app-body.login-body .login form button:not(.disabled) { background-color: inherit; }
+
+.app-body.login-body .login .form-control .login-input-wrapper { width: 460px; height: 52px; background-color: none; border: 0; padding: 0; }
+
+.app-body.login-body .login .form-control .login-input-wrapper input { display: block; width: 460px; padding: 18px 30px 17px; background-color: #f3f8ff; }
+
+.app-body.login-body .login .form-control .input-label { display: none; }
+
+.app-body.login-body .login .btn-login { margin-top: 14px; }
+
+.app-body.login-body .login .find-password { display: block; margin-top: 46px; margin-left: inherit; font-size: 14px; color: #273142; text-align: center; text-decoration: none; }
+
+.app-body.login-body .login .title-full { flex: none; padding: 26px 0 23px; font-size: 18px; font-weight: 500; border-bottom: 1px solid #d7e3f1; text-align: center; }
+
+.app-body.login-body .login._find { color: #273142; }
+
+.app-body.login-body .login._find .form-control p { padding-bottom: 26px; font-size: 18px; font-weight: 500; line-height: 1.45; }
+
+.modal-container > div { position: relative; padding: 30px 70px 30px 30px; }
+
+.modal-container > div .buttons button { min-width: 60px; }
+
+.modal-container i.zmdi-close { position: absolute; right: 25px; top: 30px; font-size: 0; }
+
+.modal-container i.zmdi-close::before { content: ''; display: block; width: 16px; height: 16px; background-image: url("/crm/static/images/icon/ic-close.png"); background-size: 16px; background-repeat: no-repeat; background-position: 0 0; }
+
+.modal-container .head { padding-bottom: 10px; }
+
+.modal-container .head .title { font-size: 16px; font-weight: normal; letter-spacing: -0.08px; color: #000000; }
+
+.modal-container .conts { min-height: 50px; line-height: 1.36; color: #5f6367; }
+
+.modal-container .conts p { line-height: inherit; color: inherit; }
+
+.modal-container.modal-findpwd { min-width: 400px; max-width: 460px; }
+
+@media (min-width: 481px) { .route.left-nav-opened { left: 230px; padding: 0; } }

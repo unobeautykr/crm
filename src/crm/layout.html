@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <style type="text/css">
     .anticon {
@@ -56,18 +56,10 @@
       }
     }
   </style>
-  <meta charset="utf-8">
-  <link rel="icon" href="/favicon.png">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#000000">
-  <meta name="description" content="Web site created using create-react-app">
-  <link rel="apple-touch-icon" href="/logo192.png">
-  <link rel="manifest" href="/manifest.json">
-  <title>CRM - 펜1</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-  <link href="./static/css/base.css" rel="stylesheet">
-  <link href="./static/css/main.css" rel="stylesheet">
-  <link href="./static/css/ui.css" rel="stylesheet">
+  <!-- page head -->
+  @@include('./inc/pagehead.inc',{
+  })
+  <!--// page head -->
 </head>
 
 <body><noscript>You need to enable JavaScript to run this app.</noscript>
@@ -79,7 +71,10 @@
     <!--// header-bar & ui-header -->
 
     <!-- app-body & ui-body -->
-    <div class="flex-row app-body ui-body">
+    <div class="flex-row app-body ui-body"> <!-- add class=ui-body //-->
+      <!--
+      left-navigation 마크업 및 클래스 추가/수정
+      //-->
       <div class="left-navigation flex flex-wrap ">
         <div class="flex-wrap clinic-name">펜1</div>
         <div class="ver-scroll flex-fill">
@@ -184,135 +179,49 @@
           </div>
         </div>
       </div>
+      <!--
+      left-navigation 마크업 및 클래스 수정
+      //-->
+
       <div class="flex-fill left-nav-opened route">
         <div class="home">
           <div class="top"></div>
-          <div class="flex-row">
-            <div class="left-panel flex-wrap">
-              <p><button class="btn btn-fold">접기</button></p>
-              <div class="filters form-control">
-                <label>필터</label>
-                <div class="filter-wrap">
-                  <div class="filter">
-                    <select>
-                      <option value="-1">전체 부서</option>
-                      <option value="0" class="">상담실1</option>
-                      <option value="1" class="">상담실2</option>
-                      <option value="2" class="">테스트</option>
-                      <option value="3" class="">상담실3</option>
-                      <option value="4" class=""></option>
-                    </select>
-                  </div>
-                  <div class="filter">
-                    <select>
-                      <option value="-1">전체 상담사</option>
-                      <option value="0">상담이</option>
-                      <option value="1">강상담아</option>
-                      <option value="2">이상담</option>
-                      <option value="3">상담ㅎㅎ</option>
-                    </select>
-                  </div>
-                  <div class="filter">
-                    <select>
-                      <option value="-1">전체 의사</option>
-                      <option value="0">펜8</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="appointments-find-by form-control"><label>예약 찾기</label>
-                <div class="flex-row items-center"><input class="flex-fill" placeholder="고객명, 차트번호, 전화번호" value=""><button class="btn btn-primary btn-sm flex-wrap m-l-4">검색</button></div>
-              </div>
-              <div class="notices"><label class="title">메모</label>
-                <div class="notice-items">
-                  <div class="notices-empty">공지사항이 없습니다</div>
-                </div><textarea placeholder="공유할 내용을 입력 후 엔터를 누르세요. (줄바꿈은 Shift + Enter)" class="memo post"></textarea>
-              </div>
-            </div>
-            <div class="right-panel">
-              <div class="header">
-                <div class="date-functions flex-row items-center"><button class="btn-primary"><i class="zmdi zmdi-chevron-left"></i></button>
-                  <div class="react-datepicker-wrapper">
-                    <div class="react-datepicker__input-container"><input type="text" class="text-center" value="2020년 06월 9일"></div>
-                  </div><button class="btn-primary"><i class="zmdi zmdi-chevron-right"></i></button><button>오늘</button>
-                </div>
-              </div>
-              <div class="appointments-by-status flex-row">
-                <div class="status-group flex-wrap">
-                  <div>
-                    <div class="appointments-card scheduled">
-                      <div class="header flex-row items-center flex-between">
-                        <div class="title"><span>예약</span>(<span>0</span>)</div><i class="zmdi zmdi-chevron-up"></i>
-                      </div>
-                      <div class="items"></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="appointments-card unvisited">
-                      <div class="header flex-row items-center flex-between">
-                        <div class="title"><span>미방문</span>(<span>0</span>)</div><i class="zmdi zmdi-chevron-up"></i>
-                      </div>
-                      <div class="items"></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="appointments-card canceled">
-                      <div class="header flex-row items-center flex-between">
-                        <div class="title"><span>예약취소</span>(<span>0</span>)</div><i class="zmdi zmdi-chevron-up"></i>
-                      </div>
-                      <div class="items"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="status-group flex-wrap">
-                  <div>
-                    <div class="appointments-card waiting">
-                      <div class="header flex-row items-center flex-between">
-                        <div class="title"><span>접수</span>(<span>0</span>)</div><i class="zmdi zmdi-chevron-up"></i>
-                      </div>
-                      <div class="items"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="status-group flex-wrap">
-                  <div>
-                    <div class="appointments-card consulting">
-                      <div class="header flex-row items-center flex-between">
-                        <div class="title"><span>상담중</span>(<span>0</span>)</div><i class="zmdi zmdi-chevron-up"></i>
-                      </div>
-                      <div class="items"></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="appointments-card consulted">
-                      <div class="header flex-row items-center flex-between">
-                        <div class="title"><span>상담완료</span>(<span>0</span>)</div><i class="zmdi zmdi-chevron-up"></i>
-                      </div>
-                      <div class="items"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="status-group flex-wrap">
-                  <div>
-                    <div class="appointments-card treating">
-                      <div class="header flex-row items-center flex-between">
-                        <div class="title"><span>진료중</span>(<span>0</span>)</div><i class="zmdi zmdi-chevron-up"></i>
-                      </div>
-                      <div class="items"></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="appointments-card done">
-                      <div class="header flex-row items-center flex-between">
-                        <div class="title"><span>진료완료</span>(<span>0</span>)</div><i class="zmdi zmdi-chevron-up"></i>
-                      </div>
-                      <div class="items"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<style>
+  .guides {padding:2% 3%;margin:30px 0;}
+  .guides * {padding-bottom:10px;font-size:14px;}
+  .guides div:after {content: '';display: block;clear: both;}
+  .guides h1 {padding-bottom:20px;font-size: 20px;font-weight: bold;}
+  .guides pre {display: block;padding:15px;margin-bottom:40px;background-color: #000;color:#fff;line-height:1.7;}
+
+</style>
+<div class="guides">
+<h1>layout</h1>
+
+<pre>
+  &lt;div class="header-bar flex-row flex-between ui-header"&gt;
+    header
+  &lt;/div&gt;
+
+  &lt;div class="flex-row app-body ui-body"&gt;
+    body content area
+  &lt;/div&gt;
+</pre>
+
+
+<h1>button type(button 또는 a)</h1>
+<pre>
+  <p><button class="btn btn-basic">button(blue)</button> &lt;button class="btn btn-basic"&gt;button : blue type&lt;/button&gt;</p>
+  <p><a href="#" class="btn btn-basic">button(blue)</a> &lt;a class="btn btn-basic"&gt;button : blue type&lt;/a&gt;</p>
+  <p><button class="btn btn-basic _full">button width 100% : &lt;button class="btn btn-basic _full"&gt;button width 100%&lt;/button&gt;</button></p>
+  <p><button class="btn btn-basic btn-small">button default small size</button> &lt;button class="btn btn-basic btn-small"&gt;button default small size&lt;/button&gt;</p>
+
+  <p><button class="btn btn-normal">button(blue)</button> &lt;button class="btn btn-basic"&gt;button : blue type&lt;/button&gt;</p>
+  <p><button class="btn btn-normal _full">button width 100% : &lt;button class="btn btn-basic _full"&gt;button width 100%&lt;/button&gt;</button></p>
+  <p><button class="btn btn-normal _small">button default small size</button> &lt;button class="btn btn-basic _small"&gt;button default small size&lt;/button&gt;</p>
+
+</pre>
+</div>
+
         </div>
       </div>
     </div>
