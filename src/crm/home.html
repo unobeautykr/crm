@@ -164,22 +164,87 @@
                   </div>
                 </div>
               </div>
-              <div class="appointments-find-by form-control"><label>예약 찾기</label>
-                <div class="flex-row items-center"><input class="flex-fill" placeholder="고객명, 차트번호, 전화번호" value=""><button class="btn btn-primary btn-sm flex-wrap m-l-4">검색</button></div>
+
+              <div class="appointments-find-by form-control">
+                <label>찾기</label>
+                <div class="flex-row items-center">
+                  <input class="flex-fill" placeholder="고객명, 차트번호, 전화번호" value="">
+                  <button class="btn btn-search"><span class="a11y">검색</span></button>
+                </div>
               </div>
-              <div class="notices"><label class="title">메모</label>
+
+              <div class="notices">
+                <label class="title">메모</label>
                 <div class="notice-items">
                   <div class="notices-empty">공지사항이 없습니다</div>
-                </div><textarea placeholder="공유할 내용을 입력 후 엔터를 누르세요. (줄바꿈은 Shift + Enter)" class="memo post"></textarea>
+
+                  <!-- noti box -->
+                  <div class="notice">
+                    <div class="top flex-row">
+                      <div class="user-name">병원관리자</div>
+                      <div class="buttons">
+                        <span class="btn-more"><span class="a11y">메뉴</span></span>
+                        <div class="more">
+                          <button class="btn btn-modi">수정</button>
+                          <button class="btn btn-del">삭제</button>
+                          <button class="btn btn-up">상단</button>
+                        </div>
+                      </div>
+                    </div>
+                    <textarea class="memo" disabled="">장난으로라도 다른 사람 앞에서 입을 가리지 않고 기침을 하거나 너무 가까이에서 대화하지 말기를 당부드립니다. 나의 부주의한 행동이 동료는 물론 그들의 가족의 건강까지도 위험하게 할 수 있습니다. 성숙한 행동 보여주시기 바랍니다.</textarea>
+                  </div>
+                  <!--// noti box -->
+
+                  <div class="notice">
+                    <div class="top flex-row">
+                      <div class="user-name">박지웅 실장</div>
+                      <div class="buttons">
+                        <span class="btn-more"><span class="a11y">메뉴</span></span>
+                        <div class="more">
+                          <button class="btn btn-modi">수정</button>
+                          <button class="btn btn-del">삭제</button>
+                          <button class="btn btn-up">상단</button>
+                        </div>
+                      </div>
+                    </div>
+                    <textarea class="memo" disabled="">연말정산 기간입니다. 수납등록 제대로 해주세요. 퇴근 전 마지막 확인!</textarea>
+                  </div>
+
+                  <div class="notice">
+                    <div class="top flex-row">
+                      <div class="user-name">신호택 실장</div>
+                      <div class="buttons">
+                        <span class="btn-more"><span class="a11y">메뉴</span></span>
+                        <div class="more">
+                          <button class="btn btn-modi">수정</button>
+                          <button class="btn btn-del">삭제</button>
+                          <button class="btn btn-up">상단</button>
+                        </div>
+                      </div>
+                    </div>
+                    <textarea class="memo" disabled="">금일 예정 되었던 월간회의는 코로나 이슈로 인해 취소 합니다. 업무 일정에 참고 부탁 드립니다.</textarea>
+                  </div>
+
+                </div>
+
+                <textarea placeholder="공유할 내용을 입력 후 엔터를 누르세요. (줄바꿈은 Shift + Enter)" class="memo post"></textarea>
+                <p><button class="btn btn-wrt _full">등록</button></p>
               </div>
+
             </div>
+            <!--// left-panel -->
+
             <div class="right-panel">  <!-- add class=right-panel //-->
               <div class="header">
                 <div class="date-functions flex-row items-center">
-                  <button class="btn-primary"><i class="zmdi zmdi-chevron-left"></i></button>
+                  <button class="btn btn-today">오늘</button>
+                  <button class="btn btn-left"><span class="a11y">이전</span></button>
                   <div class="react-datepicker-wrapper">
-                    <div class="react-datepicker__input-container"><input type="text" class="text-center" value="2020년 06월 9일"></div>
-                  </div><button class="btn-primary"><i class="zmdi zmdi-chevron-right"></i></button><button>오늘</button>
+                    <div class="react-datepicker__input-container">
+                      <input type="text" class="text-center" value="2020년 06월 9일">
+                    </div>
+                  </div>
+                  <button class="btn btn-right"><span class="a11y">다음</span></button>
                 </div>
               </div>
               <div class="appointments-by-status flex-row">

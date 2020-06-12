@@ -13,19 +13,27 @@
       </div>
     </div>
     <div class="header-items right">
-      <div class="me _sched">  <!--modi //-->
+      <div class="me _language">
+        <button class="btn btn-lang">언어변환</button>
+        <div class="lang">
+          <ul>
+            <li><a href="#">한글</a></li>
+            <li><a href="#">영문</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="me _sched">
         <button class="btn btn-sched"><span class="alram"></span>부재일정확인</button>
       </div>
-      <div class="me _info">  <!--modi //-->
+      <div class="me _info">
+        <p class="fig"></p>
         <p>park</p>
-        <p class="email"><a href="mailto:test1@gmail.com">test1@gmail.com</a></p>
+        <p class="email"><a href="mailto:test1@gmail.com">test1test1test1@gmail.com</a></p>
+      </div>
+      <div class="me _power">
+        <button class="btn btn-logout">로그아웃</button>
       </div>
 
-      <!--
-      디자인확인필요
-      <i class="zmdi zmdi-font"></i>
-      <i class="zmdi zmdi-power"></i>
-      -->
     </div>
   </div>
 </div>

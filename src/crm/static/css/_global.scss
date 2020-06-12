@@ -129,9 +129,16 @@ select{
   border: solid 1px #dee2ec;
   background-color: #ffffff;
 }
-input[type=text], input[type=password], input[type=tell], input[type=email] {
+input:not([type=radio]):not([type=checkbox]), input.flex-fill, textarea {
+// input[type=text], input[type=password], input[type=tell], input[type=email] {
   min-height:10px;
+  padding:15px 15px 14px;
   border-radius: 4px;
+  background-color: #f3f8ff;
+  color:#000;
+  &:focus {
+    color:#000;
+  }
 }
 input::-ms-clear { display: none; }
 ::-webkit-input-placeholder {
@@ -149,6 +156,7 @@ input::-ms-clear { display: none; }
 
 /** layout **/
 .header-bar {
+  z-index: 10;
   &.ui-header {
     height: 70px;
     line-height: 70px;
@@ -194,9 +202,17 @@ input::-ms-clear { display: none; }
   .customer-search-bar {
     margin-left:10px;
     input {
-      width:360px;
+      width:340px;
       height:46px;
-      background-color: #f3f8ff;
+      padding-left:45px !important;
+      padding-right:20px !important;
+      background: {
+        color: #f3f8ff;
+        image: url('/crm/static/images/icon/ic-search.png');
+        size:19px;
+        repeat:no-repeat;
+        position: left 18px center;
+      }
     }
     .btn-accent {
       min-width: 30px;
@@ -214,25 +230,53 @@ input::-ms-clear { display: none; }
       padding-left:22px;
       padding-right:22px;
       .btn-sched {
-        padding-top:30px;
+        position: relative;
+        max-width:63px;
+        padding-top:34px;
         font-size: 12px;
         color: #9cb2cd;
         background: {
           color:#fff;
-          image:url('/crm/static/images/icon/ic-sidemenu-calendar.png');
-          size:24px;
+          image:url('/crm/static/images/icon/ic-absenteeschedule.png');
+          size:34px;
           repeat:no-repeat;
           position: center top;
+        }
+        .alram {
+          display: block;
+          position: absolute;
+          right:16px;
+          top:4px;
+          width: 10px;
+          height: 10px;
+          border: solid 2px #ffffff;
+          background-color: #0060ff;
+          border-radius: 50%;
         }
       }
     }
     &._info {
+      position: relative;
       padding-top:20px;
       padding-right:22px;
-      padding-left:22px;
+      padding-left:78px;
       p {
         font-size: 13px;
         font-weight: 600;
+        &.fig {
+          position: absolute;
+          left:22px;
+          top:12px;
+          display: inline-block;
+          width:46px;
+          height:46px;
+          background: {
+            image:url('/crm/static/images/common/img-profile.png');
+            size:46px;
+            repeat:no-repeat;
+            position: center top;
+          }
+        }
         &.email {
           padding-top:1px;
           font-size: 12px;
@@ -241,6 +285,65 @@ input::-ms-clear { display: none; }
             color:inherit;
             font-size: inherit;
           }
+        }
+      }
+    }
+    &._language {
+      position: relative;
+      padding-left:18px;
+      padding-right:18px;
+      .btn-lang {
+        position: relative;
+        max-width:63px;
+        padding-top:34px;
+        font-size: 12px;
+        color: #9cb2cd;
+        background: {
+          color:#fff;
+          image:url('/crm/static/images/icon/ic-language.png');
+          size:34px;
+          repeat:no-repeat;
+          position: center top;
+        }
+      }
+      .lang {
+        position: absolute;
+        right:15%;
+        top:85%;
+        background-color: #fff;
+        width: 119px;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px 0 rgba(235, 235, 235, 0.5);
+        border: solid 1px #efeff4;
+        z-index: 1;
+        li {
+          padding:10px 20px;
+          line-height: normal;
+          height:auto;
+          &:first-child {
+            border-bottom: solid 1px #efeff4;
+          }
+          a {
+            color: #282828;
+          }
+        }
+      }
+    }
+    &._power {
+      padding-left:18px;
+      padding-right:18px;
+      .btn-logout {
+        position: relative;
+        max-width:63px;
+        padding-top:34px;
+        font-size: 12px;
+        color: #9cb2cd;
+        background: {
+          color:#fff;
+          image:url('/crm/static/images/icon/ic-logout.png');
+          size:34px;
+          repeat:no-repeat;
+          position: center top;
         }
       }
     }
@@ -280,13 +383,21 @@ input::-ms-clear { display: none; }
   }
 }
 
+html, body{
+  overflow: auto;
+}
 .app-body {
   &.ui-body {
+    position: relative;
+    height:100%;
+    width:100%;
     top:70px;
     .left-navigation {
       width:230px;
-      padding-bottom:60px;
       background-color: #273142;
+      .ver-scroll {
+        padding-bottom:60px;
+      }
       .menu {
         background-color:inherit;
         font-size: 16px;
@@ -357,8 +468,14 @@ input::-ms-clear { display: none; }
   } //&.ui-body
 
   .flex-fill.route {
+    min-height:100%;
+    height:100%;
+    background-color: #f3f8ff;
+    // home
     .home {
-      height:100%;
+      // height:100%;
+      min-height:100%;
+      // overflow: hidden;
       .btn-fold {
         display: block;
         width:100%;
@@ -378,17 +495,21 @@ input::-ms-clear { display: none; }
       }
       .flex-row {
         height:100%;
+        min-height:100%;
+
       }
       .left-panel {
         width: 340px;
         margin-right:0;
         background-color: #ffffff;
+        border-right:1px solid #d7e3f1;
       }
       .right-panel {
         padding:20px;
+        background-color: #f3f8ff;
       }
 
-      .filters.form-control {
+      .form-control {
         padding-top:25px;
         padding-left:20px;
         padding-right:20px;
@@ -399,27 +520,163 @@ input::-ms-clear { display: none; }
           font-weight: 600;
           color: #273142;
         }
-        .filter-wrap {
-          display: flex;
-        }
-        .filter {
-          flex:1;
-          margin-right:20px;
-          &:last-child {
-            margin-right:0;
+        &.filters {
+          .filter-wrap {
+            display: flex;
           }
-          select {
-            padding:8px 10px 7px;
+          .filter {
+            flex:1;
+            margin-right:20px;
+            &:last-child {
+              margin-right:0;
+            }
+            select {
+              padding:8px 10px 7px;
+            }
           }
         }
-        // &:after {
-        //   content: '';
-        //   display: block;
-        //   clear:both;
-        // }
+        &.appointments-find-by {
+          .flex-row {
+            position: relative;
+            input {
+              padding-left:45px;
+            }
+            .btn-search {
+              position: absolute;
+              left:18px;
+              top:50%;
+              margin-top:-15px;
+              width:30px;
+              height:30px;
+              background: {
+                image:url('/crm/static/images/icon/ic-search.png');
+                repeat:no-repeat;
+                size:19px;
+                position: left  center;
+              }
+            }
+          }
+        }
+      }
+      .notices {
+        padding-top:25px;
+        padding-left:20px;
+        padding-right:20px;
+        margin-bottom:14px;
+        > label {
+          display: block;
+          font-size: 17px;
+          font-weight: 600;
+          color: #273142;
+        }
+        .notice-items {
+          padding:0;
+          border:0;
+          max-height:auto;
+        }
+        .notices-empty {
+          height:auto;
+          padding:50px;
+          margin-bottom:5px;
+          background-color: #fffaf3;
+          border-radius: 4px;
+        }
+        .btn-wrt {
+          padding:12px 0 11px;
+          color:#fff;
+          font-weight: 700;
+          background-color: #9cb2cd;
+        }
+        .notice {
+          padding: 15px;
+          margin-bottom:10px;
+          border-radius: 4px;
+          border-bottom:0;
+          &:nth-child(4n+1) { background-color: #fffaf3; }
+          &:nth-child(4n+2) { background-color: #fff9f9; }
+          &:nth-child(4n+3) { background-color: #f3fbff; }
+          &:nth-child(4n+4) { background-color: #f3fbff; }
+          .top {
+            &:after {
+              @extend %clearer;
+            }
+          }
+          textarea {
+            padding:0;
+            line-height: 1.5;
+            background-color: transparent;
+          }
+        }
+        .user-name {
+          font-weight: 700;
+        }
+        .buttons {
+          position: relative;
+          float:right;
+          text-align: right;
+          .more {
+            position: absolute;
+            right:0;
+            top:0;
+            padding:5px;
+            background-color: #fff;
+            .btn {
+              display: block;
+            }
+          }
+        }
+        .btn-more {
+          display: inline-block;
+          width:20px;
+          height:20px;
+          background: {
+            image:url('/crm/static/images/icon/ic-more.png');
+            repeat:no-repeat;
+            size:19px;
+            position: right top;
+          }
+        }
+      }
+    } //.home
+  } //.flex-fill.route
+
+  .right-panel {
+    .date-functions {
+      .btn {
+        display: inline-block;
+        min-width: 36px;
+        height: 36px;
+        border: solid 1px #dee2ec;
+        background-color: #ffffff;
+        &.btn-left {
+          background: {
+            image:url('/crm/static/images/icon/arrow.png');
+            size:7px;
+            repeat:no-repeat;
+            position: center center;
+          }
+        }
+        &.btn-right {
+          background: {
+            image:url('/crm/static/images/icon/arrow_2.png');
+            size:7px;
+            repeat:no-repeat;
+            position: center center;
+          }
+        }
       }
     }
-  } //.flex-fill.route
+    .react-datepicker-wrapper {
+      margin-right:0;
+      input {
+        background-color: transparent;
+        border:0;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+
 
   &.login-body {
     top:0;
