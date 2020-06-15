@@ -1,4 +1,4 @@
-.app-body .flex-fill.route .home .notices .notice .top:after { content: ""; display: block; clear: both; }
+.app-body .flex-fill .home .right-panel > .header:after, .app-body .flex-fill .home .notices .notice .top:after { content: ""; display: block; clear: both; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
@@ -72,6 +72,8 @@ input::-ms-clear { display: none; }
 
 .header-bar.ui-header .header-items h1.title { font-size: 18px; font-weight: 500; }
 
+.header-bar.ui-header .flex-between.items-center { border-bottom: 1px solid #d7e3f1; }
+
 .header-bar .btn-close { position: absolute; right: 16px; width: 18px; height: 18px; background-image: url("/crm/static/images/icon/ic-sidemenu-close.png"); background-size: 16px; background-repeat: no-repeat; background-position: center center; }
 
 .header-bar .customer-search-bar { margin-left: 10px; }
@@ -102,7 +104,7 @@ input::-ms-clear { display: none; }
 
 .header-bar .me._language .btn-lang { position: relative; max-width: 63px; padding-top: 34px; font-size: 12px; color: #9cb2cd; background-color: #fff; background-image: url("/crm/static/images/icon/ic-language.png"); background-size: 34px; background-repeat: no-repeat; background-position: center top; }
 
-.header-bar .me._language .lang { position: absolute; right: 15%; top: 85%; background-color: #fff; width: 119px; border-radius: 6px; box-shadow: 0 2px 4px 0 rgba(235, 235, 235, 0.5); border: solid 1px #efeff4; z-index: 1; }
+.header-bar .me._language .lang { display: none; position: absolute; right: 15%; top: 85%; background-color: #fff; width: 119px; border-radius: 6px; box-shadow: 0 2px 4px 0 rgba(235, 235, 235, 0.5); border: solid 1px #efeff4; z-index: 1; }
 
 .header-bar .me._language .lang li { padding: 10px 20px; line-height: normal; height: auto; }
 
@@ -122,9 +124,9 @@ input::-ms-clear { display: none; }
 
 .help li:before { content: ''; position: absolute; left: 0; top: 40%; margin-top: -2px; display: block; width: 4px; height: 4px; background-color: #273142; border-radius: 50%; }
 
-html, body { overflow: auto; }
+html, body { height: 100%; overflow: auto; }
 
-.app-body.ui-body { position: relative; height: 100%; width: 100%; top: 70px; }
+.app-body.ui-body { top: 70px; }
 
 .app-body.ui-body .left-navigation { width: 230px; background-color: #273142; }
 
@@ -156,67 +158,135 @@ html, body { overflow: auto; }
 
 .app-body.ui-body .ico.ic-hospital { background-image: url("/crm/static/images/icon/ic-sidemenu-hospital.png"); }
 
-.app-body .flex-fill.route { min-height: 100%; height: 100%; background-color: #f3f8ff; }
+.app-body .flex-fill.route { min-height: 100%; height: 100%; background-color: #f3f8ff; padding: 0; }
 
-.app-body .flex-fill.route .home { min-height: 100%; }
+.app-body .flex-fill label.title { display: block; font-size: 17px; font-weight: 600; color: #273142; }
 
-.app-body .flex-fill.route .home .btn-fold { display: block; width: 100%; padding: 9px 9px 9px 30px; border-bottom: 1px solid #d7e3f1; text-align: left; font-size: 11px; font-weight: 700; color: #9cb2cd; background-color: #f9fbff; background-image: url("/crm/static/images/icon/icon-foldarrow.png"); background-repeat: no-repeat; background-size: 11px; background-position: left 9px center; }
+.app-body .flex-fill .left-panel { width: 340px; min-height: 100%; padding-bottom: 60px; margin-right: 0; background-color: #ffffff; border-right: 1px solid #d7e3f1; }
 
-.app-body .flex-fill.route .home .flex-row { height: 100%; min-height: 100%; }
+.app-body .flex-fill .right-panel { min-width: auto; height: 100%; min-height: 100%; padding: 17px 20px 20px; background-color: #f3f8ff; }
 
-.app-body .flex-fill.route .home .left-panel { width: 340px; margin-right: 0; background-color: #ffffff; border-right: 1px solid #d7e3f1; }
+.app-body .flex-fill .home { height: 100%; }
 
-.app-body .flex-fill.route .home .right-panel { padding: 20px; background-color: #f3f8ff; }
+.app-body .flex-fill .home .btn-fold { display: block; width: 100%; padding: 9px 9px 9px 30px; border-bottom: 1px solid #d7e3f1; text-align: left; font-size: 11px; font-weight: 700; color: #9cb2cd; background-color: #f9fbff; background-image: url("/crm/static/images/icon/icon-foldarrow.png"); background-repeat: no-repeat; background-size: 11px; background-position: left 9px center; }
 
-.app-body .flex-fill.route .home .form-control { padding-top: 25px; padding-left: 20px; padding-right: 20px; margin-bottom: 14px; }
+.app-body .flex-fill .home .flex-row { min-height: 100%; }
 
-.app-body .flex-fill.route .home .form-control > label { display: block; font-size: 17px; font-weight: 600; color: #273142; }
+.app-body .flex-fill .home .flex-row.appointments-by-status { height: auto; min-height: auto; margin-top: 20px; }
 
-.app-body .flex-fill.route .home .form-control.filters .filter-wrap { display: flex; }
+.app-body .flex-fill .home .form-control { padding-top: 25px; padding-left: 20px; padding-right: 20px; margin-bottom: 14px; }
 
-.app-body .flex-fill.route .home .form-control.filters .filter { flex: 1; margin-right: 20px; }
+.app-body .flex-fill .home .form-control > label { display: block; font-size: 17px; font-weight: 600; color: #273142; }
 
-.app-body .flex-fill.route .home .form-control.filters .filter:last-child { margin-right: 0; }
+.app-body .flex-fill .home .form-control.filters .filter-wrap { display: flex; }
 
-.app-body .flex-fill.route .home .form-control.filters .filter select { padding: 8px 10px 7px; }
+.app-body .flex-fill .home .form-control.filters .filter { flex: 1; margin-right: 20px; }
 
-.app-body .flex-fill.route .home .form-control.appointments-find-by .flex-row { position: relative; }
+.app-body .flex-fill .home .form-control.filters .filter:last-child { margin-right: 0; }
 
-.app-body .flex-fill.route .home .form-control.appointments-find-by .flex-row input { padding-left: 45px; }
+.app-body .flex-fill .home .form-control.filters .filter select { padding: 8px 10px 7px; }
 
-.app-body .flex-fill.route .home .form-control.appointments-find-by .flex-row .btn-search { position: absolute; left: 18px; top: 50%; margin-top: -15px; width: 30px; height: 30px; background-image: url("/crm/static/images/icon/ic-search.png"); background-repeat: no-repeat; background-size: 19px; background-position: left  center; }
+.app-body .flex-fill .home .form-control.appointments-find-by .flex-row { position: relative; }
 
-.app-body .flex-fill.route .home .notices { padding-top: 25px; padding-left: 20px; padding-right: 20px; margin-bottom: 14px; }
+.app-body .flex-fill .home .form-control.appointments-find-by .flex-row input { padding-left: 45px; }
 
-.app-body .flex-fill.route .home .notices > label { display: block; font-size: 17px; font-weight: 600; color: #273142; }
+.app-body .flex-fill .home .form-control.appointments-find-by .flex-row .btn-search { position: absolute; left: 18px; top: 50%; margin-top: -15px; width: 30px; height: 30px; background-image: url("/crm/static/images/icon/ic-search.png"); background-repeat: no-repeat; background-size: 19px; background-position: left  center; }
 
-.app-body .flex-fill.route .home .notices .notice-items { padding: 0; border: 0; max-height: auto; }
+.app-body .flex-fill .home .appointments-card { width: 310px; margin-bottom: 0; margin-right: 20px; }
 
-.app-body .flex-fill.route .home .notices .notices-empty { height: auto; padding: 50px; margin-bottom: 5px; background-color: #fffaf3; border-radius: 4px; }
+.app-body .flex-fill .home .appointments-card .zmdi-chevron-up:before { content: ''; display: inline-block; width: 13px; height: 13px; background-image: url("/crm/static/images/icon/ic-down-arrow.png"); background-repeat: no-repeat; background-size: 13px; background-position: center center; }
 
-.app-body .flex-fill.route .home .notices .btn-wrt { padding: 12px 0 11px; color: #fff; font-weight: 700; background-color: #9cb2cd; }
+.app-body .flex-fill .home .appointments-card .zmdi-chevron-down:before { content: ''; display: inline-block; width: 13px; height: 13px; background-image: url("/crm/static/images/icon/ic-down-arrow.png"); background-repeat: no-repeat; background-size: 13px; background-position: center center; transform: rotate(180deg); }
 
-.app-body .flex-fill.route .home .notices .notice { padding: 15px; margin-bottom: 10px; border-radius: 4px; border-bottom: 0; }
+.app-body .flex-fill .home .appointments-card .header { background-color: #273142; }
 
-.app-body .flex-fill.route .home .notices .notice:nth-child(4n+1) { background-color: #fffaf3; }
+.app-body .flex-fill .home .appointments-card .header .title { color: #fff; }
 
-.app-body .flex-fill.route .home .notices .notice:nth-child(4n+2) { background-color: #fff9f9; }
+.app-body .flex-fill .home .appointments-card .items { max-height: 500px; }
 
-.app-body .flex-fill.route .home .notices .notice:nth-child(4n+3) { background-color: #f3fbff; }
+.app-body .flex-fill .home .appointments-card .items .appointment { padding: 12px; }
 
-.app-body .flex-fill.route .home .notices .notice:nth-child(4n+4) { background-color: #f3fbff; }
+.app-body .flex-fill .home .appointments-card .items .schedule { padding: 0; margin-right: 30px; }
 
-.app-body .flex-fill.route .home .notices .notice textarea { padding: 0; line-height: 1.5; background-color: transparent; }
+.app-body .flex-fill .home .appointments-card .items .schedule div { font-size: 13px; }
 
-.app-body .flex-fill.route .home .notices .user-name { font-weight: 700; }
+.app-body .flex-fill .home .appointments-card .items .schedule div:last-child:before { content: '-'; display: inline-block; vertical-align: middle; }
 
-.app-body .flex-fill.route .home .notices .buttons { position: relative; float: right; text-align: right; }
+.app-body .flex-fill .home .appointments-card .items .schedule .text-center { display: none; }
 
-.app-body .flex-fill.route .home .notices .buttons .more { position: absolute; right: 0; top: 0; padding: 5px; background-color: #fff; }
+.app-body .flex-fill .home .appointments-card .items .info div { padding: 1px 0; }
 
-.app-body .flex-fill.route .home .notices .buttons .more .btn { display: block; }
+.app-body .flex-fill .home .appointments-card .items .info .basic { font-weight: 700; }
 
-.app-body .flex-fill.route .home .notices .btn-more { display: inline-block; width: 20px; height: 20px; background-image: url("/crm/static/images/icon/ic-more.png"); background-repeat: no-repeat; background-size: 19px; background-position: right top; }
+.app-body .flex-fill .home .appointments-card .items .info .basic .lines-1 { width: auto; }
+
+.app-body .flex-fill .home .appointments-card .items .info .first-visit { width: 34px; height: 17px; margin-right: 5px; border-radius: 2px; border: solid 1px #4a90e2; background-color: rgba(74, 144, 226, 0.1); font-size: 12px; color: #0060ff; text-align: center; }
+
+.app-body .flex-fill .home .appointments-card .items .info .second-visit { width: 34px; height: 17px; margin-right: 5px; border-radius: 2px; border: solid 1px #9cb2cd; background-color: rgba(156, 178, 205, 0.1); font-size: 12px; color: #9cb2cd; text-align: center; }
+
+.app-body .flex-fill .home .appointments-card .items .info .new-patient { width: 34px; height: 17px; margin-right: 5px; border-radius: 2px; border: solid 1px #ff508c; background-color: rgba(255, 80, 140, 0.1); font-size: 12px; color: #ff508c; text-align: center; }
+
+.app-body .flex-fill .home .appointments-card .items .info .origin-patient { width: 34px; height: 17px; margin-right: 5px; border-radius: 2px; border: solid 1px #9cb2cd; background-color: rgba(156, 178, 205, 0.1); font-size: 12px; color: #9cb2cd; text-align: center; }
+
+.app-body .flex-fill .home .appointments-card .items .counselor-doctor.flex-wrap { margin-top: 11px; text-align: right; }
+
+.app-body .flex-fill .home .appointments-card.waiting .items { max-height: 800px; }
+
+.app-body .flex-fill .home .notices { padding-top: 25px; padding-left: 20px; padding-right: 20px; margin-bottom: 14px; }
+
+.app-body .flex-fill .home .notices .notice-items { padding: 0; border: 0; max-height: auto; }
+
+.app-body .flex-fill .home .notices .notices-empty { height: auto; padding: 50px; margin-bottom: 5px; background-color: #fffaf3; border-radius: 4px; }
+
+.app-body .flex-fill .home .notices .btn-wrt { padding: 12px 0 11px; color: #fff; font-weight: 700; background-color: #9cb2cd; }
+
+.app-body .flex-fill .home .notices .notice { padding: 15px; margin-bottom: 10px; border-radius: 4px; border-bottom: 0; }
+
+.app-body .flex-fill .home .notices .notice:nth-child(4n+1) { background-color: #fffaf3; }
+
+.app-body .flex-fill .home .notices .notice:nth-child(4n+2) { background-color: #fff9f9; }
+
+.app-body .flex-fill .home .notices .notice:nth-child(4n+3) { background-color: #f3fbff; }
+
+.app-body .flex-fill .home .notices .notice:nth-child(4n+4) { background-color: #f3fbff; }
+
+.app-body .flex-fill .home .notices .notice textarea.memo { min-height: 100px; padding: 0; line-height: 1.5; background-color: transparent; }
+
+.app-body .flex-fill .home .notices .user-name { font-weight: 700; }
+
+.app-body .flex-fill .home .notices .buttons { position: relative; float: right; text-align: right; }
+
+.app-body .flex-fill .home .notices .buttons .more { position: absolute; right: 0; top: 0; padding: 5px; background-color: #fff; }
+
+.app-body .flex-fill .home .notices .buttons .more .btn { display: block; }
+
+.app-body .flex-fill .home .notices .btn-more { display: inline-block; width: 20px; height: 20px; background-image: url("/crm/static/images/icon/ic-more.png"); background-repeat: no-repeat; background-size: 19px; background-position: right top; }
+
+.app-body .appointment-boards { z-index: 1; }
+
+.app-body .appointment-boards.route { padding: 0; height: 100%; min-height: 100%; background-color: #f3f8ff; }
+
+.app-body .appointment-boards.route:before { content: ''; position: fixed; left: 230px; bottom: 0; display: block; width: 340px; height: 100%; background-color: #ffffff; border-right: 1px solid #d7e3f1; z-index: 0; }
+
+.app-body .appointment-boards .left-panel { position: relative; padding: 20px 16px; }
+
+.app-body .appointment-boards .right-panel { position: relative; padding-left: 0; }
+
+.app-body .appointment-boards .right-panel .conditional-board { margin-left: -1px; padding-left: 20px; background-color: #f3f8ff; border-left: 1px solid #d7e3f1; }
+
+.app-body .react-datepicker { width: 100%; margin: 0 auto; border-radius: 0; border: 0; }
+
+.app-body .react-datepicker .react-datepicker__header { background-color: #fff; border-bottom: 0; }
+
+.app-body .react-datepicker .react-datepicker__month-container { width: 100%; }
+
+.app-body .react-datepicker .react-datepicker__month-container .react-datepicker__month { margin: 0; }
+
+.app-body .react-datepicker .react-datepicker__month-container .react-datepicker__day, .app-body .react-datepicker .react-datepicker__month-container .react-datepicker__day-name, .app-body .react-datepicker .react-datepicker__month-container .react-datepicker__time-name { width: calc(100% / 7); width: 36px; height: 36px; margin: 0 2px; font-size: 13px; font-weight: 600; line-height: 2.7; color: #9cb2cd; }
+
+.app-body .react-datepicker .react-datepicker__day.react-datepicker__day--selected { width: 36px; height: 36px; border-radius: 30px; background-color: #0060ff; color: #fff; }
+
+.app-body .right-panel .date-functions { float: left; max-width: 50%; }
 
 .app-body .right-panel .date-functions .btn { display: inline-block; min-width: 36px; height: 36px; border: solid 1px #dee2ec; background-color: #ffffff; }
 
@@ -224,9 +294,13 @@ html, body { overflow: auto; }
 
 .app-body .right-panel .date-functions .btn.btn-right { background-image: url("/crm/static/images/icon/arrow_2.png"); background-size: 7px; background-repeat: no-repeat; background-position: center center; }
 
-.app-body .right-panel .react-datepicker-wrapper { margin-right: 0; }
+.app-body .right-panel .react-datepicker-wrapper { margin-right: 0; margin-left: -8px; max-width: 140px; }
 
 .app-body .right-panel .react-datepicker-wrapper input { background-color: transparent; border: 0; font-size: 14px; font-weight: 600; }
+
+.app-body .right-panel .absence-info { float: right; max-width: 500px; height: 17px; margin-top: 15px; white-space: normal; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; font-weight: 500; text-align: right; }
+
+.app-body .right-panel .absence-info .ti { display: inline-block; margin-right: 10px; color: #9cb2cd; font-weight: inherit; }
 
 .app-body.login-body { top: 0; }
 
