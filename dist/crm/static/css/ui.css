@@ -1,24 +1,6 @@
 .app-body .flex-fill .home .right-panel > .header:after, .app-body .flex-fill .home .notices .notice .top:after { content: ""; display: block; clear: both; }
 
-* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-
-*, *:active, *:hover { outline: none !important; }
-
-:hover { transition: all 0.35s ease; }
-
-*:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-
-ol, ul { list-style: none; padding: 0; margin: 0; }
-
-ol li, ul li { list-style-type: none; }
-
-table { border-collapse: collapse; border-spacing: 0; width: 100%; }
-
-a { color: inherit; text-decoration: none; }
-
-body { color: #273142; font-size: 14px; line-height: normal; font-weight: 500; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-break: break-word; }
-
-html, body { overflow-y: hidden; }
+.app-body .flex-fill .home .right-panel > .header:after, .app-body .flex-fill .home .notices .notice .top:after { content: ""; display: block; clear: both; }
 
 @-webkit-keyframes autofill { to { color: #666;
     background: transparent; } }
@@ -56,6 +38,50 @@ input::-ms-clear { display: none; }
 ::-moz-placeholder { font-size: 14px; color: #9cb2cd !important; }
 
 ::-moz-placeholder { font-size: 14px; color: #9cb2cd !important; }
+
+.react-datepicker { width: 100%; margin: 0 auto; border-radius: 0; border: 0; }
+
+.react-datepicker .react-datepicker__header { background-color: #fff; border-bottom: 0; padding-top: 0; }
+
+.react-datepicker .react-datepicker__month-container { width: 100%; }
+
+.react-datepicker .react-datepicker__month-container .react-datepicker__current-month { font-size: 0; }
+
+.react-datepicker .react-datepicker__month-container .react-datepicker__header__dropdown { padding-bottom: 10px; }
+
+.react-datepicker .react-datepicker__month-container .react-datepicker__header__dropdown select { font-size: 17px !important; font-weight: 600; }
+
+.react-datepicker .react-datepicker__month-container .react-datepicker__month { margin: 0; }
+
+.react-datepicker .react-datepicker__month-container .react-datepicker__day, .react-datepicker .react-datepicker__month-container .react-datepicker__day-name, .react-datepicker .react-datepicker__month-container .react-datepicker__time-name { width: calc(100% / 7); width: 36px; height: 36px; margin: 0 2px; font-size: 13px; font-weight: 600; line-height: 2.7; color: #9cb2cd; }
+
+.react-datepicker .react-datepicker__day.react-datepicker__day--selected { width: 36px; height: 36px; border-radius: 30px; background-color: #0060ff; color: #fff; }
+
+.react-datepicker .react-datepicker__navigation { top: 2px; width: 28px; height: 28px; border-radius: 4px; border: solid 0.8px #dee2ec; background-color: #ffffff; background-size: 8px; background-repeat: no-repeat; background-position: center center; }
+
+.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--previous { background-image: url("/crm/static/images/icon/arrow.png"); }
+
+.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--next { background-image: url("/crm/static/images/icon/arrow_2.png"); }
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+*, *:active, *:hover { outline: none !important; }
+
+:hover { transition: all 0.35s ease; }
+
+*:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+ol, ul { list-style: none; padding: 0; margin: 0; }
+
+ol li, ul li { list-style-type: none; }
+
+table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+body { color: #273142; font-size: 14px; line-height: normal; font-weight: 500; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-break: break-word; }
+
+html, body { overflow-y: hidden; }
 
 /** layout **/
 .header-bar { z-index: 10; }
@@ -160,11 +186,29 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .flex-fill.route { min-height: 100%; height: 100%; background-color: #f3f8ff; padding: 0; }
 
-.app-body .flex-fill label.title { display: block; font-size: 17px; font-weight: 600; color: #273142; }
+.app-body .flex-fill label.title { display: block; margin-bottom: 20px; font-size: 17px; font-weight: 600; color: #273142; }
 
 .app-body .flex-fill .left-panel { width: 340px; min-height: 100%; padding-bottom: 60px; margin-right: 0; background-color: #ffffff; border-right: 1px solid #d7e3f1; }
 
 .app-body .flex-fill .right-panel { min-width: auto; height: 100%; min-height: 100%; padding: 17px 20px 20px; background-color: #f3f8ff; }
+
+.app-body .flex-fill .form-control { padding-top: 30px; margin-bottom: 14px; }
+
+.app-body .flex-fill .form-control > label { display: block; margin-bottom: 20px; font-size: 17px; font-weight: 600; color: #273142; }
+
+.app-body .flex-fill .form-control.filters .filter-wrap { display: flex; }
+
+.app-body .flex-fill .form-control.filters .filter { flex: 1; margin-right: 12px; margin-bottom: 0; }
+
+.app-body .flex-fill .form-control.filters .filter:last-child { margin-right: 0; }
+
+.app-body .flex-fill .form-control.filters .filter select { padding: 8px 5px 7px; }
+
+.app-body .flex-fill .form-control.appointments-find-by .flex-row { position: relative; }
+
+.app-body .flex-fill .form-control.appointments-find-by .flex-row input { padding-left: 45px; }
+
+.app-body .flex-fill .form-control.appointments-find-by .flex-row .btn-search { position: absolute; left: 18px; top: 50%; margin-top: -15px; width: 30px; height: 30px; background-image: url("/crm/static/images/icon/ic-search.png"); background-repeat: no-repeat; background-size: 19px; background-position: left  center; }
 
 .app-body .flex-fill .home { height: 100%; }
 
@@ -174,23 +218,7 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .flex-fill .home .flex-row.appointments-by-status { height: auto; min-height: auto; margin-top: 20px; }
 
-.app-body .flex-fill .home .form-control { padding-top: 25px; padding-left: 20px; padding-right: 20px; margin-bottom: 14px; }
-
-.app-body .flex-fill .home .form-control > label { display: block; font-size: 17px; font-weight: 600; color: #273142; }
-
-.app-body .flex-fill .home .form-control.filters .filter-wrap { display: flex; }
-
-.app-body .flex-fill .home .form-control.filters .filter { flex: 1; margin-right: 20px; }
-
-.app-body .flex-fill .home .form-control.filters .filter:last-child { margin-right: 0; }
-
-.app-body .flex-fill .home .form-control.filters .filter select { padding: 8px 10px 7px; }
-
-.app-body .flex-fill .home .form-control.appointments-find-by .flex-row { position: relative; }
-
-.app-body .flex-fill .home .form-control.appointments-find-by .flex-row input { padding-left: 45px; }
-
-.app-body .flex-fill .home .form-control.appointments-find-by .flex-row .btn-search { position: absolute; left: 18px; top: 50%; margin-top: -15px; width: 30px; height: 30px; background-image: url("/crm/static/images/icon/ic-search.png"); background-repeat: no-repeat; background-size: 19px; background-position: left  center; }
+.app-body .flex-fill .home .form-control { padding-left: 20px; padding-right: 20px; }
 
 .app-body .flex-fill .home .appointments-card { width: 310px; margin-bottom: 0; margin-right: 20px; }
 
@@ -270,21 +298,85 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .appointment-boards .left-panel { position: relative; padding: 20px 16px; }
 
-.app-body .appointment-boards .right-panel { position: relative; padding-left: 0; }
+.app-body .appointment-boards .right-panel { position: relative; padding: 20px 0 0; }
 
-.app-body .appointment-boards .right-panel .conditional-board { margin-left: -1px; padding-left: 20px; background-color: #f3f8ff; border-left: 1px solid #d7e3f1; }
+.app-body .appointment-boards .right-panel .route-top { position: absolute; top: 30px; right: 40px; margin-bottom: 0; }
 
-.app-body .react-datepicker { width: 100%; margin: 0 auto; border-radius: 0; border: 0; }
+.app-body .appointment-boards .right-panel .route-top .stats { font-size: 14px; }
 
-.app-body .react-datepicker .react-datepicker__header { background-color: #fff; border-bottom: 0; }
+.app-body .appointment-boards .right-panel .route-top .stats .ti { display: inline-block; margin-left: 5px; margin-right: 2px; color: #9cb2cd; }
 
-.app-body .react-datepicker .react-datepicker__month-container { width: 100%; }
+.app-body .appointment-boards .right-panel .header { padding-left: 20px; padding-bottom: 20px; }
 
-.app-body .react-datepicker .react-datepicker__month-container .react-datepicker__month { margin: 0; }
+.app-body .appointment-boards .right-panel .header .date-functions button { width: 46px; height: 36px; border: solid 1px #dee2ec; background-color: #ffffff; font-size: 14px; font-weight: 600; line-height: normal; box-shadow: none; }
 
-.app-body .react-datepicker .react-datepicker__month-container .react-datepicker__day, .app-body .react-datepicker .react-datepicker__month-container .react-datepicker__day-name, .app-body .react-datepicker .react-datepicker__month-container .react-datepicker__time-name { width: calc(100% / 7); width: 36px; height: 36px; margin: 0 2px; font-size: 13px; font-weight: 600; line-height: 2.7; color: #9cb2cd; }
+.app-body .appointment-boards .right-panel .header .date-functions button.selected { color: #000; font-weight: 700; }
 
-.app-body .react-datepicker .react-datepicker__day.react-datepicker__day--selected { width: 36px; height: 36px; border-radius: 30px; background-color: #0060ff; color: #fff; }
+.app-body .appointment-boards .right-panel .draggable.has-appointment { border-radius: 0; }
+
+.app-body .appointment-boards .right-panel .cell, .app-body .appointment-boards .right-panel .department-category-name { border-right: 1px solid #d7e3f1; border-bottom: 1px solid #d7e3f1; }
+
+.app-body .appointment-boards .right-panel .cell { background-color: #fff; }
+
+.app-body .appointment-boards .right-panel .department-category-name { font-size: 14px; font-weight: 600; color: #273142; }
+
+.app-body .appointment-boards .right-panel .department .cell { font-size: 12px; color: #273142; text-align: center; }
+
+.app-body .appointment-boards .right-panel .draggable .cell { font-size: 13px; }
+
+.app-body .appointment-boards .right-panel .draggable .cell:hover { box-shadow: none; -webkit-box-shadow: inset 0px 0px 0px 1px #273142; -moz-box-shadow: inset 0px 0px 0px 1px #273142; box-shadow: inset 0px 0px 0px 1px #273142; transition: none; }
+
+.app-body .appointment-boards .right-panel .status { border-radius: 6px; border: 1px solid; border-top-width: 3px; color: #273142; }
+
+.app-body .appointment-boards .right-panel .status.unvisited { background-color: #fff5ef; border-color: #ff9450; }
+
+.app-body .appointment-boards .right-panel .status.unvisited:hover { -webkit-box-shadow: inset 0px 0px 0px 1px #ff9450; -moz-box-shadow: inset 0px 0px 0px 1px #ff9450; box-shadow: inset 0px 0px 0px 1px #ff9450; transition: none; }
+
+.app-body .appointment-boards .right-panel .status.waiting { background-color: #ecfafa; border-color: #31d0d3; }
+
+.app-body .appointment-boards .right-panel .status.waiting:hover { -webkit-box-shadow: inset 0px 0px 0px 2px #31d0d3; -moz-box-shadow: inset 0px 0px 0px 2px #31d0d3; box-shadow: inset 0px 0px 0px 2px #31d0d3; }
+
+.app-body .appointment-boards .right-panel .status.scheduled { background-color: #f2f3ff; border-color: #897dff; }
+
+.app-body .appointment-boards .right-panel .status.scheduled:hover { -webkit-box-shadow: inset 0px 0px 0px 2px #f2f3ff; -moz-box-shadow: inset 0px 0px 0px 2px #f2f3ff; box-shadow: inset 0px 0px 0px 2px #f2f3ff; }
+
+.app-body .appointment-boards .right-panel .status.lunch { border-radius: 0; border: 0; background-color: rgba(74, 74, 74, 0.05); }
+
+.app-body .appointment-boards .right-panel .status.lunch:hover { box-shadow: none; }
+
+.app-body .appointment-boards .right-panel .status .status { border: 0; border-radius: 0; }
+
+.app-body .appointment-boards .right-panel .conditional-board { margin-left: -1px; padding-right: 40px; background-color: #f3f8ff; border-left: 1px solid #d7e3f1; }
+
+.app-body .appointment-boards .right-panel .conditional-board .table { border-left: 0; border-top: 1px solid #d7e3f1; }
+
+.app-body .appointment-boards .right-panel .conditional-board .table.leftmost .cell { padding: 19px 15px 0 0; font-size: 14px; font-weight: 600; text-align: right; color: #9cb2cd; }
+
+.app-body .appointment-boards .appointments-find-by { margin-bottom: 40px; }
+
+.app-body .appointment-boards .regions { display: block; grid-template-columns: auto; grid-gap: 0; max-height: 350px; margin-top: 0; overflow-y: auto; }
+
+.app-body .appointment-boards .regions .region { position: relative; margin-right: 0; padding: 12px 0; font-size: 14px !important; }
+
+.app-body .appointment-boards .regions .region:first-child { padding-top: 5px; }
+
+.app-body .appointment-boards .regions .region:first-child .box { top: 5px; }
+
+.app-body .appointment-boards .regions .region .box { position: absolute; right: 0; top: 10px; max-width: 19px; width: 19px; height: 19px; border-radius: 50%; margin-right: 10px; }
+
+.app-body .appointment-boards .regions .region .status.scheduled { background-color: #897dff; }
+
+.app-body .appointment-boards .regions .region .status.waiting { background-color: #31d0d3; }
+
+.app-body .appointment-boards .regions .region .status.unvisited { background-color: #ff9450; }
+
+.app-body .appointment-boards .regions .region .status.consulting { background-color: #13b0e0; }
+
+.app-body .appointment-boards .regions .region .status.treating { background-color: #0060ff; }
+
+.app-body .appointment-boards .regions .region .status.consulted { background-color: #ff508c; }
+
+.app-body .appointment-boards .regions .region .status.done { background-color: #484860; }
 
 .app-body .right-panel .date-functions { float: left; max-width: 50%; }
 
@@ -296,7 +388,9 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .right-panel .react-datepicker-wrapper { margin-right: 0; margin-left: -8px; max-width: 140px; }
 
-.app-body .right-panel .react-datepicker-wrapper input { background-color: transparent; border: 0; font-size: 14px; font-weight: 600; }
+.app-body .right-panel .react-datepicker-wrapper input { background-color: transparent; border: 0; padding: 0; font-size: 14px; font-weight: 600; }
+
+.app-body .right-panel .react-datepicker-wrapper input:focus { outline: none; box-shadow: none; }
 
 .app-body .right-panel .absence-info { float: right; max-width: 500px; height: 17px; margin-top: 15px; white-space: normal; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; font-weight: 500; text-align: right; }
 

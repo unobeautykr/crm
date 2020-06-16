@@ -185,7 +185,7 @@ left-navigation 마크업 및 클래스 수정
       <div class="flex-fill left-nav-opened route">
         <div class="appointment-boards route flex-row">
           <div class="left-panel flex-wrap">
-            <label class="title">메모</label>
+            <label class="title">캘린더</label>
             <div>
               <div class="react-datepicker">
                 <div class="react-datepicker__triangle"></div><button type="button" class="react-datepicker__navigation react-datepicker__navigation--previous" aria-label="Previous Month">Previous Month</button><button type="button"
@@ -194,7 +194,16 @@ left-navigation 마크업 및 클래스 수정
                   <div class="react-datepicker__header">
                     <div class="react-datepicker__current-month react-datepicker__current-month--hasYearDropdown react-datepicker__current-month--hasMonthDropdown">6월 2020</div>
                     <div class="react-datepicker__header__dropdown react-datepicker__header__dropdown--select">
-                      <div class="react-datepicker__month-dropdown-container react-datepicker__month-dropdown-container--select"><select class="react-datepicker__month-select">
+
+                      <div class="react-datepicker__year-dropdown-container react-datepicker__year-dropdown-container--select">
+                        <select class="react-datepicker__year-select">
+                          <option value="2020">2020년</option>
+                          <option value="1900">1900년</option>
+                          <option value="1901">1901년</option>
+                        </select>
+                      </div>
+                      <div class="react-datepicker__month-dropdown-container react-datepicker__month-dropdown-container--select">
+                        <select class="react-datepicker__month-select">
                           <option value="0">1월</option>
                           <option value="1">2월</option>
                           <option value="2">3월</option>
@@ -207,11 +216,8 @@ left-navigation 마크업 및 클래스 수정
                           <option value="9">10월</option>
                           <option value="10">11월</option>
                           <option value="11">12월</option>
-                        </select></div>
-                      <div class="react-datepicker__year-dropdown-container react-datepicker__year-dropdown-container--select"><select class="react-datepicker__year-select">
-                          <option value="1900">1900</option>
-                          <option value="1901">1901</option>
-                        </select></div>
+                        </select>
+                      </div>
                     </div>
                     <div class="react-datepicker__day-names">
                       <div class="react-datepicker__day-name">일</div>
@@ -276,43 +282,50 @@ left-navigation 마크업 및 클래스 수정
                 <div class="react-datepicker__today-button">오늘</div>
               </div>
             </div>
-            <div class="hr m-t-16 m-b-16"></div>
+            <!-- <div class="hr m-t-16 m-b-16"></div> 삭제 -->
             <div class="filters form-control">
               <label>필터</label>
-              <div class="filter">
-                <select>
-                  <option value="-1">전체 부서</option>
-                  <option value="0" class="">상담실1</option>
-                  <option value="1" class="">상담실2</option>
-                  <option value="2" class="">테스트</option>
-                  <option value="3" class="">상담실3</option>
-                  <option value="4" class=""></option>
-                </select>
+              <!-- add modi -->
+              <div class="filter-wrap">
+                <div class="filter">
+                  <select>
+                    <option value="-1">전체 부서</option>
+                    <option value="0" class="">상담실1</option>
+                    <option value="1" class="">상담실2</option>
+                    <option value="2" class="">테스트</option>
+                    <option value="3" class="">상담실3</option>
+                    <option value="4" class=""></option>
+                  </select>
+                </div>
+                <div class="filter">
+                  <select>
+                    <option value="-1">전체 상담사</option>
+                    <option value="0">상담이</option>
+                    <option value="1">강상담아</option>
+                    <option value="2">이상담</option>
+                    <option value="3">상담ㅎㅎ</option>
+                  </select>
+                </div>
+                <div class="filter">
+                  <select>
+                    <option value="-1">전체 의사</option>
+                    <option value="0">펜8</option>
+                  </select>
+                </div>
               </div>
-              <div class="filter">
-                <select>
-                  <option value="-1">전체 상담사</option>
-                  <option value="0">상담이</option>
-                  <option value="1">강상담아</option>
-                  <option value="2">이상담</option>
-                  <option value="3">상담ㅎㅎ</option>
-                </select>
-              </div>
-              <div class="filter">
-                <select>
-                  <option value="-1">전체 의사</option>
-                  <option value="0">펜8</option>
-                </select>
-              </div>
+              <!--// add modi -->
             </div>
-            <div class="hr m-t-16 m-b-16"></div>
-            <div class="appointments-find-by form-control"><label>예약 찾기</label>
+            <!-- <div class="hr m-t-16 m-b-16"></div> 삭제 -->
+            <div class="appointments-find-by form-control">
+              <label>검색</label>
               <div class="flex-row items-center">
                 <input class="flex-fill" placeholder="고객명, 차트번호, 전화번호" value="">
-                <button class="btn btn-primary btn-sm flex-wrap m-l-4">검색</button>
+                <button class="btn btn-search"><span class="a11y">검색</span></button> <!-- modi //-->
               </div>
             </div>
-            <div class="hr m-t-16 m-b-16"></div>
+            <!-- <div class="hr m-t-16 m-b-16"></div> 삭제 -->
+
+            <label class="title">상태</label>
             <div class="regions">
               <div class="region">
                 <div class="box status scheduled"></div>
@@ -354,17 +367,26 @@ left-navigation 마크업 및 클래스 수정
           </div>
           <div class="right-panel">
             <div class="route-top">
-              <div class="stats m-t-16 f-700 c-black">예약: 3 (초진 / 2 / 재진: 1, 취소: 0)</div>
+              <div class="stats"><span class="ti">예약</span>3 (<span class="ti">초진</span>2 <span class="ti">재진</span>1 <span class="ti">취소</span>0 )</div> <!-- modi //-->
             </div>
             <div class="header">
-              <div class="date-functions flex-row items-center"><button class="btn-primary"><i class="zmdi zmdi-chevron-left"></i></button>
+              <!-- modi -->
+              <div class="date-functions flex-row items-center">
+                <button class="selected">일</button>
+                <button class="">주</button>
+                <button class="">월</button>
+                <button>오늘</button>
+
+                <button class="btn-primary"><i class="zmdi zmdi-chevron-left"></i></button>
                 <div class="react-datepicker-wrapper">
                   <div class="react-datepicker__input-container"><input type="text" class="text-center" value="2020년 06월 15일"></div>
                 </div>
                 <div class="react-datepicker-wrapper">
                   <div class="react-datepicker__input-container"><input type="text" disabled="" class="text-center display-none" value="2020년 06월 16일"></div>
-                </div><button class="btn-primary"><i class="zmdi zmdi-chevron-right"></i></button><button class="selected">일</button><button class="">주</button><button class="">월</button><button>오늘</button>
+                </div>
+                <button class="btn-primary"><i class="zmdi zmdi-chevron-right"></i></button>
               </div>
+              <!--// modi -->
             </div>
             <div class="conditional-board day squeeze">
               <div class="context-menu overlay display-none">
