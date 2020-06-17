@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page head -->
+  @@include('../inc/pagehead.inc',{
+  })
+  <!--// page head -->
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+    <!-- header-bar & ui-header -->
+		@@include('../inc/header.inc',{
+		})
+    <!--// header-bar & ui-header -->
+
+    <!-- app-body & ui-body -->
+    <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
+      <!-- left navigation -->
+  		@@include('../inc/leftnavigation.inc',{
+  		})
+      <!--// left navigation -->
+
+
+      <div class="flex-fill left-nav-opened route">
+        <div class="list organizations">
+          <!-- <div class="route-top"><span class="title">조직 관리</span></div> modi 삭제, 위치 이동 //-->
+          <div class="card">
+            <div class="flex-row">
+              <div class="organizations-tree flex-wrap">
+                <div class="tree-title">조직도</div>
+                <div class="draggable-demo">
+                  <div class="draggable-container">
+                    <ul class="rc-tree" role="tree" unselectable="on">
+                      <li class="rc-tree-treenode-switcher-open" role="treeitem"><span class="rc-tree-switcher rc-tree-switcher_open"></span><span title="병원" class="rc-tree-node-content-wrapper rc-tree-node-content-wrapper-open"><span
+                            class="rc-tree-iconEle rc-tree-icon__customize"><a href="#" class="more ant-dropdown-link ant-dropdown-trigger"><span role="img" aria-label="down" class="anticon anticon-down"><svg viewBox="64 64 896 896" focusable="false"
+                                  class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                  <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
+                                </svg></span></a></span><span class="rc-tree-title">병원</span></span>
+                        <ul class="rc-tree-child-tree rc-tree-child-tree-open" data-expanded="true" role="group">
+                          <li class="rc-tree-treenode-switcher-open" role="treeitem"><span class="rc-tree-switcher rc-tree-switcher_open"></span><span title="페이스센터" class="rc-tree-node-content-wrapper rc-tree-node-content-wrapper-open"><span
+                                class="rc-tree-iconEle rc-tree-icon__customize"><a href="#" class="more ant-dropdown-link ant-dropdown-trigger"><span role="img" aria-label="down" class="anticon anticon-down"><svg viewBox="64 64 896 896"
+                                      focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                      <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
+                                    </svg></span></a></span><span class="rc-tree-title">페이스센터</span></span>
+                            <ul class="rc-tree-child-tree rc-tree-child-tree-open" data-expanded="true" role="group">
+                              <li class="rc-tree-treenode-switcher-open" role="treeitem"><span class="rc-tree-switcher rc-tree-switcher_open"></span><span title="마케팅실" class="rc-tree-node-content-wrapper rc-tree-node-content-wrapper-open"><span
+                                    class="rc-tree-iconEle rc-tree-icon__customize"><a href="#" class="more ant-dropdown-link ant-dropdown-trigger"><span role="img" aria-label="down" class="anticon anticon-down"><svg viewBox="64 64 896 896"
+                                          focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                          <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
+                                        </svg></span></a></span><span class="rc-tree-title">마케팅실</span></span>
+                                <ul class="rc-tree-child-tree rc-tree-child-tree-open" data-expanded="true" role="group">
+                                  <li class="rc-tree-treenode-switcher-open" role="treeitem"><span class="rc-tree-switcher rc-tree-switcher-noop"></span><span title="마케팅1팀"
+                                      class="rc-tree-node-content-wrapper rc-tree-node-content-wrapper-normal"><span class="rc-tree-iconEle rc-tree-icon__customize"><a href="#" class="more ant-dropdown-link ant-dropdown-trigger"><span role="img"
+                                            aria-label="down" class="anticon anticon-down"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                              <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
+                                            </svg></span></a></span><span class="rc-tree-title">마케팅1팀</span></span></li>
+                                  <li class="rc-tree-treenode-switcher-open" role="treeitem"><span class="rc-tree-switcher rc-tree-switcher-noop"></span><span title="마케팅2팀"
+                                      class="rc-tree-node-content-wrapper rc-tree-node-content-wrapper-normal"><span class="rc-tree-iconEle rc-tree-icon__customize"><a href="#" class="more ant-dropdown-link ant-dropdown-trigger"><span role="img"
+                                            aria-label="down" class="anticon anticon-down"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                              <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
+                                            </svg></span></a></span><span class="rc-tree-title">마케팅2팀</span></span></li>
+                                </ul>
+                              </li>
+                              <li class="rc-tree-treenode-switcher-close rc-tree-treenode-selected" role="treeitem"><span class="rc-tree-switcher rc-tree-switcher_close"></span><span title="상담실" class="rc-tree-node-content-wrapper rc-tree-node-content-wrapper-close rc-tree-node-selected"><span class="rc-tree-iconEle rc-tree-icon__customize"><a href="#" class="more ant-dropdown-link ant-dropdown-trigger"><span role="img" aria-label="down" class="anticon anticon-down"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span></a></span><span class="rc-tree-title">상담실</span></span></li>
+                            </ul>
+                          </li>
+                          <li class="rc-tree-treenode-switcher-open" role="treeitem"><span class="rc-tree-switcher rc-tree-switcher-noop"></span><span title="체형센터" class="rc-tree-node-content-wrapper rc-tree-node-content-wrapper-normal"><span
+                                class="rc-tree-iconEle rc-tree-icon__customize"><a href="#" class="more ant-dropdown-link ant-dropdown-trigger"><span role="img" aria-label="down" class="anticon anticon-down"><svg viewBox="64 64 896 896"
+                                      focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                      <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
+                                    </svg></span></a></span><span class="rc-tree-title">체형센터</span></span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="organizations-view">
+
+                <div class="page-navi"><span class="title">병원관리</span><span class="title">조직 관리</span></div> <!-- modi add //-->
+
+                <div class="organizations-list organ-section">
+                  <div class="search-bar">
+                    <div class="search-item title">구성원 목록</div>
+                    <div class="search-item"><input placeholder="이름" name="userName" value=""></div>
+                    <div class="search-item"><button class="btn-sm">검색</button></div>
+                  </div>
+                  <div class="data-area">
+                    <div class="data-table">
+                      <!-- <div class="top flex-row items-center flex-between m-b-16"></div> modi 삭제 해도 되는 영역이라면 삭제 -->
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>
+                              <div class="flex-row items-center"><span>소속 부서</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>이름</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>직무</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>직급</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>이메일(ID)</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>휴대폰 번호</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>내선번호</span></div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class=" row-0">
+                            <td>
+                              <div class="item-content center">상담실</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">펜8</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">의사</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">국장</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">1_8@gmail.com</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">2345678</div>
+                            </td>
+                            <td>
+                              <div class="item-content center"></div>
+                            </td>
+                          </tr>
+                          <tr class=" row-1">
+                            <td>
+                              <div class="item-content center">상담실</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">상담ㅎㅎ</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">상담사</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">과장</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">1_3@gmail.com</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">2341234</div>
+                            </td>
+                            <td>
+                              <div class="item-content center"></div>
+                            </td>
+                          </tr>
+                          <tr class=" row-2">
+                            <td>
+                              <div class="item-content center">상담실</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">이상담</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">상담사</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">병원장</div>
+                            </td>
+                            <td>
+                              <div class="item-content center">1_9@gmail.com</div>
+                            </td>
+                            <td>
+                              <div class="item-content center"></div>
+                            </td>
+                            <td>
+                              <div class="item-content center"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="empty">조회결과가 없습니다</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="organizations-detail organ-section flex-row">
+                  <div class="profile flex">
+                    <img class="img-cover m-a" alt="" src="http://post.phinf.naver.net/MjAyMDAzMjZfMTk2/MDAxNTg1MTgzNDM5NzI2.C-vOUeA7SE4n5aEPgMllGPZx7_qzn2iR9MSnWpQdwT0g.VnRFqhLquCSvOGpGWn8tuLKpltEWHi5Hx-pxyGTtz4wg.JPEG/ITaw-KyWnAdt42XX_C9QBduXLS04.jpg">
+                  </div>
+                  <div class="profile-data">
+                    <table>
+                      <colgroup>
+                        <col width="20%">
+                        <col width="30%">
+                        <col width="20%">
+                        <col width="30%">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>이름</th>
+                          <td>펜8</td>
+                          <th>생년월일</th>
+                          <td>1970-01-28</td>
+                        </tr>
+                        <tr>
+                          <th>직무</th>
+                          <td>의사</td>
+                          <th>직급</th>
+                          <td>국장</td>
+                        </tr>
+                        <tr>
+                          <th>전체부서</th>
+                          <td colspan="3">병원 &gt; 페이스센터 &gt; 상담실</td>
+                        </tr>
+                        <tr>
+                          <th>휴대폰 번호</th>
+                          <td>01012345678</td>
+                          <th>내선번호</th>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th>이메일(ID)</th>
+                          <td>test1_8@gmail.com</td>
+                          <th>입사일</th>
+                          <td>1970-01-28</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-wrapper">
+      <div class="toast  "></div>
+    </div>
+  </div>
+  <script>
+    ! function(e) {
+      function r(r) {
+        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
+        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
+        for (c && c(r); s.length;) s.shift()();
+        return u.push.apply(u, f || []), t()
+      }
+
+      function t() {
+        for (var e, r = 0; r < u.length; r++) {
+          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
+            var i = t[l];
+            0 !== o[i] && (n = !1)
+          }
+          n && (u.splice(r--, 1), e = a(a.s = t[0]))
+        }
+        return e
+      }
+      var n = {},
+        o = {
+          1: 0
+        },
+        u = [];
+
+      function a(r) {
+        if (n[r]) return n[r].exports;
+        var t = n[r] = {
+          i: r,
+          l: !1,
+          exports: {}
+        };
+        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
+      }
+      a.m = e, a.c = n, a.d = function(e, r, t) {
+        a.o(e, r) || Object.defineProperty(e, r, {
+          enumerable: !0,
+          get: t
+        })
+      }, a.r = function(e) {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+          value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+          value: !0
+        })
+      }, a.t = function(e, r) {
+        if (1 & r && (e = a(e)), 8 & r) return e;
+        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
+        var t = Object.create(null);
+        if (a.r(t), Object.defineProperty(t, "default", {
+            enumerable: !0,
+            value: e
+          }), 2 & r && "string" != typeof e)
+          for (var n in e) a.d(t, n, function(r) {
+            return e[r]
+          }.bind(null, n));
+        return t
+      }, a.n = function(e) {
+        var r = e && e.__esModule ? function() {
+          return e.default
+        } : function() {
+          return e
+        };
+        return a.d(r, "a", r), r
+      }, a.o = function(e, r) {
+        return Object.prototype.hasOwnProperty.call(e, r)
+      }, a.p = "/";
+      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
+        i = l.push.bind(l);
+      l.push = r, l = l.slice();
+      for (var f = 0; f < l.length; f++) r(l[f]);
+      var c = i;
+      t()
+    }([])
+  </script>
+  <script src="/static/js/2.48d9c0c9.chunk.js"></script>
+  <script src="/static/js/main.e021eb59.chunk.js"></script>
+</body>
+
+</html>

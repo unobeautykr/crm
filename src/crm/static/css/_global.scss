@@ -415,6 +415,7 @@ html, body {
           display: flex;
         }
         .filter {
+          position: relative;
           flex:1;
           margin-right:12px;
           margin-bottom:0;
@@ -424,6 +425,18 @@ html, body {
           select {
             padding:8px 5px 7px;
           }
+          // &:after {
+          //   content: '';
+          //   position: absolute;
+          //   top:37%;
+          //   right:10px;
+          //   border: solid black;
+          //   border-width: 0 1px 1px 0;
+          //   display: inline-block;
+          //   padding: 2px;
+          //   transform: rotate(45deg);
+          //   -webkit-transform: rotate(45deg);
+          // }
         }
       }
       &.appointments-find-by {
@@ -789,12 +802,23 @@ html, body {
         font-size: 14px;
         font-weight: 600;
         color: #273142;
+        &:hover {
+          box-shadow:none;
+        }
       }
       .department {
         .cell {
           font-size: 12px;
           color: #273142;
           text-align: center;
+          word-break: keep-all;
+          &:hover {
+            box-shadow:none;
+            -webkit-box-shadow:inset 0px 0px 0px 1px #273142;
+            -moz-box-shadow:inset 0px 0px 0px 1px #273142;
+            box-shadow:inset 0px 0px 0px 1px #273142;
+            transition: none;
+          }
         }
       }
       .draggable  {
@@ -802,7 +826,6 @@ html, body {
           font-size: 13px;
           &:hover {
             box-shadow:none;
-            // border:1px solid #273142;
             -webkit-box-shadow:inset 0px 0px 0px 1px #273142;
             -moz-box-shadow:inset 0px 0px 0px 1px #273142;
             box-shadow:inset 0px 0px 0px 1px #273142;
@@ -862,7 +885,23 @@ html, body {
         padding-right:40px;
         background-color: #f3f8ff;
         border-left:1px solid #d7e3f1;
-
+        overflow: hidden;
+        .current-timeline {
+          width:calc(100% - 40px);
+          background-color: #0060ff;
+          z-index: 1;
+          .now-time {
+            display: inline-block;
+            border-radius: 2px;
+            padding:2px 3px;
+            background-color: #0060ff;
+            font-size: 10px;
+            text-align: center;
+            color: #ffffff;
+            margin-top:-16px;
+            vertical-align: middle;
+          }
+        }
         .table {
           border-left:0;
           border-top: 1px solid #d7e3f1;
@@ -876,7 +915,7 @@ html, body {
             }
           }
         }
-      }
+      } //.conditional-board
     }
     .appointments-find-by {
       margin-bottom:40px;
@@ -930,9 +969,8 @@ html, body {
         .status.done {
           background-color: #484860;
         }
-
       }
-    }
+    } //.regions
   } //.appointment-boards
 
   .right-panel {
@@ -998,102 +1036,330 @@ html, body {
         font-weight: inherit;
       }
     }
-  }
+  } // .right-panel
+} //.app-body
 
-
-  &.login-body {
-    top:0;
-    .copyright {
-      margin-top:24.2%;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #273142;
-      text-align: center;
-      a {
-        font-size: inherit;
-        line-height: inherit;
-        color: inherit;
+.organizations {
+  height:100%;
+  min-height:100%;
+  // .route-top {display: none;}
+  .page-navi {
+    padding-bottom:20px;
+    .title {
+      &:after {
+        content: '>';
+        display: inline-block;
+        margin:0 8px;
       }
-    }
-    .logo {
-      width:379px;
-      height:242px;
-      margin:0 auto;
-      background: {
-        image:url('/crm/static/images/common/logo-unocarecrm.png');
-        size:379px;
-        repeat:no-repeat;
-        position: center 0;
-      }
-    }
-    .login {
-      background-color: #fff;
-      form button {
-        margin-top:0;
-        font-size: 18px;
-        height:auto;
-        line-height: inherit;
-        border-radius: inherit;
-      }
-      form button:not(.disabled) {
-        background-color: inherit;
-      }
-      .form-control {
-        .login-input-wrapper {
-          width: 460px;
-          height: 52px;
-          background-color: none;
-          border:0;
-          padding:0;
-          input {
-            display: block;
-            width: 460px;
-            // height: 52px;
-            padding:18px 30px 17px;
-            background-color: #f3f8ff;
-          }
-        }
-        .input-label {
+      &:last-child {
+        &:after {
           display: none;
         }
       }
-      .btn-login {
-        margin-top:14px;
-      }
-      .find-password {
-        display: block;
-        margin-top:46px;
-        margin-left: inherit;
-        font-size: 14px;
-        color: #273142;
-        text-align: center;
-        text-decoration: none;
-      }
-      .title-full {
-        flex:none;
-        padding:26px 0 23px;
-        font-size: 18px;
-        font-weight: 500;
-        border-bottom: 1px solid #d7e3f1;
-        text-align: center;
-      }
-      &._find {
-        color: #273142;
-        .form-control {
-          p {
-            padding-bottom:26px;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.45;
+    }
+  }
+  .card {
+    height:100%;
+    min-height:100%;
+    padding:0;
+    border-radius: 0;
+    box-shadow: none;
+    > .flex-row {
+      min-height:100%;
+    }
+  }
+  .organizations-tree {
+    min-width:340px;
+    padding:24px;
+    margin-right:0;
+    border-top:0;
+    .tree-title {
+      font-size: 17px;
+      color: #273142;
+      background-color: #fff;
+    }
+    .draggable-demo {
+      min-height:500px;
+      border-radius: 4px;
+      border: solid 1px #dee2ec;
+    }
+  }
+  .rc-tree {
+    padding:10px 20px;
+    li {
+      span.rc-tree-checkbox,
+      span.rc-tree-iconEle,
+      span.rc-tree-switcher {
+        width: 28px;
+        height: 28px;
+        background: {
+          image:url('/crm/static/images/icon/ic-folder-spread-m.png');
+          size:28px;
+          repeat:no-repeat;
+          position: left top -4px;
+        }
+        &.rc-tree-switcher_close {
+          background: {
+            image:url('/crm/static/images/icon/ic-folder-folding-m.png');
           }
         }
-      } //._find
-    } //.login
+      }
+
+      .rc-tree-node-content-wrapper {
+        width:calc(100% - 30px);
+        span.rc-tree-checkbox,
+        span.rc-tree-iconEle,
+        span.rc-tree-switcher {
+          background: {
+            image:url('/crm/static/images/icon/ic-tree-more.png');
+            size:19px;
+            repeat:no-repeat;
+            position: center top 25%;
+          }
+          .anticon {display: none;}
+        }
+      } //.rc-tree-node-content-wrapper
+      .rc-tree-node-content-wrapper {
+        height:52px;
+        font-size: 14px;
+      }
+      .rc-tree-child-tree {
+        span.rc-tree-checkbox,
+        span.rc-tree-iconEle,
+        span.rc-tree-switcher {
+          width: 28px;
+          height: 28px;
+          background: {
+            image:url('/crm/static/images/icon/ic-folder-spread-s.png');
+            size:28px;
+            repeat:no-repeat;
+            position: left top -6px;
+          }
+          &.rc-tree-switcher_close {
+            background: {
+              image:url('/crm/static/images/icon/ic-folder-folding-s.png');
+            }
+          }
+        }
+        .rc-tree-treenode-selected {
+          span.rc-tree-checkbox,
+          span.rc-tree-iconEle,
+          span.rc-tree-switcher {
+            &.rc-tree-switcher_close {
+              background: {
+                image:url('/crm/static/images/icon/ic-folder-folding-s_2.png');
+              }
+            }
+          }
+        } //.rc-tree-treenode-selected
+        .rc-tree-node-content-wrapper {
+          span.rc-tree-checkbox,
+          span.rc-tree-iconEle,
+          span.rc-tree-switcher {
+            background: {
+              image:url('/crm/static/images/icon/ic-tree-more.png');
+              size:19px;
+              repeat:no-repeat;
+              position: center top 25%;
+            }
+            .anticon {display: none;}
+          }
+        } //.rc-tree-node-content-wrapper
+      } //.rc-tree-child-tree
+      .rc-tree-node-selected {
+        background-color: #fff;
+        border: 0;
+        opacity: 1;
+        color: #0060ff;
+        font-weight: 700;
+      } //.rc-tree-node-selected
+    }
+  }
+} //.organizations
+.organizations-view {
+  padding:20px;
+  background-color: #f3f8ff;
+  .search-bar {
+    display: block;
+    .search-item {
+      display: inline-block;
+      input {
+        min-width:300px;
+        padding: 13px 15px 12px;
+        background-color: #fff;
+      }
+      .btn-sm {
+        width: 70px;
+        height: 46px;
+        border-radius: 4px;
+        border: solid 1px #dee2ec;
+        background-color: #ffffff;
+      }
+      &.title {
+        display: block;
+        padding-bottom:11px;
+        font-size: 17px;
+      }
+    }
+  }
+  .data-area {
+    max-height:inherit;
+  }
+  .data-table {
+    border-radius: 4px;
+    border: solid 1px #dee2ec;
+    th {
+      border-bottom:1px solid #d7e3f1;
+    }
+    th, td {
+      padding:17px 0;
+      .item-content {
+        padding:0;
+      }
+    }
+    .empty {
+      height:auto;
+      padding: 60px 0;
+      font-weight: 700;
+      background-color: #fff;
+    }
+  }
+  .organ-section {
+    height:auto;
+    background-color: #fff;
+    &.organizations-list {
+      background-color: transparent;
+    }
+  }
+  .organizations-detail {
+    .profile {
+      max-width:168px;
+      max-height:inherit;
+      min-height:222px;
+      margin-right:0;
+      border-right:0;
+      // padding:9px;
+      background: {
+        color: #eff6ff;
+        image:url('/crm/static/images/common/img-profile.png');
+        size:92px;
+        repeat:no-repeat;
+        position: center center;
+      }
+      img {
+        width:100%;
+        height:auto;
+        border:9px solid #fff;
+      }
+    }
+    .profile-data {
+      max-height:inherit;
+      min-height:222px;
+      th, td {
+        padding:17px 19px;
+      }
+      th {
+        background-color: #f9fbff;
+        color: #4a4f70;
+        font-weight: 400;
+        text-align: left;
+      }
+    }
+  }
+
+} //.organizations-view
 
 
-  } //&.login-body
 
-} //.app-body
+.login-body {
+  top:0;
+  .copyright {
+    margin-top:24.2%;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #273142;
+    text-align: center;
+    a {
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+  }
+  .logo {
+    width:379px;
+    height:242px;
+    margin:0 auto;
+    background: {
+      image:url('/crm/static/images/common/logo-unocarecrm.png');
+      size:379px;
+      repeat:no-repeat;
+      position: center 0;
+    }
+  }
+  .login {
+    background-color: #fff;
+    form button {
+      margin-top:0;
+      font-size: 18px;
+      height:auto;
+      line-height: inherit;
+      border-radius: inherit;
+    }
+    form button:not(.disabled) {
+      background-color: inherit;
+    }
+    .form-control {
+      .login-input-wrapper {
+        width: 460px;
+        height: 52px;
+        background-color: none;
+        border:0;
+        padding:0;
+        input {
+          display: block;
+          width: 460px;
+          // height: 52px;
+          padding:18px 30px 17px;
+          background-color: #f3f8ff;
+        }
+      }
+      .input-label {
+        display: none;
+      }
+    }
+    .btn-login {
+      margin-top:14px;
+    }
+    .find-password {
+      display: block;
+      margin-top:46px;
+      margin-left: inherit;
+      font-size: 14px;
+      color: #273142;
+      text-align: center;
+      text-decoration: none;
+    }
+    .title-full {
+      flex:none;
+      padding:26px 0 23px;
+      font-size: 18px;
+      font-weight: 500;
+      border-bottom: 1px solid #d7e3f1;
+      text-align: center;
+    }
+    &._find {
+      color: #273142;
+      .form-control {
+        p {
+          padding-bottom:26px;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 1.45;
+        }
+      }
+    } //._find
+  } //.login
+} //.login-body
 
 .modal-container {
   > div {
@@ -1145,7 +1411,7 @@ html, body {
     min-width:460px;
     max-width:480px;
   }
-}
+} //.modal-container
 
 
 @import "_response";

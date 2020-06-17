@@ -25,7 +25,9 @@ button._full, a._full { width: 100%; }
 
 button._small, a._small { min-width: 56px !important; padding: 9px 20px !important; font-size: 12.5px !important; font-weight: 700 !important; }
 
-select { border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
+select { -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 50px; padding: 8px 10px 7px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #fff; background-image: url("/crm/static/images/icon/ico_select.png"); background-size: 7px; background-repeat: no-repeat; background-position: right 10px center; }
+
+select::-ms-expand { display: none; }
 
 input:not([type=radio]):not([type=checkbox]), input.flex-fill, textarea { min-height: 10px; padding: 15px 15px 14px; border-radius: 4px; background-color: #f3f8ff; color: #000; }
 
@@ -45,23 +47,39 @@ input::-ms-clear { display: none; }
 
 .react-datepicker .react-datepicker__month-container { width: 100%; }
 
-.react-datepicker .react-datepicker__month-container .react-datepicker__current-month { font-size: 0; }
+.react-datepicker .react-datepicker__month-container .react-datepicker__current-month { padding-top: 5px; font-size: 17px; }
 
-.react-datepicker .react-datepicker__month-container .react-datepicker__header__dropdown { padding-bottom: 10px; }
+.react-datepicker .react-datepicker__month-container .react-datepicker__header__dropdown { padding-top: 14px; padding-bottom: 10px; }
 
-.react-datepicker .react-datepicker__month-container .react-datepicker__header__dropdown select { font-size: 17px !important; font-weight: 600; }
+.react-datepicker .react-datepicker__month-container .react-datepicker__header__dropdown select { min-width: 80px; font-size: 14px !important; font-weight: 600; }
 
 .react-datepicker .react-datepicker__month-container .react-datepicker__month { margin: 0; }
 
-.react-datepicker .react-datepicker__month-container .react-datepicker__day, .react-datepicker .react-datepicker__month-container .react-datepicker__day-name, .react-datepicker .react-datepicker__month-container .react-datepicker__time-name { width: calc(100% / 7); width: 36px; height: 36px; margin: 0 2px; font-size: 13px; font-weight: 600; line-height: 2.7; color: #9cb2cd; }
+.react-datepicker .react-datepicker__month-container .react-datepicker__day, .react-datepicker .react-datepicker__month-container .react-datepicker__day-name, .react-datepicker .react-datepicker__month-container .react-datepicker__time-name { width: calc(100% / 7); width: 36px; height: 36px; margin: 0 4px 0 1px; font-size: 13px; font-weight: 600; line-height: 2.7; color: #9cb2cd; }
 
 .react-datepicker .react-datepicker__day.react-datepicker__day--selected { width: 36px; height: 36px; border-radius: 30px; background-color: #0060ff; color: #fff; }
 
-.react-datepicker .react-datepicker__navigation { top: 2px; width: 28px; height: 28px; border-radius: 4px; border: solid 0.8px #dee2ec; background-color: #ffffff; background-size: 8px; background-repeat: no-repeat; background-position: center center; }
+.react-datepicker .react-datepicker__day:hover { width: 36px; height: 36px; border-radius: 30px; }
 
-.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--previous { background-image: url("/crm/static/images/icon/arrow.png"); }
+.react-datepicker .react-datepicker__navigation { top: 0; width: 28px !important; height: 28px !important; border-radius: 4px; border: solid 0.8px #dee2ec; background-color: #ffffff; background-size: 8px; background-repeat: no-repeat; background-position: center center; }
 
-.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--next { background-image: url("/crm/static/images/icon/arrow_2.png"); }
+.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--previous { left: 0; background-image: url("/crm/static/images/icon/arrow.png"); }
+
+.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--next { right: 0; background-image: url("/crm/static/images/icon/arrow_2.png"); }
+
+.react-datepicker-popper .react-datepicker__triangle { display: none; }
+
+.react-datepicker-popper .react-datepicker { width: 340px; padding: 26px 12px; box-shadow: 0 4px 8px 0 rgba(0, 96, 255, 0.15); }
+
+.react-datepicker-popper .react-datepicker .react-datepicker__navigation { top: 20px; }
+
+.react-datepicker-popper .react-datepicker .react-datepicker__navigation.react-datepicker__navigation--previous { left: 12px; }
+
+.react-datepicker-popper .react-datepicker .react-datepicker__navigation.react-datepicker__navigation--next { right: 12px; }
+
+.react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__current-month { font-size: 17px; font-weight: 600; }
+
+.react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__day, .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__day-name, .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__time-name { margin: 0 5px 0 4px; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
@@ -198,7 +216,7 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .flex-fill .form-control.filters .filter-wrap { display: flex; }
 
-.app-body .flex-fill .form-control.filters .filter { flex: 1; margin-right: 12px; margin-bottom: 0; }
+.app-body .flex-fill .form-control.filters .filter { position: relative; flex: 1; margin-right: 12px; margin-bottom: 0; }
 
 .app-body .flex-fill .form-control.filters .filter:last-child { margin-right: 0; }
 
@@ -320,7 +338,11 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .appointment-boards .right-panel .department-category-name { font-size: 14px; font-weight: 600; color: #273142; }
 
-.app-body .appointment-boards .right-panel .department .cell { font-size: 12px; color: #273142; text-align: center; }
+.app-body .appointment-boards .right-panel .department-category-name:hover { box-shadow: none; }
+
+.app-body .appointment-boards .right-panel .department .cell { font-size: 12px; color: #273142; text-align: center; word-break: keep-all; }
+
+.app-body .appointment-boards .right-panel .department .cell:hover { box-shadow: none; -webkit-box-shadow: inset 0px 0px 0px 1px #273142; -moz-box-shadow: inset 0px 0px 0px 1px #273142; box-shadow: inset 0px 0px 0px 1px #273142; transition: none; }
 
 .app-body .appointment-boards .right-panel .draggable .cell { font-size: 13px; }
 
@@ -346,7 +368,11 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .appointment-boards .right-panel .status .status { border: 0; border-radius: 0; }
 
-.app-body .appointment-boards .right-panel .conditional-board { margin-left: -1px; padding-right: 40px; background-color: #f3f8ff; border-left: 1px solid #d7e3f1; }
+.app-body .appointment-boards .right-panel .conditional-board { margin-left: -1px; padding-right: 40px; background-color: #f3f8ff; border-left: 1px solid #d7e3f1; overflow: hidden; }
+
+.app-body .appointment-boards .right-panel .conditional-board .current-timeline { width: calc(100% - 40px); background-color: #0060ff; z-index: 1; }
+
+.app-body .appointment-boards .right-panel .conditional-board .current-timeline .now-time { display: inline-block; border-radius: 2px; padding: 2px 3px; background-color: #0060ff; font-size: 10px; text-align: center; color: #ffffff; margin-top: -16px; vertical-align: middle; }
 
 .app-body .appointment-boards .right-panel .conditional-board .table { border-left: 0; border-top: 1px solid #d7e3f1; }
 
@@ -396,35 +422,117 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .right-panel .absence-info .ti { display: inline-block; margin-right: 10px; color: #9cb2cd; font-weight: inherit; }
 
-.app-body.login-body { top: 0; }
+.organizations { height: 100%; min-height: 100%; }
 
-.app-body.login-body .copyright { margin-top: 24.2%; font-size: 14px; line-height: 1.5; color: #273142; text-align: center; }
+.organizations .page-navi { padding-bottom: 20px; }
 
-.app-body.login-body .copyright a { font-size: inherit; line-height: inherit; color: inherit; }
+.organizations .page-navi .title:after { content: '>'; display: inline-block; margin: 0 8px; }
 
-.app-body.login-body .logo { width: 379px; height: 242px; margin: 0 auto; background-image: url("/crm/static/images/common/logo-unocarecrm.png"); background-size: 379px; background-repeat: no-repeat; background-position: center 0; }
+.organizations .page-navi .title:last-child:after { display: none; }
 
-.app-body.login-body .login { background-color: #fff; }
+.organizations .card { height: 100%; min-height: 100%; padding: 0; border-radius: 0; box-shadow: none; }
 
-.app-body.login-body .login form button { margin-top: 0; font-size: 18px; height: auto; line-height: inherit; border-radius: inherit; }
+.organizations .card > .flex-row { min-height: 100%; }
 
-.app-body.login-body .login form button:not(.disabled) { background-color: inherit; }
+.organizations .organizations-tree { min-width: 340px; padding: 24px; margin-right: 0; border-top: 0; }
 
-.app-body.login-body .login .form-control .login-input-wrapper { width: 460px; height: 52px; background-color: none; border: 0; padding: 0; }
+.organizations .organizations-tree .tree-title { font-size: 17px; color: #273142; background-color: #fff; }
 
-.app-body.login-body .login .form-control .login-input-wrapper input { display: block; width: 460px; padding: 18px 30px 17px; background-color: #f3f8ff; }
+.organizations .organizations-tree .draggable-demo { min-height: 500px; border-radius: 4px; border: solid 1px #dee2ec; }
 
-.app-body.login-body .login .form-control .input-label { display: none; }
+.organizations .rc-tree { padding: 10px 20px; }
 
-.app-body.login-body .login .btn-login { margin-top: 14px; }
+.organizations .rc-tree li span.rc-tree-checkbox, .organizations .rc-tree li span.rc-tree-iconEle, .organizations .rc-tree li span.rc-tree-switcher { width: 28px; height: 28px; background-image: url("/crm/static/images/icon/ic-folder-spread-m.png"); background-size: 28px; background-repeat: no-repeat; background-position: left top -4px; }
 
-.app-body.login-body .login .find-password { display: block; margin-top: 46px; margin-left: inherit; font-size: 14px; color: #273142; text-align: center; text-decoration: none; }
+.organizations .rc-tree li span.rc-tree-checkbox.rc-tree-switcher_close, .organizations .rc-tree li span.rc-tree-iconEle.rc-tree-switcher_close, .organizations .rc-tree li span.rc-tree-switcher.rc-tree-switcher_close { background-image: url("/crm/static/images/icon/ic-folder-folding-m.png"); }
 
-.app-body.login-body .login .title-full { flex: none; padding: 26px 0 23px; font-size: 18px; font-weight: 500; border-bottom: 1px solid #d7e3f1; text-align: center; }
+.organizations .rc-tree li .rc-tree-node-content-wrapper { width: calc(100% - 30px); }
 
-.app-body.login-body .login._find { color: #273142; }
+.organizations .rc-tree li .rc-tree-node-content-wrapper span.rc-tree-checkbox, .organizations .rc-tree li .rc-tree-node-content-wrapper span.rc-tree-iconEle, .organizations .rc-tree li .rc-tree-node-content-wrapper span.rc-tree-switcher { background-image: url("/crm/static/images/icon/ic-tree-more.png"); background-size: 19px; background-repeat: no-repeat; background-position: center top 25%; }
 
-.app-body.login-body .login._find .form-control p { padding-bottom: 26px; font-size: 18px; font-weight: 500; line-height: 1.45; }
+.organizations .rc-tree li .rc-tree-node-content-wrapper span.rc-tree-checkbox .anticon, .organizations .rc-tree li .rc-tree-node-content-wrapper span.rc-tree-iconEle .anticon, .organizations .rc-tree li .rc-tree-node-content-wrapper span.rc-tree-switcher .anticon { display: none; }
+
+.organizations .rc-tree li .rc-tree-node-content-wrapper { height: 52px; font-size: 14px; }
+
+.organizations .rc-tree li .rc-tree-child-tree span.rc-tree-checkbox, .organizations .rc-tree li .rc-tree-child-tree span.rc-tree-iconEle, .organizations .rc-tree li .rc-tree-child-tree span.rc-tree-switcher { width: 28px; height: 28px; background-image: url("/crm/static/images/icon/ic-folder-spread-s.png"); background-size: 28px; background-repeat: no-repeat; background-position: left top -6px; }
+
+.organizations .rc-tree li .rc-tree-child-tree span.rc-tree-checkbox.rc-tree-switcher_close, .organizations .rc-tree li .rc-tree-child-tree span.rc-tree-iconEle.rc-tree-switcher_close, .organizations .rc-tree li .rc-tree-child-tree span.rc-tree-switcher.rc-tree-switcher_close { background-image: url("/crm/static/images/icon/ic-folder-folding-s.png"); }
+
+.organizations .rc-tree li .rc-tree-child-tree .rc-tree-treenode-selected span.rc-tree-checkbox.rc-tree-switcher_close, .organizations .rc-tree li .rc-tree-child-tree .rc-tree-treenode-selected span.rc-tree-iconEle.rc-tree-switcher_close, .organizations .rc-tree li .rc-tree-child-tree .rc-tree-treenode-selected span.rc-tree-switcher.rc-tree-switcher_close { background-image: url("/crm/static/images/icon/ic-folder-folding-s_2.png"); }
+
+.organizations .rc-tree li .rc-tree-child-tree .rc-tree-node-content-wrapper span.rc-tree-checkbox, .organizations .rc-tree li .rc-tree-child-tree .rc-tree-node-content-wrapper span.rc-tree-iconEle, .organizations .rc-tree li .rc-tree-child-tree .rc-tree-node-content-wrapper span.rc-tree-switcher { background-image: url("/crm/static/images/icon/ic-tree-more.png"); background-size: 19px; background-repeat: no-repeat; background-position: center top 25%; }
+
+.organizations .rc-tree li .rc-tree-child-tree .rc-tree-node-content-wrapper span.rc-tree-checkbox .anticon, .organizations .rc-tree li .rc-tree-child-tree .rc-tree-node-content-wrapper span.rc-tree-iconEle .anticon, .organizations .rc-tree li .rc-tree-child-tree .rc-tree-node-content-wrapper span.rc-tree-switcher .anticon { display: none; }
+
+.organizations .rc-tree li .rc-tree-node-selected { background-color: #fff; border: 0; opacity: 1; color: #0060ff; font-weight: 700; }
+
+.organizations-view { padding: 20px; background-color: #f3f8ff; }
+
+.organizations-view .search-bar { display: block; }
+
+.organizations-view .search-bar .search-item { display: inline-block; }
+
+.organizations-view .search-bar .search-item input { min-width: 300px; padding: 13px 15px 12px; background-color: #fff; }
+
+.organizations-view .search-bar .search-item .btn-sm { width: 70px; height: 46px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
+
+.organizations-view .search-bar .search-item.title { display: block; padding-bottom: 11px; font-size: 17px; }
+
+.organizations-view .data-area { max-height: inherit; }
+
+.organizations-view .data-table { border-radius: 4px; border: solid 1px #dee2ec; }
+
+.organizations-view .data-table th { border-bottom: 1px solid #d7e3f1; }
+
+.organizations-view .data-table th, .organizations-view .data-table td { padding: 17px 0; }
+
+.organizations-view .data-table th .item-content, .organizations-view .data-table td .item-content { padding: 0; }
+
+.organizations-view .data-table .empty { height: auto; padding: 60px 0; font-weight: 700; background-color: #fff; }
+
+.organizations-view .organ-section { height: auto; background-color: #fff; }
+
+.organizations-view .organ-section.organizations-list { background-color: transparent; }
+
+.organizations-view .organizations-detail .profile { max-width: 168px; max-height: inherit; min-height: 222px; margin-right: 0; border-right: 0; background-color: #eff6ff; background-image: url("/crm/static/images/common/img-profile.png"); background-size: 92px; background-repeat: no-repeat; background-position: center center; }
+
+.organizations-view .organizations-detail .profile img { width: 100%; height: auto; border: 9px solid #fff; }
+
+.organizations-view .organizations-detail .profile-data { max-height: inherit; min-height: 222px; }
+
+.organizations-view .organizations-detail .profile-data th, .organizations-view .organizations-detail .profile-data td { padding: 17px 19px; }
+
+.organizations-view .organizations-detail .profile-data th { background-color: #f9fbff; color: #4a4f70; font-weight: 400; text-align: left; }
+
+.login-body { top: 0; }
+
+.login-body .copyright { margin-top: 24.2%; font-size: 14px; line-height: 1.5; color: #273142; text-align: center; }
+
+.login-body .copyright a { font-size: inherit; line-height: inherit; color: inherit; }
+
+.login-body .logo { width: 379px; height: 242px; margin: 0 auto; background-image: url("/crm/static/images/common/logo-unocarecrm.png"); background-size: 379px; background-repeat: no-repeat; background-position: center 0; }
+
+.login-body .login { background-color: #fff; }
+
+.login-body .login form button { margin-top: 0; font-size: 18px; height: auto; line-height: inherit; border-radius: inherit; }
+
+.login-body .login form button:not(.disabled) { background-color: inherit; }
+
+.login-body .login .form-control .login-input-wrapper { width: 460px; height: 52px; background-color: none; border: 0; padding: 0; }
+
+.login-body .login .form-control .login-input-wrapper input { display: block; width: 460px; padding: 18px 30px 17px; background-color: #f3f8ff; }
+
+.login-body .login .form-control .input-label { display: none; }
+
+.login-body .login .btn-login { margin-top: 14px; }
+
+.login-body .login .find-password { display: block; margin-top: 46px; margin-left: inherit; font-size: 14px; color: #273142; text-align: center; text-decoration: none; }
+
+.login-body .login .title-full { flex: none; padding: 26px 0 23px; font-size: 18px; font-weight: 500; border-bottom: 1px solid #d7e3f1; text-align: center; }
+
+.login-body .login._find { color: #273142; }
+
+.login-body .login._find .form-control p { padding-bottom: 26px; font-size: 18px; font-weight: 500; line-height: 1.45; }
 
 .modal-container > div { position: relative; padding: 30px; }
 
