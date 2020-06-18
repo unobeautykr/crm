@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page head -->
+  <meta charset="utf-8">
+<link rel="icon" href="/favicon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Web site created using create-react-app">
+<link rel="apple-touch-icon" href="/logo192.png">
+<link rel="manifest" href="/manifest.json">
+<title>CRM - 펜1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+<link href="/crm/static/css/base.css" rel="stylesheet">
+<link href="/crm/static/css/main.css" rel="stylesheet">
+<link href="/crm/static/css/ui.css" rel="stylesheet">
+
+  <!--// page head -->
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+    <!-- header-bar & ui-header -->
+		<!-- header-bar -->
+<div class="header-bar flex-row flex-between ui-header"> <!-- add class=ui-header //-->
+  <div class="header-items left flex-wrap">
+    <h1 class="title">바비톡 성형외과</h1>  <!--modi //-->
+    <button class="btn btn-close"><span class="a11y">사이드 닫기/열기</span></button>  <!--modi //-->
+  </div>
+  <div class="flex-row items-center flex-between flex-fill">
+    <div class="customer-search-bar flex-row items-center">
+      <input placeholder="고객명, 차트번호, 전화번호, 주민번호" class="flex-fill" value="">
+      <div class="buttons flex-row flex-wrap">
+        <button class="btn btn-accent m-l-8">검색</button>  <!--modi //-->
+        <button class="btn btn-accent m-l-8">고객등록</button>  <!--modi //-->
+      </div>
+    </div>
+    <div class="header-items right">
+      <div class="me _language">
+        <button class="btn btn-lang">언어변환</button>
+        <div class="lang">
+          <ul>
+            <li><a href="#">한글</a></li>
+            <li><a href="#">영문</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="me _sched">
+        <button class="btn btn-sched"><span class="alram"></span>부재일정확인</button>
+      </div>
+      <div class="me _info">
+        <p class="fig"></p>
+        <p>park</p>
+        <p class="email"><a href="mailto:test1@gmail.com">test1test1test1@gmail.com</a></p>
+      </div>
+      <div class="me _power">
+        <button class="btn btn-logout">로그아웃</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--// header-bar -->
+
+    <!--// header-bar & ui-header -->
+
+    <!-- app-body & ui-body -->
+    <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
+      <!-- left navigation -->
+  		<!--
+left-navigation 마크업 및 클래스 추가/수정
+//-->
+<div class="left-navigation flex flex-wrap ">
+  <div class="flex-wrap clinic-name">펜1</div>
+  <div class="ver-scroll flex-fill">
+    <div class="menu depth-0">
+      <div class="menu-item selected">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-home"></i>현황판 (홈)</span></div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-calender"></i>예약 캘린더</span></div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-consult"></i>상담문의 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">상담문의</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">담당자 배정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">연동설정</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-msg"></i>문자 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">문자 전송</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">문자 충전</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">전송내역 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">충전내역 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">문자코드 설정</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-inq"></i>조회</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">고객 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">예약 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">상담 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">진료 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">수납 조회</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-stat"></i>통계</span></div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-setting"></i>환경 설정</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">고객코드 설정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">예약캘린더 설정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">상담코드 설정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">수납코드 설정</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-hospital"></i>병원 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">조직 관리</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">직원 관리</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">병원 정보</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">펜차트 샘플함</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+left-navigation 마크업 및 클래스 수정
+//-->
+
+      <!--// left navigation -->
+
+      <div class="flex-fill left-nav-opened route">
+        <div class="list">
+          <div class="page-navi"><span class="title">병원관리</span><span class="title">펜차트 샘플함</span></div> <!-- modi add //-->
+          <div class="route-top">
+            <p>1. 본 페이지에서 파일 또는 폴더를 추가/수정/삭제 시, 우노뷰티 펜차트 앱의 '차트 샘플함'에 동시에 반영됩니다.</p>
+          </div>
+          <div class="card">
+            <div class="react-contextmenu-wrapper">
+              <div class="wrap-resource">
+                <div class="title"><span>홈</span></div>
+                <div class="wrap-folder">
+                  <div class="sub-title">폴더</div>
+                  <ul class="folder">
+                    <li class="" data-index="0" draggable="true">동의서</li>
+                    <li class="" data-index="1" draggable="true">상담차트</li>
+                    <li class="" data-index="2" draggable="true">진료차트</li>
+                  </ul>
+                </div>
+                <div class="wrap-file">
+                  <div class="sub-title">파일</div>
+                  <ul class="file">
+                    <li class="" data-index="3" draggable="true">
+                      <div class="thumb" draggable="false" style="background: url(&quot;&quot;);"></div>
+                      <p class="file-name">file_ee8</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <nav role="menu" tabindex="-1" class="react-contextmenu" style="position: fixed; opacity: 0; pointer-events: none;">
+              <div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false">폴더 생성</div>
+              <div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false">사진 업로드</div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="toast-wrapper">
+      <div class="toast success ">update</div>
+    </div>
+  </div>
+  <!-- <script>
+    ! function(e) {
+      function r(r) {
+        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
+        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
+        for (c && c(r); s.length;) s.shift()();
+        return u.push.apply(u, f || []), t()
+      }
+
+      function t() {
+        for (var e, r = 0; r < u.length; r++) {
+          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
+            var i = t[l];
+            0 !== o[i] && (n = !1)
+          }
+          n && (u.splice(r--, 1), e = a(a.s = t[0]))
+        }
+        return e
+      }
+      var n = {},
+        o = {
+          1: 0
+        },
+        u = [];
+
+      function a(r) {
+        if (n[r]) return n[r].exports;
+        var t = n[r] = {
+          i: r,
+          l: !1,
+          exports: {}
+        };
+        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
+      }
+      a.m = e, a.c = n, a.d = function(e, r, t) {
+        a.o(e, r) || Object.defineProperty(e, r, {
+          enumerable: !0,
+          get: t
+        })
+      }, a.r = function(e) {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+          value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+          value: !0
+        })
+      }, a.t = function(e, r) {
+        if (1 & r && (e = a(e)), 8 & r) return e;
+        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
+        var t = Object.create(null);
+        if (a.r(t), Object.defineProperty(t, "default", {
+            enumerable: !0,
+            value: e
+          }), 2 & r && "string" != typeof e)
+          for (var n in e) a.d(t, n, function(r) {
+            return e[r]
+          }.bind(null, n));
+        return t
+      }, a.n = function(e) {
+        var r = e && e.__esModule ? function() {
+          return e.default
+        } : function() {
+          return e
+        };
+        return a.d(r, "a", r), r
+      }, a.o = function(e, r) {
+        return Object.prototype.hasOwnProperty.call(e, r)
+      }, a.p = "/";
+      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
+        i = l.push.bind(l);
+      l.push = r, l = l.slice();
+      for (var f = 0; f < l.length; f++) r(l[f]);
+      var c = i;
+      t()
+    }([])
+  </script>
+  <script src="/static/js/2.48d9c0c9.chunk.js"></script>
+  <script src="/static/js/main.e021eb59.chunk.js"></script> -->
+</body>
+
+</html>

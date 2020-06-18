@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page head -->
+  @@include('../inc/pagehead.inc',{
+  })
+  <!--// page head -->
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+    <!-- header-bar & ui-header -->
+		@@include('../inc/header.inc',{
+		})
+    <!--// header-bar & ui-header -->
+
+    <!-- app-body & ui-body -->
+    <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
+      <!-- left navigation -->
+  		@@include('../inc/leftnavigation.inc',{
+  		})
+      <!--// left navigation -->
+
+      <div class="flex-fill left-nav-opened route">
+        <div class="list">
+          <div class="page-navi"><span class="title">병원관리</span><span class="title">펜차트 샘플함</span></div> <!-- modi add //-->
+          <div class="route-top">
+            <p>1. 본 페이지에서 파일 또는 폴더를 추가/수정/삭제 시, 우노뷰티 펜차트 앱의 '차트 샘플함'에 동시에 반영됩니다.</p>
+          </div>
+          <div class="card">
+            <div class="react-contextmenu-wrapper">
+              <div class="wrap-resource">
+                <div class="title"><span>홈</span></div>
+                <div class="wrap-folder">
+                  <div class="sub-title">폴더</div>
+                  <ul class="folder">
+                    <li class="" data-index="0" draggable="true">동의서</li>
+                    <li class="" data-index="1" draggable="true">상담차트</li>
+                    <li class="" data-index="2" draggable="true">진료차트</li>
+                  </ul>
+                </div>
+                <div class="wrap-file">
+                  <div class="sub-title">파일</div>
+                  <ul class="file">
+                    <li class="" data-index="3" draggable="true">
+                      <div class="thumb" draggable="false" style="background: url(&quot;&quot;);"></div>
+                      <p class="file-name">file_ee8</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <nav role="menu" tabindex="-1" class="react-contextmenu" style="position: fixed; opacity: 0; pointer-events: none;">
+              <div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false">폴더 생성</div>
+              <div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false">사진 업로드</div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="toast-wrapper">
+      <div class="toast success ">update</div>
+    </div>
+  </div>
+  <!-- <script>
+    ! function(e) {
+      function r(r) {
+        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
+        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
+        for (c && c(r); s.length;) s.shift()();
+        return u.push.apply(u, f || []), t()
+      }
+
+      function t() {
+        for (var e, r = 0; r < u.length; r++) {
+          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
+            var i = t[l];
+            0 !== o[i] && (n = !1)
+          }
+          n && (u.splice(r--, 1), e = a(a.s = t[0]))
+        }
+        return e
+      }
+      var n = {},
+        o = {
+          1: 0
+        },
+        u = [];
+
+      function a(r) {
+        if (n[r]) return n[r].exports;
+        var t = n[r] = {
+          i: r,
+          l: !1,
+          exports: {}
+        };
+        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
+      }
+      a.m = e, a.c = n, a.d = function(e, r, t) {
+        a.o(e, r) || Object.defineProperty(e, r, {
+          enumerable: !0,
+          get: t
+        })
+      }, a.r = function(e) {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+          value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+          value: !0
+        })
+      }, a.t = function(e, r) {
+        if (1 & r && (e = a(e)), 8 & r) return e;
+        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
+        var t = Object.create(null);
+        if (a.r(t), Object.defineProperty(t, "default", {
+            enumerable: !0,
+            value: e
+          }), 2 & r && "string" != typeof e)
+          for (var n in e) a.d(t, n, function(r) {
+            return e[r]
+          }.bind(null, n));
+        return t
+      }, a.n = function(e) {
+        var r = e && e.__esModule ? function() {
+          return e.default
+        } : function() {
+          return e
+        };
+        return a.d(r, "a", r), r
+      }, a.o = function(e, r) {
+        return Object.prototype.hasOwnProperty.call(e, r)
+      }, a.p = "/";
+      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
+        i = l.push.bind(l);
+      l.push = r, l = l.slice();
+      for (var f = 0; f < l.length; f++) r(l[f]);
+      var c = i;
+      t()
+    }([])
+  </script>
+  <script src="/static/js/2.48d9c0c9.chunk.js"></script>
+  <script src="/static/js/main.e021eb59.chunk.js"></script> -->
+</body>
+
+</html>

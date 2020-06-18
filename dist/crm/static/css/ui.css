@@ -9,6 +9,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .a11y { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
 
+.btnwrap { margin-bottom: 60px; }
+
 button { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px !important; }
 
 button.btn, a.btn { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px; }
@@ -40,6 +42,8 @@ input::-ms-clear { display: none; }
 ::-moz-placeholder { font-size: 14px; color: #9cb2cd !important; }
 
 ::-moz-placeholder { font-size: 14px; color: #9cb2cd !important; }
+
+input[type=radio] { vertical-align: middle; margin-top: -2px; margin-right: 10px; }
 
 .react-datepicker { width: 100%; margin: 0 auto; border-radius: 0; border: 0; }
 
@@ -80,6 +84,34 @@ input::-ms-clear { display: none; }
 .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__current-month { font-size: 17px; font-weight: 600; }
 
 .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__day, .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__day-name, .react-datepicker-popper .react-datepicker .react-datepicker__month-container .react-datepicker__time-name { margin: 0 5px 0 4px; }
+
+.modal { z-index: 10; }
+
+.modal .modal-container > div { position: relative; padding: 30px; }
+
+.modal .modal-container > div .buttons button { min-width: 60px; }
+
+.modal .modal-container i.zmdi-close { position: absolute; right: 25px; top: 30px; font-size: 0; }
+
+.modal .modal-container i.zmdi-close::before { content: ''; display: block; width: 16px; height: 16px; background-image: url("/crm/static/images/icon/ic-close.png"); background-size: 16px; background-repeat: no-repeat; background-position: 0 0; }
+
+.modal .modal-container .head { padding-bottom: 10px; }
+
+.modal .modal-container .head .title { font-size: 16px; font-weight: normal; letter-spacing: -0.08px; color: #000000; }
+
+.modal .modal-container .conts { min-height: 50px; line-height: 1.36; color: #5f6367; }
+
+.modal .modal-container .conts p { line-height: inherit; color: inherit; }
+
+.modal .modal-container.modal-findpwd { min-width: 460px; max-width: 480px; }
+
+.modal .modal-container .data-table { border-radius: 4px; border: solid 1px #dee2ec; }
+
+.modal .modal-container .data-table th, .modal .modal-container .data-table td { width: auto; padding: 17px 0; border-right: 0; color: #4a4f70; }
+
+.modal .modal-container .data-table th .item-content, .modal .modal-container .data-table td .item-content { padding: 0; }
+
+.modal .modal-container .data-table th:not(:last-child), .modal .modal-container .data-table td:not(:last-child) { border-right: 0; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
@@ -308,6 +340,8 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .flex-fill .home .notices .btn-more { display: inline-block; width: 20px; height: 20px; background-image: url("/crm/static/images/icon/ic-more.png"); background-repeat: no-repeat; background-size: 19px; background-position: right top; }
 
+.app-body .route > .detail .card .header .title { font-size: 17px; font-weight: 600; color: #273142; }
+
 .app-body .appointment-boards { z-index: 1; }
 
 .app-body .appointment-boards.route { padding: 0; height: 100%; min-height: 100%; background-color: #f3f8ff; }
@@ -422,17 +456,21 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .right-panel .absence-info .ti { display: inline-block; margin-right: 10px; color: #9cb2cd; font-weight: inherit; }
 
-.organizations { height: 100%; min-height: 100%; }
+.page-navi { padding-bottom: 20px; }
 
-.organizations .page-navi { padding-bottom: 20px; }
+.page-navi .title:after { content: '>'; display: inline-block; margin: 0 8px; }
 
-.organizations .page-navi .title:after { content: '>'; display: inline-block; margin: 0 8px; }
+.page-navi .title:last-child:after { display: none; }
 
-.organizations .page-navi .title:last-child:after { display: none; }
+.organizations { height: 100%; min-height: 100%; padding: 20px; }
+
+.organizations > .card { margin: -20px 0 0 -20px; }
 
 .organizations .card { height: 100%; min-height: 100%; padding: 0; border-radius: 0; box-shadow: none; }
 
 .organizations .card > .flex-row { min-height: 100%; }
+
+.organizations .card .card-title { font-size: 17px; }
 
 .organizations .organizations-tree { min-width: 340px; padding: 24px; margin-right: 0; border-top: 0; }
 
@@ -466,43 +504,195 @@ html, body { height: 100%; overflow: auto; }
 
 .organizations .rc-tree li .rc-tree-node-selected { background-color: #fff; border: 0; opacity: 1; color: #0060ff; font-weight: 700; }
 
-.organizations-view { padding: 20px; background-color: #f3f8ff; }
+.organizations .search-bar { position: relative; display: block; min-width: 1000px; max-width: 1240px; }
 
-.organizations-view .search-bar { display: block; }
+.organizations .search-bar .search-item { display: inline-block; }
 
-.organizations-view .search-bar .search-item { display: inline-block; }
+.organizations .search-bar .search-item input { min-width: 300px; padding: 13px 15px 12px; background-color: #fff; }
 
-.organizations-view .search-bar .search-item input { min-width: 300px; padding: 13px 15px 12px; background-color: #fff; }
+.organizations .search-bar .search-item select { min-width: 150px; height: 46px; color: #9cb2cd; font-size: 14px; }
 
-.organizations-view .search-bar .search-item .btn-sm { width: 70px; height: 46px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
+.organizations .search-bar .search-item button { font-size: 14px; }
 
-.organizations-view .search-bar .search-item.title { display: block; padding-bottom: 11px; font-size: 17px; }
+.organizations .search-bar .search-item .btn-sm { min-width: 70px; height: 46px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
+
+.organizations .search-bar .search-item .right { position: absolute; right: 0; bottom: 5px; }
+
+.organizations .search-bar .search-item .right .btn-sm { width: 124px; height: 34px; box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); background-color: #0060ff; color: #fff; }
+
+.organizations .search-bar .search-item.title { display: block; padding-bottom: 11px; font-size: 17px; }
+
+.organizations .data-table { min-width: 1000px; max-width: 1240px; border-radius: 4px; border: solid 1px #dee2ec; }
+
+.organizations .data-table tbody tr:nth-child(odd) { background-color: #fff; }
+
+.organizations .data-table tbody tr { background-color: #f9fbff; }
+
+.organizations .data-table th { color: #4a4f70; border-bottom: 1px solid #d7e3f1; }
+
+.organizations .data-table th, .organizations .data-table td { width: auto; padding: 17px 0; border-right: 0; }
+
+.organizations .data-table th .item-content, .organizations .data-table td .item-content { padding: 0; }
+
+.organizations .data-table th:not(:last-child), .organizations .data-table td:not(:last-child) { border-right: 0; }
+
+.organizations .data-table .empty { height: auto; padding: 60px 0; font-weight: 700; background-color: #fff; }
+
+.organizations-view { min-width: 1000px; padding: 20px; background-color: #f3f8ff; }
 
 .organizations-view .data-area { max-height: inherit; }
-
-.organizations-view .data-table { border-radius: 4px; border: solid 1px #dee2ec; }
-
-.organizations-view .data-table th { border-bottom: 1px solid #d7e3f1; }
-
-.organizations-view .data-table th, .organizations-view .data-table td { padding: 17px 0; }
-
-.organizations-view .data-table th .item-content, .organizations-view .data-table td .item-content { padding: 0; }
-
-.organizations-view .data-table .empty { height: auto; padding: 60px 0; font-weight: 700; background-color: #fff; }
 
 .organizations-view .organ-section { height: auto; background-color: #fff; }
 
 .organizations-view .organ-section.organizations-list { background-color: transparent; }
 
-.organizations-view .organizations-detail .profile { max-width: 168px; max-height: inherit; min-height: 222px; margin-right: 0; border-right: 0; background-color: #eff6ff; background-image: url("/crm/static/images/common/img-profile.png"); background-size: 92px; background-repeat: no-repeat; background-position: center center; }
+.organizations-view .organizations-detail { max-width: 1240px; }
 
-.organizations-view .organizations-detail .profile img { width: 100%; height: auto; border: 9px solid #fff; }
+.organizations-view .organizations-detail .profile { max-width: 168px; max-height: inherit; min-height: 222px; margin-right: 0; border-right: 0; background-color: #fff; padding: 9px; background-image: url("/crm/static/images/common/img-profile.png"); background-size: 92px; background-repeat: no-repeat; background-position: center center; }
+
+.organizations-view .organizations-detail .profile img { flex: none; min-width: 150px; width: 100%; height: auto; }
 
 .organizations-view .organizations-detail .profile-data { max-height: inherit; min-height: 222px; }
 
 .organizations-view .organizations-detail .profile-data th, .organizations-view .organizations-detail .profile-data td { padding: 17px 19px; }
 
 .organizations-view .organizations-detail .profile-data th { background-color: #f9fbff; color: #4a4f70; font-weight: 400; text-align: left; }
+
+.pagination { margin: 0 auto; padding: 36px 0; }
+
+.pagination .flex-row { display: inline-block; width: 100%; margin: 0 auto; text-align: center; }
+
+.pagination .page-icon { display: inline-block; height: auto; margin-right: 0; background-color: #fff; color: #a4b9d2; font-size: 14px; }
+
+.pagination .page-icon:not(:last-child) { margin-right: 0; }
+
+.pagination .page-icon.selected { background-color: #fff; font-weight: 600; color: #273142; }
+
+.organizations-staff .data-table { background-color: #fff; }
+
+.organizations-staff .data-table .checkbox { width: 16px; height: 16px; border-radius: 3px; border: solid 2px #d5d5d5; box-shadow: none; vertical-align: middle; }
+
+.organizations-staff .data-table table { min-width: 1000px; }
+
+.organizations-staff .data-table th { position: relative; }
+
+.organizations-staff .data-table th .checkbox { flex: none; display: inline-block; margin-left: 5px; }
+
+.organizations-staff .data-table td .item-content span { color: #0060ff; }
+
+.organizations-staff .data-table button { min-width: 50px; height: 22px; line-height: 21px; }
+
+.organizations-staff .data-table button.btn-edit { background-color: #2ed47a; }
+
+.organizations-staff .data-table button.btn-warning { background-color: #273142; }
+
+.organizations-staff .data-table button.btn-danger { background-color: #f7685b; }
+
+.organizations-staff .data-table button.btn-settings { background-color: #0060ff; }
+
+.organizations-staff .data-table .pagination { padding: 36px 0; }
+
+.organizations-staff .organ-section { height: auto; background-color: #fff; }
+
+.organizations-staff .organ-section.organizations-list { background-color: transparent; }
+
+.organizations-staff .organizations-detail { max-width: 1000px; margin-top: 20px; }
+
+.organizations-staff .organizations-detail .profile { max-width: 168px; max-height: inherit; min-height: 222px; margin-right: 0; border-right: 0; background-color: #fff; padding: 9px; background-image: url("/crm/static/images/common/img-profile.png"); background-size: 92px; background-repeat: no-repeat; background-position: center center; }
+
+.organizations-staff .organizations-detail .profile img { flex: none; min-width: 150px; width: 100%; height: auto; }
+
+.organizations-staff .organizations-detail .profile-data { max-height: inherit; min-height: 222px; }
+
+.organizations-staff .organizations-detail .profile-data th, .organizations-staff .organizations-detail .profile-data td { padding: 17px 19px; }
+
+.organizations-staff .organizations-detail .profile-data th { background-color: #f9fbff; color: #4a4f70; font-weight: 400; text-align: left; }
+
+.table-round { max-width: 850px; margin-bottom: 10px; border: 1px solid #dee2ec; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; background-color: #fff; }
+
+.organizations-users .card { max-width: 850px; background-color: transparent; }
+
+.organizations-users .card .card-title p { padding-top: 10px; }
+
+.organizations-users .card .card-title p button { min-width: 250px; padding: 15px 20px; border: solid 1px #dee2ec; color: #9cb2cd; font-weight: 400; text-align: left; background-color: #fff; background-image: url("/crm/static/images/icon/ico_select.png"); background-size: 7px; background-repeat: no-repeat; background-position: right 10px center; }
+
+.organizations-users .user-contents .card { margin-bottom: 33px !important; }
+
+.organizations-users .user-contents .card table { width: 100%; background-color: transparent; }
+
+.organizations-users .user-contents .card table th { padding-left: 19px; font-weight: 500; text-align: left; background-color: #f9fbff; }
+
+.organizations-users .user-contents .card table td { padding: 7px 18px; }
+
+.organizations-users .user-contents .card table td input:not([type=radio]):not([type=checkbox]), .organizations-users .user-contents .card table td input.flex-fill, .organizations-users .user-contents .card table td select { width: 80%; padding: 9px 20px; text-align: left; font-size: 14px; }
+
+.organizations-users .user-contents .card table tbody th, .organizations-users .user-contents .card table tbody td { background-color: transparent; }
+
+.organizations-users .user-contents .card table tr:first-child td { padding-top: 14px; }
+
+.organizations-users .user-contents .card table tr:last-child td { padding-bottom: 14px; }
+
+.organizations-users .user-contents .card table .menu-row { border-bottom: solid 1px #dee2ec; background-color: transparent; }
+
+.organizations-users .user-contents .card table .menu-row:last-child { border-bottom: 0; }
+
+.organizations-users .user-contents .card table .menu-row.open td { position: relative; }
+
+.organizations-users .user-contents .card table .menu-row.open td:after { content: ''; display: block; position: absolute; top: 45%; right: 20px; width: 10px; height: 10px; background-image: url("/crm/static/images/icon/ic-down-arrow.png"); background-size: 10px; background-repeat: no-repeat; background-position: 0 0; }
+
+.organizations-users .user-contents .card table .menu-row.close td { position: relative; }
+
+.organizations-users .user-contents .card table .menu-row.close td:after { content: ''; display: block; position: absolute; top: 35%; right: 20px; width: 10px; height: 10px; background-image: url("/crm/static/images/icon/ic-down-arrow.png"); background-size: 10px; background-repeat: no-repeat; background-position: 0 0; transform: rotate(-180deg); }
+
+.organizations-users .user-contents .card table .m-r-8 { margin-right: 20px !important; }
+
+.organizations-users .user-contents .organizations-input .profile { max-width: 168px; max-height: inherit; height: auto; min-height: auto; margin-right: 20px; }
+
+.organizations-users .user-contents .organizations-input .profile .pic { min-height: 222px; background-color: #fff; padding: 9px; margin-bottom: 10px; border-radius: 4px; border: solid 1px #dee2ec; background-image: url("/crm/static/images/common/img-profile.png"); background-size: 92px; background-repeat: no-repeat; background-position: center center; }
+
+.organizations-users .user-contents .organizations-input .profile .pic img { flex: none; min-width: 150px; width: 100%; height: auto; }
+
+.organizations-users .user-contents .organizations-input .profile button.btn.btn-primary { width: 100%; padding: 9px 0; box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); background-color: #0060ff; }
+
+.organizations-users .user-contents .organizations-input .profile p { padding-top: 15px; font-size: 12px; color: #9cb2cd; }
+
+.organizations-users .user-contents .auth-card table th, .organizations-users .user-contents .auth-card table td { padding: 17px 0; text-align: center; }
+
+.organizations-users .user-contents .auth-card table th { background-color: #fff; border-bottom: solid 1px #dee2ec; }
+
+.organizations-users .user-contents .auth-card table td { text-align: left; }
+
+.organizations-users .user-contents .auth-card table tbody th { border-bottom: 0; }
+
+.organizations-users .btnwrap { display: block; max-width: 850px; text-align: right; }
+
+.organizations-users .btnwrap .btn { flex: none; margin-right: 0 !important; margin-left: 8px; width: 84px; height: 34px; box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); color: #fff; }
+
+.organizations-users .btnwrap .btn.btn-cancel { background-color: #dee2ec; }
+
+.organizations-users .btnwrap .btn.btn-save { background-color: #0060ff; }
+
+.modal .modal-container .modal-frequently-authority { min-width: 580px; padding: 0; }
+
+.modal .modal-container .modal-frequently-authority .head { padding: 36px 40px 17px; border: solid 1px #d7e3f1; }
+
+.modal .modal-container .modal-frequently-authority .head .title { font-size: 22px; font-weight: 700; }
+
+.modal .modal-container .modal-frequently-authority .body { padding: 30px; }
+
+.modal .modal-container .modal-frequently-authority .buttons { padding: 30px; margin-top: 0; }
+
+.modal .modal-container .modal-frequently-authority .buttons .btn { box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); background-color: #0060ff; }
+
+.clinic-info { padding: 20px; }
+
+.clinic-info .card { max-width: 850px; background: transparent; padding: 24px 16px; border-radius: 0; box-shadow: none; }
+
+.clinic-info .card .table-round { padding: 10px 45px 25px; }
+
+.clinic-info .card .table-round .form-control > label { margin-bottom: 8px; font-size: 14px; }
+
+.clinic-info .card .table-round .form-control > div { max-width: 50%; padding: 9px 20px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #efeff4; }
 
 .login-body { top: 0; }
 
@@ -533,23 +723,5 @@ html, body { height: 100%; overflow: auto; }
 .login-body .login._find { color: #273142; }
 
 .login-body .login._find .form-control p { padding-bottom: 26px; font-size: 18px; font-weight: 500; line-height: 1.45; }
-
-.modal-container > div { position: relative; padding: 30px; }
-
-.modal-container > div .buttons button { min-width: 60px; }
-
-.modal-container i.zmdi-close { position: absolute; right: 25px; top: 30px; font-size: 0; }
-
-.modal-container i.zmdi-close::before { content: ''; display: block; width: 16px; height: 16px; background-image: url("/crm/static/images/icon/ic-close.png"); background-size: 16px; background-repeat: no-repeat; background-position: 0 0; }
-
-.modal-container .head { padding-bottom: 10px; }
-
-.modal-container .head .title { font-size: 16px; font-weight: normal; letter-spacing: -0.08px; color: #000000; }
-
-.modal-container .conts { min-height: 50px; line-height: 1.36; color: #5f6367; }
-
-.modal-container .conts p { line-height: inherit; color: inherit; }
-
-.modal-container.modal-findpwd { min-width: 460px; max-width: 480px; }
 
 @media (min-width: 481px) { .route.left-nav-opened { left: 230px; padding: 0; } }

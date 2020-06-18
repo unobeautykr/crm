@@ -1,377 +1,473 @@
-<html lang="en"><head><style type="text/css">
-.anticon {
-  display: inline-block;
-  color: inherit;
-  font-style: normal;
-  line-height: 0;
-  text-align: center;
-  text-transform: none;
-  vertical-align: -0.125em;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.anticon > * {
-  line-height: 1;
-}
-
-.anticon svg {
-  display: inline-block;
-}
-
-.anticon::before {
-  display: none;
-}
-
-.anticon .anticon-icon {
-  display: block;
-}
-
-.anticon[tabindex] {
-  cursor: pointer;
-}
-
-.anticon-spin::before,
-.anticon-spin {
-  display: inline-block;
-  -webkit-animation: loadingCircle 1s infinite linear;
-  animation: loadingCircle 1s infinite linear;
-}
-
-@-webkit-keyframes loadingCircle {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes loadingCircle {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-</style><meta charset="utf-8"><link rel="icon" href="/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="Web site created using create-react-app"><link rel="apple-touch-icon" href="/logo192.png"><link rel="manifest" href="/manifest.json"><title>CRM - 펜1</title><link href="/static/css/2.845fd876.chunk.css" rel="stylesheet"><link href="/static/css/main.78fb97cd.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="app"><div class="overlay left-navigation-overlay"></div><div class="header-bar flex-row flex-between"><div class="header-items left flex-wrap"><i class="zmdi zmdi-close"></i><div class="flex-wrap cursor-pointer">직원 관리</div></div><div class="flex-row items-center flex-between flex-fill"><div class="customer-search-bar flex-row items-center"><input placeholder="고객명, 차트번호, 전화번호, 주민번호" class="flex-fill" value=""><div class="buttons flex-row flex-wrap"><button class="btn btn-accent btn-sm m-l-8">조회</button><button class="btn btn-accent btn-sm m-l-8">신규고객등록</button></div></div><div class="header-items right"><button class="btn btn-accent btn-sm m-r-8">부재일정확인</button><div class="me m-r-16">park (test1@gmail.com)</div><i class="zmdi zmdi-font"></i><i class="zmdi zmdi-power"></i></div></div></div><div class="flex-row app-body "><div class="left-navigation flex flex-wrap "><div class="flex-wrap clinic-name">펜1</div><div class="ver-scroll flex-fill"><div class="menu depth-0"><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8"><i class="zmdi zmdi-check"></i></span><span class="text flex-fill">현황판 (홈)</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8"><i class="zmdi zmdi-check"></i></span><span class="text flex-fill">예약 캘린더</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8"><i class="zmdi zmdi-check"></i></span><span class="text flex-fill">상담문의 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div><div class="menu depth-1"><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">상담 문의</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">담당자 배정</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">연동설정</span></div></div></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8"><i class="zmdi zmdi-check"></i></span><span class="text flex-fill">문자 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div><div class="menu depth-1"><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">문자 전송</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">문자 충전</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">전송내역 조회</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">충전내역 조회</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">문자코드 설정</span></div></div></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8"><i class="zmdi zmdi-check"></i></span><span class="text flex-fill">조회</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div><div class="menu depth-1"><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">고객 조회</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">예약 조회</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">상담 조회</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">진료 조회</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">수납 조회</span></div></div></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8"><i class="zmdi zmdi-check"></i></span><span class="text flex-fill">환경 설정</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div><div class="menu depth-1"><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">고객코드 설정</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">예약캘린더 설정</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">상담코드 설정</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">수납코드 설정</span></div></div></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8"><i class="zmdi zmdi-check"></i></span><span class="text flex-fill">병원 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div><div class="menu depth-1"><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">조직 관리</span></div></div><div class="menu-item selected"><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">직원 관리</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">병원 정보</span></div></div><div class="menu-item "><div class="title flex-row"><span class="sharp flex-wrap m-r-8">-</span><span class="text flex-fill">펜차트 샘플함</span></div></div></div></div></div></div></div><div class="
-            flex-fill
-            left-nav-opened
-            route
-          "><div class="list organizations"><div class="route-top"><span class="title">직원 관리</span></div><div class="staff-list"><div class="search-bar"><div class="search-item m-r-8"><span>직원 목록</span></div><div class="search-item m-r-8"><input name="userName" placeholder="이름"></div><div class="search-item m-r-8"><select name="userStatus"><option value="">사용여부</option><option value="active">사용</option><option value="deactivated">미사용</option><option value="deleted">삭제</option></select></div><div class="search-item m-r-8"><button class="btn btn-primary btn-sm m-r-8">검색</button></div><div class="search-item"><div class="right"><button class="btn btn-primary btn-sm m-r-8">신규 등록</button></div></div></div><div class="data-table"><div class="top flex-row items-center flex-between m-b-16"></div><table><thead><tr><th><div class="flex-row items-center"><span></span></div></th><th><div class="flex-row items-center"><span>소속조직</span></div></th><th><div class="flex-row items-center"><span>이름</span></div></th><th><div class="flex-row items-center"><span>직무</span></div></th><th><div class="flex-row items-center"><span>직급</span></div></th><th><div class="flex-row items-center"><span>권한설정</span></div></th><th><div class="flex-row items-center"><span>상담문의 응대담당자</span></div><div class="checkbox  m-a "></div></th></tr></thead><tbody><tr class=" row-0"><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
-                    <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
-                    <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div></td><td><div class="item-content
-                        center
-
-
-
-                      ">상담실</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">펜8</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">의사</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">국장</div></td><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-sm btn-primary btn-settings ">설정</button></div></td><td><div class="checkbox checked m-a "><i class="zmdi zmdi-check"></i></div></td></tr><tr class=" row-1"><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button></div></td><td><div class="item-content
-                        center
-
-
-
-                      ">병원</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">park</div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "><span>owner</span></div></td><td><div class="checkbox checked m-a "><i class="zmdi zmdi-check"></i></div></td></tr><tr class=" row-2"><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
-                    <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
-                    <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div></td><td><div class="item-content
-                        center
-
-
-
-                      ">상담1팀</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">111</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">경영/지원</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">수간호사</div></td><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-sm btn-primary btn-settings ">설정</button></div></td><td><div class="checkbox  m-a "></div></td></tr><tr class=" row-3"><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
-                    <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
-                    <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div></td><td><div class="item-content
-                        center
-
-
-
-                      ">페이스센터</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">이헌</div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-sm btn-primary btn-settings ">설정</button></div></td><td><div class="checkbox  m-a "></div></td></tr><tr class=" row-4"><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
-                    <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
-                    <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div></td><td><div class="item-content
-                        center
-
-
-
-                      ">마케팅실</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">테스트1-2</div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-sm btn-primary btn-settings ">설정</button></div></td><td><div class="checkbox  m-a "></div></td></tr><tr class=" row-5"><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
-                    <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
-                    <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div></td><td><div class="item-content
-                        center
-
-
-
-                      ">상담실</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">상담ㅎㅎ</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">상담사</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">과장</div></td><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-sm btn-primary btn-settings ">설정</button></div></td><td><div class="checkbox checked m-a "><i class="zmdi zmdi-check"></i></div></td></tr><tr class=" row-6"><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
-                    <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
-                    <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div></td><td><div class="item-content
-                        center
-
-
-
-                      ">마케팅1팀</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">테스트1_4</div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-sm btn-primary btn-settings ">설정</button></div></td><td><div class="checkbox checked m-a "><i class="zmdi zmdi-check"></i></div></td></tr><tr class=" row-7"><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
-                    <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
-                    <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div></td><td><div class="item-content
-                        center
-
-
-
-                      ">마케팅2팀</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">테스트1_5</div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-sm btn-primary btn-settings ">설정</button></div></td><td><div class="checkbox checked m-a "><i class="zmdi zmdi-check"></i></div></td></tr><tr class=" row-8"><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
-                    <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
-                    <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div></td><td><div class="item-content
-                        center
-
-
-
-                      ">상담1팀</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">테스트1_6</div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-sm btn-primary btn-settings ">설정</button></div></td><td><div class="checkbox  m-a "></div></td></tr><tr class=" row-9"><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
-                    <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
-                    <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div></td><td><div class="item-content
-                        center
-
-
-
-                      ">상담2팀</div></td><td><div class="item-content
-                        center
-
-
-
-                      ">테스트1</div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "></div></td><td><div class="item-content
-                        center
-
-
-
-                      "><button class="btn btn-sm btn-primary btn-settings ">설정</button></div></td><td><div class="checkbox  m-a "></div></td></tr></tbody></table><div class="flex-row flex-between"><div class="pagination"><div class="flex-row items-center"><div class="page-icon flex-wrap selected">1</div><div class="page-icon flex-wrap ">2</div></div><div class="c-red f-medium m-t-16">1 / 2</div></div></div></div><div class="organizations-detail organ-section flex-row"><div class="profile flex"><img class="img-cover m-a" alt="" src="data:image/jpeg;base64,/9j/4QBcRXhpZgAASUkqAAgAAAABAJiCAgA3AAAAGgAAAAAAAAB3d3cuY2l0eWhlYWRzaG90cy5jb20gKGZyb20gJDE0OSkgICAgICAgICAgICAgICAgICAgICAAAAAA/+wAEUR1Y2t5AAEABAAAAGQAAP/hBFxodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wUmlnaHRzOk1hcmtlZD0iRmFsc2UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTY1QzMxOTIxQTYxMTFFODlDM0I5MkNGODNFMzA0NkYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTY1QzMxOTExQTYxMTFFODlDM0I5MkNGODNFMzA0NkYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0iNTBGNTlGRUMyNDI5QjBE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"></div><div class="profile-data"><table><colgroup><col width="20%"><col width="30%"><col width="20%"><col width="30%"></colgroup><tbody><tr><th>이름</th><td></td><th>생년월일</th><td></td></tr><tr><th>직무</th><td></td><th>직급</th><td></td></tr><tr><th>전체부서</th><td colspan="3"></td></tr><tr><th>휴대폰 번호</th><td></td><th>내선번호</th><td></td></tr><tr><th>이메일(ID)</th><td></td><th>입사일</th><td></td></tr></tbody></table></div></div></div></div></div></div><div class="toast-wrapper"><div class="toast  "></div></div></div><script>!function(e){function r(r){for(var n,a,l=r[0],i=r[1],f=r[2],p=0,s=[];p<l.length;p++)a=l[p],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&s.push(o[a][0]),o[a]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);for(c&&c(r);s.length;)s.shift()();return u.push.apply(u,f||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,l=1;l<t.length;l++){var i=t[l];0!==o[i]&&(n=!1)}n&&(u.splice(r--,1),e=a(a.s=t[0]))}return e}var n={},o={1:0},u=[];function a(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,a),t.l=!0,t.exports}a.m=e,a.c=n,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,r){if(1&r&&(e=a(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)a.d(t,n,function(r){return e[r]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="/";var l=this["webpackJsonpcarelabs-admin"]=this["webpackJsonpcarelabs-admin"]||[],i=l.push.bind(l);l.push=r,l=l.slice();for(var f=0;f<l.length;f++)r(l[f]);var c=i;t()}([])</script><script src="/static/js/2.48d9c0c9.chunk.js"></script><script src="/static/js/main.e021eb59.chunk.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page head -->
+  @@include('../inc/pagehead.inc',{
+  })
+  <!--// page head -->
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+    <!-- header-bar & ui-header -->
+		@@include('../inc/header.inc',{
+		})
+    <!--// header-bar & ui-header -->
+
+    <!-- app-body & ui-body -->
+    <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
+      <!-- left navigation -->
+  		@@include('../inc/leftnavigation.inc',{
+  		})
+      <!--// left navigation -->
+
+      <div class="flex-fill left-nav-opened route">
+        <div class="list organizations organizations-staff"> <!-- modi add class=organizations-staff //-->
+          <div class="page-navi"><span class="title">병원관리</span><span class="title">직원 관리</span></div> <!-- modi add //-->
+
+          <div class="staff-list">
+            <!-- modi -->
+            <div class="search-bar">
+              <div class="search-item title"><span>직원 목록</span></div>
+              <div class="search-item"><input name="userName" placeholder="이름"></div>
+              <div class="search-item">
+                <select name="userStatus">
+                  <option value="">사용여부</option>
+                  <option value="active">사용</option>
+                  <option value="deactivated">미사용</option>
+                  <option value="deleted">삭제</option>
+                </select>
+              </div>
+              <div class="search-item"><button class="btn-sm">검색</button></div>
+              <div class="search-item">
+                <div class="right"><button class="btn-sm">신규 등록</button></div>
+              </div>
+            </div>
+            <!--// modi -->
+            <div class="data-table">
+              <!-- <div class="top flex-row items-center flex-between m-b-16"></div> modi 삭제 해도 되는 영역이라면 삭제 -->
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span></span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>소속조직</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>이름</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>직무</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>직급</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>권한설정</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center">
+                        <span>상담문의 응대담당자 <div class="checkbox  m-a "></div></span> <!-- modi //-->
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td>
+                      <div class="item-content center"><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
+                        <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
+                        <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">상담실</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">펜8</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">의사</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">국장</div>
+                    </td>
+                    <td>
+                      <div class="item-content center"><button class="btn btn-sm btn-primary btn-settings ">설정</button></div>
+                    </td>
+                    <td>
+                      <div class="checkbox checked m-a "><i class="zmdi zmdi-check"></i></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td>
+                      <div class="item-content center"><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">병원</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">park</div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"><span>owner</span></div>
+                    </td>
+                    <td>
+                      <div class="checkbox checked m-a "><i class="zmdi zmdi-check"></i></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-2">
+                    <td>
+                      <div class="item-content center"><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
+                        <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
+                        <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">상담1팀</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">111</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">경영/지원</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">수간호사</div>
+                    </td>
+                    <td>
+                      <div class="item-content center"><button class="btn btn-sm btn-primary btn-settings ">설정</button></div>
+                    </td>
+                    <td>
+                      <div class="checkbox  m-a "></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-3">
+                    <td>
+                      <div class="item-content center"><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
+                        <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
+                        <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">페이스센터</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">이헌</div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"><button class="btn btn-sm btn-primary btn-settings ">설정</button></div>
+                    </td>
+                    <td>
+                      <div class="checkbox  m-a "></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-4">
+                    <td>
+                      <div class="item-content center"><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
+                        <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
+                        <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">마케팅실</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">테스트1-2</div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"><button class="btn btn-sm btn-primary btn-settings ">설정</button></div>
+                    </td>
+                    <td>
+                      <div class="checkbox  m-a "></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-5">
+                    <td>
+                      <div class="item-content center"><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
+                        <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
+                        <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">상담실</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">상담ㅎㅎ</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">상담사</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">과장</div>
+                    </td>
+                    <td>
+                      <div class="item-content center"><button class="btn btn-sm btn-primary btn-settings ">설정</button></div>
+                    </td>
+                    <td>
+                      <div class="checkbox checked m-a "><i class="zmdi zmdi-check"></i></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-6">
+                    <td>
+                      <div class="item-content center"><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
+                        <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
+                        <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">마케팅1팀</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">테스트1_4</div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"><button class="btn btn-sm btn-primary btn-settings ">설정</button></div>
+                    </td>
+                    <td>
+                      <div class="checkbox checked m-a "><i class="zmdi zmdi-check"></i></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-7">
+                    <td>
+                      <div class="item-content center"><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
+                        <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
+                        <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">마케팅2팀</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">테스트1_5</div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"><button class="btn btn-sm btn-primary btn-settings ">설정</button></div>
+                    </td>
+                    <td>
+                      <div class="checkbox checked m-a "><i class="zmdi zmdi-check"></i></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-8">
+                    <td>
+                      <div class="item-content center"><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
+                        <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
+                        <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">상담1팀</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">테스트1_6</div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"><button class="btn btn-sm btn-primary btn-settings ">설정</button></div>
+                    </td>
+                    <td>
+                      <div class="checkbox  m-a "></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-9">
+                    <td>
+                      <div class="item-content center"><button class="btn btn-primary btn-sm m-r-8 btn-edit">수정</button>
+                        <button class="btn btn-warning btn-sm m-r-8 btn-status">미사용</button>
+                        <button class="btn btn-danger btn-sm m-r-8 btn-delete">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">상담2팀</div>
+                    </td>
+                    <td>
+                      <div class="item-content center">테스트1</div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"></div>
+                    </td>
+                    <td>
+                      <div class="item-content center"><button class="btn btn-sm btn-primary btn-settings ">설정</button></div>
+                    </td>
+                    <td>
+                      <div class="checkbox  m-a "></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="flex-row flex-between">
+                <div class="pagination">
+                  <div class="flex-row items-center">
+                    <div class="page-icon flex-wrap selected">1</div>
+                    <div class="page-icon flex-wrap ">2</div>
+                  </div>
+                  <!-- <div class="c-red f-medium m-t-16">1 / 2</div> modi 삭제해도 되는 영역이면 삭제 //-->
+                </div>
+              </div>
+            </div>
+            <div class="organizations-detail organ-section flex-row">
+              <div class="profile flex">
+                <img class="img-cover m-a" alt="" src="http://blogfiles.naver.net/MjAxOTA5MjdfMjY1/MDAxNTY5NTEyNzUwOTc0.eOLBPAKz6G5tOHS0cZxioTsOtym3Zq0ZRmGmdEoeBxwg.6WraNZMuDj7SYdSgYQFOl5rRds6HKVHZUmTySs_Y7p8g.JPEG.gydms9539/IMG_0999.JPG">
+              </div>
+              <div class="profile-data">
+                <table>
+                  <colgroup>
+                    <col width="20%">
+                    <col width="30%">
+                    <col width="20%">
+                    <col width="30%">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>이름</th>
+                      <td>펜8</td>
+                      <th>생년월일</th>
+                      <td>1970-01-28</td>
+                    </tr>
+                    <tr>
+                      <th>직무</th>
+                      <td>의사</td>
+                      <th>직급</th>
+                      <td>국장</td>
+                    </tr>
+                    <tr>
+                      <th>전체부서</th>
+                      <td colspan="3">병원 &gt; 페이스센터 &gt; 상담실</td>
+                    </tr>
+                    <tr>
+                      <th>휴대폰 번호</th>
+                      <td>01012345678</td>
+                      <th>내선번호</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>이메일(ID)</th>
+                      <td>test1_8@gmail.com</td>
+                      <th>입사일</th>
+                      <td>1970-01-28</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-wrapper">
+      <div class="toast  "></div>
+    </div>
+  </div>
+  <!-- <script>
+    ! function(e) {
+      function r(r) {
+        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
+        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
+        for (c && c(r); s.length;) s.shift()();
+        return u.push.apply(u, f || []), t()
+      }
+
+      function t() {
+        for (var e, r = 0; r < u.length; r++) {
+          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
+            var i = t[l];
+            0 !== o[i] && (n = !1)
+          }
+          n && (u.splice(r--, 1), e = a(a.s = t[0]))
+        }
+        return e
+      }
+      var n = {},
+        o = {
+          1: 0
+        },
+        u = [];
+
+      function a(r) {
+        if (n[r]) return n[r].exports;
+        var t = n[r] = {
+          i: r,
+          l: !1,
+          exports: {}
+        };
+        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
+      }
+      a.m = e, a.c = n, a.d = function(e, r, t) {
+        a.o(e, r) || Object.defineProperty(e, r, {
+          enumerable: !0,
+          get: t
+        })
+      }, a.r = function(e) {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+          value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+          value: !0
+        })
+      }, a.t = function(e, r) {
+        if (1 & r && (e = a(e)), 8 & r) return e;
+        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
+        var t = Object.create(null);
+        if (a.r(t), Object.defineProperty(t, "default", {
+            enumerable: !0,
+            value: e
+          }), 2 & r && "string" != typeof e)
+          for (var n in e) a.d(t, n, function(r) {
+            return e[r]
+          }.bind(null, n));
+        return t
+      }, a.n = function(e) {
+        var r = e && e.__esModule ? function() {
+          return e.default
+        } : function() {
+          return e
+        };
+        return a.d(r, "a", r), r
+      }, a.o = function(e, r) {
+        return Object.prototype.hasOwnProperty.call(e, r)
+      }, a.p = "/";
+      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
+        i = l.push.bind(l);
+      l.push = r, l = l.slice();
+      for (var f = 0; f < l.length; f++) r(l[f]);
+      var c = i;
+      t()
+    }([])
+  </script>
+  <script src="/static/js/2.48d9c0c9.chunk.js"></script>
+  <script src="/static/js/main.e021eb59.chunk.js"></script> -->
+</body>
+
+</html>
