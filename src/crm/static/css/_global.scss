@@ -250,6 +250,9 @@ html, body {
       }
     }
   }
+  .btn {
+    box-shadow: none;
+  }
 }
 
 .err {
@@ -720,6 +723,12 @@ html, body {
       }
     }
   } //.route>.detail
+
+  .data-table {
+    .top.m-b-16 {
+      margin-bottom:0 !important;
+    }
+  }
 
   .appointment-boards {
     z-index: 1;
@@ -1194,7 +1203,7 @@ html, body {
         font-weight: 700;
       } //.rc-tree-node-selected
     }
-  }
+  } //.rc-tree
 
   .search-bar {
     position: relative;
@@ -1242,7 +1251,7 @@ html, body {
         font-size: 17px;
       }
     }
-  }
+  } //.search-bar
 
   .data-table {
     min-width:1000px;
@@ -1335,33 +1344,6 @@ html, body {
     }
   } //.organizations-detail
 } //.organizations-view
-
-.pagination {
-  margin:0 auto;
-  padding: 36px 0;
-  .flex-row {
-    display: inline-block;
-    width:100%;
-    margin:0 auto;
-    text-align: center;
-  }
-  .page-icon {
-    display: inline-block;
-    height:auto;
-    margin-right:0;
-    background-color: #fff;
-    color: #a4b9d2;
-    font-size: 14px;
-    &:not(:last-child) {
-      margin-right:0;
-    }
-    &.selected {
-      background-color: #fff;
-      font-weight: 600;
-      color: #273142;
-    }
-  }
-}
 
 .organizations-staff {
   // padding:20px;
@@ -1728,101 +1710,288 @@ html, body {
       }
     }
   }
-
-
 } //.clinic-info
 
-
-.login-body {
-  top:0;
-  .copyright {
-    margin-top:24.2%;
+// 환경설정
+.appointment-codes>div:not(:last-child),
+.consulting-codes>div:not(:last-child),
+.customer-codes>div:not(:last-child),
+.payment-codes>div:not(:last-child),
+.sms-notification-codes>div:not(:last-child),
+.treatment-codes>div:not(:last-child),
+.user-codes>div:not(:last-child) {
+  margin-bottom:30px;
+}
+.customer-codes, .appointment-codes, .consulting-codes, .payment-codes {
+  max-width:1006px;
+  padding:20px;
+  .page-navi {
+    border:0;
+    padding:0;
+  }
+  > div:not(.page-navi) {
+    padding:0;
+    border:0;
+    > .route-top {
+      margin-bottom:8px;
+      .title {
+        font-size: 17px !important;
+        margin-bottom:13px !important;
+      }
+    }
+  }
+  .btn-add {
+    width: 84px;
+    height: 34px;
+    box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1);
+    background-color: #0060ff;
     font-size: 14px;
-    line-height: 1.5;
-    color: #273142;
-    text-align: center;
-    a {
-      font-size: inherit;
-      line-height: inherit;
-      color: inherit;
+    font-weight: 600;
+  }
+  .route-top {
+    position: relative;
+    > .flex-row {
+      position: absolute;
+      right:0;
+      top:-8px;
     }
   }
-  .logo {
-    width:379px;
-    height:242px;
-    margin:0 auto;
-    background: {
-      image:url('/crm/static/images/common/logo-unocarecrm.png');
-      size:379px;
-      repeat:no-repeat;
-      position: center 0;
+  .data-table {
+    border-radius: 4px;
+    border: solid 1px #dee2ec;
+    background-color: #ffffff;
+    .btn {
+      min-width:44px;
+      padding-left:5px;
+      padding-right:5px;
+      line-height: 23px;
+      background-color: #273142;
+      &.btn-primary {
+        background-color: #2ed47a;
+      }
+    }
+    table {
+      th {
+        padding:17px 0;
+        color: #4a4f70;
+        border-bottom: solid 1px #dee2ec;
+        border-right:0;
+      }
+      td {
+        padding:10px 0;
+        background-color: #fff;
+        border-right:0;
+      }
     }
   }
-  .login {
-    background-color: #fff;
-    form button {
-      margin-top:0;
-      font-size: 18px;
-      height:auto;
-      line-height: inherit;
-      border-radius: inherit;
+}
+.customer-codes {
+  &:after {
+    content: '';
+    clear:both;
+    display: block;
+  }
+  .customer-change {
+    margin-bottom:40px !important;
+    .title {
+      font-size: 17px;
+      font-weight: 600;
+      padding-bottom:20px;
     }
-    form button:not(.disabled) {
-      background-color: inherit;
-    }
-    .form-control {
-      .login-input-wrapper {
-        width: 460px;
-        height: 52px;
-        background-color: none;
-        border:0;
-        padding:0;
-        input {
-          display: block;
-          width: 460px;
-          // height: 52px;
-          padding:18px 30px 17px;
-          background-color: #f3f8ff;
-        }
-      }
-      .input-label {
-        display: none;
-      }
-    }
-    .btn-login {
-      margin-top:14px;
-    }
-    .find-password {
-      display: block;
-      margin-top:46px;
-      margin-left: inherit;
-      font-size: 14px;
-      color: #273142;
-      text-align: center;
-      text-decoration: none;
-    }
-    .title-full {
-      flex:none;
-      padding:26px 0 23px;
-      font-size: 18px;
-      font-weight: 500;
-      border-bottom: 1px solid #d7e3f1;
-      text-align: center;
-    }
-    &._find {
-      color: #273142;
+    .data-table {
+      min-width:480px;
+      padding:25px;
       .form-control {
-        p {
-          padding-bottom:26px;
-          font-size: 18px;
-          font-weight: 500;
-          line-height: 1.45;
+        padding-top:0;
+        margin-bottom:0;
+      }
+      .radios {
+        .radio-item {
+          width:50%;
         }
       }
-    } //._find
-  } //.login
-} //.login-body
+      input[type=radio] {
+        flex:none;
+        width:auto;
+      }
+      .desc {
+        padding-top:14px;
+        padding-left:23px;
+        color: #4a4f70;
+      }
+    }
+    .help {
+      padding-left:23px;
+      color: rgba(74, 79, 112, 0.5);
+    }
+  }
+  // > div:not(.page-navi) {
+  div.cust-box {
+    float:left;
+    max-width:inherit;
+    width:calc((100% / 2) - 21px);
+    min-height:350px;
+    margin-right:21px;
+    margin-bottom:40px;
+    &:nth-child(2n+1) {
+      clear:left;
+    }
+    // &:nth-child(4) {
+    //   clear:left;
+    // }
+    // &:nth-child(6) {
+    //   clear:left;
+    // }
+    // &:nth-child(8) {
+    //   clear:left;
+    // }
+    // &:nth-child(8) {
+    //   clear:left;
+    // }
+    // &:nth-child(10) {
+    //   clear:left;
+    // }
+    .data-table {
+      min-height:350px;
+      table {
+        background-color: transparent;
+      }
+      tbody {
+        tr, td {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+} //.customer-codes
 
+.appointment-codes {
+  .route-top {
+    .flex-row {
+      .flex-row  {
+        flex: 1 1 auto;
+      }
+    }
+  }
+  .data-table {
+    tbody {
+      tr {
+        border-bottom:1px solid #dee2ec;
+        &:last-child {
+          border-bottom:0;
+        }
+      }
+    }
+  }
+  .department-categories {
+    .item-content {
+      > div  {
+        width:100%;
+      }
+      .flex-row.items-center {
+        width:80%;
+        > div {
+          width:calc(100% - 100px);
+        }
+      }
+    }
+  }
+  .appointment-time {
+    max-width:480px;
+    .route-top {
+      .flex-row {
+        .btn {
+          width: 84px;
+          height: 34px;
+          &.btn-warning {
+            background-color: #dee2ec;
+          }
+          &.btn-primary {
+            background-color: #0060ff;
+          }
+        }
+      }
+    }
+    .data-table {
+      padding:30px 20px;
+      .form-control {
+        position: relative;
+        padding-left:100px;
+        padding-top:0;
+        margin-bottom:24px;
+        > label {
+          position: absolute;
+          left:0;
+          top:30%;
+          font-size: 14px;
+        }
+        &:last-child {
+          margin-bottom:0;
+        }
+        select {
+          min-width:70px;
+          margin-left:5px;
+          margin-right:5px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+} //.appointment-codes
+
+.consulting-codes {
+  .results {
+    max-width:480px;
+  }
+} //.consulting-codes
+
+.modal .modal-container {
+  .head {
+    border-bottom: solid 1px #d7e3f1;
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+    }
+  }
+  .modal-department-category {
+    min-width:540px;
+    .form-control {
+      > label {
+        font-size: 14px;
+        font-weight: 700;
+        &:after {
+          color: #4a4f70;
+        }
+      }
+      input:not([type=radio]):not([type=checkbox]),
+      input.flex-fill {
+        width:calc(100% - 93px);
+        padding:7px 10px;
+        background-color: #fff;
+        font-size: 14px;
+      }
+      .btn-danger {
+        padding:8px 25px;
+        background-color: #fff;
+        border: solid 1px #dee2ec;
+        color: #9cb2cd;
+        // &:hover,
+        &.on {
+          background-color: #f7685b;
+          color:#fff;
+        }
+      }
+    }
+    .btn-primary.btn-block {
+      padding:9px 0;
+      background-color: #0060ff;
+      font-weight:700;
+    }
+    .buttons {
+      margin-top:60px;
+    }
+  }
+}
 
 
 @import "_response";

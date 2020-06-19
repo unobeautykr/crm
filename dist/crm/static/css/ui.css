@@ -13,7 +13,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 button { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px !important; }
 
-button.btn, a.btn { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px; }
+button.btn, a.btn { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px; background-color: #273142; box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); }
 
 button.btn-normal, a.btn-normal { font-size: 18px; font-weight: 700; padding: 21px 6px 20px; border: 1px solid #dee2ec !important; background-color: #ffffff; color: #1b73e8; }
 
@@ -87,6 +87,8 @@ input[type=radio] { vertical-align: middle; margin-top: -2px; margin-right: 10px
 
 .modal { z-index: 10; }
 
+.modal .modal-container { min-width: 400px; }
+
 .modal .modal-container > div { position: relative; padding: 30px; }
 
 .modal .modal-container > div .buttons button { min-width: 60px; }
@@ -95,7 +97,7 @@ input[type=radio] { vertical-align: middle; margin-top: -2px; margin-right: 10px
 
 .modal .modal-container i.zmdi-close::before { content: ''; display: block; width: 16px; height: 16px; background-image: url("/crm/static/images/icon/ic-close.png"); background-size: 16px; background-repeat: no-repeat; background-position: 0 0; }
 
-.modal .modal-container .head { padding-bottom: 10px; }
+.modal .modal-container .head { padding-bottom: 14px; }
 
 .modal .modal-container .head .title { font-size: 16px; font-weight: normal; letter-spacing: -0.08px; color: #000000; }
 
@@ -112,6 +114,50 @@ input[type=radio] { vertical-align: middle; margin-top: -2px; margin-right: 10px
 .modal .modal-container .data-table th .item-content, .modal .modal-container .data-table td .item-content { padding: 0; }
 
 .modal .modal-container .data-table th:not(:last-child), .modal .modal-container .data-table td:not(:last-child) { border-right: 0; }
+
+.modal .modal-container > div .buttons button.btn-default { background-color: #dee2ec; color: #ffffff; }
+
+.modal .modal-container > div .buttons button.btn-primary { background-color: #0060ff; }
+
+.login-body { top: 0; }
+
+.login-body .copyright { margin-top: 24.2%; font-size: 14px; line-height: 1.5; color: #273142; text-align: center; }
+
+.login-body .copyright a { font-size: inherit; line-height: inherit; color: inherit; }
+
+.login-body .logo { width: 379px; height: 242px; margin: 0 auto; background-image: url("/crm/static/images/common/logo-unocarecrm.png"); background-size: 379px; background-repeat: no-repeat; background-position: center 0; }
+
+.login-body .login { background-color: #fff; }
+
+.login-body .login form button { margin-top: 0; font-size: 18px; height: auto; line-height: inherit; border-radius: inherit; }
+
+.login-body .login form button:not(.disabled) { background-color: inherit; }
+
+.login-body .login .form-control .login-input-wrapper { width: 460px; height: 52px; background-color: none; border: 0; padding: 0; }
+
+.login-body .login .form-control .login-input-wrapper input { display: block; width: 460px; padding: 18px 30px 17px; background-color: #f3f8ff; }
+
+.login-body .login .form-control .input-label { display: none; }
+
+.login-body .login .btn-login { margin-top: 14px; }
+
+.login-body .login .find-password { display: block; margin-top: 46px; margin-left: inherit; font-size: 14px; color: #273142; text-align: center; text-decoration: none; }
+
+.login-body .login .title-full { flex: none; padding: 26px 0 23px; font-size: 18px; font-weight: 500; border-bottom: 1px solid #d7e3f1; text-align: center; }
+
+.login-body .login._find { color: #273142; }
+
+.login-body .login._find .form-control p { padding-bottom: 26px; font-size: 18px; font-weight: 500; line-height: 1.45; }
+
+.pagination { margin: 0 auto; padding: 36px 0; }
+
+.pagination .flex-row { display: inline-block; width: 100%; margin: 0 auto; text-align: center; }
+
+.pagination .page-icon { display: inline-block; height: auto; margin-right: 0; background-color: #fff; color: #a4b9d2; font-size: 14px; }
+
+.pagination .page-icon:not(:last-child) { margin-right: 0; }
+
+.pagination .page-icon.selected { background-color: #fff; font-weight: 600; color: #273142; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
@@ -191,6 +237,8 @@ html, body { overflow-y: hidden; }
 .header-bar .me._power { padding-left: 18px; padding-right: 18px; }
 
 .header-bar .me._power .btn-logout { position: relative; max-width: 63px; padding-top: 34px; font-size: 12px; color: #9cb2cd; background-color: #fff; background-image: url("/crm/static/images/icon/ic-logout.png"); background-size: 34px; background-repeat: no-repeat; background-position: center top; }
+
+.header-bar .btn { box-shadow: none; }
 
 .err { display: block; padding-top: 8px; text-align: right; font-size: 12px; font-weight: 500; color: #0060ff; }
 
@@ -341,6 +389,8 @@ html, body { height: 100%; overflow: auto; }
 .app-body .flex-fill .home .notices .btn-more { display: inline-block; width: 20px; height: 20px; background-image: url("/crm/static/images/icon/ic-more.png"); background-repeat: no-repeat; background-size: 19px; background-position: right top; }
 
 .app-body .route > .detail .card .header .title { font-size: 17px; font-weight: 600; color: #273142; }
+
+.app-body .data-table .top.m-b-16 { margin-bottom: 0 !important; }
 
 .app-body .appointment-boards { z-index: 1; }
 
@@ -558,16 +608,6 @@ html, body { height: 100%; overflow: auto; }
 
 .organizations-view .organizations-detail .profile-data th { background-color: #f9fbff; color: #4a4f70; font-weight: 400; text-align: left; }
 
-.pagination { margin: 0 auto; padding: 36px 0; }
-
-.pagination .flex-row { display: inline-block; width: 100%; margin: 0 auto; text-align: center; }
-
-.pagination .page-icon { display: inline-block; height: auto; margin-right: 0; background-color: #fff; color: #a4b9d2; font-size: 14px; }
-
-.pagination .page-icon:not(:last-child) { margin-right: 0; }
-
-.pagination .page-icon.selected { background-color: #fff; font-weight: 600; color: #273142; }
-
 .organizations-staff .data-table { background-color: #fff; }
 
 .organizations-staff .data-table .checkbox { width: 16px; height: 16px; border-radius: 3px; border: solid 2px #d5d5d5; box-shadow: none; vertical-align: middle; }
@@ -694,34 +734,112 @@ html, body { height: 100%; overflow: auto; }
 
 .clinic-info .card .table-round .form-control > div { max-width: 50%; padding: 9px 20px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #efeff4; }
 
-.login-body { top: 0; }
+.appointment-codes > div:not(:last-child), .consulting-codes > div:not(:last-child), .customer-codes > div:not(:last-child), .payment-codes > div:not(:last-child), .sms-notification-codes > div:not(:last-child), .treatment-codes > div:not(:last-child), .user-codes > div:not(:last-child) { margin-bottom: 30px; }
 
-.login-body .copyright { margin-top: 24.2%; font-size: 14px; line-height: 1.5; color: #273142; text-align: center; }
+.customer-codes, .appointment-codes, .consulting-codes, .payment-codes { max-width: 1006px; padding: 20px; }
 
-.login-body .copyright a { font-size: inherit; line-height: inherit; color: inherit; }
+.customer-codes .page-navi, .appointment-codes .page-navi, .consulting-codes .page-navi, .payment-codes .page-navi { border: 0; padding: 0; }
 
-.login-body .logo { width: 379px; height: 242px; margin: 0 auto; background-image: url("/crm/static/images/common/logo-unocarecrm.png"); background-size: 379px; background-repeat: no-repeat; background-position: center 0; }
+.customer-codes > div:not(.page-navi), .appointment-codes > div:not(.page-navi), .consulting-codes > div:not(.page-navi), .payment-codes > div:not(.page-navi) { padding: 0; border: 0; }
 
-.login-body .login { background-color: #fff; }
+.customer-codes > div:not(.page-navi) > .route-top, .appointment-codes > div:not(.page-navi) > .route-top, .consulting-codes > div:not(.page-navi) > .route-top, .payment-codes > div:not(.page-navi) > .route-top { margin-bottom: 8px; }
 
-.login-body .login form button { margin-top: 0; font-size: 18px; height: auto; line-height: inherit; border-radius: inherit; }
+.customer-codes > div:not(.page-navi) > .route-top .title, .appointment-codes > div:not(.page-navi) > .route-top .title, .consulting-codes > div:not(.page-navi) > .route-top .title, .payment-codes > div:not(.page-navi) > .route-top .title { font-size: 17px !important; margin-bottom: 13px !important; }
 
-.login-body .login form button:not(.disabled) { background-color: inherit; }
+.customer-codes .btn-add, .appointment-codes .btn-add, .consulting-codes .btn-add, .payment-codes .btn-add { width: 84px; height: 34px; box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); background-color: #0060ff; font-size: 14px; font-weight: 600; }
 
-.login-body .login .form-control .login-input-wrapper { width: 460px; height: 52px; background-color: none; border: 0; padding: 0; }
+.customer-codes .route-top, .appointment-codes .route-top, .consulting-codes .route-top, .payment-codes .route-top { position: relative; }
 
-.login-body .login .form-control .login-input-wrapper input { display: block; width: 460px; padding: 18px 30px 17px; background-color: #f3f8ff; }
+.customer-codes .route-top > .flex-row, .appointment-codes .route-top > .flex-row, .consulting-codes .route-top > .flex-row, .payment-codes .route-top > .flex-row { position: absolute; right: 0; top: -8px; }
 
-.login-body .login .form-control .input-label { display: none; }
+.customer-codes .data-table, .appointment-codes .data-table, .consulting-codes .data-table, .payment-codes .data-table { border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
 
-.login-body .login .btn-login { margin-top: 14px; }
+.customer-codes .data-table .btn, .appointment-codes .data-table .btn, .consulting-codes .data-table .btn, .payment-codes .data-table .btn { min-width: 44px; padding-left: 5px; padding-right: 5px; line-height: 23px; background-color: #273142; }
 
-.login-body .login .find-password { display: block; margin-top: 46px; margin-left: inherit; font-size: 14px; color: #273142; text-align: center; text-decoration: none; }
+.customer-codes .data-table .btn.btn-primary, .appointment-codes .data-table .btn.btn-primary, .consulting-codes .data-table .btn.btn-primary, .payment-codes .data-table .btn.btn-primary { background-color: #2ed47a; }
 
-.login-body .login .title-full { flex: none; padding: 26px 0 23px; font-size: 18px; font-weight: 500; border-bottom: 1px solid #d7e3f1; text-align: center; }
+.customer-codes .data-table table th, .appointment-codes .data-table table th, .consulting-codes .data-table table th, .payment-codes .data-table table th { padding: 17px 0; color: #4a4f70; border-bottom: solid 1px #dee2ec; border-right: 0; }
 
-.login-body .login._find { color: #273142; }
+.customer-codes .data-table table td, .appointment-codes .data-table table td, .consulting-codes .data-table table td, .payment-codes .data-table table td { padding: 10px 0; background-color: #fff; border-right: 0; }
 
-.login-body .login._find .form-control p { padding-bottom: 26px; font-size: 18px; font-weight: 500; line-height: 1.45; }
+.customer-codes:after { content: ''; clear: both; display: block; }
+
+.customer-codes .customer-change { margin-bottom: 40px !important; }
+
+.customer-codes .customer-change .title { font-size: 17px; font-weight: 600; padding-bottom: 20px; }
+
+.customer-codes .customer-change .data-table { min-width: 480px; padding: 25px; }
+
+.customer-codes .customer-change .data-table .form-control { padding-top: 0; margin-bottom: 0; }
+
+.customer-codes .customer-change .data-table .radios .radio-item { width: 50%; }
+
+.customer-codes .customer-change .data-table input[type=radio] { flex: none; width: auto; }
+
+.customer-codes .customer-change .data-table .desc { padding-top: 14px; padding-left: 23px; color: #4a4f70; }
+
+.customer-codes .customer-change .help { padding-left: 23px; color: rgba(74, 79, 112, 0.5); }
+
+.customer-codes div.cust-box { float: left; max-width: inherit; width: calc((100% / 2) - 21px); min-height: 350px; margin-right: 21px; margin-bottom: 40px; }
+
+.customer-codes div.cust-box:nth-child(2n+1) { clear: left; }
+
+.customer-codes div.cust-box .data-table { min-height: 350px; }
+
+.customer-codes div.cust-box .data-table table { background-color: transparent; }
+
+.customer-codes div.cust-box .data-table tbody tr, .customer-codes div.cust-box .data-table tbody td { background-color: transparent; }
+
+.appointment-codes .route-top .flex-row .flex-row { flex: 1 1 auto; }
+
+.appointment-codes .data-table tbody tr { border-bottom: 1px solid #dee2ec; }
+
+.appointment-codes .data-table tbody tr:last-child { border-bottom: 0; }
+
+.appointment-codes .department-categories .item-content > div { width: 100%; }
+
+.appointment-codes .department-categories .item-content .flex-row.items-center { width: 80%; }
+
+.appointment-codes .department-categories .item-content .flex-row.items-center > div { width: calc(100% - 100px); }
+
+.appointment-codes .appointment-time { max-width: 480px; }
+
+.appointment-codes .appointment-time .route-top .flex-row .btn { width: 84px; height: 34px; }
+
+.appointment-codes .appointment-time .route-top .flex-row .btn.btn-warning { background-color: #dee2ec; }
+
+.appointment-codes .appointment-time .route-top .flex-row .btn.btn-primary { background-color: #0060ff; }
+
+.appointment-codes .appointment-time .data-table { padding: 30px 20px; }
+
+.appointment-codes .appointment-time .data-table .form-control { position: relative; padding-left: 100px; padding-top: 0; margin-bottom: 24px; }
+
+.appointment-codes .appointment-time .data-table .form-control > label { position: absolute; left: 0; top: 30%; font-size: 14px; }
+
+.appointment-codes .appointment-time .data-table .form-control:last-child { margin-bottom: 0; }
+
+.appointment-codes .appointment-time .data-table .form-control select { min-width: 70px; margin-left: 5px; margin-right: 5px; font-size: 14px; }
+
+.consulting-codes .results { max-width: 480px; }
+
+.modal .modal-container .head { border-bottom: solid 1px #d7e3f1; }
+
+.modal .modal-container .head .title { font-size: 22px; font-weight: 700; }
+
+.modal .modal-container .modal-department-category { min-width: 540px; }
+
+.modal .modal-container .modal-department-category .form-control > label { font-size: 14px; font-weight: 700; }
+
+.modal .modal-container .modal-department-category .form-control > label:after { color: #4a4f70; }
+
+.modal .modal-container .modal-department-category .form-control input:not([type=radio]):not([type=checkbox]), .modal .modal-container .modal-department-category .form-control input.flex-fill { width: calc(100% - 93px); padding: 7px 10px; background-color: #fff; font-size: 14px; }
+
+.modal .modal-container .modal-department-category .form-control .btn-danger { padding: 8px 25px; background-color: #fff; border: solid 1px #dee2ec; color: #9cb2cd; }
+
+.modal .modal-container .modal-department-category .form-control .btn-danger.on { background-color: #f7685b; color: #fff; }
+
+.modal .modal-container .modal-department-category .btn-primary.btn-block { padding: 9px 0; background-color: #0060ff; font-weight: 700; }
+
+.modal .modal-container .modal-department-category .buttons { margin-top: 60px; }
 
 @media (min-width: 481px) { .route.left-nav-opened { left: 230px; padding: 0; } }
