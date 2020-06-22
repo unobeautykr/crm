@@ -1712,6 +1712,36 @@ html, body {
   }
 } //.clinic-info
 
+.data-table {
+  padding:0 0 10px;
+  border-radius: 4px;
+  border: solid 1px #dee2ec;
+  background-color: #ffffff;
+  .btn {
+    min-width:44px;
+    padding-left:5px;
+    padding-right:5px;
+    line-height: 23px;
+    background-color: #273142;
+    &.btn-primary {
+      background-color: #2ed47a;
+    }
+  }
+  table {
+    th {
+      padding:17px 0;
+      color: #4a4f70;
+      border-bottom: solid 1px #dee2ec;
+      border-right:0;
+    }
+    td {
+      padding:10px 0;
+      background-color: #fff;
+      border-right:0;
+    }
+  }
+}
+
 // 환경설정
 .appointment-codes>div:not(:last-child),
 .consulting-codes>div:not(:last-child),
@@ -1743,7 +1773,6 @@ html, body {
   .btn-add {
     width: 84px;
     height: 34px;
-    box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1);
     background-color: #0060ff;
     font-size: 14px;
     font-weight: 600;
@@ -1756,38 +1785,38 @@ html, body {
       top:-8px;
     }
   }
-  .data-table {
-    padding:0 0 10px;
-    border-radius: 4px;
-    border: solid 1px #dee2ec;
-    background-color: #ffffff;
-    .btn {
-      min-width:44px;
-      padding-left:5px;
-      padding-right:5px;
-      line-height: 23px;
-      background-color: #273142;
-      &.btn-primary {
-        background-color: #2ed47a;
-      }
-    }
-    table {
-      // tbody {
-      //   padding-top:15px;
-      // }
-      th {
-        padding:17px 0;
-        color: #4a4f70;
-        border-bottom: solid 1px #dee2ec;
-        border-right:0;
-      }
-      td {
-        padding:10px 0;
-        background-color: #fff;
-        border-right:0;
-      }
-    }
-  }
+  // .data-table {
+  //   padding:0 0 10px;
+  //   border-radius: 4px;
+  //   border: solid 1px #dee2ec;
+  //   background-color: #ffffff;
+  //   .btn {
+  //     min-width:44px;
+  //     padding-left:5px;
+  //     padding-right:5px;
+  //     line-height: 23px;
+  //     background-color: #273142;
+  //     &.btn-primary {
+  //       background-color: #2ed47a;
+  //     }
+  //   }
+  //   table {
+  //     // tbody {
+  //     //   padding-top:15px;
+  //     // }
+  //     th {
+  //       padding:17px 0;
+  //       color: #4a4f70;
+  //       border-bottom: solid 1px #dee2ec;
+  //       border-right:0;
+  //     }
+  //     td {
+  //       padding:10px 0;
+  //       background-color: #fff;
+  //       border-right:0;
+  //     }
+  //   }
+  // }
 }
 .customer-codes {
   &:after {
@@ -1948,6 +1977,128 @@ html, body {
     max-width:480px;
   }
 } //.consulting-codes
+
+.payment-codes {
+  padding-bottom:70px;
+  .data-table {
+    .depth-2 {
+      width:150px;
+      > span, .btn {
+        display: inline-block;
+      }
+      > span {
+        width:calc(100% - 50px);
+        text-align: left;
+        white-space: normal;
+        word-break: break-all;
+      }
+    }
+  }
+} //.payment-codes
+
+.connects, .counselors {
+  padding:20px;
+
+  [class*='-header']{
+    position: relative;
+    font-size: 17px;
+    margin-bottom: 21px;
+    .flex-row {
+      position: absolute;
+      right:0;
+      top:-8px;
+      font-size: 14px;
+      .flex-wrap {
+        span {
+          font-size: inherit;
+        }
+      }
+      button.btn {
+        width: 84px;
+        height: 34px;
+        font-size: 14px;
+        font-weight: 600;
+        color:#fff;
+      }
+    }
+  }
+
+  .btn-add {
+    background-color: #0060ff;
+  }
+} //.connects, .counselors
+.connects {
+  > .flex-row {
+    display: block;
+  }
+  .data-table td:not(:last-child),
+  .data-table th:not(:last-child) {
+    border-right:0;
+  }
+
+  .consulting-media {
+    flex:none;
+    width:100%;
+    max-width:500px;
+    margin-bottom:32px;
+  }
+  .consulting-event {
+    flex:none;
+    width:100%;
+    max-width:1000px;
+    // margin-bottom:32px;
+  }
+  .consulting-connect {
+    .ant-btn {
+      width:20px;
+      height:20px;
+      background: {
+        image:url('/crm/static/images/icon/ic-title-notice.png');
+        size:20px;
+        repeat:no-repeat;
+        position:0 0;
+      }
+      span {
+        font-size: 0;
+      }
+    }
+  }
+  .consulting-request-connect {
+    background-color: #fff;
+    .tabs {
+      .tab {
+        padding-top:21px;
+        padding-bottom:0;
+        border:0;
+        font-size: 16px;
+        &:not(.disabled):hover {
+          border:0;
+        }
+        span {
+          display: inline-block;
+          padding-bottom:8px;
+        }
+        &.selected {
+          color: #0060ff;
+          font-weight: 700;
+          span {
+            border-bottom:2px solid #0060ff;
+          }
+        }
+      }
+    }
+    button.btn {
+      width: 84px;
+      height: 34px;
+      background-color: #0060ff;
+      font-size: 14px;
+      font-weight: 600;
+      color:#fff;
+    }
+  }
+}
+
+
 
 .modal .modal-container {
   .head {

@@ -740,6 +740,16 @@ html, body { height: 100%; overflow: auto; }
 
 .clinic-info .card .table-round .form-control > div { max-width: 50%; padding: 9px 20px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #efeff4; }
 
+.data-table { padding: 0 0 10px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
+
+.data-table .btn { min-width: 44px; padding-left: 5px; padding-right: 5px; line-height: 23px; background-color: #273142; }
+
+.data-table .btn.btn-primary { background-color: #2ed47a; }
+
+.data-table table th { padding: 17px 0; color: #4a4f70; border-bottom: solid 1px #dee2ec; border-right: 0; }
+
+.data-table table td { padding: 10px 0; background-color: #fff; border-right: 0; }
+
 .appointment-codes > div:not(:last-child), .consulting-codes > div:not(:last-child), .customer-codes > div:not(:last-child), .payment-codes > div:not(:last-child), .sms-notification-codes > div:not(:last-child), .treatment-codes > div:not(:last-child), .user-codes > div:not(:last-child) { margin-bottom: 30px; }
 
 .customer-codes, .appointment-codes, .consulting-codes, .payment-codes { max-width: 1006px; padding: 20px; }
@@ -752,21 +762,11 @@ html, body { height: 100%; overflow: auto; }
 
 .customer-codes > div:not(.page-navi) > .route-top .title, .appointment-codes > div:not(.page-navi) > .route-top .title, .consulting-codes > div:not(.page-navi) > .route-top .title, .payment-codes > div:not(.page-navi) > .route-top .title { font-size: 17px !important; margin-bottom: 13px !important; }
 
-.customer-codes .btn-add, .appointment-codes .btn-add, .consulting-codes .btn-add, .payment-codes .btn-add { width: 84px; height: 34px; box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); background-color: #0060ff; font-size: 14px; font-weight: 600; }
+.customer-codes .btn-add, .appointment-codes .btn-add, .consulting-codes .btn-add, .payment-codes .btn-add { width: 84px; height: 34px; background-color: #0060ff; font-size: 14px; font-weight: 600; }
 
 .customer-codes .route-top, .appointment-codes .route-top, .consulting-codes .route-top, .payment-codes .route-top { position: relative; }
 
 .customer-codes .route-top > .flex-row, .appointment-codes .route-top > .flex-row, .consulting-codes .route-top > .flex-row, .payment-codes .route-top > .flex-row { position: absolute; right: 0; top: -8px; }
-
-.customer-codes .data-table, .appointment-codes .data-table, .consulting-codes .data-table, .payment-codes .data-table { padding: 0 0 10px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
-
-.customer-codes .data-table .btn, .appointment-codes .data-table .btn, .consulting-codes .data-table .btn, .payment-codes .data-table .btn { min-width: 44px; padding-left: 5px; padding-right: 5px; line-height: 23px; background-color: #273142; }
-
-.customer-codes .data-table .btn.btn-primary, .appointment-codes .data-table .btn.btn-primary, .consulting-codes .data-table .btn.btn-primary, .payment-codes .data-table .btn.btn-primary { background-color: #2ed47a; }
-
-.customer-codes .data-table table th, .appointment-codes .data-table table th, .consulting-codes .data-table table th, .payment-codes .data-table table th { padding: 17px 0; color: #4a4f70; border-bottom: solid 1px #dee2ec; border-right: 0; }
-
-.customer-codes .data-table table td, .appointment-codes .data-table table td, .consulting-codes .data-table table td, .payment-codes .data-table table td { padding: 10px 0; background-color: #fff; border-right: 0; }
 
 .customer-codes:after { content: ''; clear: both; display: block; }
 
@@ -827,6 +827,52 @@ html, body { height: 100%; overflow: auto; }
 .appointment-codes .appointment-time .data-table .form-control select { min-width: 70px; margin-left: 5px; margin-right: 5px; font-size: 14px; }
 
 .consulting-codes .results { max-width: 480px; }
+
+.payment-codes { padding-bottom: 70px; }
+
+.payment-codes .data-table .depth-2 { width: 150px; }
+
+.payment-codes .data-table .depth-2 > span, .payment-codes .data-table .depth-2 .btn { display: inline-block; }
+
+.payment-codes .data-table .depth-2 > span { width: calc(100% - 50px); text-align: left; white-space: normal; word-break: break-all; }
+
+.connects, .counselors { padding: 20px; }
+
+.connects [class*='-header'], .counselors [class*='-header'] { position: relative; font-size: 17px; margin-bottom: 21px; }
+
+.connects [class*='-header'] .flex-row, .counselors [class*='-header'] .flex-row { position: absolute; right: 0; top: -8px; font-size: 14px; }
+
+.connects [class*='-header'] .flex-row .flex-wrap span, .counselors [class*='-header'] .flex-row .flex-wrap span { font-size: inherit; }
+
+.connects [class*='-header'] .flex-row button.btn, .counselors [class*='-header'] .flex-row button.btn { width: 84px; height: 34px; font-size: 14px; font-weight: 600; color: #fff; }
+
+.connects .btn-add, .counselors .btn-add { background-color: #0060ff; }
+
+.connects > .flex-row { display: block; }
+
+.connects .data-table td:not(:last-child), .connects .data-table th:not(:last-child) { border-right: 0; }
+
+.connects .consulting-media { flex: none; width: 100%; max-width: 500px; margin-bottom: 32px; }
+
+.connects .consulting-event { flex: none; width: 100%; max-width: 1000px; }
+
+.connects .consulting-connect .ant-btn { width: 20px; height: 20px; background-image: url("/crm/static/images/icon/ic-title-notice.png"); background-size: 20px; background-repeat: no-repeat; background-position: 0 0; }
+
+.connects .consulting-connect .ant-btn span { font-size: 0; }
+
+.connects .consulting-request-connect { background-color: #fff; }
+
+.connects .consulting-request-connect .tabs .tab { padding-top: 21px; padding-bottom: 0; border: 0; font-size: 16px; }
+
+.connects .consulting-request-connect .tabs .tab:not(.disabled):hover { border: 0; }
+
+.connects .consulting-request-connect .tabs .tab span { display: inline-block; padding-bottom: 8px; }
+
+.connects .consulting-request-connect .tabs .tab.selected { color: #0060ff; font-weight: 700; }
+
+.connects .consulting-request-connect .tabs .tab.selected span { border-bottom: 2px solid #0060ff; }
+
+.connects .consulting-request-connect button.btn { width: 84px; height: 34px; background-color: #0060ff; font-size: 14px; font-weight: 600; color: #fff; }
 
 .modal .modal-container .head { border-bottom: solid 1px #d7e3f1; }
 
