@@ -440,5 +440,26 @@ input[type=radio] {
       font-weight: 600;
       color: #273142;
     }
+    &.page-prev, &.page-next {
+      width: 26px;
+      height: 26px;
+      border-radius: 4px;
+      border: solid 1px #dee2ec;
+      background-color: #ffffff;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    &.page-prev {
+      background: {
+        image:url('/crm/static/images/icon/arrow.png');
+        size:8px;
+      }
+    }
+    &.page-next {
+      background: {
+        image:url('/crm/static/images/icon/arrow_2.png');
+        size:8px;
+      }
+    }
   }
 } //.pagination
