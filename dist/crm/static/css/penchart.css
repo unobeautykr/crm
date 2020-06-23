@@ -1,0 +1,53 @@
+.react-contextmenu-wrapper { min-height: 500px; }
+
+.react-contextmenu-wrapper .title { font-size: 25px; font-weight: bold; line-height: 25px; margin-bottom: 25px; color: #333; line-height: 1.2; }
+
+.react-contextmenu-wrapper .title span { cursor: pointer; }
+
+.react-contextmenu-wrapper .title span:not(:first-child):before { content: " > "; }
+
+.wrap-resource { min-height: 100%; }
+
+.wrap-resource .sub-title { margin: 10px 0; margin-bottom: 10px; font-size: 20px; line-height: 20px; color: #333; }
+
+.wrap-resource .wrap-folder, .wrap-resource .wrap-file { position: relative; margin-bottom: 50px; }
+
+.wrap-resource .wrap-folder .btn-create-folder, .wrap-resource .wrap-file .btn-create-folder { position: absolute; width: 150px; height: 40px; border-radius: 8px; right: 10px; top: -10px; background: #1A64F7; border: 0; color: #fff; }
+
+.wrap-resource .wrap-folder ul, .wrap-resource .wrap-file ul { display: grid; grid-gap: 0; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+.wrap-resource .wrap-folder ul li, .wrap-resource .wrap-file ul li { position: relative; font-size: 15px; margin: 10px; border: 1px solid #efeff4; background: #fff; border-radius: 8px; cursor: pointer; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none; box-shadow: 0 0 0 0px rgba(191, 170, 255, 0); transition: box-shadow 0.1s; }
+
+.wrap-resource .wrap-folder ul li .thumb, .wrap-resource .wrap-file ul li .thumb { transition: box-shadow 0.1s; }
+
+.wrap-resource .folder li { display: flex; align-items: center; padding: 10px 20px; }
+
+.wrap-resource .folder li::before { content: ""; display: inline-block; position: relative; flex: 0 0 25px; width: 25px; height: 25px; background: #b8b8b8; margin-right: 10px; }
+
+.wrap-resource .folder li p { margin: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.wrap-resource .folder li.select { box-shadow: 0 0 10px 0px #9cb0d8; }
+
+.wrap-resource .file { text-align: center; }
+
+.wrap-resource .file .btn-create-file { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 283px; border: solid 1px #d7e3f1 !important; color: #9cb2cd; }
+
+.wrap-resource .file .btn-create-file::before { content: ""; width: 50px; height: 50px; background: #9cb2cd; margin-bottom: 11px; opacity: 0.2; }
+
+.wrap-resource .file li { border: 0 !important; }
+
+.wrap-resource .file li img, .wrap-resource .file li .thumb { width: 100%; height: 283px; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; border: 1px solid #efeff4; background: #fff; border-radius: 8px; }
+
+.wrap-resource .file li .file-name { text-align: left; margin: 0; padding: 12px 0px; }
+
+.wrap-resource .file li .btn-edit { position: absolute; right: 0; bottom: 12px; width: 20px; height: 20px; background: #b8b8b8; border: 0; }
+
+.wrap-resource .file li.select .thumb { box-shadow: 0 0 10px 0px #9cb0d8; }
+
+.react-contextmenu { min-width: 140px; background: #fff; border: 1px solid #efeff4; font-size: 14px; }
+
+.react-contextmenu .react-contextmenu-item { padding: 15px 20px; cursor: pointer; transition: background 0s; }
+
+.react-contextmenu .react-contextmenu-item:hover { background: rgba(245, 245, 245, 0.5); }
+
+.react-contextmenu .react-contextmenu-item:not(:last-child) { border-bottom: 1px solid #efeff4; }

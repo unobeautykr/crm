@@ -5,6 +5,7 @@
   @@include('../inc/pagehead.inc',{
   })
   <!--// page head -->
+  <link href="/crm/static/css/penchart.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
       <!--// left navigation -->
 
       <div class="flex-fill left-nav-opened route">
-        <div class="list">
+        <div class="list chart-sample"> <!-- modi chart-sample class add //-->
           <div class="page-navi"><span class="title">병원관리</span><span class="title">펜차트 샘플함</span></div> <!-- modi add //-->
           <div class="route-top">
             <p>1. 본 페이지에서 파일 또는 폴더를 추가/수정/삭제 시, 우노뷰티 펜차트 앱의 '차트 샘플함'에 동시에 반영됩니다.</p>
@@ -32,21 +33,48 @@
           <div class="card">
             <div class="react-contextmenu-wrapper">
               <div class="wrap-resource">
-                <div class="title"><span>홈</span></div>
+                <div class="title"><span>차트샘플함</span></div> <!-- modi //-->
                 <div class="wrap-folder">
-                  <div class="sub-title">폴더</div>
+                  <div class="sub-title">폴더</div><button class="btn-create-folder">폴더추가</button>
                   <ul class="folder">
-                    <li class="" data-index="0" draggable="true">동의서</li>
-                    <li class="" data-index="1" draggable="true">상담차트</li>
-                    <li class="" data-index="2" draggable="true">진료차트</li>
+                    <li class="" data-index="0" draggable="true">동의서
+                      <span>
+                        <a href="#" class="more ant-dropdown-link ant-dropdown-trigger">
+                          <span role="img" aria-label="down" class="anticon anticon-down"></span>
+                        </a>
+                      </span>
+                    </li>
+                    <li class="" data-index="1" draggable="true">상담차트
+                      <span>
+                        <a href="#" class="more ant-dropdown-link ant-dropdown-trigger">
+                          <span role="img" aria-label="down" class="anticon anticon-down"></span>
+                        </a>
+                      </span>
+                    </li>
+                    <li class="" data-index="2" draggable="true">진료차트
+                      <span>
+                        <a href="#" class="more ant-dropdown-link ant-dropdown-trigger">
+                          <span role="img" aria-label="down" class="anticon anticon-down"></span>
+                        </a>
+                      </span>
+                    </li>
                   </ul>
                 </div>
                 <div class="wrap-file">
                   <div class="sub-title">파일</div>
                   <ul class="file">
+                    <li class="btn-create-file"><span>사진 업로드</span></li> <!-- modi 마크업 추가 //-->
                     <li class="" data-index="3" draggable="true">
-                      <div class="thumb" draggable="false" style="background: url(&quot;&quot;);"></div>
-                      <p class="file-name">file_ee8</p>
+                      <div class="thumb" draggable="false" style="background-image: url(&quot;&quot;);"></div> <!-- modi background-image 로 style //-->
+                      <p class="file-name">7680a진료차트-asdkljlaksdf.jpg</p><button class="btn-edit"></button>
+                    </li>
+                    <li class="" data-index="4" draggable="true">
+                      <div class="thumb" draggable="false" style="background-image: url(&quot;&quot;);"></div> <!-- modi background-image 로 style //-->
+                      <p class="file-name">b.jpg</p><button class="btn-edit"></button>
+                    </li>
+                    <li class="" data-index="5" draggable="true">
+                      <div class="thumb" draggable="false" style="background-image: url(&quot;&quot;);"></div> <!-- modi background-image 로 style //-->
+                      <p class="file-name">file_ee8</p><button class="btn-edit"></button>
                     </li>
                   </ul>
                 </div>
@@ -64,6 +92,26 @@
     <div class="toast-wrapper">
       <div class="toast success ">update</div>
     </div>
+
+    <!-- chart add -->
+    <div class="modal modal-overlay" style="display:none;">
+      <div class="modal-container">
+        <div class="modal-pen-chart">
+          <div class="head flex-row flex-between items-start">
+            <div class="title">새 파일</div><i class="zmdi zmdi-close"></i>
+          </div>
+          <div class="body">
+            <div class="form-control"><input type="file"></div>
+          </div>
+          <div class="buttons">
+            <div class="flex-row"><button class="btn btn-default" style="display: block;">취소</button><button class="btn btn-primary" style="display: block;">저장</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// chart add -->
+
+
   </div>
   <!-- <script>
     ! function(e) {

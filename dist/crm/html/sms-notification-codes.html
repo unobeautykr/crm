@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page head -->
+  <meta charset="utf-8">
+<link rel="icon" href="/favicon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Web site created using create-react-app">
+<link rel="apple-touch-icon" href="/logo192.png">
+<link rel="manifest" href="/manifest.json">
+<title>CRM - 펜1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+<link href="/crm/static/css/base.css" rel="stylesheet">
+<link href="/crm/static/css/main.css" rel="stylesheet">
+<link href="/crm/static/css/ui.css" rel="stylesheet">
+
+  <!--// page head -->
+  <style type="text/css">
+    svg:not(:root).svg-inline--fa {
+      overflow: visible;
+    }
+
+    .svg-inline--fa {
+      display: inline-block;
+      font-size: inherit;
+      height: 1em;
+      overflow: visible;
+      vertical-align: -0.125em;
+    }
+
+    .svg-inline--fa.fa-lg {
+      vertical-align: -0.225em;
+    }
+
+    .svg-inline--fa.fa-w-1 {
+      width: 0.0625em;
+    }
+
+    .svg-inline--fa.fa-w-2 {
+      width: 0.125em;
+    }
+
+    .svg-inline--fa.fa-w-3 {
+      width: 0.1875em;
+    }
+
+    .svg-inline--fa.fa-w-4 {
+      width: 0.25em;
+    }
+
+    .svg-inline--fa.fa-w-5 {
+      width: 0.3125em;
+    }
+
+    .svg-inline--fa.fa-w-6 {
+      width: 0.375em;
+    }
+
+    .svg-inline--fa.fa-w-7 {
+      width: 0.4375em;
+    }
+
+    .svg-inline--fa.fa-w-8 {
+      width: 0.5em;
+    }
+
+    .svg-inline--fa.fa-w-9 {
+      width: 0.5625em;
+    }
+
+    .svg-inline--fa.fa-w-10 {
+      width: 0.625em;
+    }
+
+    .svg-inline--fa.fa-w-11 {
+      width: 0.6875em;
+    }
+
+    .svg-inline--fa.fa-w-12 {
+      width: 0.75em;
+    }
+
+    .svg-inline--fa.fa-w-13 {
+      width: 0.8125em;
+    }
+
+    .svg-inline--fa.fa-w-14 {
+      width: 0.875em;
+    }
+
+    .svg-inline--fa.fa-w-15 {
+      width: 0.9375em;
+    }
+
+    .svg-inline--fa.fa-w-16 {
+      width: 1em;
+    }
+
+    .svg-inline--fa.fa-w-17 {
+      width: 1.0625em;
+    }
+
+    .svg-inline--fa.fa-w-18 {
+      width: 1.125em;
+    }
+
+    .svg-inline--fa.fa-w-19 {
+      width: 1.1875em;
+    }
+
+    .svg-inline--fa.fa-w-20 {
+      width: 1.25em;
+    }
+
+    .svg-inline--fa.fa-pull-left {
+      margin-right: 0.3em;
+      width: auto;
+    }
+
+    .svg-inline--fa.fa-pull-right {
+      margin-left: 0.3em;
+      width: auto;
+    }
+
+    .svg-inline--fa.fa-border {
+      height: 1.5em;
+    }
+
+    .svg-inline--fa.fa-li {
+      width: 2em;
+    }
+
+    .svg-inline--fa.fa-fw {
+      width: 1.25em;
+    }
+
+    .fa-layers svg.svg-inline--fa {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .fa-layers {
+      display: inline-block;
+      height: 1em;
+      position: relative;
+      text-align: center;
+      vertical-align: -0.125em;
+      width: 1em;
+    }
+
+    .fa-layers svg.svg-inline--fa {
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+    }
+
+    .fa-layers-counter,
+    .fa-layers-text {
+      display: inline-block;
+      position: absolute;
+      text-align: center;
+    }
+
+    .fa-layers-text {
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+    }
+
+    .fa-layers-counter {
+      background-color: #ff253a;
+      border-radius: 1em;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      color: #fff;
+      height: 1.5em;
+      line-height: 1;
+      max-width: 5em;
+      min-width: 1.5em;
+      overflow: hidden;
+      padding: 0.25em;
+      right: 0;
+      text-overflow: ellipsis;
+      top: 0;
+      -webkit-transform: scale(0.25);
+      transform: scale(0.25);
+      -webkit-transform-origin: top right;
+      transform-origin: top right;
+    }
+
+    .fa-layers-bottom-right {
+      bottom: 0;
+      right: 0;
+      top: auto;
+      -webkit-transform: scale(0.25);
+      transform: scale(0.25);
+      -webkit-transform-origin: bottom right;
+      transform-origin: bottom right;
+    }
+
+    .fa-layers-bottom-left {
+      bottom: 0;
+      left: 0;
+      right: auto;
+      top: auto;
+      -webkit-transform: scale(0.25);
+      transform: scale(0.25);
+      -webkit-transform-origin: bottom left;
+      transform-origin: bottom left;
+    }
+
+    .fa-layers-top-right {
+      right: 0;
+      top: 0;
+      -webkit-transform: scale(0.25);
+      transform: scale(0.25);
+      -webkit-transform-origin: top right;
+      transform-origin: top right;
+    }
+
+    .fa-layers-top-left {
+      left: 0;
+      right: auto;
+      top: 0;
+      -webkit-transform: scale(0.25);
+      transform: scale(0.25);
+      -webkit-transform-origin: top left;
+      transform-origin: top left;
+    }
+
+    .fa-lg {
+      font-size: 1.3333333333em;
+      line-height: 0.75em;
+      vertical-align: -0.0667em;
+    }
+
+    .fa-xs {
+      font-size: 0.75em;
+    }
+
+    .fa-sm {
+      font-size: 0.875em;
+    }
+
+    .fa-1x {
+      font-size: 1em;
+    }
+
+    .fa-2x {
+      font-size: 2em;
+    }
+
+    .fa-3x {
+      font-size: 3em;
+    }
+
+    .fa-4x {
+      font-size: 4em;
+    }
+
+    .fa-5x {
+      font-size: 5em;
+    }
+
+    .fa-6x {
+      font-size: 6em;
+    }
+
+    .fa-7x {
+      font-size: 7em;
+    }
+
+    .fa-8x {
+      font-size: 8em;
+    }
+
+    .fa-9x {
+      font-size: 9em;
+    }
+
+    .fa-10x {
+      font-size: 10em;
+    }
+
+    .fa-fw {
+      text-align: center;
+      width: 1.25em;
+    }
+
+    .fa-ul {
+      list-style-type: none;
+      margin-left: 2.5em;
+      padding-left: 0;
+    }
+
+    .fa-ul>li {
+      position: relative;
+    }
+
+    .fa-li {
+      left: -2em;
+      position: absolute;
+      text-align: center;
+      width: 2em;
+      line-height: inherit;
+    }
+
+    .fa-border {
+      border: solid 0.08em #eee;
+      border-radius: 0.1em;
+      padding: 0.2em 0.25em 0.15em;
+    }
+
+    .fa-pull-left {
+      float: left;
+    }
+
+    .fa-pull-right {
+      float: right;
+    }
+
+    .fa.fa-pull-left,
+    .fas.fa-pull-left,
+    .far.fa-pull-left,
+    .fal.fa-pull-left,
+    .fab.fa-pull-left {
+      margin-right: 0.3em;
+    }
+
+    .fa.fa-pull-right,
+    .fas.fa-pull-right,
+    .far.fa-pull-right,
+    .fal.fa-pull-right,
+    .fab.fa-pull-right {
+      margin-left: 0.3em;
+    }
+
+    .fa-spin {
+      -webkit-animation: fa-spin 2s infinite linear;
+      animation: fa-spin 2s infinite linear;
+    }
+
+    .fa-pulse {
+      -webkit-animation: fa-spin 1s infinite steps(8);
+      animation: fa-spin 1s infinite steps(8);
+    }
+
+    @-webkit-keyframes fa-spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes fa-spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    .fa-rotate-90 {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+
+    .fa-rotate-180 {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    .fa-rotate-270 {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+      -webkit-transform: rotate(270deg);
+      transform: rotate(270deg);
+    }
+
+    .fa-flip-horizontal {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+      -webkit-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+    }
+
+    .fa-flip-vertical {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+      -webkit-transform: scale(1, -1);
+      transform: scale(1, -1);
+    }
+
+    .fa-flip-both,
+    .fa-flip-horizontal.fa-flip-vertical {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+      -webkit-transform: scale(-1, -1);
+      transform: scale(-1, -1);
+    }
+
+    :root .fa-rotate-90,
+    :root .fa-rotate-180,
+    :root .fa-rotate-270,
+    :root .fa-flip-horizontal,
+    :root .fa-flip-vertical,
+    :root .fa-flip-both {
+      -webkit-filter: none;
+      filter: none;
+    }
+
+    .fa-stack {
+      display: inline-block;
+      height: 2em;
+      position: relative;
+      width: 2.5em;
+    }
+
+    .fa-stack-1x,
+    .fa-stack-2x {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .svg-inline--fa.fa-stack-1x {
+      height: 1em;
+      width: 1.25em;
+    }
+
+    .svg-inline--fa.fa-stack-2x {
+      height: 2em;
+      width: 2.5em;
+    }
+
+    .fa-inverse {
+      color: #fff;
+    }
+
+    .sr-only {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+
+    .svg-inline--fa .fa-primary {
+      fill: var(--fa-primary-color, currentColor);
+      opacity: 1;
+      opacity: var(--fa-primary-opacity, 1);
+    }
+
+    .svg-inline--fa .fa-secondary {
+      fill: var(--fa-secondary-color, currentColor);
+      opacity: 0.4;
+      opacity: var(--fa-secondary-opacity, 0.4);
+    }
+
+    .svg-inline--fa.fa-swap-opacity .fa-primary {
+      opacity: 0.4;
+      opacity: var(--fa-secondary-opacity, 0.4);
+    }
+
+    .svg-inline--fa.fa-swap-opacity .fa-secondary {
+      opacity: 1;
+      opacity: var(--fa-primary-opacity, 1);
+    }
+
+    .svg-inline--fa mask .fa-primary,
+    .svg-inline--fa mask .fa-secondary {
+      fill: black;
+    }
+
+    .fad.fa-inverse {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+    <!-- header-bar & ui-header -->
+		<!-- header-bar -->
+<div class="header-bar flex-row flex-between ui-header"> <!-- add class=ui-header //-->
+  <div class="header-items left flex-wrap">
+    <h1 class="title">바비톡 성형외과</h1>  <!--modi //-->
+    <button class="btn btn-close"><span class="a11y">사이드 닫기/열기</span></button>  <!--modi //-->
+  </div>
+  <div class="flex-row items-center flex-between flex-fill">
+    <div class="customer-search-bar flex-row items-center">
+      <input placeholder="고객명, 차트번호, 전화번호, 주민번호" class="flex-fill" value="">
+      <div class="buttons flex-row flex-wrap">
+        <button class="btn btn-accent m-l-8">검색</button>  <!--modi //-->
+        <button class="btn btn-accent m-l-8">고객등록</button>  <!--modi //-->
+      </div>
+    </div>
+    <div class="header-items right">
+      <div class="me _language">
+        <button class="btn btn-lang">언어변환</button>
+        <div class="lang">
+          <ul>
+            <li><a href="#">한글</a></li>
+            <li><a href="#">영문</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="me _sched">
+        <button class="btn btn-sched"><span class="alram"></span>부재일정확인</button>
+      </div>
+      <div class="me _info">
+        <p class="fig"></p>
+        <p>park</p>
+        <p class="email"><a href="mailto:test1@gmail.com">test1test1test1@gmail.com</a></p>
+      </div>
+      <div class="me _power">
+        <button class="btn btn-logout">로그아웃</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--// header-bar -->
+
+    <!--// header-bar & ui-header -->
+
+    <!-- app-body & ui-body -->
+    <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
+      <!-- left navigation -->
+  		<!--
+left-navigation 마크업 및 클래스 추가/수정
+//-->
+<div class="left-navigation flex flex-wrap ">
+  <div class="flex-wrap clinic-name">펜1</div>
+  <div class="ver-scroll flex-fill">
+    <div class="menu depth-0">
+      <div class="menu-item selected">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-home"></i>현황판 (홈)</span></div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-calender"></i>예약 캘린더</span></div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-consult"></i>상담문의 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">상담문의</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">담당자 배정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">연동설정</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-msg"></i>문자 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">문자 전송</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">문자 충전</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">전송내역 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">충전내역 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">문자코드 설정</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-inq"></i>조회</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">고객 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">예약 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">상담 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">진료 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">수납 조회</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-stat"></i>통계</span></div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-setting"></i>환경 설정</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">고객코드 설정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">예약캘린더 설정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">상담코드 설정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">수납코드 설정</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-hospital"></i>병원 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">조직 관리</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">직원 관리</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">병원 정보</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">펜차트 샘플함</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+left-navigation 마크업 및 클래스 수정
+//-->
+
+      <!--// left navigation -->
+
+      <div class="flex-fill left-nav-opened route">
+
+        <div class="sms-notification-codes">
+          <div class="caller-numbers">
+            <div class="route-top">
+              <div class="title f-20 m-b-16">발신번호</div>
+              <div class="flex-row items-center flex-between"><button class="btn btn-primary btn-sm flex-wrap">추가</button>
+                <div class="flex-row items-center  " style="cursor: pointer;">
+                  <div class="checkbox flex-wrap m-r-8"></div><span>숨김 항목 보지 않기</span>
+                </div>
+              </div>
+            </div>
+            <div class="data-table">
+              <div class="top flex-row items-center flex-between m-b-16"></div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>발신번호</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>메모</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">
+                        <div class="inline-flex has-action depth-1">
+
+                          <button class="btn btn-sm btn-primary" data-type="visible">사용</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">(02) 1111-2222</div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">-</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">
+                        <div class="inline-flex has-action depth-1">
+                          <button class="btn btn-sm btn-danger" data-type="visible">미사용</button>
+
+                        </div>
+                      </div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">010-6237-4680</div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">테스트</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-2">
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">
+                        <div class="inline-flex has-action depth-1">
+                          <button class="btn btn-sm btn-danger" data-type="visible">미사용</button>
+
+                        </div>
+                      </div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">010-8426-8026</div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">필수 입력이네</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="caller-numbers">
+            <div class="route-top">
+              <div class="title f-20 m-b-16">발신번호</div>
+              <div class="flex-row items-center"><button class="btn btn-primary btn-sm flex-wrap m-r-8">추가</button>
+                <div class="flex-row items-center">
+                  <div class="checkbox  flex-wrap m-r-8 "></div><span>숨김 항목 보지 않기</span>
+                </div>
+              </div>
+            </div>
+            <div class="data-table">
+              <div class="top flex-row items-center flex-between m-b-16"></div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>발신번호</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">
+
+                        <button class="btn btn-sm btn-primary">숨김해제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">0211112222</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">숨김</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">01062374680</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-2">
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">숨김</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">01084268026</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="message-boilerplate boilerplate-messages">
+            <div class="route-top">
+              <div class="title f-20 m-b-16">상용구</div>
+              <div class="flex-row items-center flex-between"><button class="btn btn-primary btn-sm flex-wrap">추가</button>
+                <div class="flex-row items-center  " style="cursor: pointer;">
+                  <div class="checkbox flex-wrap m-r-8"></div><span>숨김 항목 보지 않기</span>
+                </div>
+              </div>
+            </div>
+            <div class="data-table">
+              <div class="top flex-row items-center flex-between m-b-16"></div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>분류</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>제목/내용</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>이미지</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">
+                        <div class="inline-flex has-action depth-1">
+                          <button class="btn btn-sm btn-primary m-r-4" data-type="edit">수정</button>
+                          <button class="btn btn-sm btn-warning" data-type="visible">미사용</button>
+
+                          <button class="btn btn-sm btn-danger m-l-4" data-type="delete">삭제</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">테스트</div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content  pre-line
+
+
+                              ">
+                        <div>
+                          <div>내용: ㅇㅇ</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td rowspan="1" class="  "><img class="img-cover m-a" alt="" src="https://unobeautycrm-assets.s3.ap-northeast-2.amazonaws.com/development_sms/f5a79bd3-9168-426d-8feb-17ea89c0fa9b.jpg"></td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">
+                        <div class="inline-flex has-action depth-1">
+                          <button class="btn btn-sm btn-primary m-r-4" data-type="edit">수정</button>
+                          <button class="btn btn-sm btn-warning" data-type="visible">미사용</button>
+
+                          <button class="btn btn-sm btn-danger m-l-4" data-type="delete">삭제</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">ㅁㅁ</div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content  pre-line
+
+
+                              ">
+                        <div>
+                          <div>내용: ㅇㅇ</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td rowspan="1" class="  "><img class="img-cover m-a" alt="" src="https://unobeautycrm-assets.s3.ap-northeast-2.amazonaws.com/development_sms/f5a79bd3-9168-426d-8feb-17ea89c0fa9b.jpg"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="boilerplate-messages">
+            <div class="route-top">
+              <div class="title f-20 m-b-16">상용구</div>
+              <div class="flex-row items-center"><button class="btn btn-primary btn-sm flex-wrap m-r-8">추가</button>
+                <div class="flex-row items-center">
+                  <div class="checkbox  flex-wrap m-r-8 "></div><span>숨김 항목 보지 않기</span>
+                </div>
+              </div>
+            </div>
+            <div class="data-table">
+              <div class="top flex-row items-center flex-between m-b-16"></div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>분류</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>제목/내용</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>이미지</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm m-r-8 btn-warning">미사용</button>
+                        <button class="btn btn-sm btn-danger">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">테스트</div>
+                    </td>
+                    <td>
+                      <div class="item-content
+
+                        pre-line
+
+
+                      ">
+                        <div>제목: </div>
+                        <div>내용: ㅇㅇ</div>
+                      </div>
+                    </td>
+                    <td><img class="img-cover m-a" alt="" src="https://unobeautycrm-assets.s3.ap-northeast-2.amazonaws.com/development_sms/f5a79bd3-9168-426d-8feb-17ea89c0fa9b.jpg"></td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm m-r-8 btn-warning">미사용</button>
+                        <button class="btn btn-sm btn-danger">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">ㅁㅁ</div>
+                    </td>
+                    <td>
+                      <div class="item-content
+
+                        pre-line
+
+
+                      ">
+                        <div>제목: </div>
+                        <div>내용: ㅇㅇ</div>
+                      </div>
+                    </td>
+                    <td><img class="img-cover m-a" alt="" src="https://unobeautycrm-assets.s3.ap-northeast-2.amazonaws.com/development_sms/f5a79bd3-9168-426d-8feb-17ea89c0fa9b.jpg"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="message-auto-notification ">
+            <div class="route-top">
+              <div class="title f-20 m-b-16">문자 자동전송</div>
+              <div class="flex-row items-center flex-between"><button class="btn btn-primary btn-sm flex-wrap">추가</button>
+                <div class="flex-row items-center  " style="cursor: pointer;">
+                  <div class="checkbox flex-wrap m-r-8"></div><span>숨김 항목 보지 않기</span>
+                </div>
+              </div>
+            </div>
+            <div class="data-table">
+              <div class="top flex-row items-center flex-between m-b-16"></div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>알림톡 여부</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>발신번호</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>전송상황</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>문자전송시점</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>제목/내용</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>이미지</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">
+                        <div class="inline-flex has-action depth-1">
+                          <button class="btn btn-sm btn-primary m-r-4" data-type="edit">수정</button>
+                          <button class="btn btn-sm btn-warning" data-type="visible">미사용</button>
+
+                          <button class="btn btn-sm btn-danger m-l-4" data-type="delete">삭제</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">미연동</div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">(02) 1111-2222</div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">SITUATION_FIRST_VISIT</div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+
+
+                              ">4일 전 11:30</div>
+                    </td>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content  pre-line
+
+
+                              ">
+                        <div>
+                          <div>내용: 알림톡고곡고곡</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td rowspan="1" class="  "><img class="img-cover m-a" alt=""
+                        src="data:image/jpeg;base64,/9j/4QBcRXhpZgAASUkqAAgAAAABAJiCAgA3AAAAGgAAAAAAAAB3d3cuY2l0eWhlYWRzaG90cy5jb20gKGZyb20gJDE0OSkgICAgICAgICAgICAgICAgICAgICAAAAAA/+wAEUR1Y2t5AAEABAAAAGQAAP/hBFxodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wUmlnaHRzOk1hcmtlZD0iRmFsc2UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTY1QzMxOTIxQTYxMTFFODlDM0I5MkNGODNFMzA0NkYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTY1QzMxOTExQTYxMTFFODlDM0I5MkNGODNFMzA0NkYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0iNTBGNTlGRUMyNDI5QjBE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">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="sms-auto-notifications">
+            <div class="route-top">
+              <div class="title f-20 m-b-16">문자 자동전송</div>
+              <div class="flex-row items-center"><button class="btn btn-primary btn-sm flex-wrap m-r-8">추가</button>
+                <div class="flex-row items-center">
+                  <div class="checkbox  flex-wrap m-r-8 "></div><span>숨김 항목 보지 않기</span>
+                </div>
+              </div>
+            </div>
+            <div class="data-table">
+              <div class="top flex-row items-center flex-between m-b-16"></div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>알림톡 여부</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>문자타입</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>발신번호</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>전송상황</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>전송타입</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>문자전송시점</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>제목/내용</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>이미지</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm m-r-8 btn-warning">미사용</button>
+                        <button class="btn btn-sm btn-danger">삭제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">NONE</div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">일반</div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">0211112222</div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">초진</div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">SCHEDULED</div>
+                    </td>
+                    <td>
+                      <div class="item-content
+                        center
+
+
+
+                      ">11:30</div>
+                    </td>
+                    <td>
+                      <div class="item-content
+
+                        pre-line
+
+
+                      ">
+                        <div>제목: </div>
+                        <div>내용: 알림톡고곡고곡</div>
+                      </div>
+                    </td>
+                    <td><img class="img-cover m-a" alt=""
+                        src="data:image/jpeg;base64,/9j/4QBcRXhpZgAASUkqAAgAAAABAJiCAgA3AAAAGgAAAAAAAAB3d3cuY2l0eWhlYWRzaG90cy5jb20gKGZyb20gJDE0OSkgICAgICAgICAgICAgICAgICAgICAAAAAA/+wAEUR1Y2t5AAEABAAAAGQAAP/hBFxodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wUmlnaHRzOk1hcmtlZD0iRmFsc2UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTY1QzMxOTIxQTYxMTFFODlDM0I5MkNGODNFMzA0NkYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTY1QzMxOTExQTYxMTFFODlDM0I5MkNGODNFMzA0NkYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0iNTBGNTlGRUMyNDI5QjBE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">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="message-alimtalk">
+            <div class="route-top flex-row items-center flex-between">
+              <div class="title f-20">알림톡</div>
+            </div>
+            <div class="item-group">
+              <div class="row">
+                <div class="col-4 item-label guide-line"><span style="font-size: 1em; font-weight: bold;">카카오톡 알림톡 설정</span></div>
+                <div class="row col-7 ">
+                  <div class="col-4"><button class="btn btn-primary btn-sm">설정방법</button></div>
+                  <div class="col-8 p-l-4"><a target="_blank" href="#/crm/files/alim-talk/template-guide/v201911"><button class="btn btn-primary btn-sm">알림톡 템플릿 검수 가이드<svg aria-hidden="true" focusable="false" data-prefix="fas"
+                          data-icon="external-link-alt" class="svg-inline--fa fa-external-link-alt fa-w-16 fa-xs m-l-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="currentColor"
+                            d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z">
+                          </path>
+                        </svg></button></a></div>
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="row separator">
+              <div class="col-4"></div>
+              <div class="col-7 border"></div>
+              <div class="col-1"></div>
+            </div>
+            <div class="item-group">
+              <div class="row">
+                <div class="col-4 item-label"><span class="label-required">비즈니스 채널 아이디</span></div>
+                <div class="row col-7"><input class="item-input" name="channelId" placeholder="@채널아이디 (예. @우노뷰티)" value=""></div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="item-group">
+              <div class="row">
+                <div class="col-4 item-label"><span class="label-required">카테고리 분류</span></div>
+                <div class="col-7">
+                  <div class="category css-2b097c-container">
+                    <div class="uno-select__control css-16mpxbf-control">
+                      <div class="uno-select__value-container css-1hwfws3">
+                        <div class="uno-select__placeholder css-1wa3eu0-placeholder">카테고리를 선택하세요</div><input id="react-select-3-input" readonly="" tabindex="0" aria-autocomplete="list" class="css-62g3xt-dummyInput" value="">
+                      </div>
+                      <div class="uno-select__indicators css-1wy0on6"><span class="uno-select__indicator-separator css-1okebmr-indicatorSeparator"></span>
+                        <div aria-hidden="true" class="uno-select__indicator uno-select__dropdown-indicator css-tlfecz-indicatorContainer"><svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-19bqh2r">
+                            <path
+                              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z">
+                            </path>
+                          </svg></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="item-group">
+              <div class="row">
+                <div class="item-label col-4"><span class="label-required">관리자 휴대폰번호</span></div>
+                <div class="col-4"><input inputmode="numeric" class="phoneNumber" name="phoneNumber" type="text" value=""></div>
+                <div class="col-3 p-l-8"><button class="btn btn-primary btn-sm">인증번호 요청</button></div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="item-group">
+              <div class="row">
+                <div class="col-4 item-label"><span class="label-required">인증번호</span></div>
+                <div class="col-4"><input class="item-input"></div>
+                <div class="col-3 p-l-8" style="display: flex;">
+                  <div style="display: flex; align-items: center; text-align: center; padding-left: 0.5em;"><span>00:00</span></div>
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="item-group">
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-7"><button class="btn btn-primary confirm">설정하기</button></div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="item-group">
+              <div class="row">
+                <div class="col-12">
+                  <div class="help">
+                    <div class="c-danger">※ 유의사항</div>
+                    <ul class="desc">
+                      <li>알림톡 설정시, 자동전송문자는 "알림톡"으로 전송됩니다.(단. 템플릿검수를 통과해야 합니다.)</li>
+                      <li>검수에 통과하지 못한 문자는 "일반 문자"로 전송됩니다.
+                        - 알림톡 승인: "알림톡"으로 전송
+                        - 알림톡 거부: "일반 문자"로 전송 </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="alimtalk">
+            <div class="route-top flex-row items-center flex-between">
+              <div class="title f-20">알림톡</div>
+              <div class="buttons flex-row"><button class="btn btn-primary btn-sm flex-wrap m-r-8">설정방법</button><a download="" href="https://unobeautycrm-assets.s3.ap-northeast-2.amazonaws.com/assets/alimtalk_template_guide_1911.pdf"
+                  class="btn btn-primary btn-sm flex-wrap">알림톡 템플릿 검수 가이드</a></div>
+            </div>
+            <div class="form-control required"><label>비즈니스 채널 아이디</label><input value=""></div>
+            <div class="form-control required"><label>분류</label><select>
+                <option value="-1">-</option>
+                <option value="0">종합병원 (00100010001)</option>
+                <option value="1">피부과 (00100010002)</option>
+                <option value="2">성형외과 (00100010003)</option>
+                <option value="3">안과 (00100010004)</option>
+                <option value="4">이비인후과 (00100010005)</option>
+                <option value="5">정형외과 (00100010006)</option>
+                <option value="6">치과 (00100010007)</option>
+                <option value="7">비뇨기과 (00100010008)</option>
+                <option value="8">대장항문과 (00100010009)</option>
+                <option value="9">산부인과 (00100010010)</option>
+                <option value="10">소아과 (00100010011)</option>
+                <option value="11">내과 (00100010012)</option>
+                <option value="12">외과 (00100010013)</option>
+                <option value="13">신경정신과 (00100010014)</option>
+                <option value="14">물리치료과 (00100010015)</option>
+                <option value="15">재활의학과 (00100010016)</option>
+                <option value="16">한의원 (00100010017)</option>
+                <option value="17">정신병원 (00100010018)</option>
+                <option value="18">노인병원 (00100010019)</option>
+                <option value="19">요양병원 (00100010020)</option>
+                <option value="20">동물병원 (00100010021)</option>
+                <option value="21">기타병원 (00100010022)</option>
+              </select></div>
+            <div class="form-control required"><label>관리자 휴대폰번호</label>
+              <div class="flex-row items-center">
+                <div class="phone flex-wrap"><input class="block" value=""></div><button class="btn btn-primary btn-sm flex-wrap m-l-8">인증번호 전송</button>
+              </div>
+            </div>
+            <div class="form-control required"><label>인증번호</label><input class="flex-fill" value=""></div>
+            <div class="form-control">
+              <div class="help">
+                <div class="c-danger">※ 유의사항</div>
+                <div class="pre-line">1. 알림톡 설정시, 자동전송 설정된 문자는 템플릿 검수 후 '알림톡'으로 전송됩니다. (단, 이미지는 알림톡으로 전송이 불가능합니다.)
+                  2. 검수에 통과하지 못한 템플릿은 일반 문자로 전송됩니다.
+                  3. 알림톡으로 전송실패 시 일반 문자로 대체되어 문자가 전송됩니다.</div>
+              </div>
+            </div>
+            <div class="buttons display-table m-l-a">
+              <div class="flex-row"><button disabled="" class="btn btn-danger m-r-8">알림톡 해제</button><button class="btn btn-primary">설정</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-wrapper">
+      <div class="toast  "></div>
+    </div>
+  </div>
+  <!-- <script>
+    ! function(e) {
+      function r(r) {
+        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
+        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
+        for (c && c(r); s.length;) s.shift()();
+        return u.push.apply(u, f || []), t()
+      }
+
+      function t() {
+        for (var e, r = 0; r < u.length; r++) {
+          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
+            var i = t[l];
+            0 !== o[i] && (n = !1)
+          }
+          n && (u.splice(r--, 1), e = a(a.s = t[0]))
+        }
+        return e
+      }
+      var n = {},
+        o = {
+          1: 0
+        },
+        u = [];
+
+      function a(r) {
+        if (n[r]) return n[r].exports;
+        var t = n[r] = {
+          i: r,
+          l: !1,
+          exports: {}
+        };
+        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
+      }
+      a.m = e, a.c = n, a.d = function(e, r, t) {
+        a.o(e, r) || Object.defineProperty(e, r, {
+          enumerable: !0,
+          get: t
+        })
+      }, a.r = function(e) {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+          value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+          value: !0
+        })
+      }, a.t = function(e, r) {
+        if (1 & r && (e = a(e)), 8 & r) return e;
+        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
+        var t = Object.create(null);
+        if (a.r(t), Object.defineProperty(t, "default", {
+            enumerable: !0,
+            value: e
+          }), 2 & r && "string" != typeof e)
+          for (var n in e) a.d(t, n, function(r) {
+            return e[r]
+          }.bind(null, n));
+        return t
+      }, a.n = function(e) {
+        var r = e && e.__esModule ? function() {
+          return e.default
+        } : function() {
+          return e
+        };
+        return a.d(r, "a", r), r
+      }, a.o = function(e, r) {
+        return Object.prototype.hasOwnProperty.call(e, r)
+      }, a.p = "/";
+      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
+        i = l.push.bind(l);
+      l.push = r, l = l.slice();
+      for (var f = 0; f < l.length; f++) r(l[f]);
+      var c = i;
+      t()
+    }([])
+  </script>
+  <script src="/static/js/2.59decae5.chunk.js"></script>
+  <script src="/static/js/main.25d03fb0.chunk.js"></script> -->
+</body>
+
+</html>

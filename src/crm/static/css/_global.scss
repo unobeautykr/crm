@@ -379,6 +379,7 @@ html, body {
       height:100%;
       background-color: #f3f8ff;
       padding:0;
+      // padding-bottom:60px;
     }
     label.title {
       display: block;
@@ -447,6 +448,7 @@ html, body {
           position: relative;
           input {
             padding-left:45px;
+            // background-color: #fff;
           }
           .btn-search {
             position: absolute;
@@ -455,7 +457,9 @@ html, body {
             margin-top:-15px;
             width:30px;
             height:30px;
+            box-shadow: none;
             background: {
+              color:transparent;
               image:url('/crm/static/images/icon/ic-search.png');
               repeat:no-repeat;
               size:19px;
@@ -891,6 +895,7 @@ html, body {
           border-radius: 0;
           border:0;
           background-color: rgba(74, 74, 74, 0.05);
+          color: #959595;
           &:hover {
             box-shadow:none;
           }
@@ -992,6 +997,37 @@ html, body {
         }
       }
     } //.regions
+
+    .appointment-hover-card {
+      width:322px;
+      padding:30px;
+      li {
+        margin-bottom:20px;
+        &:first-child {
+          font-size: 16px;
+          margin-bottom:30px;
+          > div {
+            &:first-child {
+              width:100%;
+            }
+          }
+          .zmdi-close {
+            cursor: pointer;
+          }
+        }
+        > div {
+          font-weight: 400;
+          &:first-child {
+            width:38%;
+          }
+          &:last-child {
+            width:62%;
+            font-weight: 700;
+          }
+        }
+      }
+    } //.appointment-hover-card
+
   } //.appointment-boards
 
   .right-panel {
@@ -1079,10 +1115,11 @@ html, body {
 .organizations {
   height:100%;
   min-height:100%;
-  padding:20px;
+  padding:0 20px 20px;
+  padding-bottom:0;
   // .route-top {display: none;}
   > .card {
-    margin:-20px 0 0 -20px;
+    margin:0 0 0 -20px;
   }
   .card {
     height:100%;
@@ -1099,9 +1136,11 @@ html, body {
   }
   .organizations-tree {
     min-width:340px;
+    min-height:100%;
     padding:24px;
     margin-right:0;
     border-top:0;
+    background-color: #fff;
     .tree-title {
       font-size: 17px;
       color: #273142;
@@ -1258,6 +1297,7 @@ html, body {
     max-width:1240px;
     border-radius: 4px;
     border: solid 1px #dee2ec;
+    background-color: transparent;
     tbody {
       tr:nth-child(odd) {
         background-color: #fff;
@@ -1347,6 +1387,9 @@ html, body {
 
 .organizations-staff {
   // padding:20px;
+  height: auto;
+  padding-top:20px;
+  padding-bottom:60px;
   .data-table {
     background-color: #fff;
     .checkbox {
@@ -1456,6 +1499,9 @@ html, body {
   background-color: #fff;
 }
 .organizations-users {
+  height:auto;
+  padding-top:20px;
+  padding-bottom:60px;
   .card {
     max-width:850px;
     background-color: transparent;
@@ -1686,11 +1732,11 @@ html, body {
 } //.modal-frequently-authority
 
 .clinic-info {
-  padding:20px;
+  padding:20px 20px 60px;
   .card {
     max-width:850px;
     background: transparent;
-    padding: 24px 16px;
+    padding: 24px 16px 24px 0;
     border-radius: 0;
     box-shadow: none;
     .table-round {
@@ -1712,6 +1758,156 @@ html, body {
   }
 } //.clinic-info
 
+.chart-sample {
+  min-width:1000px;
+  max-width:1200px;
+  padding:20px 20px 60px;
+  .react-contextmenu-wrapper {
+    .title {
+      font-size: 17px;
+    }
+  }
+  .wrap-resource {
+    .wrap-folder {
+      position: relative;
+      .btn-create-folder {
+        position: absolute;
+        right:0;
+        top:0;
+        min-width:100px;
+        padding:9px 10px 8px;
+        border: solid 1px #1b73e8;
+        background-color: #1b73e8;
+        color:#fff;
+      }
+    }
+    .sub-title {
+      display: inline-block;
+      font-size: 14px;
+    }
+    .folder {
+      li {
+        position: relative;
+        border-radius: 4px;
+        font-size: 14px;
+        margin:0;
+        margin-right:20px;
+        &:last-child {
+          margin-right:0;
+        }
+        &:before {
+          background: {
+            color:#fff;
+            image:url('/crm/static/images/icon/ic-chart-folder.png');
+            size:20px;
+            repeat:no-repeat;
+            position: center center;
+          }
+        }
+        .more {
+          position: absolute;
+          right:0;
+          top:0;
+          display: inline-block;
+          width:24px;
+          height:24px;
+          background: {
+            image:url('/crm/static/images/icon/ic-more-menu.png');
+            size:20px;
+            repeat:no-repeat;
+            position: center center;
+          }
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          -webkit-transform-origin: center left;
+          transform-origin: center left;
+        }
+      }
+    }
+    .file {
+      li {
+        position: relative;
+        border-radius: 4px;
+        font-size: 14px;
+        margin:0;
+        margin-right:20px;
+        border:0;
+        &:last-child {
+          margin-right:0;
+        }
+        &.btn-create-file {
+          position: relative;
+          &:before {
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            // background: #9cb2cd;
+            // margin-bottom: 11px;
+            opacity: 1;
+            background: {
+              color: #eff6ff;
+              image:url('/crm/static/images/common/ic-addphoto.png');
+              size:50px;
+              repeat:no-repeat;
+              position: center center;
+            }
+          }
+          > span {
+            display: block;
+            position: absolute;
+            left:50%;
+            top:65%;
+            font-weight: 700;
+            color: #9cb2cd;
+            @include transform(translate(-50%, -50%));
+            // z-index: 1;
+          }
+        }
+      }
+      .thumb {
+        height:283px;
+        border-radius: 8px;
+        border: solid 1px #d7e3f1;
+        background : {
+          color: #eff6ff;
+        }
+      }
+      .file-name {
+        width:calc(100% - 35px);
+        padding:14px 0;
+        color: #282828;
+        text-align: left;
+      }
+      .btn-edit {
+        position: absolute;
+        right:10px;
+        bottom:10px;
+        display: inline-block;
+        width:24px;
+        height:24px;
+        background: {
+          color:transparent;
+          image:url('/crm/static/images/icon/ic-more-menu.png');
+          size:20px;
+          repeat:no-repeat;
+          position: center center;
+        }
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: center right;
+        transform-origin: center right;
+      }
+    }
+  }
+} //.chart-sample
+.react-contextmenu {
+  border-radius: 4px;
+}
+
+
+
 .data-table {
   padding:0 0 10px;
   border-radius: 4px;
@@ -1728,6 +1924,7 @@ html, body {
     }
   }
   table {
+    margin-bottom:15px;
     th {
       padding:17px 0;
       color: #4a4f70;
@@ -1739,6 +1936,10 @@ html, body {
       background-color: #fff;
       border-right:0;
     }
+  }
+  td:not(:last-child),
+  th:not(:last-child) {
+    border-right:0;
   }
 }
 
@@ -1754,7 +1955,7 @@ html, body {
 }
 .customer-codes, .appointment-codes, .consulting-codes, .payment-codes {
   max-width:1006px;
-  padding:20px;
+  padding:20px 20px 60px;
   .page-navi {
     border:0;
     padding:0;
@@ -1979,7 +2180,7 @@ html, body {
 } //.consulting-codes
 
 .payment-codes {
-  padding-bottom:70px;
+  // padding-bottom:70px;
   .data-table {
     .depth-2 {
       width:150px;
@@ -1997,7 +2198,7 @@ html, body {
 } //.payment-codes
 
 .connects, .counselors {
-  padding:20px;
+  padding:20px 20px 60px;
 
   [class*='-header']{
     position: relative;
@@ -2048,7 +2249,12 @@ html, body {
     max-width:1000px;
     // margin-bottom:32px;
   }
+  .display-table {
+    width:100%;
+  }
   .consulting-connect {
+    min-width:500px;
+    max-width:800px;
     .ant-btn {
       width:20px;
       height:20px;
@@ -2062,15 +2268,40 @@ html, body {
         font-size: 0;
       }
     }
+    .tab-contents {
+      border:0;
+      .contents {
+        padding:30px;
+        .m-b-8 {
+          margin-bottom:20px !important;
+        }
+        span {
+          display: block;
+          padding-bottom:8px;
+        }
+      }
+      input:not([type=radio]):not([type=checkbox]),
+      input.flex-fill,
+      textarea {
+        width:40%;
+      }
+    }
   }
   .consulting-request-connect {
     background-color: #fff;
+    border-radius: 4px;
+    border:1px solid #dee2ec;
     .tabs {
+      border-bottom:1px solid #dee2ec;
       .tab {
+        display: block;
+        flex:1;
+        min-width:inherit;
         padding-top:21px;
         padding-bottom:0;
         border:0;
-        font-size: 16px;
+        font-size: 15px;
+        text-align: center;
         &:not(.disabled):hover {
           border:0;
         }
@@ -2081,6 +2312,7 @@ html, body {
         &.selected {
           color: #0060ff;
           font-weight: 700;
+          font-size: 16px;
           span {
             border-bottom:2px solid #0060ff;
           }
@@ -2096,9 +2328,71 @@ html, body {
       color:#fff;
     }
   }
+} //.connects
+.modal .modal-container {
+  .modal-event-registration, .modal-consulting-evnt {
+    min-width:580px;
+  }
 }
-
-
+.modal .modal-container {
+  .modal-event-registration {
+    .body {
+      padding-bottom:60px;
+      font-size: 14px;
+      color:#4a4f70;
+      > div {
+        margin-bottom:15px !important;
+        button {
+          > a {
+            display: inline-block;
+            min-width: 140px;
+            padding:5px 10px;
+            font-size: 13px;
+            border-radius: 4px;
+            border: solid 1px #484760;
+            // background-color: #ffffff;
+          }
+        }
+      }
+      span + span {
+        display: block;
+        color:#9cb2cd;
+      }
+      .flex-row {
+        padding-top:20px;
+        input{
+          padding:9px 15px;
+        }
+        .btn {
+          min-width:80px;
+          border: solid 1px #dee2ec;
+          background-color: #fff;
+          color: #484760;
+        }
+        .btn-del {
+          border: solid 1px #f7685b;
+          background-color: #f7685b;
+          color:#fff;
+        }
+      }
+    }
+  } //.modal-event-registration
+  .modal-consulting-evnt {
+    .form-control {
+      select, input {
+        width:80%;
+        font-size: 14px;
+      }
+      input {
+        padding:9px 15px;
+        background-color: #fff;
+      }
+    }
+    .buttons {
+      margin-top:60px;
+    }
+  } //.modal-consulting-evnt
+}
 
 .modal .modal-container {
   .head {

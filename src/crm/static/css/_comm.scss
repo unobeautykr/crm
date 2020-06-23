@@ -68,6 +68,10 @@ button, a {
       background-color: #1b73e8 !important;
     }
   }
+  &.btn-cancel {
+    background-color: #dee2ec;
+    color:#fff;
+  }
   &._full {
     width:100%;
   }
@@ -248,6 +252,7 @@ input[type=radio] {
     > div {
       position: relative;
       padding:30px;
+      border-radius: 4px;
       .buttons {
         button {
           min-width: 60px;
@@ -325,6 +330,44 @@ input[type=radio] {
     }
   } //.modal-container
 } //.modal
+
+.ant-tooltip {
+  max-width:370px;
+  .ant-tooltip-arrow {
+    z-index: 1;
+    bottom:-3.071068px;
+    &:before {
+      width:13px;
+      height:13px;
+      background-color: #fff;
+      border:1px solid #0060ff;
+      z-index: 1;
+      // box-shadow: 3px 3px 7px rgba(0, 0, 0, .07);
+      // transform: translateY(-6.53553px) rotate(45deg);
+    }
+  }
+  .ant-tooltip-inner {
+    padding:18px 27px;
+    border-radius: 4px;
+    border:1px solid #0060ff;
+    background-color: #fff;
+    color: #484760;
+  }
+} //.ant-tooltip
+
+.ant-dropdown {
+  border: solid 1px #efeff4;
+  border-radius: 4px;
+  .ant-dropdown-menu {
+    li {
+      padding:9px 20px;
+      border-bottom: solid 1px #efeff4;
+      &:last-child {
+        border-bottom:0;
+      }
+    }
+  }
+} //.ant-dropdown
 
 .login-body {
   top:0;
@@ -463,3 +506,11 @@ input[type=radio] {
     }
   }
 } //.pagination
+
+.form-control {
+  &.required label {
+    &:after {
+      color: #4a4f70;
+    }
+  }
+}
