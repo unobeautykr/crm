@@ -2,19 +2,8 @@
 <html lang="en">
 <head>
   <!-- page head -->
-  <meta charset="utf-8">
-<link rel="icon" href="/favicon.png">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#000000">
-<meta name="description" content="Web site created using create-react-app">
-<link rel="apple-touch-icon" href="/logo192.png">
-<link rel="manifest" href="/manifest.json">
-<title>CRM - 펜1</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-<link href="/crm/static/css/base.css" rel="stylesheet">
-<link href="/crm/static/css/main.css" rel="stylesheet">
-<link href="/crm/static/css/ui.css" rel="stylesheet">
-
+  @@include('../inc/pagehead.inc',{
+  })
   <!--// page head -->
 </head>
 
@@ -23,163 +12,15 @@
   <div id="app">
     <div class="overlay left-navigation-overlay"></div>
     <!-- header-bar & ui-header -->
-		<!-- header-bar -->
-<div class="header-bar flex-row flex-between ui-header"> <!-- add class=ui-header //-->
-  <div class="header-items left flex-wrap">
-    <h1 class="title">바비톡 성형외과</h1>  <!--modi //-->
-    <button class="btn btn-close"><span class="a11y">사이드 닫기/열기</span></button>  <!--modi //-->
-  </div>
-  <div class="flex-row items-center flex-between flex-fill">
-    <div class="customer-search-bar flex-row items-center">
-      <input placeholder="고객명, 차트번호, 전화번호, 주민번호" class="flex-fill" value="">
-      <div class="buttons flex-row flex-wrap">
-        <button class="btn btn-accent m-l-8">검색</button>  <!--modi //-->
-        <button class="btn btn-accent m-l-8">고객등록</button>  <!--modi //-->
-      </div>
-    </div>
-    <div class="header-items right">
-      <div class="me _language">
-        <button class="btn btn-lang">언어변환</button>
-        <div class="lang">
-          <ul>
-            <li><a href="#">한글</a></li>
-            <li><a href="#">영문</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="me _sched">
-        <button class="btn btn-sched"><span class="alram"></span>부재일정확인</button>
-      </div>
-      <div class="me _info">
-        <p class="fig"></p>
-        <p>park</p>
-        <p class="email"><a href="mailto:test1@gmail.com">test1test1test1@gmail.com</a></p>
-      </div>
-      <div class="me _power">
-        <button class="btn btn-logout">로그아웃</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!--// header-bar -->
-
+		@@include('../inc/header.inc',{
+		})
     <!--// header-bar & ui-header -->
 
     <!-- app-body & ui-body -->
     <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
       <!-- left navigation -->
-      <!--
-left-navigation 마크업 및 클래스 추가/수정
-//-->
-<div class="left-navigation flex flex-wrap ">
-  <div class="flex-wrap clinic-name">펜1</div>
-  <div class="ver-scroll flex-fill">
-    <div class="menu depth-0">
-      <div class="menu-item selected">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-home"></i>현황판 (홈)</span></div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-calender"></i>예약 캘린더</span></div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-consult"></i>상담문의 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">상담문의</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">담당자 배정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">연동설정</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-msg"></i>문자 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">문자 전송</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">문자 충전</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">전송내역 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">충전내역 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">문자코드 설정</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-inq"></i>조회</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">고객 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">예약 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">상담 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">진료 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">수납 조회</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-stat"></i>통계</span></div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-setting"></i>환경 설정</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">고객코드 설정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">예약캘린더 설정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">상담코드 설정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">수납코드 설정</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-hospital"></i>병원 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">조직 관리</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">직원 관리</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">병원 정보</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">펜차트 샘플함</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--
-left-navigation 마크업 및 클래스 수정
-//-->
-
+      @@include('../inc/leftnavigation.inc',{
+      })
       <!--// left navigation -->
 
       <div class="flex-fill left-nav-opened route">
@@ -237,7 +78,6 @@ left-navigation 마크업 및 클래스 수정
                         <div class="inline-flex has-action depth-1">
                           <button class="btn btn-sm btn-primary m-r-4" data-type="edit">수정</button>
                           <button class="btn btn-sm btn-danger" data-type="visible">미사용</button>
-
                         </div>
                       </div>
                     </td>
@@ -274,7 +114,6 @@ left-navigation 마크업 및 클래스 수정
                       <div class="item-content center  ">
                         <div class="inline-flex has-action depth-2">
                           <span>no-option</span>
-
                           <button class="btn btn-primary btn-sm" data-type="visible">사용</button>
                         </div>
                       </div>
@@ -1688,132 +1527,355 @@ left-navigation 마크업 및 클래스 수정
               </table>
             </div>
           </div>
-          <div class="refund-reasons">
-            <div class="route-top">
-              <div class="title f-20 m-b-16">환불 사유</div>
-              <!-- modi 마크업 순서 변경 -->
-              <div class="flex-row items-center flex-between">
-                <div class="flex-row items-center m-r-8" style="cursor: pointer;"> <!-- modi add class = m-r-8 //-->
-                  <div class="checkbox flex-wrap m-r-8"></div><span>숨김 항목 보지 않기</span>
-                </div>
-                <button class="btn btn-primary btn-sm flex-wrap btn-add">추가</button> <!-- modi add class = btn-add //-->
-              </div>
-              <!--// modi 마크업 순서 변경 -->
 
-            </div>
-            <div class="data-table">
-              <div class="top flex-row items-center flex-between m-b-16"></div>
-              <table>
-                <thead>
-                  <tr>
-                    <th>
-                      <div class="flex-row items-center"><span>ACTION</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>환불 사유</span></div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class=" row-0">
-                    <td>
-                      <div class="item-content center ">
-                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
-                        <button class="btn btn-sm btn-danger">숨김</button></div>
-                    </td>
-                    <td>
-                      <div class="item-content center ">구매철회</div>
-                    </td>
-                  </tr>
-                  <tr class=" row-1">
-                    <td>
-                      <div class="item-content center "><button class="btn btn-sm btn-primary">숨김해제</button></div>
-                    </td>
-                    <td>
-                      <div class="item-content center ">진료불만족</div>
-                    </td>
-                  </tr>
-                  <tr class=" row-2">
-                    <td>
-                      <div class="item-content center ">
-                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
-                        <button class="btn btn-sm btn-danger">숨김</button></div>
-                    </td>
-                    <td>
-                      <div class="item-content center ">기타</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="discount-reasons">
-            <div class="route-top">
-              <div class="title f-20 m-b-16">할인 사유</div>
-              <!-- modi 마크업 순서 변경 -->
-              <div class="flex-row items-center flex-between">
-                <div class="flex-row items-center m-r-8" style="cursor: pointer;"> <!-- modi add class = m-r-8 //-->
-                  <div class="checkbox flex-wrap m-r-8"></div><span>숨김 항목 보지 않기</span>
-                </div>
-                <button class="btn btn-primary btn-sm flex-wrap btn-add">추가</button> <!-- modi add class = btn-add //-->
-              </div>
-              <!--// modi 마크업 순서 변경 -->
-
-            </div>
-            <div class="data-table">
-              <div class="top flex-row items-center flex-between m-b-16"></div>
-              <table>
-                <thead>
-                  <tr>
-                    <th>
-                      <div class="flex-row items-center"><span>ACTION</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>할인 사유</span></div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class=" row-0">
-                    <td>
-                      <div class="item-content center ">
-                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
-                        <button class="btn btn-sm btn-danger">숨김</button></div>
-                    </td>
-                    <td>
-                      <div class="item-content center ">할인사유1</div>
-                    </td>
-                  </tr>
-                  <tr class=" row-1">
-                    <td>
-                      <div class="item-content center ">
-                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
-                        <button class="btn btn-sm btn-danger">숨김</button></div>
-                    </td>
-                    <td>
-                      <div class="item-content center ">할인사유2</div>
-                    </td>
-                  </tr>
-                  <tr class=" row-2">
-                    <td>
-                      <div class="item-content center ">
-                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
-                        <button class="btn btn-sm btn-danger">숨김</button></div>
-                    </td>
-                    <td>
-                      <div class="item-content center ">할인사유3</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
         </div>
       </div>
     </div>
     <div class="toast-wrapper">
       <div class="toast  "></div>
     </div>
+
+    <!-- 시/수술 추가 popup -->
+    <div class="modal modal-overlay">
+      <div class="modal-container">
+        <!-- modi : 마크업 변경/추가 클래스 수정 확인 -->
+        <div class="modal-surgery items-group">
+          <div class="head flex-row flex-between items-start">
+            <div class="title">시/수술 추가</div><i class="zmdi zmdi-close"></i>
+          </div>
+          <div class="body">
+            <div class="row items-group category-name">
+              <div class="item-label">
+                <span class="label-required">카테고리 선택</span>
+                <button class="btn btn-primary btn-basic">세부항목 추가</button>
+              </div>
+              <div class=" ">
+                <input name="name" class="item-input" type="text" value="" placeholder="원하는 카테고리가 없으면 카테고리 추가 버튼을 클릭하세요">
+                <!-- <select>
+                  <option>원하는 카테고리가 없으면 카테고리 추가 버튼을 클릭하세요</option>
+                </select> -->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="surgery-list ">
+                  <!-- item-group -->
+                  <div>
+                    <div class="flex item-group item-0">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="item-label"><span class="label-required">시/수술명</span></div>
+                            <div class=""><input name="name" class="item-input" value=""></div>
+                          </div>
+                          <div class="row">
+                            <div class="form-control">
+                              <div class="item-label "><span class="label-required">시/수술 횟수</span></div>
+                              <div class="">
+                                <select name="treatmentCount" class="item-select">
+                                  <option value="1">1회</option>
+                                  <option value="2">2회</option>
+                                  <option value="3">3회</option>
+                                  <option value="4">4회</option>
+                                  <option value="5">5회</option>
+                                  <option value="6">6회</option>
+                                  <option value="7">7회</option>
+                                  <option value="8">8회</option>
+                                  <option value="9">9회</option>
+                                  <option value="10">10회</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-control">
+                              <div class="item-label "><span class="label-required">다음 방문일</span></div>
+                              <div class="">
+                                <select name="nextPeriod" disabled="" class="item-select">
+                                  <option value="d__0">-</option>
+                                  <option value="d__1">1일 후</option>
+                                  <option value="d__2">2일 후</option>
+                                  <option value="d__3">3일 후</option>
+                                  <option value="d__4">4일 후</option>
+                                  <option value="d__5">5일 후</option>
+                                  <option value="d__6">6일 후</option>
+                                  <option value="d__7">7일 후</option>
+                                  <option value="d__15">15일 후</option>
+                                  <option value="m__1">1개월 후</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="item-label"><span class="label-required">가격</span></div>
+                            <div class="">
+                              <input inputmode="numeric" class="item-currency" name="price" type="text" value="" placeholder="가격을 입력하세요.">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="item-label">VAT 포함가격</div>
+                            <div>
+                              <input inputmode="numeric" class="item-currency" name="" type="text" value="110,000" disabled="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="item-label"><span class="label-required">과세여부</span></div>
+                            <div class="col-2 ">
+                              <div class="flex-row items-center component-input-checkbox item-checkbox ">
+                                <span class="text-center label">부가세</span>
+                                <div class="checkbox flex-wrap m-r-8"><i class="zmdi zmdi-check"></i></div>
+                              </div>
+                            </div>
+                            <div class="col-2">
+                              <div class="flex-row items-center component-input-checkbox item-checkbox ">
+                                <span class="text-center label">급여</span>
+                                <div class="checkbox flex-wrap m-r-8"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- 삭제 <div class="row row-separator">
+                      <div class="col-1"></div>
+                      <div class="col-11 row-border"></div>
+                    </div> -->
+                  </div>
+                  <!--// item-group -->
+
+                  <!-- item-group -->
+                  <div>
+                    <div class="flex item-group item-1">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="item-label"><span class="label-required">시/수술명</span></div>
+                            <div class=""><input name="name" class="item-input" value=""></div>
+                            <span class="error">* 중복되는 이름이 있습니다.</span>
+                          </div>
+                          <div class="row">
+                            <div class="form-control">
+                              <div class="item-label "><span class="label-required">시/수술 횟수</span></div>
+                              <div class="">
+                                <select name="treatmentCount" class="item-select">
+                                  <option value="1">1회</option>
+                                  <option value="2">2회</option>
+                                  <option value="3">3회</option>
+                                  <option value="4">4회</option>
+                                  <option value="5">5회</option>
+                                  <option value="6">6회</option>
+                                  <option value="7">7회</option>
+                                  <option value="8">8회</option>
+                                  <option value="9">9회</option>
+                                  <option value="10">10회</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-control">
+                              <div class="item-label "><span class="label-required">다음 방문일</span></div>
+                              <div class="">
+                                <select name="nextPeriod" disabled="" class="item-select">
+                                  <option value="d__0">-</option>
+                                  <option value="d__1">1일 후</option>
+                                  <option value="d__2">2일 후</option>
+                                  <option value="d__3">3일 후</option>
+                                  <option value="d__4">4일 후</option>
+                                  <option value="d__5">5일 후</option>
+                                  <option value="d__6">6일 후</option>
+                                  <option value="d__7">7일 후</option>
+                                  <option value="d__15">15일 후</option>
+                                  <option value="m__1">1개월 후</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="item-label"><span class="label-required">가격</span></div>
+                            <div class="">
+                              <input inputmode="numeric" class="item-currency" name="price" type="text" value="" placeholder="가격을 입력하세요.">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="item-label">VAT 포함가격</div>
+                            <div class="">
+                              <input inputmode="numeric" class="item-currency" name="" type="text" value="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="item-label"><span class="label-required">과세여부</span></div>
+                            <div class="col-2 ">
+                              <div class="flex-row items-center component-input-checkbox item-checkbox ">
+                                <span class="text-center label">부가세</span>
+                                <div class="checkbox flex-wrap m-r-8"><i class="zmdi zmdi-check"></i></div>
+                              </div>
+                            </div>
+                            <div class="col-2">
+                              <div class="flex-row items-center component-input-checkbox item-checkbox ">
+                                <span class="text-center label">급여</span>
+                                <div class="checkbox flex-wrap m-r-8"></div>
+                              </div>
+                            </div>
+                            <div class="col-8 text-right">
+                              <button class="btn btn-danger btn-del item-pop">빼기</button>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!--// item-group -->
+
+                  <!-- item-group -->
+                  <div>
+                    <div class="flex item-group item-2">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="item-label"><span class="label-required">시/수술명</span></div>
+                            <div class=""><input name="name" class="item-input" value=""></div>
+                            <!-- <span class="error">* 중복되는 이름이 있습니다.</span> -->
+                          </div>
+                          <div class="row">
+                            <div class="form-control">
+                              <div class="item-label "><span class="label-required">시/수술 횟수</span></div>
+                              <div class="">
+                                <select name="treatmentCount" class="item-select">
+                                  <option value="1">1회</option>
+                                  <option value="2">2회</option>
+                                  <option value="3">3회</option>
+                                  <option value="4">4회</option>
+                                  <option value="5">5회</option>
+                                  <option value="6">6회</option>
+                                  <option value="7">7회</option>
+                                  <option value="8">8회</option>
+                                  <option value="9">9회</option>
+                                  <option value="10">10회</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-control">
+                              <div class="item-label "><span class="label-required">다음 방문일</span></div>
+                              <div class="">
+                                <select name="nextPeriod" disabled="" class="item-select">
+                                  <option value="d__0">-</option>
+                                  <option value="d__1">1일 후</option>
+                                  <option value="d__2">2일 후</option>
+                                  <option value="d__3">3일 후</option>
+                                  <option value="d__4">4일 후</option>
+                                  <option value="d__5">5일 후</option>
+                                  <option value="d__6">6일 후</option>
+                                  <option value="d__7">7일 후</option>
+                                  <option value="d__15">15일 후</option>
+                                  <option value="m__1">1개월 후</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="item-label"><span class="label-required">가격</span></div>
+                            <div class="">
+                              <input inputmode="numeric" class="item-currency" name="price" type="text" value="" placeholder="가격을 입력하세요.">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="item-label">VAT 포함가격</div>
+                            <div class="">
+                              <input inputmode="numeric" class="item-currency" name="" type="text" value="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="item-label"><span class="label-required">과세여부</span></div>
+                            <div class="col-2 ">
+                              <div class="flex-row items-center component-input-checkbox item-checkbox ">
+                                <span class="text-center label">부가세</span>
+                                <div class="checkbox flex-wrap m-r-8"><i class="zmdi zmdi-check"></i></div>
+                              </div>
+                            </div>
+                            <div class="col-2">
+                              <div class="flex-row items-center component-input-checkbox item-checkbox ">
+                                <span class="text-center label">급여</span>
+                                <div class="checkbox flex-wrap m-r-8"></div>
+                              </div>
+                            </div>
+                            <div class="col-8 text-right">
+                              <button class="btn btn-danger btn-del item-pop">빼기</button>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!--// item-group -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="flex-row"><button class="btn btn-default">취소</button><button class="btn btn-primary">저장</button></div>
+          </div>
+        </div>
+        <!--// modi : 마크업 변경/추가 클래스 수정 확인 -->
+
+      </div>
+    </div>
+    <!--// 시/수술 추가 popup -->
+
+    <!-- 제품 추가 popup -->
+    <!-- modi : 마크업 변경/추가 클래스 수정 확인 -->
+    <div class="modal modal-overlay">
+      <div class="modal-container">
+        <div class="modal-product">
+          <div class="head flex-row flex-between items-start">
+            <div class="title">제품 추가</div><i class="zmdi zmdi-close"></i>
+          </div>
+          <div class="body">
+            <div class="form-control"><label class="label-required">제품</label><input value="" placeholder="제품명을 입력하세요."></div>
+            <div class="flex-row">
+              <div class="form-control m-r-8"><label class="label-required">가격</label><input type="number" value=""></div>
+              <div class="form-control"><label>VAT 포함가격</label><input type="number" value="" disabled=""></div>
+            </div>
+            <div class="form-control"><label class="label-required">과세여부</label></div>
+            <div class="flex-row row-checkbox">
+              <div class="form-control">
+                <div class="checkbox  undefined "></div>
+                <label>부가세</label>
+              </div>
+              <div class="form-control">
+                <div class="checkbox  undefined "></div>
+                <label>급여/비급여</label>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="flex-row"><button class="btn btn-default">취소</button><button class="btn btn-primary">저장</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modi : 마크업 변경/추가 클래스 수정 확인 -->
+    <!--// 제품 추가 popup -->
+
 
   </div>
   <!-- <script>

@@ -26,12 +26,14 @@
       <div class="flex-fill left-nav-opened route">
 
         <div class="list counselors">
+          <div class="page-navi"><span class="title">상담문의 관리</span><span class="title">연동 설정</span></div> <!-- modi add //-->
+
           <div class="route-top">
-            <div class="title"><span class="title m-r-16">상담문의</span></div>
-            <div class="title"><span class="subtitle m-r-16">금일 미응대 건 : 0</span><span class="subtitle m-r-16">금일 리콜필요 건 : 0</span></div>
-            <div class="search-bar m-t-8">
-              <div class="search-btns"><button class="btn btn-primary btn-sm m-r-8">이번 주</button></div>
-              <div class="search-btns"><button class="btn btn-primary btn-sm m-r-8">이번 달</button></div>
+            <!-- <div class="title"><span class="title m-r-16">상담문의</span></div> modi 삭제 -->
+
+            <div class="search-bar">
+              <div class="search-btns"><button class="btn btn-normal _small m-r-8">이번 주</button></div> <!-- modi //-->
+              <div class="search-btns"><button class="btn btn-normal _small m-r-8">이번 달</button></div> <!-- modi //-->
               <div class="search-item m-r-8">
                 <div class="react-datepicker-wrapper">
                   <div class="react-datepicker__input-container"><input type="text" placeholder="날짜선택" class="text-center" value=""></div>
@@ -42,7 +44,8 @@
                   <div class="react-datepicker__input-container"><input type="text" placeholder="날짜선택" class="text-center" value=""></div>
                 </div>
               </div>
-              <div class="search-item m-r-8"><select class="select-form" name="assignUserId">
+              <div class="search-item m-r-8">
+                <select class="select-form" name="assignUserId">
                   <option value="" hidden="" disabled="" selected="">배정된 담당자</option>
                   <option value="null">-</option>
                   <option value="184">펜8</option>
@@ -51,8 +54,10 @@
                   <option value="180">테스트1_4</option>
                   <option value="181">테스트1_5</option>
                   <option value="299">이상담</option>
-                </select></div>
-              <div class="search-item m-r-8"><select name="status" class="select-form">
+                </select>
+              </div>
+              <div class="search-item m-r-8">
+                <select name="status" class="select-form">
                   <option value="" hidden="" disabled="" selected="">처리결과</option>
                   <option value="">-</option>
                   <option value="미응대">미응대</option>
@@ -66,11 +71,26 @@
                   <option value="중복">중복</option>
                   <option value="리콜필요">리콜필요</option>
                   <option value="직접입력">직접입력</option>
-                </select></div>
-              <div class="search-item m-r-8"><input placeholder="고객명" name="userName"></div>
-              <div class="search-item m-r-8"><input placeholder="연락처" name="phoneNumber"></div>
-              <div class="search-btns"><button class="btn btn-primary btn-sm m-r-8">조회</button></div>
+                </select>
+              </div>
+
+               <!-- modi -->
+              <div class="row">
+                <div class="search-item m-r-8"><input placeholder="고객명" name="userName"></div>
+                <div class="search-item m-r-8"><input placeholder="연락처" name="phoneNumber"></div>
+                <div class="search-btns">
+                  <button class="btn btn-cancel _small">초기화</button> <!-- modi //-->
+                  <button class="btn btn-basic _small">조회</button> <!-- modi //-->
+                </div>
+              </div>
+               <!-- modi //-->
             </div>
+
+            <div class="title">
+              <span class="subtitle m-r-16">금일 미응대 건 : <span class="cnt">0</span></span> <!-- modi //-->
+              <span class="subtitle m-r-16">금일 리콜필요 건 : <span class="cnt">0</span></span> <!-- modi //-->
+            </div>
+
           </div>
           <div class="flex-row m-b-8">
             <div class="checkbox  flex-wrap m-r-8 "></div><span class="flex-wrap m-r-16">미응대</span>
@@ -129,7 +149,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div> <!-- modi //-->
                     </div>
                   </td>
                   <td>
@@ -182,7 +202,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -235,7 +255,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">request <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">request <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -288,7 +308,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -341,7 +361,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -394,7 +414,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -447,7 +467,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">단순문의 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">단순문의 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -502,7 +522,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -555,7 +575,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -608,7 +628,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -661,7 +681,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -714,7 +734,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -767,7 +787,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">미응대 <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">미응대 <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -820,7 +840,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">request <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">request <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -873,7 +893,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">request <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">request <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -926,7 +946,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">request <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">request <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -979,7 +999,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">request <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">request <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -1032,7 +1052,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">request <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">request <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -1085,7 +1105,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">request <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">request <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -1138,7 +1158,7 @@
                   </td>
                   <td>
                     <div class="item-content center">
-                      <div class="text-center">request <button class="btn btn-primary btn-sm">응대하기</button></div>
+                      <div class="text-center">request <button class="btn btn-respon">응대하기</button></div>
                     </div>
                   </td>
                   <td>
@@ -1190,12 +1210,14 @@
             <div class="flex-row flex-between">
               <div class="pagination">
                 <div class="flex-row items-center">
+                  <div class="page-icon flex-wrap page-prev"><span class="a11y">이전</span></div>
                   <div class="page-icon flex-wrap selected">1</div>
                   <div class="page-icon flex-wrap ">2</div>
                   <div class="page-icon flex-wrap ">3</div>
                   <div class="page-icon flex-wrap ">4</div>
+                  <div class="page-icon flex-wrap page-next"><span class="a11y">다음</span></div>
                 </div>
-                <div class="c-red f-medium m-t-16">1 / 4</div>
+                <!-- <div class="c-red f-medium m-t-16">1 / 4</div> -->
               </div>
               <div class="limit-setter flex-row">
                 <div class="page-icon flex-wrap ">10</div>
