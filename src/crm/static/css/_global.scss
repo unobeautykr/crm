@@ -77,6 +77,7 @@ html, body {
       }
       &.right {
         padding-right:0;
+        margin-left:10px;
       }
       h1.title {
         font-size: 18px;
@@ -2519,8 +2520,9 @@ html, body {
 .counselors {
   .route-top {
     .title {
+      min-width: 1000px;
       max-width: 1240px;
-      padding:17px 20px;
+      padding: 17px 20px;
       background-color: #fff;
     }
   }
@@ -2564,12 +2566,26 @@ html, body {
     }
   }
   .data-table {
+    border:0;
+    background-color: transparent;
     padding-bottom:55px;
+    > table {
+      margin-bottom:10px;
+    }
+    tbody {
+      tr:nth-child(even) {
+        background-color: #f9fbff;
+      }
+    }
+    th {
+      min-width:100px;
+    }
     .btn {
       box-shadow: none;
     }
     .btn-respon {
       display: block;
+      margin:0 auto;
       background-color: transparent;
       font-size: 13px;
       color: #0060ff;
@@ -2577,29 +2593,114 @@ html, body {
     }
   }
   .text-center {
-    padding:2px 0;
+    padding:2px 0 3px;
+    // min-width:170px;
   }
   .text-underline {
+    display: inline-block;
     color: #0060ff;
     text-decoration: underline;
   }
   .existing-customer {
+    display: inline-block;
+    width:60px;
+    // margin-right:5px;
     border:1px solid #a0b2cb;
     background-color: #f6f7fa;
     color:#a0b2cb;
     border-radius: 0;
     font-size: 11px;
     padding:3px 5px;
+    & + .text-underline {
+      width: 90px;
+    }
   }
   .new-customer {
+    display: inline-block;
+    width:55px;
+    // margin-right:5px;
     border:1px solid #ec5f8c;
     background-color: #f6eaf3;
     color:#ec5f8c;
     border-radius: 0;
     font-size: 11px;
     padding:3px 5px;
+    & + .text-underline {
+      width: 90px;
+    }
   }
 } //.counselors
+.modal {
+  .modal-consulting {
+    min-width:580px;
+    .head {
+      &:after {
+        display: none;
+      }
+    }
+    .consulting-request-connect {
+      margin-left:-30px;
+      margin-right:-30px;
+      .tabs {
+        padding-left: 30px;
+        padding-right: 30px;
+        border-bottom:1px solid #d7e3f1;
+      }
+      .tab {
+        min-width:auto !important;
+        padding:6px 0;
+        margin-right:50px !important;
+        border:0;
+        font-size: 15px !important;
+        color: #9cb2cd;
+        &.selected {
+          font-size: 16px !important;
+          font-weight: 700;
+          color: #0060ff;
+          border-bottom:2px solid #0060ff;
+        }
+      }
+      .tab-contents {
+        padding: 0 30px;
+      }
+      [class*='-data'] {
+        > span {
+          display: block;
+          padding-bottom:8px;
+          font-size: 14px;
+          font-weight: 700;
+          color: #4a4f70;
+        }
+      }
+    }
+    table {
+      th,td {
+        padding:17px 10px;
+        color: #4a4f70;
+        font-weight: 500;
+        text-align: left;
+      }
+      th {
+        background-color: #f9fbff;
+      }
+    }
+    .data-table {
+      table {
+        th,td {
+          padding:17px 10px;
+          color: #4a4f70;
+          text-align: left;
+        }
+        th {
+          background-color: #f9fbff;
+        }
+      }
+    }
+    .request-data {
+      max-height:inherit;
+    }
+  }
+} //.modal-consulting
 
 .modal .modal-container {
   .modal-input{
@@ -2616,6 +2717,7 @@ html, body {
   }
   .modal-department-category {
     min-width:540px;
+    max-width:760px;
     .form-control {
       > label {
         font-size: 14px;
@@ -2652,7 +2754,7 @@ html, body {
       margin-top:60px;
     }
   }
-}
+} //.modal-department-category
 
 
 @import "_response";

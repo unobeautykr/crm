@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page head -->
+  @@include('../inc/pagehead.inc',{
+  })
+  <!--// page head -->
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+    <!-- header-bar & ui-header -->
+		@@include('../inc/header.inc',{
+		})
+    <!--// header-bar & ui-header -->
+
+    <!-- app-body & ui-body -->
+    <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
+      <!-- left navigation -->
+  		@@include('../inc/leftnavigation.inc',{
+  		})
+      <!--// left navigation -->
+
+      <div class="flex-fill left-nav-opened route">
+
+        <div class="list counselors">
+          <div class="page-navi"><span class="title">상담문의 관리</span><span class="title">상담문의</span></div> <!-- modi add //-->
+
+          <div class="route-top">
+            <!-- <div class="title"><span class="title m-r-16">상담문의</span></div> modi 삭제 -->
+
+            <div class="search-bar">
+              <div class="search-btns"><button class="btn btn-normal _small m-r-8">이번 주</button></div> <!-- modi //-->
+              <div class="search-btns"><button class="btn btn-normal _small m-r-8">이번 달</button></div> <!-- modi //-->
+              <div class="search-item m-r-8">
+                <div class="react-datepicker-wrapper">
+                  <div class="react-datepicker__input-container"><input type="text" placeholder="날짜선택" class="text-center" value=""></div>
+                </div>
+              </div>
+              <div class="search-item m-r-8">
+                <div class="react-datepicker-wrapper">
+                  <div class="react-datepicker__input-container"><input type="text" placeholder="날짜선택" class="text-center" value=""></div>
+                </div>
+              </div>
+              <div class="search-item m-r-8">
+                <select class="select-form" name="assignUserId">
+                  <option value="" hidden="" disabled="" selected="">배정된 담당자</option>
+                  <option value="null">-</option>
+                  <option value="184">펜8</option>
+                  <option value="171">park</option>
+                  <option value="179">상담ㅎㅎ</option>
+                  <option value="180">테스트1_4</option>
+                  <option value="181">테스트1_5</option>
+                  <option value="299">이상담</option>
+                </select>
+              </div>
+              <div class="search-item m-r-8">
+                <select name="status" class="select-form">
+                  <option value="" hidden="" disabled="" selected="">처리결과</option>
+                  <option value="">-</option>
+                  <option value="미응대 c-red">미응대</option>
+                  <option value="예약완료">예약완료</option>
+                  <option value="단순문의">단순문의</option>
+                  <option value="1차부재">1차부재</option>
+                  <option value="2차부재">2차부재</option>
+                  <option value="3차부재">3차부재</option>
+                  <option value="4차부재">4차부재</option>
+                  <option value="장기부재">장기부재</option>
+                  <option value="중복">중복</option>
+                  <option value="리콜필요">리콜필요</option>
+                  <option value="직접입력">직접입력</option>
+                </select>
+              </div>
+
+               <!-- modi -->
+              <div class="row">
+                <div class="search-item m-r-8"><input placeholder="고객명" name="userName"></div>
+                <div class="search-item m-r-8"><input placeholder="연락처" name="phoneNumber"></div>
+                <div class="search-btns">
+                  <button class="btn btn-cancel _small">초기화</button> <!-- modi //-->
+                  <button class="btn btn-basic _small">조회</button> <!-- modi //-->
+                </div>
+              </div>
+               <!-- modi //-->
+            </div>
+
+            <div class="title">
+              <span class="subtitle m-r-16">금일 미응대 건 : <span class="cnt">0</span></span> <!-- modi //-->
+              <span class="subtitle m-r-16">금일 리콜필요 건 : <span class="cnt">0</span></span> <!-- modi //-->
+            </div>
+
+          </div>
+          <div class="flex-row m-b-8">
+            <div class="checkbox  flex-wrap m-r-8 "></div><span class="flex-wrap m-r-16">미응대</span>
+            <div class="checkbox  flex-wrap m-r-8 "></div><span class="flex-wrap m-r-16">리콜필요</span>
+          </div>
+          <div class="data-table">
+            <!-- <div class="top flex-row items-center flex-between m-b-16"></div> modi 삭제 //-->
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="flex-row items-center"><span>배정된 담당자</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>처리결과</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>상담문의일</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>고객명</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>연락처</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>매체</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>이벤트명</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>이벤트 유형</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>이벤트 가격</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>방문희망일</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>관심항목</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>고객문의</span></div>
+                  </th>
+                  <th>
+                    <div class="flex-row items-center"><span>메모</span></div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class=" row-0">
+                  <td>
+                    <div class="item-content center"><span>park</span></div>
+                  </td>
+                  <td>
+                    <div class="item-content center">
+                      <div class="text-center c-red c-red">미응대 <button class="btn btn-respon">응대하기</button></div> <!-- modi //-->
+                    </div>
+                  </td>
+                  <td>
+                    <div class="item-content center">2020-01-01 05:30:30</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">박지웅</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">
+                      <div class="text-center"><span class="existing-customer">기존고객</span>
+                        <div class="text-underline">01084268026</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="item-content center">바비톡</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">할인이벤트~~</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">의사 상담</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">444,444</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">2020-01-02 05:30</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">가슴</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">상담문의드려요</div>
+                  </td>
+                  <td style="min-width: 300px;">
+                    <div class="item-content center">
+                      <div class="flex-row">
+                        <div class="memo-list">
+
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class=" row-1">
+                  <td>
+                    <div class="item-content center"><span>park</span></div>
+                  </td>
+                  <td>
+                    <div class="item-content center">
+                      <div class="text-center c-red">미응대 <button class="btn btn-respon">응대하기</button></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="item-content center">2020-01-02 15:30:30</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">이나혜</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">
+                      <div class="text-center"><span class="new-customer">신규고객</span>
+                        <div class="text-underline">01035903540</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="item-content center">바비톡</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">할인이벤트~~</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">의사 상담</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">444,444</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">2020-01-02 05:30</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">가슴</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">상담문의드려요</div>
+                  </td>
+                  <td style="min-width: 300px;">
+                    <div class="item-content center">
+                      <div class="flex-row">
+                        <div class="memo-list">
+
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class=" row-2">
+                  <td>
+                    <div class="item-content center">-</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">
+                      <div class="text-center">request <button class="btn btn-respon">응대하기</button></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="item-content center">2020-05-04 18:58:51</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">ㅌㅅㅌ</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">
+                      <div class="text-center"><span class="new-customer">신규고객</span>
+                        <div class="text-underline">01799996666</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="item-content center">바비톡</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">남자 성형 </div>
+                  </td>
+                  <td>
+                    <div class="item-content center">이벤트</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">7,000,000</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">2020-05-04 18:58</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">남자 성형</div>
+                  </td>
+                  <td>
+                    <div class="item-content center"></div>
+                  </td>
+                  <td style="min-width: 300px;">
+                    <div class="item-content center">
+                      <div class="flex-row">
+                        <div class="memo-list">
+
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class=" row-3">
+                  <td>
+                    <div class="item-content center"><span>상담ㅎㅎ</span></div>
+                  </td>
+                  <td>
+                    <div class="item-content center">
+                      <div class="text-center c-red">미응대 <button class="btn btn-respon">응대하기</button></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="item-content center">2020-05-13 10:23:06</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">이헌</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">
+                      <div class="text-center"><span class="existing-customer">기존고객</span>
+                        <div class="text-underline">01012341234</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="item-content center">강남언니</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">보톡스 할인 이벤트3890</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">할인</div>
+                  </td>
+                  <td>
+                    <div class="item-content center">100,000</div>
+                  </td>
+                  <td>
+                    <div class="item-content center"></div>
+                  </td>
+                  <td>
+                    <div class="item-content center"></div>
+                  </td>
+                  <td>
+                    <div class="item-content center"></div>
+                  </td>
+                  <td style="min-width: 300px;">
+                    <div class="item-content center">
+                      <div class="flex-row">
+                        <div class="memo-list">
+
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="flex-row flex-between">
+              <div class="pagination">
+                <div class="flex-row items-center">
+                  <div class="page-icon flex-wrap page-prev"><span class="a11y">이전</span></div>
+                  <div class="page-icon flex-wrap selected">1</div>
+                  <div class="page-icon flex-wrap ">2</div>
+                  <div class="page-icon flex-wrap ">3</div>
+                  <div class="page-icon flex-wrap ">4</div>
+                  <div class="page-icon flex-wrap page-next"><span class="a11y">다음</span></div>
+                </div>
+                <div class="page-total"><span class="tt">total</span>1 / 4</div>
+              </div>
+              <div class="limit-setter flex-row">
+                <div class="page-icon flex-wrap ">10</div>
+                <div class="page-icon flex-wrap selected">20</div>
+                <div class="page-icon flex-wrap ">50</div>
+                <div class="page-icon flex-wrap ">100</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-wrapper">
+      <div class="toast  "></div>
+    </div>
+
+    <!-- 응대하기 pop -->
+    <div class="modal modal-overlay">
+      <div class="modal-container">
+        <div class="modal-consulting">
+          <div class="head flex-row flex-between items-start">
+            <div class="title">응대하기</div> <!-- modi class //-->
+          </div>
+          <div class="consulting-request-connect">
+            <div class="tabs flex-row"> <!-- modi : m-t-8 class delete //-->
+              <div class="tab selected ">상담문의</div>
+              <div class="tab  ">처리내역</div>
+            </div>
+            <div class="tab-contents">
+              <div class="consulting-request m-t-32"> <!-- modi :  m-t-16 class //-->
+                <div class="request-data"> <!-- modi :  m-t-8 class delete //-->
+                  <span>상담문의</span>
+                  <table>
+                    <colgroup>
+                      <col width="20%">
+                      <col width="30%">
+                      <col width="20%">
+                      <col width="30%">
+                      <col width="30%">
+                      <col width="30%">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>배정된 담당자</th>
+                        <td>park</td>
+                        <th>상담문의일</th>
+                        <td>2020-01-01 05:30:30</td>
+                      </tr>
+                      <tr>
+                        <th>고객명</th>
+                        <td>박지웅</td>
+                        <th>연락처</th>
+                        <td><span class="m-r-16">01084268026</span><span class="existing-customer">기존고객</span></td>
+                      </tr>
+                      <tr>
+                        <th>매체</th>
+                        <td>바비톡</td>
+                        <th>이벤트명</th>
+                        <td>할인이벤트~~</td>
+                      </tr>
+                      <tr>
+                        <th>이벤트 유형</th>
+                        <td>의사 상담</td>
+                        <th>이벤트 가격</th>
+                        <td>444,444</td>
+                      </tr>
+                      <tr>
+                        <th>방문희망일</th>
+                        <td>2020-01-02</td>
+                        <th>관심항목</th>
+                        <td>가슴</td>
+                      </tr>
+                      <tr>
+                        <th>고객문의</th>
+                        <td colspan="3">상담문의드려요</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="unresponsive-data m-t-32"> <!-- modi :  m-t-16 class delete //-->
+                  <span>이 외, 미응대 중인 건</span>
+                  <div class="scroll-table">
+                    <div class="data-table">
+                      <!-- <div class="top flex-row items-center flex-between m-b-16"></div> modi 삭제 //-->
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>
+                              <div class="flex-row items-center"><span>상담문의일</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>매체</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>이벤트명</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>이벤트 유형</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>이벤트 가격</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>방문희망일</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>관심항목</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>고객문의</span></div>
+                            </th>
+                            <th>
+                              <div class="flex-row items-center"><span>메모</span></div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class=" row-0">
+                            <td>
+                              <div class="item-content
+                            center
+
+
+
+                          ">2020-06-08 17:38:41</div>
+                            </td>
+                            <td>
+                              <div class="item-content
+                            center
+
+
+
+                          ">강남언니</div>
+                            </td>
+                            <td>
+                              <div class="item-content
+                            center
+
+
+
+                          ">보톡스 할인 이벤트3890</div>
+                            </td>
+                            <td>
+                              <div class="item-content
+                            center
+
+
+
+                          ">할인</div>
+                            </td>
+                            <td>
+                              <div class="item-content
+                            center
+
+
+
+                          ">100,000</div>
+                            </td>
+                            <td>
+                              <div class="item-content
+                            center
+
+
+
+                          ">2020-06-08</div>
+                            </td>
+                            <td>
+                              <div class="item-content
+                            center
+
+
+
+                          "></div>
+                            </td>
+                            <td>
+                              <div class="item-content
+                            center
+
+
+
+                          "></div>
+                            </td>
+                            <td>
+                              <div class="item-content
+                            center
+
+
+
+                          "></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="handling-data m-t-16">
+                  <div class="flex-row">
+                    <div class="m-r-8"><span>메모</span><textarea></textarea></div>
+                    <div>
+                      <div class="m-b-8">
+                        <div>처리하기</div>
+                        <div class="flex-row"><button class="btn btn-sm m-r-8">예약등록</button><button class="btn btn-sm m-r-8">부재문자전송</button></div>
+                      </div>
+                      <div>
+                        <div>처리결과</div><select name="status">
+                          <option value="">-</option>
+                          <option value="미응대">미응대</option>
+                          <option value="단순문의">단순문의</option>
+                          <option value="1차부재">1차부재</option>
+                          <option value="2차부재">2차부재</option>
+                          <option value="3차부재">3차부재</option>
+                          <option value="4차부재">4차부재</option>
+                          <option value="장기부재">장기부재</option>
+                          <option value="중복">중복</option>
+                          <option value="리콜필요">리콜필요</option>
+                          <option value="직접입력">직접입력</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="buttons">
+                  <div class="flex-row"><button class="btn-primary">닫기</button><button class="btn-primary">저장</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// 응대하기 pop -->
+
+  </div>
+  <!-- <script>
+    ! function(e) {
+      function r(r) {
+        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
+        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
+        for (c && c(r); s.length;) s.shift()();
+        return u.push.apply(u, f || []), t()
+      }
+
+      function t() {
+        for (var e, r = 0; r < u.length; r++) {
+          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
+            var i = t[l];
+            0 !== o[i] && (n = !1)
+          }
+          n && (u.splice(r--, 1), e = a(a.s = t[0]))
+        }
+        return e
+      }
+      var n = {},
+        o = {
+          1: 0
+        },
+        u = [];
+
+      function a(r) {
+        if (n[r]) return n[r].exports;
+        var t = n[r] = {
+          i: r,
+          l: !1,
+          exports: {}
+        };
+        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
+      }
+      a.m = e, a.c = n, a.d = function(e, r, t) {
+        a.o(e, r) || Object.defineProperty(e, r, {
+          enumerable: !0,
+          get: t
+        })
+      }, a.r = function(e) {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+          value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+          value: !0
+        })
+      }, a.t = function(e, r) {
+        if (1 & r && (e = a(e)), 8 & r) return e;
+        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
+        var t = Object.create(null);
+        if (a.r(t), Object.defineProperty(t, "default", {
+            enumerable: !0,
+            value: e
+          }), 2 & r && "string" != typeof e)
+          for (var n in e) a.d(t, n, function(r) {
+            return e[r]
+          }.bind(null, n));
+        return t
+      }, a.n = function(e) {
+        var r = e && e.__esModule ? function() {
+          return e.default
+        } : function() {
+          return e
+        };
+        return a.d(r, "a", r), r
+      }, a.o = function(e, r) {
+        return Object.prototype.hasOwnProperty.call(e, r)
+      }, a.p = "/";
+      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
+        i = l.push.bind(l);
+      l.push = r, l = l.slice();
+      for (var f = 0; f < l.length; f++) r(l[f]);
+      var c = i;
+      t()
+    }([])
+  </script>
+  <script src="/static/js/2.59decae5.chunk.js"></script>
+  <script src="/static/js/main.25d03fb0.chunk.js"></script> -->
+</body>
+
+</html>
