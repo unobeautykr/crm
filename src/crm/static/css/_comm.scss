@@ -68,6 +68,10 @@ button, a {
     &:not(.disabled) {
       background-color: #ffffff !important;
     }
+    &:disabled {
+      border: solid 1px #dee2ec;
+      background-color: #dee2ec !important;
+    }
   }
   &.btn-basic {
     font-size: 18px;
@@ -79,11 +83,16 @@ button, a {
     &:not(.disabled) {
       background-color: #1b73e8 !important;
     }
+    &:disabled {
+      border: solid 1px #dee2ec;
+      background-color: #dee2ec !important;
+    }
   }
   &.btn-cancel {
     border: solid 1px #dee2ec;
     background-color: #dee2ec;
     color:#fff;
+    box-shadow: none;
   }
   &._full {
     width:100%;
@@ -98,6 +107,10 @@ button, a {
     border: solid 1px #f7685b !important;
     background-color: #f7685b !important;
     color:#fff !important;
+  }
+  &:disabled {
+    border: solid 1px #dee2ec;
+    background-color: #dee2ec !important;
   }
 }
 select {
@@ -152,10 +165,29 @@ input[type=radio] {
 }
 
 .data-table {
+  min-width:100%;
   padding:0 0 10px;
   border-radius: 4px;
   border: solid 1px #dee2ec;
   background-color: #ffffff;
+  thead {
+    .checkbox {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      border: solid 2px #d5d5d5;
+      box-shadow:none;
+      vertical-align: middle;
+    }
+    th {
+      position: relative;
+      .checkbox {
+        flex:none;
+        display: inline-block;
+        margin-left:5px;
+      }
+    }
+  }
   tbody {
     tr:nth-child(odd) {
       background-color: #fff;
@@ -174,7 +206,7 @@ input[type=radio] {
   }
   tr:hover {
     th, td, .td-grouped {
-      background-color: #fff;
+      background-color: none;
     }
   }
   th {
@@ -294,7 +326,6 @@ input[type=radio] {
     }
   }
 } // .datepicker
-
 .react-datepicker-popper {
   .react-datepicker__triangle {display: none;}
   .react-datepicker {
@@ -323,9 +354,29 @@ input[type=radio] {
     }
   }
 } //.react-datepicker-popper
+.react-datepicker__input-container {
+  input[type=text] {
+    background: {
+      color:#fff;
+      image:url('/crm/static/images/icon/ic-absenteeschedule.png');
+      size:30px;
+      repeat:no-repeat;
+      position: right center;
+    }
+  }
+} //.react-datepicker__input-container
+input.text-date {
+  background: {
+    color:#fff;
+    image:url('/crm/static/images/icon/ic-absenteeschedule.png');
+    size:30px;
+    repeat:no-repeat;
+    position: right center;
+  }
+}
 
 .modal {
-  padding-bottom:5%;
+  // padding-bottom:5px;
   z-index: 10;
   .modal-container {
     min-width:400px;
