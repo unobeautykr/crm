@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page head -->
+  <meta charset="utf-8">
+<link rel="icon" href="/favicon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Web site created using create-react-app">
+<link rel="apple-touch-icon" href="/logo192.png">
+<link rel="manifest" href="/manifest.json">
+<title>CRM - 펜1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+<link href="/crm/static/css/base.css" rel="stylesheet">
+<link href="/crm/static/css/main.css" rel="stylesheet">
+<link href="/crm/static/css/ui.css" rel="stylesheet">
+
+  <!--// page head -->
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+    <!-- header-bar & ui-header -->
+		<!-- header-bar -->
+<div class="header-bar flex-row flex-between ui-header"> <!-- add class=ui-header //-->
+  <div class="header-items left flex-wrap">
+    <h1 class="title">바비톡 성형외과</h1>  <!--modi //-->
+    <button class="btn btn-close"><span class="a11y">사이드 닫기/열기</span></button>  <!--modi //-->
+  </div>
+  <div class="flex-row items-center flex-between flex-fill">
+    <div class="customer-search-bar flex-row items-center">
+      <input placeholder="고객명, 차트번호, 전화번호, 주민번호" class="flex-fill" value="">
+      <div class="buttons flex-row flex-wrap">
+        <button class="btn btn-accent m-l-8">검색</button>  <!--modi //-->
+        <button class="btn btn-accent m-l-8">고객등록</button>  <!--modi //-->
+      </div>
+    </div>
+    <div class="header-items right">
+      <div class="me _language">
+        <button class="btn btn-lang">언어변환</button>
+        <div class="lang">
+          <ul>
+            <li><a href="#">한글</a></li>
+            <li><a href="#">영문</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="me _sched">
+        <button class="btn btn-sched"><span class="alram"></span>부재일정확인</button>
+      </div>
+      <div class="me _info">
+        <p class="fig"></p>
+        <p>park</p>
+        <p class="email"><a href="mailto:test1@gmail.com">test1test1test1@gmail.com</a></p>
+      </div>
+      <div class="me _power">
+        <button class="btn btn-logout">로그아웃</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--// header-bar -->
+
+    <!--// header-bar & ui-header -->
+
+    <!-- app-body & ui-body -->
+    <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
+      <!-- left navigation -->
+  		<!--
+left-navigation 마크업 및 클래스 추가/수정
+//-->
+<div class="left-navigation flex flex-wrap ">
+  <div class="flex-wrap clinic-name">펜1</div>
+  <div class="ver-scroll flex-fill">
+    <div class="menu depth-0">
+      <div class="menu-item selected">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-home"></i>현황판 (홈)</span></div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-calender"></i>예약 캘린더</span></div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-consult"></i>상담문의 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">상담문의</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">담당자 배정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">연동설정</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-msg"></i>문자 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">문자 전송</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">문자 충전</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">전송내역 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">충전내역 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">문자코드 설정</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-inq"></i>조회</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">고객 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">예약 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">상담 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">진료 조회</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">수납 조회</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-stat"></i>통계</span></div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-setting"></i>환경 설정</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">고객코드 설정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">예약캘린더 설정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">상담코드 설정</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">수납코드 설정</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item ">
+        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-hospital"></i>병원 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
+        <div class="menu depth-1">
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">조직 관리</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">직원 관리</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">병원 정보</span></div>
+          </div>
+          <div class="menu-item ">
+            <div class="title flex-row"><span class="text flex-fill">펜차트 샘플함</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+left-navigation 마크업 및 클래스 수정
+//-->
+
+      <!--// left navigation -->
+
+      <div class="flex-fill left-nav-opened route">
+
+        <div class="appointment-boards route flex-row">
+          <div class="left-panel flex-wrap">
+            <div>
+              <div class="react-datepicker">
+                <div class="react-datepicker__triangle"></div>
+                <button type="button" class="react-datepicker__navigation react-datepicker__navigation--previous" aria-label="Previous Month">Previous Month</button>
+                <button type="button" class="react-datepicker__navigation react-datepicker__navigation--next react-datepicker__navigation--next--with-today-button" aria-label="Next Month">Next Month</button>
+                <div class="react-datepicker__month-container">
+                  <div class="react-datepicker__header">
+                    <div class="react-datepicker__current-month react-datepicker__current-month--hasYearDropdown react-datepicker__current-month--hasMonthDropdown">6월 2020</div>
+                    <div class="react-datepicker__header__dropdown react-datepicker__header__dropdown--select">
+                      <div class="react-datepicker__month-dropdown-container react-datepicker__month-dropdown-container--select"><select class="react-datepicker__month-select">
+                          <option value="0">1월</option>
+                          <option value="1">2월</option>
+                          <option value="2">3월</option>
+                          <option value="3">4월</option>
+                          <option value="4">5월</option>
+                          <option value="5">6월</option>
+                          <option value="6">7월</option>
+                          <option value="7">8월</option>
+                          <option value="8">9월</option>
+                          <option value="9">10월</option>
+                          <option value="10">11월</option>
+                          <option value="11">12월</option>
+                        </select></div>
+                      <div class="react-datepicker__year-dropdown-container react-datepicker__year-dropdown-container--select"><select class="react-datepicker__year-select">
+                          <option value="1900">1900</option>
+                          <option value="1901">1901</option>
+                          <option value="1902">1902</option>
+                          <option value="1903">1903</option>
+                          <option value="1904">1904</option>
+                        </select></div>
+                    </div>
+                    <div class="react-datepicker__day-names">
+                      <div class="react-datepicker__day-name">일</div>
+                      <div class="react-datepicker__day-name">월</div>
+                      <div class="react-datepicker__day-name">화</div>
+                      <div class="react-datepicker__day-name">수</div>
+                      <div class="react-datepicker__day-name">목</div>
+                      <div class="react-datepicker__day-name">금</div>
+                      <div class="react-datepicker__day-name">토</div>
+                    </div>
+                  </div>
+                  <div class="react-datepicker__month" role="listbox" aria-label="month  2020-06">
+                    <div class="react-datepicker__week">
+                      <div class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Sunday, May 31st, 2020" role="option" aria-disabled="false">31
+                      </div>
+                      <div class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--selected" tabindex="-1" aria-label="Choose Monday, June 1st, 2020" role="option" aria-disabled="false">1</div>
+                      <div class="react-datepicker__day react-datepicker__day--002" tabindex="-1" aria-label="Choose Tuesday, June 2nd, 2020" role="option" aria-disabled="false">2</div>
+                      <div class="react-datepicker__day react-datepicker__day--003" tabindex="-1" aria-label="Choose Wednesday, June 3rd, 2020" role="option" aria-disabled="false">3</div>
+                      <div class="react-datepicker__day react-datepicker__day--004" tabindex="-1" aria-label="Choose Thursday, June 4th, 2020" role="option" aria-disabled="false">4</div>
+                      <div class="react-datepicker__day react-datepicker__day--005" tabindex="-1" aria-label="Choose Friday, June 5th, 2020" role="option" aria-disabled="false">5</div>
+                      <div class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Saturday, June 6th, 2020" role="option" aria-disabled="false">6</div>
+                    </div>
+                    <div class="react-datepicker__week">
+                      <div class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Sunday, June 7th, 2020" role="option" aria-disabled="false">7</div>
+                      <div class="react-datepicker__day react-datepicker__day--008" tabindex="-1" aria-label="Choose Monday, June 8th, 2020" role="option" aria-disabled="false">8</div>
+                      <div class="react-datepicker__day react-datepicker__day--009" tabindex="-1" aria-label="Choose Tuesday, June 9th, 2020" role="option" aria-disabled="false">9</div>
+                      <div class="react-datepicker__day react-datepicker__day--010" tabindex="-1" aria-label="Choose Wednesday, June 10th, 2020" role="option" aria-disabled="false">10</div>
+                      <div class="react-datepicker__day react-datepicker__day--011" tabindex="-1" aria-label="Choose Thursday, June 11th, 2020" role="option" aria-disabled="false">11</div>
+                      <div class="react-datepicker__day react-datepicker__day--012" tabindex="-1" aria-label="Choose Friday, June 12th, 2020" role="option" aria-disabled="false">12</div>
+                      <div class="react-datepicker__day react-datepicker__day--013 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Saturday, June 13th, 2020" role="option" aria-disabled="false">13</div>
+                    </div>
+                    <div class="react-datepicker__week">
+                      <div class="react-datepicker__day react-datepicker__day--014 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Sunday, June 14th, 2020" role="option" aria-disabled="false">14</div>
+                      <div class="react-datepicker__day react-datepicker__day--015" tabindex="-1" aria-label="Choose Monday, June 15th, 2020" role="option" aria-disabled="false">15</div>
+                      <div class="react-datepicker__day react-datepicker__day--016" tabindex="-1" aria-label="Choose Tuesday, June 16th, 2020" role="option" aria-disabled="false">16</div>
+                      <div class="react-datepicker__day react-datepicker__day--017" tabindex="-1" aria-label="Choose Wednesday, June 17th, 2020" role="option" aria-disabled="false">17</div>
+                      <div class="react-datepicker__day react-datepicker__day--018" tabindex="-1" aria-label="Choose Thursday, June 18th, 2020" role="option" aria-disabled="false">18</div>
+                      <div class="react-datepicker__day react-datepicker__day--019" tabindex="-1" aria-label="Choose Friday, June 19th, 2020" role="option" aria-disabled="false">19</div>
+                      <div class="react-datepicker__day react-datepicker__day--020 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Saturday, June 20th, 2020" role="option" aria-disabled="false">20</div>
+                    </div>
+                    <div class="react-datepicker__week">
+                      <div class="react-datepicker__day react-datepicker__day--021 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Sunday, June 21st, 2020" role="option" aria-disabled="false">21</div>
+                      <div class="react-datepicker__day react-datepicker__day--022" tabindex="-1" aria-label="Choose Monday, June 22nd, 2020" role="option" aria-disabled="false">22</div>
+                      <div class="react-datepicker__day react-datepicker__day--023" tabindex="-1" aria-label="Choose Tuesday, June 23rd, 2020" role="option" aria-disabled="false">23</div>
+                      <div class="react-datepicker__day react-datepicker__day--024" tabindex="-1" aria-label="Choose Wednesday, June 24th, 2020" role="option" aria-disabled="false">24</div>
+                      <div class="react-datepicker__day react-datepicker__day--025" tabindex="-1" aria-label="Choose Thursday, June 25th, 2020" role="option" aria-disabled="false">25</div>
+                      <div class="react-datepicker__day react-datepicker__day--026 react-datepicker__day--today" tabindex="-1" aria-label="Choose Friday, June 26th, 2020" role="option" aria-disabled="false">26</div>
+                      <div class="react-datepicker__day react-datepicker__day--027 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Saturday, June 27th, 2020" role="option" aria-disabled="false">27</div>
+                    </div>
+                    <div class="react-datepicker__week">
+                      <div class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Sunday, June 28th, 2020" role="option" aria-disabled="false">28</div>
+                      <div class="react-datepicker__day react-datepicker__day--029" tabindex="-1" aria-label="Choose Monday, June 29th, 2020" role="option" aria-disabled="false">29</div>
+                      <div class="react-datepicker__day react-datepicker__day--030" tabindex="-1" aria-label="Choose Tuesday, June 30th, 2020" role="option" aria-disabled="false">30</div>
+                      <div class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Wednesday, July 1st, 2020" role="option" aria-disabled="false">1</div>
+                      <div class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Thursday, July 2nd, 2020" role="option" aria-disabled="false">2</div>
+                      <div class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Friday, July 3rd, 2020" role="option" aria-disabled="false">3</div>
+                      <div class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--weekend react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Saturday, July 4th, 2020" role="option" aria-disabled="false">4
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="react-datepicker__today-button">오늘</div>
+              </div>
+            </div>
+            <!-- <div class="hr m-t-16 m-b-16"></div> 삭제 -->
+            <div class="filters form-control">
+              <label>필터</label>
+              <!-- add modi -->
+              <div class="filter-wrap">
+                <div class="filter">
+                  <select>
+                    <option value="-1">전체 부서</option>
+                    <option value="0" class="">상담실1</option>
+                    <option value="1" class="">상담실2</option>
+                    <option value="2" class="">테스트</option>
+                    <option value="3" class="">상담실3</option>
+                    <option value="4" class=""></option>
+                  </select>
+                </div>
+                <div class="filter">
+                  <select>
+                    <option value="-1">전체 상담사</option>
+                    <option value="0">상담이</option>
+                    <option value="1">강상담아</option>
+                    <option value="2">이상담</option>
+                    <option value="3">상담ㅎㅎ</option>
+                  </select>
+                </div>
+                <div class="filter">
+                  <select>
+                    <option value="-1">전체 의사</option>
+                    <option value="0">펜8</option>
+                  </select>
+                </div>
+              </div>
+              <!--// add modi -->
+            </div>
+            <!-- <div class="hr m-t-16 m-b-16"></div> modi 삭제 -->
+            <div class="appointments-find-by form-control">
+              <label>검색</label>
+              <div class="flex-row items-center">
+                <input class="flex-fill" placeholder="고객명, 차트번호, 전화번호" value="">
+                <button class="btn btn-search"><span class="a11y">검색</span></button> <!-- modi //-->
+              </div>
+            </div>
+            <!-- <div class="hr m-t-16 m-b-16"></div> modi 삭제 -->
+
+            <div class="regions">
+              <div class="region">
+                <div class="box status scheduled"></div>
+                <div>예약</div>
+              </div>
+              <div class="region">
+                <div class="box status waiting"></div>
+                <div>접수</div>
+              </div>
+              <div class="region">
+                <div class="box status unvisited"></div>
+                <div>미방문</div>
+              </div>
+              <div class="region">
+                <div class="box status consulting"></div>
+                <div>상담중</div>
+              </div>
+              <div class="region">
+                <div class="box status treating"></div>
+                <div>진료중</div>
+              </div>
+              <div class="region">
+                <div class="box status consulted"></div>
+                <div>상담완료</div>
+              </div>
+              <div class="region">
+                <div class="box status done"></div>
+                <div>퇴원</div>
+              </div>
+              <div class="region">
+                <div class="box status absence"></div>
+                <div>휴진</div>
+              </div>
+              <div class="region">
+                <div class="box status lunch"></div>
+                <div>점심</div>
+              </div>
+            </div>
+          </div>
+          <div class="right-panel">
+            <div class="route-top">
+              <div class="stats"><span class="ti">예약</span>3 (<span class="ti">초진</span>2 <span class="ti">재진</span>1 <span class="ti">취소</span>0 )</div> <!-- modi //-->
+            </div>
+            <div class="header">
+              <!-- modi -->
+              <div class="date-functions flex-row items-center">
+
+                <button class="btn-primary"><i class="zmdi zmdi-chevron-left"></i></button>
+                <div class="react-datepicker-wrapper">
+                  <div class="react-datepicker__input-container"><input type="text" class="text-center" value="2020년 06월 15일"></div>
+                </div>
+
+                <!-- calender pop -->
+
+                <button class="btn-primary"><i class="zmdi zmdi-chevron-right"></i></button>
+
+                <button>오늘</button>
+                <button class="selected">일</button>
+                <button class="">주</button>
+                <button class="">월</button>
+              </div>
+              <!--// modi -->
+            </div>
+
+            <div class="conditional-board month squeeze">
+              <div class="context-menu overlay display-none ">
+                <ul></ul>
+              </div>
+
+              <!-- modi 마크업/클래스 확인 -->
+              <div class="overlay" !style="display:none;">
+                <div class="appointment-hover-card" style="left: 917px; top: 704px;">
+                  <ul>
+                    <li class="flex-row items-center">
+                      <div>[초진] 김세인</div>
+                      <i class="zmdi zmdi-close"></i>
+                    </li>
+                    <!-- <li class="flex-row items-center">
+                      <div>- 고객</div>
+                      <div>: 김세인</div>
+                    </li> -->
+                    <li class="flex-row items-center">
+                      <div>예약일</div>
+                      <div>06월 26일 10:30-11:00</div>
+                    </li>
+                    <li class="flex-row items-center">
+                      <div>내원경로</div>
+                      <div>지인소개</div>
+                    </li>
+                    <li class="flex-row items-center">
+                      <div>상담사</div>
+                      <div>상담이</div>
+                    </li>
+                    <li class="flex-row items-center">
+                      <div>의사</div>
+                      <div>펜8</div>
+                    </li>
+                    <li class="flex-row items-center">
+                      <div>상담/진료항목</div>
+                      <div>펜8</div>
+                    </li>
+                    <li class="flex-row items-center">
+                      <div>예약 메모</div>
+                      <div>지인소개 할인 원합니다</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--// modi 마크업/클래스 확인 -->
+
+              <!-- modi more pop -->
+              <div class="overlay" !style="display:none;">
+                <div class="appointment-hover-more" style="left: 580px; top: 404px;">
+                  <div class="day">
+                    <span>17</span>
+                    <i class="zmdi zmdi-close"></i>
+                  </div>
+                  <div class="stats"><span class="ti">예약</span>999 (<span class="ti">초진</span>2 <span class="ti">재진</span>1 <span class="ti">취소</span>0 )</div>
+                  <ul>
+                    <li>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[재진] 박지웅</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                          <!-- <div class="schedule">15:40</div>
+                          <div class="customer">존고객</div>,
+                          <div class="department">상담실2-상담실2-2</div>,
+                          <div class="counselor">강상담아</div>,
+                          <div class="doctor">펜8</div> -->
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cell status waiting">
+                        <div class="item flex-row status waiting">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[접수] 박지웅</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cell status consulting">
+                        <div class="item flex-row status consulting">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[진료중] 박지웅</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cell status waiting">
+                        <div class="item flex-row status waiting">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[접수] 박지웅</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cell status consulting">
+                        <div class="item flex-row status consulting">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[진료중] 박지웅</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--// modi more pop -->
+
+              <div class="monthly-board">
+                <div class="first-line flex-row">
+                  <div class="day-name">일</div>
+                  <div class="day-name">월</div>
+                  <div class="day-name">화</div>
+                  <div class="day-name">수</div>
+                  <div class="day-name">목</div>
+                  <div class="day-name">금</div>
+                  <div class="day-name">토</div>
+                </div>
+                <div class="calendar">
+                  <div class="calendar-cell">
+                    <div class="day ">31</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">01</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">02</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">03</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">04</div>
+                    <div class="appointment-items">
+                      <div class="stats"><span class="ti">예약</span>999 (<span class="ti">초진</span>2 <span class="ti">재진</span>1 <span class="ti">취소</span>0 )</div>
+
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                          <span class="schedule">09:15</span>
+                          <span class="customer">[재진] 박지웅</span>
+                          <span class="department">상담실2-상담실2-2</span>
+                          <span class="counselor">강상담아</span>
+                          <span class="doctor">펜8</span>
+                          <!-- <div class="customer">존고객</div>,<div class="schedule">15:40 - 16:10</div>,<div class="department">상담실2-상담실2-2</div>,<div class="counselor">강상담아</div>,<div class="doctor">펜8</div> -->
+                        </div>
+                      </div>
+
+                      <div class="more">
+                        <a href="#">5개 더 보기</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">05</div>
+                    <div class="appointment-items">
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">06</div>
+                    <div class="appointment-items">
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                          <!-- <div class="customer">신고객</div>,<div class="schedule">11:00 - 11:20</div>,<div class="department">상담실3-상담실3-3</div>,<div class="counselor">상담ㅎㅎ</div>,<div class="doctor">펜8</div> -->
+                        </div>
+                      </div>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">07</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">08</div>
+                    <div class="appointment-items">
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">09</div>
+                    <div class="appointment-items">
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">10</div>
+                    <div class="appointment-items">
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">상담실2-상담실2-2</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">11</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">12</div>
+                    <div class="appointment-items">
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">13</div>
+                    <div class="appointment-items">
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">14</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">15</div>
+                    <div class="appointment-items">
+                      <div class="cell status waiting">
+                        <div class="item flex-row status waiting">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[접수] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                      <div class="cell status consulted">
+                        <div class="item flex-row status consulted">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[상담완료] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">16</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">17</div>
+                    <div class="appointment-items">
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">18</div>
+                    <div class="appointment-items">
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">19</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">20</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">21</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">22</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">23</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">24</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">25</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day today">26</div>
+                    <div class="appointment-items">
+                      <div class="cell status unvisited">
+                        <div class="item flex-row status unvisited">
+                           <span class="schedule">09:15</span>
+                           <span class="customer">[초진] 신고객</span>
+                           <span class="department">테스트-부서이름이 왜이리 길어!</span>
+                           <span class="counselor">강상담아</span>
+                           <span class="doctor">펜8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">27</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">28</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">29</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">30</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">01</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">02</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">03</div>
+                  </div>
+                  <div class="calendar-cell">
+                    <div class="day ">04</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-wrapper">
+      <div class="toast error ">검색어를 입력해주세요</div>
+    </div>
+  </div>
+</body>
+
+</html>
