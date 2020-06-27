@@ -60,7 +60,7 @@ button, a {
     border:0;
     border-radius: 4px;
     min-width:60px;
-    height:auto !important;
+    height:auto;
     background-color: #273142;
     box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1);
     color: #dee2ec;
@@ -123,6 +123,14 @@ button, a {
   &:disabled {
     border: solid 1px #dee2ec;
     background-color: #dee2ec !important;
+  }
+
+  &.btn-add {
+    width: 84px;
+    height: 34px !important;
+    background-color: #0060ff;
+    font-size: 14px;
+    font-weight: 600;
   }
 }
 select {

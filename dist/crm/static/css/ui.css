@@ -19,7 +19,7 @@ button { display: inline-block; background-color: transparent; padding: 0; margi
 
 ._right { position: absolute; right: 0; top: 0; }
 
-button.btn, button.btn-primary, a.btn, a.btn-primary { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px; min-width: 60px; height: auto !important; background-color: #273142; box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); color: #dee2ec; }
+button.btn, button.btn-primary, a.btn, a.btn-primary { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px; min-width: 60px; height: auto; background-color: #273142; box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); color: #dee2ec; }
 
 button.btn-normal, a.btn-normal { font-size: 18px; font-weight: 700; padding: 21px 6px 20px; border: 1px solid #dee2ec !important; background-color: #ffffff; color: #1b73e8; }
 
@@ -44,6 +44,8 @@ button._small, a._small { min-width: 56px !important; padding: 10px 20px 9px !im
 button.btn-del, a.btn-del { border: solid 1px #f7685b !important; background-color: #f7685b !important; color: #fff !important; }
 
 button:disabled, a:disabled { border: solid 1px #dee2ec; background-color: #dee2ec !important; }
+
+button.btn-add, a.btn-add { width: 84px; height: 34px !important; background-color: #0060ff; font-size: 14px; font-weight: 600; }
 
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 50px; padding: 8px 10px 7px; border-radius: 4px; border: solid 1px #dee2ec; font-size: 14px; background-color: #fff; background-image: url("/crm/static/images/icon/ico_select.png"); background-size: 7px; background-repeat: no-repeat; background-position: right 10px center; }
 
@@ -403,6 +405,10 @@ html, body { height: 100%; overflow: auto; }
 .app-body.ui-body .ico.ic-hospital { background-image: url("/crm/static/images/icon/ic-sidemenu-hospital.png"); }
 
 .app-body .flex-fill.route { min-height: 100%; height: 100%; background-color: #f3f8ff; padding: 0; }
+
+.app-body .flex-fill.route .route-top { position: relative; }
+
+.app-body .flex-fill.route .route-top > .flex-row { position: absolute; right: 0; top: -8px; }
 
 .app-body .flex-fill label.title { display: block; margin-bottom: 20px; font-size: 17px; font-weight: 600; color: #273142; }
 
@@ -1056,8 +1062,6 @@ html, body { height: 100%; overflow: auto; }
 
 .customer-codes > div:not(.page-navi) > .route-top .title, .appointment-codes > div:not(.page-navi) > .route-top .title, .consulting-codes > div:not(.page-navi) > .route-top .title, .payment-codes > div:not(.page-navi) > .route-top .title { font-size: 17px !important; margin-bottom: 13px !important; }
 
-.customer-codes .btn-add, .appointment-codes .btn-add, .consulting-codes .btn-add, .payment-codes .btn-add { width: 84px; height: 34px; background-color: #0060ff; font-size: 14px; font-weight: 600; }
-
 .customer-codes .route-top, .appointment-codes .route-top, .consulting-codes .route-top, .payment-codes .route-top { position: relative; }
 
 .customer-codes .route-top > .flex-row, .appointment-codes .route-top > .flex-row, .consulting-codes .route-top > .flex-row, .payment-codes .route-top > .flex-row { position: absolute; right: 0; top: -8px; }
@@ -1571,6 +1575,16 @@ html, body { height: 100%; overflow: auto; }
 .ui-body .message-history-container .data-table table { border: solid 1px #dee2ec; background: #fff; }
 
 .ui-body .message-history-container .data-table tbody tr:nth-child(even) { background-color: #f9fbff; }
+
+.ui-body .message-codes { padding: 20px 20px 60px; }
+
+.ui-body .message-codes div { border: 0; }
+
+.ui-body .message-codes .message-caller-numbers, .ui-body .message-codes .message-boilerplate, .ui-body .message-codes .message-auto-notification { margin-bottom: 40px; }
+
+.ui-body .sms-use-list { padding: 20px 20px 60px; }
+
+.ui-body .sms-use-list .sms-list { margin-bottom: 40px; }
 
 .modal .modal-message-details.message-type-event { width: 868px; max-height: 720px; }
 
