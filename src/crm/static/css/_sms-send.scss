@@ -1,0 +1,170 @@
+// @depreacted
+// -> message-send.scss
+
+.sms-send {}
+
+.sms-filters {
+  &.tab-clicked {
+    .tab:not(.expanded) {
+      border-bottom: 1px solid $brand-primary;
+    }
+  }
+
+  &:not(.tab-clicked) {
+    .filters {
+      border: 1px solid $gray-border !important;
+    }
+  }
+
+  .tabs {
+    //@extend .flex-row;
+    .tab {
+      border: 1px solid $gray-border;
+      border-bottom: 0;
+      padding: 4px 12px;
+      cursor: pointer;
+
+      &.expanded,
+      &:hover {
+        border-top: 1px solid $brand-primary;
+        border-left: 1px solid $brand-primary;
+        border-right: 1px solid $brand-primary;
+      }
+
+      &.applying {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  .applied-filters {
+    padding: 16px 12px;
+    border: 1px solid $gray-border;
+    border-top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    .desc {
+      color: $brand-primary;
+      white-space: pre-line;
+      line-height: 24px;
+    }
+  }
+
+  .filters {
+    border: 1px solid $brand-primary;
+    border-top: 0;
+  }
+
+  .filter {
+    padding: 32px 16px;
+    border-top: 0;
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 24px;
+      //@extend .f-bold;
+    }
+
+    .inline-check {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      //@extend .flex-wrap;
+      &:not(:first-child) {
+        margin-left: 16px;
+      }
+    }
+
+    .detail-item {
+      //@extend .flex-fill;
+      &:first-child {
+        margin-right: 16px;
+      }
+
+      select {
+        display: block;
+        width: 100%;
+      }
+
+      .btn-primary {
+        width: 100%;
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray-border;
+    }
+  }
+
+  .date-range-picker {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    input {
+      text-align: center;
+      max-width: 120px;
+    }
+  }
+
+  .help {
+    margin-top: 8px;
+    font-size: 12px;
+    color: $brand-danger;
+  }
+}
+
+.point-balance {
+  .point-balance-desc {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+  }
+
+  .point-balance-desc button {
+    margin-left: 10px;
+  }
+}
+
+.point-deposit-info {
+  span {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+  }
+}
+
+.payment-info-confirm {
+  span {
+    margin-right: 8px;
+  }
+}
+
+.point-histories {
+  .card {
+    margin-bottom: 24px;
+  }
+}
+
+.payment-info-confirm,
+.point-apply-input {
+  border: 1px solid #400e40;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.price-btn button {
+  margin-right: 8px;
+}
+
+.folder-cell {
+  width: 40px;
+  height: 40px;
+  border: solid 1px;
+}
+
+.folder-cell.select {
+  background-color: gray;
+}

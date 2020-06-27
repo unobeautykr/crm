@@ -1,0 +1,69 @@
+.customer-chart {
+  .tabs {
+    .tab {
+      padding: 12px;
+      border-radius: 16px 16px 0 0;
+      // border: 1px solid $gray-border;
+      min-width: 120px;
+      font-size: 16px;
+      margin-right: 0 !important;
+      //@extend .f-medium;
+      //@extend .flex-wrap;
+      //@extend .center;
+
+      &.selected,
+      &:not(.disabled):hover {
+        // border: 1px solid $gray-lightest;
+        // background: $gray-lightest;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.disabled {
+        // color: $gray-lightest;
+      }
+    }
+  }
+
+  .flex-row > *:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.chart-page {
+  font-size: 12px;
+  margin-top: 20px;
+
+  > .footer,
+  > .header {
+    .title {
+      font-size: 16px;
+      margin: 16px 0;
+      // color: $brand-primary;
+      //@extend .f-bold;
+    }
+
+    button {
+      margin-left: 16px;
+    }
+
+    .title,
+    button {
+      //@extend .flex-wrap;
+    }
+  }
+
+  .favorite:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.customer-pen-charts {
+  .react-contextmenu-wrapper {
+    height: 600px;
+    max-height: 600px;
+    overflow: scroll;
+  }
+}

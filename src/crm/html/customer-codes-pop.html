@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page head -->
+  @@include('../inc/pagehead.inc',{
+  })
+  <!--// page head -->
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+    <!-- header-bar & ui-header -->
+		@@include('../inc/header.inc',{
+		})
+    <!--// header-bar & ui-header -->
+
+    <!-- app-body & ui-body -->
+    <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
+      <!-- left navigation -->
+  		@@include('../inc/leftnavigation.inc',{
+  		})
+      <!--// left navigation -->
+
+      <div class="flex-fill left-nav-opened route">
+        <div class="customer-codes">
+          <div class="page-navi"><span class="title">환경설정</span><span class="title">고객코드 설정</span></div> <!-- modi add //-->
+
+          <!-- modi add area -->
+          <div class="customer-change">
+            <div class="title">신환/구환 전환시점 설정</div>
+            <div class="data-table">
+
+              <div class="form-control">
+                <div class="radios flex-row">
+                  <div class="radio-item ">
+                    <input type="radio" name="" value="normal">내원유무시점에 전환
+                    <div class="desc">
+                      내원이력 없음 - 신환<br>
+                      내원이력 있음 - 구환
+                    </div>
+                  </div>
+                  <div class="radio-item ">
+                    <input type="radio" name="" value="event">수납유무시점에 전환
+                    <div class="desc">
+                      내원이력 없음 - 신환<br>
+                      내원이력 있음 - 구환
+                    </div>
+                  </div>
+                </div>
+                <p class="help">* 해당 설정을 변경하시려면 info@unobeauty.kr으로 문의해주세요.</p>
+              </div>
+            </div>
+          </div>
+          <!--// modi add area -->
+
+          <div class="acquisition-channels cust-box"> <!-- modi add class=cust-box //-->
+            <div class="route-top">
+              <div class="title f-20 m-b-16">내원경로</div>
+              <!-- modi 마크업 순서 변경 및 클래스 추가 -->
+              <div class="flex-row items-center">
+                <div class="flex-row items-center m-r-8"> <!-- modi add class = m-r-8 //-->
+                  <div class="checkbox  flex-wrap m-r-8 "></div><span>숨김 항목 보지 않기</span>
+                </div>
+                <button class="btn btn-primary btn-sm flex-wrap btn-add">추가</button> <!-- modi add class=btn-add //-->
+              </div>
+              <!--// modi 마크업 순서 변경 및 클래스 추가 -->
+
+            </div>
+            <div class="data-table">
+              <!--  <div class="top flex-row items-center flex-between m-b-16"></div> modi 삭제해도 되는 영역이면 삭제 //-->
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>내원경로</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">홈페이지</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">지인소개</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-2">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">바비톡</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-3">
+                    <td>
+                      <div class="item-content center ">
+
+                        <button class="btn btn-sm btn-primary">숨김해제</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="jobs cust-box"> <!-- modi add class=cust-box //-->
+            <div class="route-top">
+              <div class="title f-20 m-b-16">직업</div>
+              <!-- modi 마크업 순서 변경 및 클래스 추가 -->
+              <div class="flex-row items-center">
+                <div class="flex-row items-center m-r-8"> <!-- modi add class = m-r-8 //-->
+                  <div class="checkbox  flex-wrap m-r-8 "></div><span>숨김 항목 보지 않기</span>
+                </div>
+                <button class="btn btn-primary btn-sm flex-wrap btn-add">추가</button> <!-- modi add class=btn-add //-->
+              </div>
+              <!--// modi 마크업 순서 변경 및 클래스 추가 -->
+            </div>
+            <div class="data-table">
+              <!--  <div class="top flex-row items-center flex-between m-b-16"></div> modi 삭제해도 되는 영역이면 삭제 //-->
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>직업</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">회사원</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">공무원</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-2">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center  ">학생</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-3">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center  ">무직</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-4">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">프리랜서</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-4">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">프리랜서</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="levels cust-box"> <!-- modi add class=cust-box //-->
+            <div class="route-top">
+              <div class="title f-20 m-b-16">등급</div>
+              <!-- modi 마크업 순서 변경 및 클래스 추가 -->
+              <div class="flex-row items-center">
+                <div class="flex-row items-center m-r-8"> <!-- modi add class = m-r-8 //-->
+                  <div class="checkbox  flex-wrap m-r-8 "></div><span>숨김 항목 보지 않기</span>
+                </div>
+                <button class="btn btn-primary btn-sm flex-wrap btn-add">추가</button> <!-- modi add class=btn-add //-->
+              </div>
+              <!--// modi 마크업 순서 변경 및 클래스 추가 -->
+            </div>
+            <div class="data-table">
+              <!--  <div class="top flex-row items-center flex-between m-b-16"></div> modi 삭제해도 되는 영역이면 삭제 //-->
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>등급</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">VIP</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">VVIP</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-2">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">GOLD</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-3">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">silver</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="complaints cust-box"> <!-- modi add class=cust-box //-->
+            <div class="route-top">
+              <div class="title f-20 m-b-16">불만사항</div>
+              <!-- modi 마크업 순서 변경 및 클래스 추가 -->
+              <div class="flex-row items-center">
+                <div class="flex-row items-center m-r-8"> <!-- modi add class = m-r-8 //-->
+                  <div class="checkbox  flex-wrap m-r-8 "></div><span>숨김 항목 보지 않기</span>
+                </div>
+                <button class="btn btn-primary btn-sm flex-wrap btn-add">추가</button> <!-- modi add class=btn-add //-->
+              </div>
+              <!--// modi 마크업 순서 변경 및 클래스 추가 -->
+            </div>
+            <div class="data-table">
+              <!--  <div class="top flex-row items-center flex-between m-b-16"></div> modi 삭제해도 되는 영역이면 삭제 //-->
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>불만사항</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">시술불만</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">상담불만</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-2">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">가격불만</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="regions cust-box"> <!-- modi add class=cust-box //-->
+            <div class="route-top">
+              <div class="title f-20 m-b-16">국가/지역</div>
+              <!-- modi 마크업 순서 변경 및 클래스 추가 -->
+              <div class="flex-row items-center">
+                <div class="flex-row items-center m-r-8"> <!-- modi add class = m-r-8 //-->
+                  <div class="checkbox  flex-wrap m-r-8 "></div><span>숨김 항목 보지 않기</span>
+                </div>
+                <button class="btn btn-primary btn-sm flex-wrap btn-add">추가</button> <!-- modi add class=btn-add //-->
+              </div>
+              <!--// modi 마크업 순서 변경 및 클래스 추가 -->
+            </div>
+            <div class="data-table">
+              <!--  <div class="top flex-row items-center flex-between m-b-16"></div> modi 삭제해도 되는 영역이면 삭제 //-->
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>국가/지역</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center">대한민국</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center  ">일본</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-2">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center  ">중국</div>
+                    </td>
+                  </tr>
+                  <tr class=" row-3">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">미사용</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center  ">태국</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-wrapper">
+      <div class="toast  "></div>
+    </div>
+
+    <!-- 추가 (내원경로) -->
+    <div class="modal modal-overlay">
+      <div class="modal-container">
+        <div class="modal-input">
+          <div class="head flex-row flex-between items-start">
+            <div class="title ">추가 (내원경로)</div>
+          </div>
+          <div class="body pre-line undefined"></div>
+          <div class="inputs">
+            <div class="form-control"><label></label><input class="model-input-0" placeholder="내원경로"></div>
+          </div>
+          <div class="buttons">
+            <div class="flex-row"><button class="btn btn-default">취소</button><button class="btn btn-primary">확인</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// 추가 (내원경로) -->
+
+
+
+
+  </div>
+  <!-- <script>
+    ! function(e) {
+      function r(r) {
+        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
+        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
+        for (c && c(r); s.length;) s.shift()();
+        return u.push.apply(u, f || []), t()
+      }
+
+      function t() {
+        for (var e, r = 0; r < u.length; r++) {
+          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
+            var i = t[l];
+            0 !== o[i] && (n = !1)
+          }
+          n && (u.splice(r--, 1), e = a(a.s = t[0]))
+        }
+        return e
+      }
+      var n = {},
+        o = {
+          1: 0
+        },
+        u = [];
+
+      function a(r) {
+        if (n[r]) return n[r].exports;
+        var t = n[r] = {
+          i: r,
+          l: !1,
+          exports: {}
+        };
+        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
+      }
+      a.m = e, a.c = n, a.d = function(e, r, t) {
+        a.o(e, r) || Object.defineProperty(e, r, {
+          enumerable: !0,
+          get: t
+        })
+      }, a.r = function(e) {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+          value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+          value: !0
+        })
+      }, a.t = function(e, r) {
+        if (1 & r && (e = a(e)), 8 & r) return e;
+        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
+        var t = Object.create(null);
+        if (a.r(t), Object.defineProperty(t, "default", {
+            enumerable: !0,
+            value: e
+          }), 2 & r && "string" != typeof e)
+          for (var n in e) a.d(t, n, function(r) {
+            return e[r]
+          }.bind(null, n));
+        return t
+      }, a.n = function(e) {
+        var r = e && e.__esModule ? function() {
+          return e.default
+        } : function() {
+          return e
+        };
+        return a.d(r, "a", r), r
+      }, a.o = function(e, r) {
+        return Object.prototype.hasOwnProperty.call(e, r)
+      }, a.p = "/";
+      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
+        i = l.push.bind(l);
+      l.push = r, l = l.slice();
+      for (var f = 0; f < l.length; f++) r(l[f]);
+      var c = i;
+      t()
+    }([])
+  </script>
+  <script src="/static/js/2.48d9c0c9.chunk.js"></script>
+  <script src="/static/js/main.b9a9b0ab.chunk.js"></script> -->
+</body>
+
+</html>

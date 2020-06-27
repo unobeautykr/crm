@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page head -->
+  @@include('../inc/pagehead.inc',{
+  })
+  <!--// page head -->
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+    <!-- header-bar & ui-header -->
+		@@include('../inc/header.inc',{
+		})
+    <!--// header-bar & ui-header -->
+
+    <!-- app-body & ui-body -->
+    <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
+      <!-- left navigation -->
+  		@@include('../inc/leftnavigation.inc',{
+  		})
+      <!--// left navigation -->
+
+      <div class="flex-fill left-nav-opened route">
+        <div class="appointment-codes">
+          <div class="page-navi"><span class="title">환경설정</span><span class="title">예약캘린더 설정</span></div> <!-- modi add //-->
+
+          <div class="department-categories">
+            <div class="route-top">
+              <div class="title f-20 m-b-16">부서</div>
+              <!-- modi 마크업 순서 변경 -->
+              <div class="flex-row items-center flex-between">
+                <div class="flex-row items-center m-r-8"> <!-- modi add class = m-r-8 //-->
+                  <div class="checkbox  flex-wrap m-r-8 "></div><span>숨김 항목 보지 않기</span>
+                </div>
+                <button class="btn btn-primary btn-sm flex-wrap btn-add">추가</button> <!-- modi add class = btn-add //-->
+              </div>
+              <!--// modi 마크업 순서 변경 -->
+            </div>
+            <div class="data-table">
+              <!-- <div class="top flex-row items-center flex-between m-b-16"></div> modi 삭제해도 되면 삭제 //-->
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>부서</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>세부부서</span></div>
+                    </th>
+                    <th>
+                      <div class="flex-row items-center"><span>순서변경</span></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" row-0">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">숨김</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                    <td>
+                      <div class="item-content center ">
+                        <div>
+
+                          <div class="flex-row items-center flex-between ">
+                            <div>상담실1-1</div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-0">숨김</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-1">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">숨김</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                    <td>
+                      <div class="item-content center ">
+                        <div>
+
+                          <div class="flex-row items-center flex-between m-b-8">
+                            <div>상담실2-1</div>
+                            <button class="btn btn-primary btn-sm flex-wrap m-l-8 index-0">숨김해제</button>
+                          </div>
+                          <div class="flex-row items-center flex-between ">
+                            <div>상담실2-2</div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-1">숨김</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-2">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">숨김</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                    <td>
+                      <div class="item-content center ">
+                        <div>
+
+                          <div class="flex-row items-center flex-between m-b-8">
+                            <div>부서이름이 왜이리 길어!</div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-0">숨김</button>
+                          </div>
+
+
+                          <div class="flex-row items-center flex-between m-b-8">
+                            <div>우히히히힣</div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-1">숨김</button>
+                          </div>
+
+
+                          <div class="flex-row items-center flex-between ">
+                            <div>이러면 넘어갈 것인가?</div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-2">숨김</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-3">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">숨김</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                    <td>
+                      <div class="item-content center ">
+                        <div>
+
+                          <div class="flex-row items-center flex-between m-b-8">
+                            <div>상담실3-1</div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-0">숨김</button>
+                          </div>
+
+
+                          <div class="flex-row items-center flex-between m-b-8">
+                            <div>상담실3-2</div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-1">숨김</button>
+                          </div>
+
+
+                          <div class="flex-row items-center flex-between m-b-8">
+                            <div>상담실3-3</div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-2">숨김</button>
+                          </div>
+
+
+                          <div class="flex-row items-center flex-between m-b-8">
+                            <div>상담실3-4</div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-3">숨김</button>
+                          </div>
+
+
+                          <div class="flex-row items-center flex-between ">
+                            <div>상담실3-5</div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-4">숨김</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                  </tr>
+                  <tr class=" row-4">
+                    <td>
+                      <div class="item-content center ">
+                        <button class="btn btn-sm btn-primary m-r-8">수정</button>
+                        <button class="btn btn-sm btn-danger">숨김</button></div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                    <td>
+                      <div class="item-content center ">
+                        <div>
+
+                          <div class="flex-row items-center flex-between ">
+                            <div></div>
+                            <button class="btn btn-danger btn-sm flex-wrap m-l-8 index-0">숨김</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item-content center "></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="appointment-time">
+            <div class="route-top">
+              <div class="title f-20 m-b-16">예약 캘린더 시간</div>
+              <!-- modi -->
+              <div class="flex-row">
+                <button class="btn btn-warning">초기화</button>
+                <button class="btn btn-primary m-l-8">저장</button>
+              </div>
+              <!--// modi -->
+            </div>
+            <!-- modi 마크업 data-table 추가 -->
+            <div class="data-table">
+              <div class="form-control">
+                <label>영업 시간</label>
+                <div class="flex-row items-center">
+                  <div class="flex-wrap">
+                    <div class="time-setter"><select>
+                        <option disabled="" value="">-</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="00">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                      </select>:<select>
+                        <option disabled="" value="">-</option>
+                        <option value="00">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                      </select></div>
+                  </div>
+                  <div class="flex-wrap">~</div>
+                  <div class="flex-wrap">
+                    <div class="time-setter"><select>
+                        <option disabled="" value="">-</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="00">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                      </select>:<select>
+                        <option disabled="" value="">-</option>
+                        <option value="00">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                      </select></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-control"><label>현황판 시간 단위</label><select>
+                  <option disabled="" value="">-</option>
+                  <option value="5">5분</option>
+                  <option value="10">10분</option>
+                  <option value="15">15분</option>
+                  <option value="30">30분</option>
+                  <option value="60">60분</option>
+                </select></div>
+              <div class="form-control"><label>점심 시간</label>
+                <div class="flex-row items-center">
+                  <div class="flex-wrap">
+                    <div class="time-setter"><select>
+                        <option disabled="" value="">-</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="00">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                      </select>:<select>
+                        <option disabled="" value="">-</option>
+                        <option value="00">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                      </select></div>
+                  </div>
+                  <div class="flex-wrap">~</div>
+                  <div class="flex-wrap">
+                    <div class="time-setter"><select>
+                        <option disabled="" value="">-</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="00">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                      </select>:<select>
+                        <option disabled="" value="">-</option>
+                        <option value="00">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                      </select></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// modi 마크업 data-table 추가 -->
+
+            <!-- route-top 으로 위치 이동
+            <div class="flex-row">
+              <button class="btn btn-warning">초기화</button>
+              <button disabled="" class="btn btn-primary m-l-8">저장</button>
+            </div>
+              -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-wrapper">
+      <div class="toast  "></div>
+    </div>
+
+    <!-- 입력란 추가 -->
+    <div class="modal modal-overlay">
+      <div class="modal-container">
+        <div class="modal-department-category">
+          <div class="head flex-row flex-between items-start">
+            <div class="title">부서명 추가</div><i class="zmdi zmdi-close"></i>
+          </div>
+          <div class="body">
+            <div class="form-control section required">
+              <label>부서</label>
+              <input value="" placeholder="부서명 입력">
+            </div>
+            <div class="form-control section required">
+              <label>세부부서</label>
+              <div class="department flex-row m-b-8">
+                <input class="flex-fill" value="" placeholder="세부 부서명 입력">
+                <button class="btn btn-danger flex-wrap m-l-16">삭제</button>
+              </div>
+            </div>
+            <div class="form-control section required">
+              <label>세부부서</label>
+              <div class="department flex-row m-b-8">
+                <input class="flex-fill" value="세부 부서명 있는 경우 삭제버튼에 클래스 on 추가" placeholder="세부 부서명 입력">
+                <button class="btn btn-danger flex-wrap m-l-16 on">삭제</button>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block">입력란 추가</button>
+          </div>
+          <div class="buttons">
+            <div class="flex-row"><button class="btn btn-default">취소</button><button class="btn btn-primary">저장</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// 입력란 추가 -->
+
+
+  </div>
+  <!-- <script>
+    ! function(e) {
+      function r(r) {
+        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
+        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
+        for (c && c(r); s.length;) s.shift()();
+        return u.push.apply(u, f || []), t()
+      }
+
+      function t() {
+        for (var e, r = 0; r < u.length; r++) {
+          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
+            var i = t[l];
+            0 !== o[i] && (n = !1)
+          }
+          n && (u.splice(r--, 1), e = a(a.s = t[0]))
+        }
+        return e
+      }
+      var n = {},
+        o = {
+          1: 0
+        },
+        u = [];
+
+      function a(r) {
+        if (n[r]) return n[r].exports;
+        var t = n[r] = {
+          i: r,
+          l: !1,
+          exports: {}
+        };
+        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
+      }
+      a.m = e, a.c = n, a.d = function(e, r, t) {
+        a.o(e, r) || Object.defineProperty(e, r, {
+          enumerable: !0,
+          get: t
+        })
+      }, a.r = function(e) {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+          value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+          value: !0
+        })
+      }, a.t = function(e, r) {
+        if (1 & r && (e = a(e)), 8 & r) return e;
+        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
+        var t = Object.create(null);
+        if (a.r(t), Object.defineProperty(t, "default", {
+            enumerable: !0,
+            value: e
+          }), 2 & r && "string" != typeof e)
+          for (var n in e) a.d(t, n, function(r) {
+            return e[r]
+          }.bind(null, n));
+        return t
+      }, a.n = function(e) {
+        var r = e && e.__esModule ? function() {
+          return e.default
+        } : function() {
+          return e
+        };
+        return a.d(r, "a", r), r
+      }, a.o = function(e, r) {
+        return Object.prototype.hasOwnProperty.call(e, r)
+      }, a.p = "/";
+      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
+        i = l.push.bind(l);
+      l.push = r, l = l.slice();
+      for (var f = 0; f < l.length; f++) r(l[f]);
+      var c = i;
+      t()
+    }([])
+  </script>
+  <script src="/static/js/2.48d9c0c9.chunk.js"></script>
+  <script src="/static/js/main.b9a9b0ab.chunk.js"></script> -->
+</body>
+
+</html>

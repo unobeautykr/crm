@@ -46,6 +46,11 @@ button {
   border:0;
   border-radius: 4px !important;
 }
+._right {
+  position: absolute;
+  right:0;
+  top:0;
+}
 button, a {
   &.btn, &.btn-primary {
     display: inline-block;
@@ -54,6 +59,8 @@ button, a {
     margin:0;
     border:0;
     border-radius: 4px;
+    min-width:60px;
+    height:auto !important;
     background-color: #273142;
     box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1);
     color: #dee2ec;
@@ -93,7 +100,11 @@ button, a {
     background-color: #dee2ec !important;
     color:#fff;
     box-shadow: none;
-
+  }
+  &.btn-success {
+    background-color: #2ed47a !important;
+    color:#fff;
+    font-weight: 700;
   }
   &._full {
     width:100%;
@@ -233,7 +244,7 @@ input[type=radio] {
     min-width:44px;
     padding-left:5px;
     padding-right:5px;
-    line-height: 23px;
+    line-height: normal;
     background-color: #273142;
     &.btn-primary {
       background-color: #2ed47a;
@@ -540,12 +551,47 @@ input.text-date {
 
 .login-body {
   top:0;
+  .foo-info {
+    padding-top:92px;
+    text-align: left;
+    > div {
+      padding-bottom:10px;
+      p {
+        position: relative;
+        display: inline-block;
+        padding-left:11px;
+        margin-left:7px;
+        font-size: 12px;
+        span {
+          margin-right:1px;
+          font-weight: 700;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          left:0;
+          top:2px;
+          display: block;
+          width:1px;
+          height:10px;
+          background-color: #dee2ec;
+        }
+        &:first-child {
+          padding-left:0;
+          margin-left:0;
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   .copyright {
-    margin-top:24.2%;
-    font-size: 14px;
+    margin-top:1.8%;
+    font-size: 12px;
     line-height: 1.5;
-    color: #273142;
-    text-align: center;
+    color: #9cb2cd;
+    text-align: left;
     a {
       font-size: inherit;
       line-height: inherit;
@@ -553,18 +599,24 @@ input.text-date {
     }
   }
   .logo {
-    width:379px;
-    height:242px;
-    margin:0 auto;
+    width:100%;
+    // height:242px;
+    min-height: 121px;
+    margin:0 auto 56px;
     background: {
       image:url('/crm/static/images/common/logo-unocarecrm.png');
-      size:379px;
+      size:380px;
       repeat:no-repeat;
       position: center 0;
     }
   }
   .login {
+    max-width:460px;
+    margin:0 auto;
     background-color: #fff;
+    p {
+      color: #273142;
+    }
     form button {
       margin-top:0;
       font-size: 18px;
@@ -575,23 +627,29 @@ input.text-date {
     form button:not(.disabled) {
       background-color: inherit;
     }
-    .form-control {
-      .login-input-wrapper {
-        width: 460px;
-        height: 52px;
-        background-color: none;
-        border:0;
-        padding:0;
-        input {
-          display: block;
+    .flex-fill {
+      .form-control {
+        padding-top: 0;
+        // &:first-child {
+        //   padding-top:0;
+        // }
+        .login-input-wrapper {
           width: 460px;
-          // height: 52px;
-          padding:18px 30px 17px;
-          background-color: #f3f8ff;
+          height: 52px;
+          background-color: none;
+          border:0;
+          padding:0;
+          input {
+            display: block;
+            width: 460px;
+            // height: 52px;
+            padding:18px 30px 17px;
+            background-color: #f3f8ff;
+          }
         }
-      }
-      .input-label {
-        display: none;
+        .input-label {
+          display: none;
+        }
       }
     }
     .btn-login {
@@ -599,12 +657,18 @@ input.text-date {
     }
     .find-password {
       display: block;
-      margin-top:46px;
+      margin-top:14px;
       margin-left: inherit;
       font-size: 14px;
       color: #273142;
-      text-align: center;
+      text-align: right;
       text-decoration: none;
+    }
+    .frm-demo {
+      padding-top:112px;
+      a {
+        color: #0060ff;
+      }
     }
     .title-full {
       flex:none;
@@ -648,6 +712,8 @@ input.text-date {
   position: relative;
   margin:0 auto;
   padding: 36px 0;
+  max-width:80%;
+  width:calc(100% - 270px);
   .flex-row {
     display: inline-block;
     width:100%;
@@ -700,7 +766,7 @@ input.text-date {
   }
   .page-total {
     position: absolute;
-    left:0;
+    left:15px;
     top:15px;
     .tt {
       display: inline-block;
@@ -715,7 +781,7 @@ input.text-date {
   .page-icon {
     width:auto;
     min-width:32px;
-    height:auto;
+    height:36px;
     margin-right:0 !important;
     margin-left:10px;
     padding:9px 17px 8px;
@@ -728,6 +794,7 @@ input.text-date {
       border: solid 1px #0060ff;
       background-color: #ffffff;
       color: #0060ff;
+      font-weight: 700;
     }
   }
 } //.limit-setter

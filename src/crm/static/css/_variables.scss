@@ -1,0 +1,36 @@
+@import 'open-color';
+
+$screen-xs:                  480px;
+$screen-sm:                  768px;
+$screen-md:                  992px;
+$screen-lg:                  1200px;
+
+$gray-dark:        #434245;
+$gray-normal:      #646468;
+$gray-light:       #7f7e83;
+$gray-lightest:    #ADACB0;
+$gray-border:      #E9E9ED;
+
+$text-color-dark:    $gray-dark;
+$text-color:         $gray-normal;
+$text-color-light:   $gray-light;
+$text-color-lightest: $gray-lightest;
+
+$white:        #FFF;
+$almost-white: #FAFAFA;
+$dark-white:   #F5F5F5;
+$black:        #000;
+
+$brand-primary:            rgba(64, 14, 64, 1);
+$brand-accent:             rgba(32, 14, 32, 1);
+$brand-info:               rgba(147, 218, 69, 1);
+$brand-warning:            rgba(255, 179, 2, 1);
+$brand-danger:             rgba(255, 61, 107, 1);
+$brand-red:                rgba(254, 48, 4, 1);
+$brand-blue:               rgba(4, 48, 254, 1);
+$brand-success:            rgba(46, 212, 121, 1); // #2ed47a
+
+// Allows for customizing button radius independently from global border radius
+$btn-height:    44px;
+$icon-size:     24px;
+$route-padding: 16px;

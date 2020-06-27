@@ -1,0 +1,403 @@
+.absence-schedules-calendar,
+.appointment-boards,
+.home {
+  .date-functions {
+    > button {
+      //@extend .btn;
+      ////@extend .btn-sm;
+      &.selected {
+        //@extend .btn-primary;
+      }
+    }
+
+    > * {
+      ////@extend .flex-wrap;
+      max-width: 160px;
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .left-panel {
+    margin-right: 16px;
+
+    .region,
+    input,
+    select {
+      font-size: 12px !important;
+    }
+
+    .filters {
+      .filter:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      select {
+        width: 100%;
+      }
+    }
+  }
+}
+$cellSize: 40px;
+
+.appointment-boards {
+  padding-bottom: 160px;
+
+  .overlay {
+    position: fixed;
+    z-index: 2;
+  }
+
+  .board {
+    .header {
+      .current-date {
+        color: $brand-primary;
+        font-size: 16px;
+        text-align: center;
+        //@extend .f-bold;
+      }
+    }
+  }
+
+  .table {
+    user-select: none;
+    display: table;
+    border-top: 1px solid $gray-border;
+    border-left: 1px solid $gray-border;
+  }
+
+  .cell {
+    font-size: 12px;
+    padding: 8px;
+    width: $cellSize * 3;
+    height: $cellSize;
+    border-right: 1px solid $gray-border;
+    border-bottom: 1px solid $gray-border;
+    position: relative;
+    overflow-y: auto;
+
+    &:hover {
+      box-shadow: 0 0 4px $brand-primary;
+      transition: none;
+    }
+
+    .counselor,
+    .customer,
+    .doctor {
+      max-width: 40px;
+      //@extend .lines-1;
+    }
+  }
+
+  .department-category-name {
+    //@extend .cell;
+    //@extend .center;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    background: $white;
+    // 한 부서에 세부부서가 설마 10개가 넘진 않겠제?
+    @for $i from 1 to 10 {
+      &.colspan-#{$i} {
+        width: $cellSize * 3 * $i;
+      }
+    }
+  }
+
+  .draggable {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+
+    &:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
+
+    &.dragging-over {
+      background: $brand-primary;
+      opacity: 0.5;
+    }
+
+    &.has-appointment {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }
+  @for $i from 1 to 24 {
+    .size-#{$i} {
+      height: $cellSize * $i;
+    }
+  }
+
+  .regions {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+
+    .region {
+      align-items: center;
+      //@extend .flex-row;
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      .box {
+        max-width: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .status {
+    &:not(.scheduled) {
+      color: $white;
+    }
+
+    &.scheduled {
+      background: $white;
+      border: 1px solid $gray-border;
+    }
+
+    &.waiting {
+      background: rgba(87, 225, 236, 1);
+    }
+
+    &.treating {
+      background: rgba(42, 194, 233, 1);
+    }
+
+    &.done {
+      background: rgba(72, 72, 96, 1);
+    }
+
+    &.consulting {
+      background: rgba(224, 97, 173, 1);
+    }
+
+    &.consulted {
+      background: rgba(187, 132, 165, 1);
+    }
+
+    &.unvisited {
+      background: rgba(252, 152, 61, 1);
+    }
+
+    &.absence {
+      background: rgba(148, 148, 165, 1);
+    }
+
+    &.lunch {
+      background: rgba(226, 226, 230, 1);
+    }
+  }
+}
+
+.appointment-hover-card {
+  width: 240px;
+  padding: 16px;
+  border-radius: 8px;
+  position: absolute;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.32);
+  background: $white;
+  color: $black;
+  z-index: 1;
+  max-height: 320px;
+  overflow-y: auto;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.context-menu {
+  position: relative;
+
+  ul {
+    background: $white;
+    position: absolute;
+    border-radius: 4px;
+    border: 1px solid $gray-border;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.32);
+
+    li {
+      padding: 6px 12px;
+      min-width: 144px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray-border;
+      }
+
+      &:hover {
+        color: $white;
+        background: $gray-lightest;
+        cursor: pointer;
+      }
+
+      &.disabled {
+        color: $gray-lightest;
+      }
+
+      i {
+        font-size: 14px;
+      }
+    }
+
+    &.menu-status {
+      left: 144px;
+      top: 0;
+    }
+  }
+}
+
+.conditional-board {
+  margin-top: 40px;
+  display: table;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  position: relative;
+
+  .current-timeline {
+    position: absolute;
+    height: 1px;
+    background: $brand-danger;
+    width: calc(100% - 80px); // (전체 - 위의 padding-right)
+  }
+
+  .today {
+    color: $white;
+    background: $brand-primary;
+    border-radius: 4px;
+    padding: 0 8px;
+    display: table;
+    margin: 0 auto;
+  }
+
+  &.week {
+    .leftmost {
+      margin-top: 48px; // 하단 .daily-info의 height와 일치해야함
+    }
+
+    &.squeeze {
+      .table:not(.leftmost) {
+        .cell {
+          width: $cellSize;
+        }
+      }
+
+      .department-category-name {
+        // 한 부서에 세부부서가 설마 10개가 넘진 않겠제?
+        // 여긴 위쪽 .department-category-name과 달리 squeeze 안쪽이라 사이즈가 작음 (3분의 1)
+        @for $i from 1 to 10 {
+          &.colspan-#{$i} {
+            width: $cellSize * $i !important;
+          }
+        }
+      }
+    }
+  }
+
+  .daily-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $gray-border;
+    border-right: 1px solid $gray-border;
+    height: 48px; // 위 &.week .leftmost의 margin-top과 일치해야함
+
+    &:first-child {
+      border-left: 1px solid $gray-border;
+    }
+
+    .day-name {
+      color: $black;
+      font-size: 16px;
+    }
+  }
+}
+
+.monthly-board {
+  display: table;
+  padding-right: 80px;
+  padding-bottom: 80px;
+
+  .calendar-cell,
+  .day-name {
+    min-width: 280px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.16);
+  }
+
+  .calendar-cell {
+    padding: 8px;
+    height: 240px;
+    overflow: auto;
+  }
+
+  .first-line {
+    .day-name {
+      color: $black;
+      font-size: 16px;
+      padding: 16px;
+      //@extend .center;
+    }
+  }
+
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .calendar-cell {
+    font-size: 10px;
+
+    .day {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+  }
+
+  .appointment-items {
+    .item {
+      padding: 2px 6px;
+      border-radius: 4px;
+      width: max-content;
+      cursor: pointer;
+
+      > * {
+        ////@extend .flex-wrap;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .btn-expand {
+    margin-top: 24px;
+    color: $white;
+    background: $brand-primary;
+  }
+
+  .cell {
+    border-radius: 4px;
+    height: initial;
+    padding: 0;
+    width: max-content;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+}

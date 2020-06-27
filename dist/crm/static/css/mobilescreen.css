@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Roboto&display=swap");
+.mobile-screen { --mobile-screen-max-width: 100vh; --mobile-screen-max-height: 100%; --screen-nav-bar-height: 3.5em; --screen-tab-bar-height: 3.5em; --bubble-image-max-width: 250px; --bubble-text-max-width: 95%; --theme-bg-color: #ffffff; --theme-header-border-color: #eef2f4; --theme-nav-bar-background-color: #ffffff; --theme-clinic-profile-icon: #cccccc; --theme-bubble-background-color: #f4f4f4; --theme-bubble-remove-image-icon-color: #cccccc; --theme-bubble-remove-image-icon-hover-color: red; --theme-bubble-text-color: #b5b5b5; --theme-bubble-status-color: black; --theme-view-tab-bar-border-color: #eef2f4; --theme-view-tab-bar-bg-color: #ffffff; --theme-view-tab-bar-item-color: #9fa6aa; --theme-view-tab-bar-item-hover-color: #272727; --theme-view-tab-bar-item-active-bg-color:#fbfbfb; --theme-view-tab-bar-item-active-shadow-color:#e6e6e6; --theme-view-tab-bar-dropup-bg-color: #ffffff; --theme-view-tab-bar-dropup-color: #4e5052; --mobile-screen-font: "Noto Sans KR", sans-serif; --theme-view-bottom-bg-color: #f7f7f7; }
+
+.mobile-screen[data-theme="iphone"] { --theme-view-tab-bar-item-hover-color: #1084ff; }
+
+.mobile-screen[data-theme="kakaotalk"] { --theme-bg-color: #9bbbd4; --theme-nav-bar-background-color: #9bbbd4; --theme-bubble-background-color: #ffffff; --theme-clinic-profile-icon: #ffffff; --theme-view-tab-bar-item-hover-color:#556677; --theme-view-tab-bar-border-color: #eef2f4; --theme-header-border-color: #8fb3cf; }
+
+.mobile-screen input, .mobile-screen textarea { font-family: var(--mobile-screen-font); line-height: 1.4em; padding: none; }
+
+.mobile-screen { font-family: var(--mobile-screen-font); display: flex; flex-direction: column; background-color: var(--theme-bg-color); height: var(--mobile-screen-max-height); max-width: var(--mobile-screen-max-width); margin: 0 auto; overflow: hidden; }
+
+.mobile-screen .nav-bar { background-color: var(--theme-nav-bar-background-color); height: var(--screen-nav-bar-height); border-bottom: 1px solid var(--theme-header-border-color); display: flex; align-items: center; }
+
+.mobile-screen .nav-bar-title { width: 20em; flex-shrink: 0; height: 100%; display: flex; align-items: center; display: flex; }
+
+.mobile-screen .nav-bar-title .title-label { margin: 0 .5em 0 1em; display: flex; align-items: center; font-size: .9em; }
+
+.mobile-screen .nav-bar-title .title-label span.label-required:after { color: red; content: "*"; }
+
+.mobile-screen .nav-bar-title .caller-numbers { padding-left: .5em; }
+
+.mobile-screen .nav-bar-title .caller-numbers .uno-select__control { border: 0 !important; border-bottom: 1px; }
+
+.mobile-screen .nav-bar-title .caller-numbers .uno-select__menu { font-size: .85em; margin-left: .5em; width: 95%; top: 90%; }
+
+.mobile-screen .nav-bar-title .caller-numbers .uno-select__indicator-separator { background: none; }
+
+.mobile-screen .nav-bar-title .caller-numbers .uno-select__clear-indicator { display: none; }
+
+.mobile-screen .nav-bar-title .caller-numbers .selected-value { display: flex; flex-direction: column; line-height: 1.1em; padding-top: .4em; }
+
+.mobile-screen .nav-bar-title .caller-numbers .selected-value .comment { color: #868e96; font-size: .5em; padding-left: .2em; }
+
+.mobile-screen .nav-bar-title .caller-numbers .option .comment { color: #868e96; font-size: .5em; padding-left: .5em; }
+
+.mobile-screen .nav-bar-title .caller-numbers .option.uno-select__option--is-selected .comment { color: #e9ecef; }
+
+.mobile-screen .nav-bar-submit { display: flex; align-items: center; margin-left: auto; flex-shrink: 0; height: 100%; }
+
+.mobile-screen .app-view { display: relative; flex-direction: column; }
+
+.mobile-screen .app-view-header { display: block; position: sticky; }
+
+.mobile-screen .app-view-main { flex-grow: 1; overflow-y: scroll; }
+
+.mobile-screen .message-bubble-clinic-profile { position: relative; }
+
+.mobile-screen .message-bubble-clinic-profile svg { color: var(--theme-clinic-profile-icon); }
+
+.mobile-screen .message-bubble-date { position: absolute; left: calc(6.5em); bottom: 0; font-size: .5em; }
+
+.mobile-screen .message-bubble { display: flex; padding: 0 1em 3em 1em; margin-top: .8em; }
+
+.mobile-screen .message-bubble-content { display: flex; flex-direction: column; align-items: flex-start; padding-bottom: 1.4em; margin-left: .5em; width: 100%; }
+
+.mobile-screen .message-bubble-content .message-bubble-text { color: var(--theme-bubble-text-color); background-color: var(--theme-bubble-background-color); padding: 15px; border-radius: 0px 18px 18px 10px; line-height: 1.5; font-size: .9em; font-weight: 500; width: var(--bubble-text-max-width); }
+
+.mobile-screen .message-bubble-content .message-bubble-text .message-title { display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 1em; border-bottom: solid; border-bottom-width: .1px; padding-bottom: 7px; border-color: #cccccc; }
+
+.mobile-screen .message-bubble-content .message-bubble-text .title-input { width: 100%; }
+
+.mobile-screen .message-bubble-content .message-bubble-text .content-input { display: flex; width: 100%; margin-right: .5em; flex-direction: column; }
+
+.mobile-screen .message-bubble-content .message-bubble-text .content-input .event-prefix, .mobile-screen .message-bubble-content .message-bubble-text .content-input .event-suffix { font-size: .9em; padding-left: 4px; }
+
+.mobile-screen .message-bubble-content .message-bubble-text .title-status { width: 10em; }
+
+.mobile-screen .message-bubble-content .message-bubble-text .title-status, .mobile-screen .message-bubble-content .message-bubble-text .content-status { align-self: flex-end; padding-left: 1em; padding-right: .5em; font-size: .6em; text-align: right; color: var(--theme-bubble-status-color); }
+
+.mobile-screen .message-bubble-content .message-bubble-text .title-status .message-type, .mobile-screen .message-bubble-content .message-bubble-text .content-status .message-type { margin-right: 1em; }
+
+.mobile-screen .message-bubble-content .message-bubble-text .content-status { padding-top: .5em; }
+
+.mobile-screen .message-bubble-content .message-bubble-text .message-input:not([type=radio]) { padding: none; }
+
+.mobile-screen .message-bubble-content .message-bubble-text .message-input, .mobile-screen .message-bubble-content .message-bubble-text .message-textarea { overflow-y: hidden; width: 100%; background-color: transparent; border-color: none; border-width: 0px; font-size: .9em; resize: none; }
+
+.mobile-screen .message-bubble-content .message-bubble-text .message-input:focus, .mobile-screen .message-bubble-content .message-bubble-text .message-textarea:focus { outline-width: .1px; outline-color: #dcdcdc; outline-style: dotted; outline-offset: 0; }
+
+.mobile-screen .message-bubble-content .message-bubble-text .message-input:hover, .mobile-screen .message-bubble-content .message-bubble-text .message-textarea:hover { transition: none; }
+
+.mobile-screen .message-bubble-content .message-bubble-image { color: var(--theme-bubble-text-color); display: inline-block; position: relative; background-color: var(--theme-bubble-background-color); padding: 15px; border-radius: 0px 18px 18px 10px; line-height: 1.5; font-size: .9em; font-weight: 500; margin-bottom: .5em; }
+
+.mobile-screen .message-bubble-content .message-bubble-image img { max-width: var(--bubble-image-max-width); }
+
+.mobile-screen .message-bubble-content .message-bubble-image .remove-image { position: absolute; top: 18px; right: 23px; color: var(--theme-bubble-remove-image-icon-color); cursor: pointer; }
+
+.mobile-screen .message-bubble-content .message-bubble-image .remove-image :hover { color: var(--theme-bubble-remove-image-icon-hover-color); }
+
+.mobile-screen .app-view-main { height: calc( var(--mobile-screen-max-height) - var(--screen-nav-bar-height) - var(--screen-tab-bar-height)); }
+
+.mobile-screen .app-view-tab-bar { display: flex; flex-direction: column; border-top: 1px solid var(--theme-view-tab-bar-border-color); align-items: center; background-color: var(--theme-view-tab-bar-bg-color); position: sticky; bottom: 0; left: 0; align-items: stretch; }
+
+.mobile-screen .app-view-tab-bar .tab-dropup { display: none; animation: fadein .8s; -webkit-animation: fadein .8s; -moz-animation: fadein .8s; /* CHROME */ /* FF */ }
+
+@keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+
+@-webkit-keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+
+@-moz-keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup { padding-bottom: 3em; display: flex; flex-direction: column; background-color: var(--theme-view-tab-bar-dropup-bg-color); border-color: var(--theme-view-tab-bar-border-color); border-bottom-width: 1px; border-bottom-style: solid; width: 100%; font-size: .75em; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-header { display: flex; justify-content: space-between; padding: .5em 1.5em .5em 1em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #fcfcfc; color: var(--theme-view-tab-bar-dropup-color); }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-header-title { display: flex; font-weight: 500; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-header-title .dropup-header-icon { width: 1.5em; padding-left: .3em; display: flex; cursor: pointer; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-header-close { cursor: pointer; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body { display: flex; flex-direction: row; flex-wrap: nowrap; margin: .5em 1.5em .5em .5em; color: var(--theme-view-tab-bar-dropup-color); }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body ul { list-style-type: none; margin-block-start: 0; margin-block-end: 0; margin-inline-start: 0; margin-inline-end: 0; padding-inline-start: 0; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body ul.dropup-body-characters { width: 100%; align-content: stretch; justify-content: flex-start; align-items: center; display: flex; flex-wrap: wrap; height: 1.8em; margin: 0 2em 1em 2em; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body ul.dropup-body-characters li { display: flex; align-content: center; font-size: .85em; padding: .4em .8em; width: 4%; justify-content: center; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body ul.dropup-body-characters li:hover { cursor: pointer; background-color: #f5f5f5; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body ul.dropup-body-variables { width: 100%; align-content: stretch; justify-content: center; align-items: center; display: flex; flex-wrap: wrap; height: 1.5em; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body ul.dropup-body-variables li { display: flex; align-content: center; font-size: .85em; width: 20%; padding: .2em 1em .2em 1em; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body ul.dropup-body-variables li:hover { cursor: pointer; background-color: #f5f5f5; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body ul.dropup-body-links { width: 100%; align-content: stretch; justify-content: center; align-items: center; display: flex; flex-wrap: wrap; height: 1.5em; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body ul.dropup-body-links li { display: flex; align-content: center; font-size: .85em; width: 45%; padding: .2em 1em .2em 1em; justify-content: center; }
+
+.mobile-screen .app-view-tab-bar.toggled .tab-dropup .dropup-body ul.dropup-body-links li:hover { cursor: pointer; background-color: #f5f5f5; }
+
+.mobile-screen .app-view-tab-bar .tab-control { display: flex; width: 100%; height: var(--screen-tab-bar-height); }
+
+.mobile-screen .app-view-tab-bar .tab-header { padding-left: .8em; padding-right: .5em; display: flex; flex-direction: column; justify-content: center; }
+
+.mobile-screen .app-view-tab-bar .tab-header-icon { color: var(--theme-view-tab-bar-item-color); }
+
+.mobile-screen .app-view-tab-bar .tab-items-group { display: flex; flex-grow: 1; justify-content: space-evenly; padding-right: .5em; }
+
+.mobile-screen .app-view-tab-bar .tab-items-group .tab-item { display: flex; flex-direction: column; justify-content: center; padding-top: .3em; width: 100%; height: 100%; }
+
+.mobile-screen .app-view-tab-bar .tab-items-group .tab-item.active { background-color: var(--theme-view-tab-bar-item-active-bg-color); outline: none; -webkit-box-shadow: inset 0px 0px 3px var(--theme-view-tab-bar-item-active-shadow-color); -moz-box-shadow: inset 0px 0px 3px var(--theme-view-tab-bar-item-active-shadow-color); box-shadow: inset 0px 0px 3px var(--theme-view-tab-bar-item-active-shadow-color); }
+
+.mobile-screen .app-view-tab-bar .tab-items-group .tab-item:hover { cursor: pointer; }
+
+.mobile-screen .app-view-tab-bar .tab-items-group .tab-item:hover .tab-item-icon svg, .mobile-screen .app-view-tab-bar .tab-items-group .tab-item:hover .tab-item-text { color: var(--theme-view-tab-bar-item-hover-color); }
+
+.mobile-screen .app-view-tab-bar .tab-items-group .tab-item-icon { display: flex; margin-top: 2px; justify-content: center; }
+
+.mobile-screen .app-view-tab-bar .tab-items-group .tab-item-icon svg { color: var(--theme-view-tab-bar-item-color); }
+
+.mobile-screen .app-view-tab-bar .tab-items-group .tab-item-text { color: var(--theme-view-tab-bar-item-color); margin-top: 5px; display: flex; justify-content: center; font-size: .65em; font-weight: 500; }
+
+.mobile-screen .app-view-bottom { border-top-width: 1px; border-top-style: solid; border-top-color: #cccccc; padding-top: .5em; font-size: .8em; padding-left: 1.5em; background-color: #f1f1f16c; }
+
+.mobile-screen .app-view-bottom .uno-select__control { font-size: .95em; }
+
+.mobile-screen .app-view-bottom .sms-situation, .mobile-screen .app-view-bottom .sms-type, .mobile-screen .app-view-bottom .schedule-type, .mobile-screen .app-view-bottom .schedule-info { font-size: .9em; margin: 0 .5em 0 0em; display: flex; align-items: center; }
+
+.mobile-screen .app-view-bottom .sms-situation .label, .mobile-screen .app-view-bottom .sms-type .label, .mobile-screen .app-view-bottom .schedule-type .label, .mobile-screen .app-view-bottom .schedule-info .label { padding-left: 1em; width: 6em; }
+
+.mobile-screen .app-view-bottom .sms-situation .label span.label-required:after, .mobile-screen .app-view-bottom .sms-type .label span.label-required:after, .mobile-screen .app-view-bottom .schedule-type .label span.label-required:after, .mobile-screen .app-view-bottom .schedule-info .label span.label-required:after { color: red; content: "*"; }
+
+.mobile-screen .app-view-bottom .sms-situation { padding: .8em 0 0 0; }
+
+.mobile-screen .app-view-bottom .sms-type, .mobile-screen .app-view-bottom .schedule-type { padding: 1em 0; }
+
+.mobile-screen .app-view-bottom .sms-type label, .mobile-screen .app-view-bottom .schedule-type label { padding-left: .8em; padding-right: .5em; cursor: pointer; }
+
+.mobile-screen .app-view-bottom .sms-type label span, .mobile-screen .app-view-bottom .schedule-type label span { padding-left: .5em; }
+
+.mobile-screen .app-view-bottom .schedule-info { padding-bottom: 1.5em; }
+
+.mobile-screen .app-view-bottom .schedule-info .input-select { display: flex; align-items: center; }
+
+.mobile-screen .app-view-bottom .schedule-info .input-select .uno-select__value-container { justify-content: center; }
+
+.mobile-screen .app-view-bottom .schedule-info .input-select .uno-select__option { padding: .2em 0 0 .5em; font-size: 1em; }
+
+.mobile-screen .app-view-bottom .schedule-info .input-select .schedule-info-select { display: flex; width: none; }
+
+.mobile-screen .app-view-bottom .schedule-info .input-select .schedule-info-select.schedule-info-days-delta { max-width: 6em; }
+
+.mobile-screen .app-view-bottom .schedule-info .input-select .schedule-info-select.schedule-info-days-before { max-width: 6em; }
+
+.mobile-screen .app-view-bottom .schedule-info .input-select .schedule-info-select.schedule-info-time-hour { margin-left: .5em; max-width: 5em; }
+
+.mobile-screen .app-view-bottom .schedule-info .input-select .schedule-info-select.schedule-info-time-minute { max-width: 5em; }

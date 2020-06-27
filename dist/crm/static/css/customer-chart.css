@@ -1,0 +1,15 @@
+.customer-chart .tabs .tab { padding: 12px; border-radius: 16px 16px 0 0; min-width: 120px; font-size: 16px; margin-right: 0 !important; }
+
+.customer-chart .tabs .tab:hover { cursor: pointer; }
+
+.customer-chart .flex-row > *:not(:last-child) { margin-right: 16px; }
+
+.chart-page { font-size: 12px; margin-top: 20px; }
+
+.chart-page > .footer .title, .chart-page > .header .title { font-size: 16px; margin: 16px 0; }
+
+.chart-page > .footer button, .chart-page > .header button { margin-left: 16px; }
+
+.chart-page .favorite:not(:last-child) { margin-bottom: 16px; }
+
+.customer-pen-charts .react-contextmenu-wrapper { height: 600px; max-height: 600px; overflow: scroll; }

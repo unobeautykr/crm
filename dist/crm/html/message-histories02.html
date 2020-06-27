@@ -506,6 +506,7 @@
       color: #fff;
     }
   </style>
+  <link href="/crm/static/css/routes.css" rel="stylesheet">
 </head>
 
 <body>
@@ -674,130 +675,126 @@ left-navigation 마크업 및 클래스 수정
 
       <div class="flex-fill left-nav-opened route">
 
-        <div class="list">
-          <div class="sms-list">
-            <div class="route-top"><span class="title">마케팅 문자 발송 내역</span></div>
-            <div class="flex-row items-center flex-between flex-fill">
-              <div class="flex-row items-center"><button class="btn btn-primary btn-sm m-r-8">이번주</button><button class="btn btn-primary btn-sm m-r-8">이번달</button><button class="btn btn-primary btn-sm m-r-8">기간 선택</button><select>
-                  <option>문자종류</option>
-                </select></div>
-              <div class="right"><button class="btn btn-primary btn-sm m-r-8">엑셀 다운로드</button></div>
+        <div>
+          <div class="message-history-container">
+            <div class="page-navi"><span class="title">문자관리</span><span class="title">문자 전송내역 조회</span></div> <!-- modi add //-->
+
+            <div class="tabs">
+              <div class="tab ">광고문자 전송결과</div>
+              <div class="tab selected ">전송예약중인 광고문자</div>
             </div>
-            <div class="data-table">
-              <div class="top flex-row items-center flex-between m-b-16"></div>
-              <table>
-                <thead>
-                  <tr>
-                    <th>
-                      <div class="flex-row items-center"><span>일자</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>종류</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>사용금액</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>발송성공</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>링크조회수</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>수술건수</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>금액</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>링크조회율</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>이벤트신청율</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>시수술전환률</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>광고효율</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>상세 결과 보기</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>해당조건 다시 보내기</span></div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-              <div class="empty">조회결과가 없습니다</div>
-              <div class="flex-row flex-between">
-                <div class="pagination">
-                  <div class="flex-row items-center"></div>
-                  <div class="c-red f-medium m-t-16">1 / 0</div>
+            <div>
+              <div class="search-inputs">
+                <button class="btn btn-normal _small">최근 1주일</button>
+                <button class="btn btn-basic _small">이번달</button>
+
+                <div class="uno-datepicker">
+                  <div class="react-datepicker-wrapper">
+                    <div class="react-datepicker__input-container"><button class="input-datepicker  "><label>2020/06/01</label><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt"
+                          class="svg-inline--fa fa-calendar-alt fa-w-14 icon-calendar" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="currentColor"
+                            d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z">
+                          </path>
+                        </svg></button></div>
+                  </div>
+                  <div class="range-separator"><span>~</span></div>
+                  <div class="react-datepicker-wrapper">
+                    <div class="react-datepicker__input-container"><button class="input-datepicker  "><label>2020/06/30</label><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt"
+                          class="svg-inline--fa fa-calendar-alt fa-w-14 icon-calendar" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="currentColor"
+                            d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z">
+                          </path>
+                        </svg></button></div>
+                  </div>
                 </div>
-                <div class="limit-setter flex-row">
-                  <div class="page-icon flex-wrap selected">10</div>
-                  <div class="page-icon flex-wrap ">20</div>
-                  <div class="page-icon flex-wrap ">50</div>
-                  <div class="page-icon flex-wrap ">100</div>
-                </div>
+                <button class="btn btn-primary m-l-8">조회</button>
               </div>
-            </div>
-          </div>
-          <div class="sms-list">
-            <div class="route-top"><span class="title">일반 문자 발송 내역</span></div>
-            <div class="flex-row items-center flex-between flex-fill">
-              <div class="flex-row items-center"><button class="btn btn-primary btn-sm m-r-8">이번주</button><button class="btn btn-primary btn-sm m-r-8">이번달</button><button class="btn btn-primary btn-sm m-r-8">기간 선택</button><select>
-                  <option>문자종류</option>
-                </select></div>
-              <div class="right"><button class="btn btn-primary btn-sm m-r-8">엑셀 다운로드</button></div>
-            </div>
-            <div class="data-table">
-              <div class="top flex-row items-center flex-between m-b-16"></div>
-              <table>
-                <thead>
-                  <tr>
-                    <th>
-                      <div class="flex-row items-center"><span>일자</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>종류</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>사용금액</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>발송건수</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>발송성공</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>발송실패</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>상세 결과 보기</span></div>
-                    </th>
-                    <th>
-                      <div class="flex-row items-center"><span>해당조건 다시 보내기</span></div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-              <div class="empty">조회결과가 없습니다</div>
-              <div class="flex-row flex-between">
-                <div class="pagination">
-                  <div class="flex-row items-center"></div>
-                  <div class="c-red f-medium m-t-16">1 / 0</div>
-                </div>
-                <div class="limit-setter flex-row">
-                  <div class="page-icon flex-wrap selected">10</div>
-                  <div class="page-icon flex-wrap ">20</div>
-                  <div class="page-icon flex-wrap ">50</div>
-                  <div class="page-icon flex-wrap ">100</div>
+              <div class="data-table header-style-classic">
+                <!-- <div class="top flex-row items-center flex-between m-b-16"></div> modi delete //-->
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="">
+                        <div class="flex-row items-center"><span></span></div>
+                      </th>
+                      <th class="">
+                        <div class="flex-row items-center"><span>입력일</span></div>
+                      </th>
+                      <th class="">
+                        <div class="flex-row items-center"><span>전송일</span></div>
+                      </th>
+                      <th class="title-and-content">
+                        <div class="flex-row items-center"><span>제목/내용</span></div>
+                      </th>
+                      <th class="image-preview">
+                        <div class="flex-row items-center"><span>이미지</span></div>
+                      </th>
+                      <th class="">
+                        <div class="flex-row items-center"><span>요청건수</span></div>
+                      </th>
+                      <th class="">
+                        <div class="flex-row items-center"><span>예상소진금액</span></div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class=" row-0">
+                      <td rowspan="1" class="  ">
+                        <div class="item-content center "><button class="btn btn-sm btn-danger m-r-4" data-type="delete">전송취소</button></div>
+                      </td>
+                      <td rowspan="1" class="  ">
+                        <div class="item-content center ">2020-06-21 06:05:58</div>
+                      </td>
+                      <td rowspan="1" class="  ">
+                        <div class="item-content center ">2020-06-21 06:05:58</div>
+                      </td>
+                      <td rowspan="1" class="title-and-content  ">
+                        <div class="item-content  pre-line ">
+                          <div class="contents">
+                            <div class="label">내용</div>
+                            <div class="text">ㅅㄷㄴㅈㅅ</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td rowspan="1" class="image-preview  ">
+                        <div class="image-thumbnail">
+                          <div class="null-image"><span class="image-icon fa-layers fa-fw fa-lg"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="image" class="svg-inline--fa fa-image fa-w-16 fa-lg " role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                  d="M464 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM112 120c-30.928 0-56 25.072-56 56s25.072 56 56 56 56-25.072 56-56-25.072-56-56-56zM64 384h384V272l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L208 320l-55.515-55.515c-4.686-4.686-12.284-4.686-16.971 0L64 336v48z">
+                                </path>
+                              </svg></span></div>
+                        </div>
+                      </td>
+                      <td rowspan="1" class="  ">
+                        <div class="item-content center ">4</div>
+                      </td>
+                      <td rowspan="1" class="  ">
+                        <div class="item-content center ">₩ 96</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="flex-row flex-between">
+                  <div class="pagination">
+                    <div class="flex-row items-center">
+                      <div class="page-icon flex-wrap page-prev"><span class="a11y">이전</span></div>
+                      <div class="page-icon flex-wrap selected">1</div>
+                      <div class="page-icon flex-wrap ">2</div>
+                      <div class="page-icon flex-wrap ">3</div>
+                      <div class="page-icon flex-wrap ">4</div>
+                      <div class="page-icon flex-wrap page-next"><span class="a11y">다음</span></div>
+                    </div>
+                    <div class="page-total"><span class="tt">total</span>1 / 4</div>
+                  </div>
+                  <div class="limit-setter flex-row">
+                    <div class="page-icon flex-wrap ">10</div>
+                    <div class="page-icon flex-wrap selected">20</div>
+                    <div class="page-icon flex-wrap ">50</div>
+                    <div class="page-icon flex-wrap ">100</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -809,83 +806,6 @@ left-navigation 마크업 및 클래스 수정
       <div class="toast  "></div>
     </div>
   </div>
-  <!-- <script>
-    ! function(e) {
-      function r(r) {
-        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
-        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
-        for (c && c(r); s.length;) s.shift()();
-        return u.push.apply(u, f || []), t()
-      }
-
-      function t() {
-        for (var e, r = 0; r < u.length; r++) {
-          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
-            var i = t[l];
-            0 !== o[i] && (n = !1)
-          }
-          n && (u.splice(r--, 1), e = a(a.s = t[0]))
-        }
-        return e
-      }
-      var n = {},
-        o = {
-          1: 0
-        },
-        u = [];
-
-      function a(r) {
-        if (n[r]) return n[r].exports;
-        var t = n[r] = {
-          i: r,
-          l: !1,
-          exports: {}
-        };
-        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
-      }
-      a.m = e, a.c = n, a.d = function(e, r, t) {
-        a.o(e, r) || Object.defineProperty(e, r, {
-          enumerable: !0,
-          get: t
-        })
-      }, a.r = function(e) {
-        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
-          value: "Module"
-        }), Object.defineProperty(e, "__esModule", {
-          value: !0
-        })
-      }, a.t = function(e, r) {
-        if (1 & r && (e = a(e)), 8 & r) return e;
-        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
-        var t = Object.create(null);
-        if (a.r(t), Object.defineProperty(t, "default", {
-            enumerable: !0,
-            value: e
-          }), 2 & r && "string" != typeof e)
-          for (var n in e) a.d(t, n, function(r) {
-            return e[r]
-          }.bind(null, n));
-        return t
-      }, a.n = function(e) {
-        var r = e && e.__esModule ? function() {
-          return e.default
-        } : function() {
-          return e
-        };
-        return a.d(r, "a", r), r
-      }, a.o = function(e, r) {
-        return Object.prototype.hasOwnProperty.call(e, r)
-      }, a.p = "/";
-      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
-        i = l.push.bind(l);
-      l.push = r, l = l.slice();
-      for (var f = 0; f < l.length; f++) r(l[f]);
-      var c = i;
-      t()
-    }([])
-  </script>
-  <script src="/static/js/2.59decae5.chunk.js"></script>
-  <script src="/static/js/main.25d03fb0.chunk.js"></script> -->
 </body>
 
 </html>

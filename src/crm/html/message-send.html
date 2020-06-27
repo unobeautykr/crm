@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- page head -->
+  @@include('../inc/pagehead.inc',{
+  })
+  <!--// page head -->
+  <style type="text/css">
+    svg:not(:root).svg-inline--fa {
+      overflow: visible;
+    }
+
+    .svg-inline--fa {
+      display: inline-block;
+      font-size: inherit;
+      height: 1em;
+      overflow: visible;
+      vertical-align: -0.125em;
+    }
+    .svg-inline--fa.fa-lg {
+      vertical-align: -0.225em;
+    }
+    .svg-inline--fa.fa-w-1 {
+      width: 0.0625em;
+    }
+    .svg-inline--fa.fa-w-2 {
+      width: 0.125em;
+    }
+    .svg-inline--fa.fa-w-3 {
+      width: 0.1875em;
+    }
+    .svg-inline--fa.fa-w-4 {
+      width: 0.25em;
+    }
+    .svg-inline--fa.fa-w-5 {
+      width: 0.3125em;
+    }
+    .svg-inline--fa.fa-w-6 {
+      width: 0.375em;
+    }
+    .svg-inline--fa.fa-w-7 {
+      width: 0.4375em;
+    }
+    .svg-inline--fa.fa-w-8 {
+      width: 0.5em;
+    }
+    .svg-inline--fa.fa-w-9 {
+      width: 0.5625em;
+    }
+    .svg-inline--fa.fa-w-10 {
+      width: 0.625em;
+    }
+    .svg-inline--fa.fa-w-11 {
+      width: 0.6875em;
+    }
+    .svg-inline--fa.fa-w-12 {
+      width: 0.75em;
+    }
+    .svg-inline--fa.fa-w-13 {
+      width: 0.8125em;
+    }
+    .svg-inline--fa.fa-w-14 {
+      width: 0.875em;
+    }
+    .svg-inline--fa.fa-w-15 {
+      width: 0.9375em;
+    }
+    .svg-inline--fa.fa-w-16 {
+      width: 1em;
+    }
+    .svg-inline--fa.fa-w-17 {
+      width: 1.0625em;
+    }
+    .svg-inline--fa.fa-w-18 {
+      width: 1.125em;
+    }
+    .svg-inline--fa.fa-w-19 {
+      width: 1.1875em;
+    }
+    .svg-inline--fa.fa-w-20 {
+      width: 1.25em;
+    }
+    .svg-inline--fa.fa-pull-left {
+      margin-right: 0.3em;
+      width: auto;
+    }
+    .svg-inline--fa.fa-pull-right {
+      margin-left: 0.3em;
+      width: auto;
+    }
+    .svg-inline--fa.fa-border {
+      height: 1.5em;
+    }
+    .svg-inline--fa.fa-li {
+      width: 2em;
+    }
+    .svg-inline--fa.fa-fw {
+      width: 1.25em;
+    }
+
+    .fa-layers svg.svg-inline--fa {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .fa-layers {
+      display: inline-block;
+      height: 1em;
+      position: relative;
+      text-align: center;
+      vertical-align: -0.125em;
+      width: 1em;
+    }
+    .fa-layers svg.svg-inline--fa {
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+    }
+
+    .fa-layers-counter, .fa-layers-text {
+      display: inline-block;
+      position: absolute;
+      text-align: center;
+    }
+
+    .fa-layers-text {
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+    }
+
+    .fa-layers-counter {
+      background-color: #ff253a;
+      border-radius: 1em;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      color: #fff;
+      height: 1.5em;
+      line-height: 1;
+      max-width: 5em;
+      min-width: 1.5em;
+      overflow: hidden;
+      padding: 0.25em;
+      right: 0;
+      text-overflow: ellipsis;
+      top: 0;
+      -webkit-transform: scale(0.25);
+              transform: scale(0.25);
+      -webkit-transform-origin: top right;
+              transform-origin: top right;
+    }
+
+    .fa-layers-bottom-right {
+      bottom: 0;
+      right: 0;
+      top: auto;
+      -webkit-transform: scale(0.25);
+              transform: scale(0.25);
+      -webkit-transform-origin: bottom right;
+              transform-origin: bottom right;
+    }
+
+    .fa-layers-bottom-left {
+      bottom: 0;
+      left: 0;
+      right: auto;
+      top: auto;
+      -webkit-transform: scale(0.25);
+              transform: scale(0.25);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+
+    .fa-layers-top-right {
+      right: 0;
+      top: 0;
+      -webkit-transform: scale(0.25);
+              transform: scale(0.25);
+      -webkit-transform-origin: top right;
+              transform-origin: top right;
+    }
+
+    .fa-layers-top-left {
+      left: 0;
+      right: auto;
+      top: 0;
+      -webkit-transform: scale(0.25);
+              transform: scale(0.25);
+      -webkit-transform-origin: top left;
+              transform-origin: top left;
+    }
+
+    .fa-lg {
+      font-size: 1.3333333333em;
+      line-height: 0.75em;
+      vertical-align: -0.0667em;
+    }
+
+    .fa-xs {
+      font-size: 0.75em;
+    }
+
+    .fa-sm {
+      font-size: 0.875em;
+    }
+
+    .fa-1x {
+      font-size: 1em;
+    }
+
+    .fa-2x {
+      font-size: 2em;
+    }
+
+    .fa-3x {
+      font-size: 3em;
+    }
+
+    .fa-4x {
+      font-size: 4em;
+    }
+
+    .fa-5x {
+      font-size: 5em;
+    }
+
+    .fa-6x {
+      font-size: 6em;
+    }
+
+    .fa-7x {
+      font-size: 7em;
+    }
+
+    .fa-8x {
+      font-size: 8em;
+    }
+
+    .fa-9x {
+      font-size: 9em;
+    }
+
+    .fa-10x {
+      font-size: 10em;
+    }
+
+    .fa-fw {
+      text-align: center;
+      width: 1.25em;
+    }
+
+    .fa-ul {
+      list-style-type: none;
+      margin-left: 2.5em;
+      padding-left: 0;
+    }
+    .fa-ul > li {
+      position: relative;
+    }
+
+    .fa-li {
+      left: -2em;
+      position: absolute;
+      text-align: center;
+      width: 2em;
+      line-height: inherit;
+    }
+
+    .fa-border {
+      border: solid 0.08em #eee;
+      border-radius: 0.1em;
+      padding: 0.2em 0.25em 0.15em;
+    }
+
+    .fa-pull-left {
+      float: left;
+    }
+
+    .fa-pull-right {
+      float: right;
+    }
+
+    .fa.fa-pull-left,
+    .fas.fa-pull-left,
+    .far.fa-pull-left,
+    .fal.fa-pull-left,
+    .fab.fa-pull-left {
+      margin-right: 0.3em;
+    }
+    .fa.fa-pull-right,
+    .fas.fa-pull-right,
+    .far.fa-pull-right,
+    .fal.fa-pull-right,
+    .fab.fa-pull-right {
+      margin-left: 0.3em;
+    }
+
+    .fa-spin {
+      -webkit-animation: fa-spin 2s infinite linear;
+              animation: fa-spin 2s infinite linear;
+    }
+
+    .fa-pulse {
+      -webkit-animation: fa-spin 1s infinite steps(8);
+              animation: fa-spin 1s infinite steps(8);
+    }
+
+    @-webkit-keyframes fa-spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+      }
+    }
+
+    @keyframes fa-spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+      }
+    }
+    .fa-rotate-90 {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+    }
+
+    .fa-rotate-180 {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+
+    .fa-rotate-270 {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+      -webkit-transform: rotate(270deg);
+              transform: rotate(270deg);
+    }
+
+    .fa-flip-horizontal {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+      -webkit-transform: scale(-1, 1);
+              transform: scale(-1, 1);
+    }
+
+    .fa-flip-vertical {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+      -webkit-transform: scale(1, -1);
+              transform: scale(1, -1);
+    }
+
+    .fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+      -webkit-transform: scale(-1, -1);
+              transform: scale(-1, -1);
+    }
+
+    :root .fa-rotate-90,
+    :root .fa-rotate-180,
+    :root .fa-rotate-270,
+    :root .fa-flip-horizontal,
+    :root .fa-flip-vertical,
+    :root .fa-flip-both {
+      -webkit-filter: none;
+              filter: none;
+    }
+
+    .fa-stack {
+      display: inline-block;
+      height: 2em;
+      position: relative;
+      width: 2.5em;
+    }
+
+    .fa-stack-1x,
+    .fa-stack-2x {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .svg-inline--fa.fa-stack-1x {
+      height: 1em;
+      width: 1.25em;
+    }
+    .svg-inline--fa.fa-stack-2x {
+      height: 2em;
+      width: 2.5em;
+    }
+
+    .fa-inverse {
+      color: #fff;
+    }
+
+    .sr-only {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    .sr-only-focusable:active, .sr-only-focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+
+    .svg-inline--fa .fa-primary {
+      fill: var(--fa-primary-color, currentColor);
+      opacity: 1;
+      opacity: var(--fa-primary-opacity, 1);
+    }
+
+    .svg-inline--fa .fa-secondary {
+      fill: var(--fa-secondary-color, currentColor);
+      opacity: 0.4;
+      opacity: var(--fa-secondary-opacity, 0.4);
+    }
+
+    .svg-inline--fa.fa-swap-opacity .fa-primary {
+      opacity: 0.4;
+      opacity: var(--fa-secondary-opacity, 0.4);
+    }
+
+    .svg-inline--fa.fa-swap-opacity .fa-secondary {
+      opacity: 1;
+      opacity: var(--fa-primary-opacity, 1);
+    }
+
+    .svg-inline--fa mask .fa-primary,
+    .svg-inline--fa mask .fa-secondary {
+      fill: black;
+    }
+
+    .fad.fa-inverse {
+      color: #fff;
+    }
+
+    .point-status .css-2b097c-container {
+      position: relative;
+      box-sizing: border-box;
+    }
+    .point-status .css-16mpxbf-control {
+      -webkit-box-align: center;
+      align-items: center;
+      background-color: rgb(255, 255, 255);
+      box-shadow: none;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      min-height: 38px;
+      position: relative;
+      box-sizing: border-box;
+      border-radius: 4px;
+      transition: all 100ms ease 0s;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      outline: 0px !important;
+    }
+    .point-status .css-1hwfws3 {
+      -webkit-box-align: center;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      box-sizing: border-box;
+      flex: 1 1 0%;
+      padding: 2px 8px;
+      overflow: hidden;
+    }
+    .point-status .css-1wa3eu0-placeholder {
+      color: rgb(128, 128, 128);
+      margin-left: 2px;
+      margin-right: 2px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      box-sizing: border-box;
+    }
+    .point-status .css-62g3xt-dummyInput {
+      font-size: inherit;
+      width: 1px;
+      color: transparent;
+      left: -100px;
+      opacity: 0;
+      position: relative;
+      transform: scale(0);
+      background: 0px center;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      outline: 0px;
+      padding: 0px;
+    }
+    .point-status .css-1wy0on6 {
+      -webkit-box-align: center;
+      align-items: center;
+      align-self: stretch;
+      display: flex;
+      flex-shrink: 0;
+      box-sizing: border-box;
+    }
+    .point-status .css-16mpxbf-control {
+      -webkit-box-align: center;
+      align-items: center;
+      background-color: rgb(255, 255, 255);
+      box-shadow: none;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      min-height: 38px;
+      position: relative;
+      box-sizing: border-box;
+      border-radius: 4px;
+      transition: all 100ms ease 0s;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      outline: 0px !important;
+    }
+    .point-status .css-tlfecz-indicatorContainer {
+      color: rgb(204, 204, 204);
+      display: flex;
+      box-sizing: border-box;
+      padding: 8px;
+      transition: color 150ms ease 0s;
+    }
+    .point-status .css-19bqh2r {
+      display: inline-block;
+      fill: currentcolor;
+      line-height: 1;
+      stroke: currentcolor;
+      stroke-width: 0;
+    }
+    .point-status .css-14jk2my-container {
+      pointer-events: none;
+      position: relative;
+      box-sizing: border-box;
+    }
+    .point-status .css-14n7s40-control {
+      -webkit-box-align: center;
+      align-items: center;
+      background-color: rgb(242, 242, 242);
+      box-shadow: none;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      min-height: 38px;
+      position: relative;
+      box-sizing: border-box;
+      border-radius: 4px;
+      transition: all 100ms ease 0s;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      outline: 0px !important;
+    }
+    .point-status .css-1hwfws3 {
+      -webkit-box-align: center;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      box-sizing: border-box;
+      flex: 1 1 0%;
+      padding: 2px 8px;
+      overflow: hidden;
+    }
+    .point-status .css-107lb6w-singleValue {
+      color: rgb(153, 153, 153);
+      margin-left: 2px;
+      margin-right: 2px;
+      max-width: calc(100% - 8px);
+      position: absolute;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      top: 50%;
+      transform: translateY(-50%);
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .point-status .css-62g3xt-dummyInput {
+      font-size: inherit;
+      width: 1px;
+      color: transparent;
+      left: -100px;
+      opacity: 0;
+      position: relative;
+      transform: scale(0);
+      background: 0px center;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      outline: 0px;
+      padding: 0px;
+    }
+    .condition-groups .css-1hupqmi-control {
+      -webkit-box-align: center;
+      align-items: center;
+      background-color: rgb(255, 255, 255);
+      box-shadow: none;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      min-height: 1em;
+      position: relative;
+      box-sizing: border-box;
+      font-size: 0.9em;
+      border-radius: 4px;
+      transition: all 100ms ease 0s;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      outline: 0px !important;
+    }
+    .condition-groups .css-1hwfws3 {
+      -webkit-box-align: center;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      box-sizing: border-box;
+      flex: 1 1 0%;
+      padding: 2px 8px;
+      overflow: hidden;
+    }
+    .condition-groups .css-1wa3eu0-placeholder {
+      color: rgb(128, 128, 128);
+      margin-left: 2px;
+      margin-right: 2px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      box-sizing: border-box;
+    }
+    .condition-groups .css-62g3xt-dummyInput {
+      font-size: inherit;
+      width: 1px;
+      color: transparent;
+      left: -100px;
+      opacity: 0;
+      position: relative;
+      transform: scale(0);
+      background: 0px center;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      outline: 0px;
+      padding: 0px;
+    }
+    .condition-include .css-14jk2my-container {
+      pointer-events: none;
+      position: relative;
+      box-sizing: border-box;
+    }
+    .condition-include .css-30d78j-control {
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: rgb(242, 242, 242);
+        box-shadow: none;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        min-height: 1em;
+        position: relative;
+        box-sizing: border-box;
+        font-size: 0.9em;
+        border-radius: 4px;
+        transition: all 100ms ease 0s;
+        border-width: 0px;
+        border-style: initial;
+        border-color: initial;
+        border-image: initial;
+        outline: 0px !important;
+    }
+    .condition-include .css-1hwfws3 {
+      -webkit-box-align: center;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      box-sizing: border-box;
+      flex: 1 1 0%;
+      padding: 2px 8px;
+      overflow: hidden;
+    }
+    .condition-include .css-107lb6w-singleValue {
+      color: rgb(153, 153, 153);
+      margin-left: 2px;
+      margin-right: 2px;
+      max-width: calc(100% - 8px);
+      position: absolute;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      top: 50%;
+      transform: translateY(-50%);
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .condition-include .css-62g3xt-dummyInput {
+      font-size: inherit;
+      width: 1px;
+      color: transparent;
+      left: -100px;
+      opacity: 0;
+      position: relative;
+      transform: scale(0);
+      background: 0px center;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      outline: 0px;
+      padding: 0px;
+    }
+  </style>
+  <link href="/crm/static/css/routes.css" rel="stylesheet">
+  <link href="/crm/static/css/mobilescreen.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="overlay left-navigation-overlay"></div>
+    <!-- header-bar & ui-header -->
+		@@include('../inc/header.inc',{
+		})
+    <!--// header-bar & ui-header -->
+
+    <!-- app-body & ui-body -->
+    <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
+      <!-- left navigation -->
+  		@@include('../inc/leftnavigation.inc',{
+  		})
+      <!--// left navigation -->
+
+      <div class="flex-fill left-nav-opened route">
+
+        <div class="message-send">
+          <div class="message-wrap">
+            <div class="point-status">
+              <div class="point-head">
+                <div class="head-left">
+                  <span>잔여충전금</span>
+                  <span>₩5,986,120</span>
+                </div>
+                <div class="head-right">
+                  <button class="btn btn-basic _small">충전</button>
+                  <button class="btn btn-basic _small">전송단가표</button>
+                </div>
+              </div>
+              <div class="message-screen-message-send">
+                <div class="mobile-screen " data-theme="default">
+                  <div class="nav-bar">
+                    <div class="nav-bar-title">
+                      <div class="title-input">
+                        <div class="caller-numbers css-2b097c-container">
+                          <div class="uno-select__control css-16mpxbf-control">
+                            <div class="uno-select__value-container css-1hwfws3">
+                              <div class="uno-select__placeholder css-1wa3eu0-placeholder">발신번호를 선택하세요</div><input id="react-select-2-input" readonly="" tabindex="0" aria-autocomplete="list" class="css-62g3xt-dummyInput" value="">
+                            </div>
+                            <div class="uno-select__indicators css-1wy0on6"><span class="uno-select__indicator-separator css-1okebmr-indicatorSeparator"></span>
+                              <div aria-hidden="true" class="uno-select__indicator uno-select__dropdown-indicator css-tlfecz-indicatorContainer"><svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-19bqh2r">
+                                  <path
+                                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z">
+                                  </path>
+                                </svg></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-view-header"></div>
+                  <div class="app-view-main undefined">
+                    <div class="message-bubble">
+                      <div class="message-bubble-clinic-profile">
+                        <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-16 fa-2x " role="img" xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 512 512">
+                          <defs>
+                            <clipPath id="clip-z4IFGbx4yiOH">
+                              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+                            </clipPath>
+                            <mask x="0" y="0" width="100%" height="100%" id="mask-GqASkgiftLRs" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+                              <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+                              <g transform="translate(256 256)">
+                                <g transform="translate(0, 0)  scale(0.5625, 0.5625)  rotate(0 0 0)">
+                                  <path fill="black"
+                                    d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                                    transform="translate(-224 -256)"></path>
+                                </g>
+                              </g>
+                            </mask>
+                          </defs>
+                          <rect fill="currentColor" clip-path="url(#clip-z4IFGbx4yiOH)" mask="url(#mask-GqASkgiftLRs)" x="0" y="0" width="100%" height="100%"></rect>
+                        </svg> -->
+                      </div>
+                      <div class="message-bubble-content">
+                        <div class="message-bubble-text">
+                          <div class="message-contents">
+                            <div class="content-input"><textarea class="message-contents  message-textarea " name="contents" placeholder="문자내용을 입력하세요. 90bytes 초과시 장문(LMS)으로 전송됩니다." style="height: 42px;"></textarea></div>
+                            <div class="content-status"><span class="message-type">SMS</span><span class="content-bytes">0</span><span class="content-max-bytes">&nbsp;/&nbsp;90&nbsp;byte</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-view-tab-bar   ">
+                    <div class="tab-dropup">
+                      <div class="dropup-header">
+                        <div class="dropup-header-title">
+                          <div class="dropup-header-icon">
+                            <div class="close-icon display-normal"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10 " role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 320 512">
+                                <path fill="currentColor"
+                                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                </path>
+                              </svg></div>
+                          </div><span>LABEL_SCREEN_TAB_ITEM_null</span>
+                        </div>
+                        <div class="dropup-header-close"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times-circle" class="svg-inline--fa fa-times-circle fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                              d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z">
+                            </path>
+                          </svg></div>
+                      </div>
+                      <div class="dropup-body"></div>
+                    </div>
+                    <div class="tab-control">
+                      <div class="tab-header">
+                        <div class="tab-header-icon"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus-square" class="svg-inline--fa fa-plus-square fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                              d="M352 240v32c0 6.6-5.4 12-12 12h-88v88c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-88h-88c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h88v-88c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v88h88c6.6 0 12 5.4 12 12zm96-160v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-48 346V86c0-3.3-2.7-6-6-6H54c-3.3 0-6 2.7-6 6v340c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z">
+                            </path>
+                          </svg></div>
+                      </div>
+                      <div class="tab-items-group">
+                        <div class="tab-item  " tabrole="CHARACTERS">
+                          <div class="tab-item-icon ico-character">
+                            <!-- <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" class="svg-inline--fa fa-smile fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                              <path fill="currentColor"
+                                d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z">
+                              </path>
+                            </svg> -->
+                          </div>
+                          <span class="tab-item-text">특수문자</span>
+                        </div>
+                        <div class="tab-item ">
+                          <div class="tab-item-icon ico-text">
+                            <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="folder-open" class="svg-inline--fa fa-folder-open fa-w-18 " role="img" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 576 512">
+                              <path fill="currentColor"
+                                d="M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z">
+                              </path>
+                            </svg> -->
+                          </div>
+                          <span class="tab-item-text">상용구</span>
+                        </div>
+                        <div class="tab-item  " tabrole="VARIABLES">
+                          <div class="tab-item-icon ico-variables">
+                            <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="hashtag" class="svg-inline--fa fa-hashtag fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor"
+                                d="M440.667 182.109l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l14.623-81.891C377.123 38.754 371.468 32 363.997 32h-40.632a12 12 0 0 0-11.813 9.891L296.175 128H197.54l14.623-81.891C213.477 38.754 207.822 32 200.35 32h-40.632a12 12 0 0 0-11.813 9.891L132.528 128H53.432a12 12 0 0 0-11.813 9.891l-7.143 40C33.163 185.246 38.818 192 46.289 192h74.81L98.242 320H19.146a12 12 0 0 0-11.813 9.891l-7.143 40C-1.123 377.246 4.532 384 12.003 384h74.81L72.19 465.891C70.877 473.246 76.532 480 84.003 480h40.632a12 12 0 0 0 11.813-9.891L151.826 384h98.634l-14.623 81.891C234.523 473.246 240.178 480 247.65 480h40.632a12 12 0 0 0 11.813-9.891L315.472 384h79.096a12 12 0 0 0 11.813-9.891l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l22.857-128h79.096a12 12 0 0 0 11.813-9.891zM261.889 320h-98.634l22.857-128h98.634l-22.857 128z">
+                              </path>
+                            </svg> -->
+                          </div>
+                          <span class="tab-item-text">변수추가</span>
+                        </div>
+                        <div class="tab-item  " tabrole="LINKS">
+                          <div class="tab-item-icon ico-links">
+                            <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="link" class="svg-inline--fa fa-link fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                              <path fill="currentColor"
+                                d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z">
+                              </path>
+                            </svg> -->
+                          </div>
+                          <span class="tab-item-text">링크추가</span>
+                        </div>
+                        <div class="tab-item tooltip" tooltip-class="message-upload-image" tooltip-message="이미지는 1MB이하의 JPG/JPEG 파일만 첨부가능합니다.">
+                          <div class="tab-item-icon ico-image">
+                            <!-- <span class="fa-layers fa-fw"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="image" class="svg-inline--fa fa-image fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                  d="M464 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM112 120c-30.928 0-56 25.072-56 56s25.072 56 56 56 56-25.072 56-56-25.072-56-56-56zM64 384h384V272l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L208 320l-55.515-55.515c-4.686-4.686-12.284-4.686-16.971 0L64 336v48z">
+                                </path>
+                              </svg>
+                            </span> -->
+                          </div>
+                          <span class="tab-item-text">이미지</span>
+                          <input type="file" accept="image/jpeg" style="display: none;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-view-bottom  ">
+                    <div class="sms-type">
+                      <div class="label"><span class="label-required">문자분류</span></div>
+                      <div class="input-select"><label><input name="smsType" type="radio" value="normal" checked=""><span>일반</span></label><label><input name="smsType" type="radio" value="event"><span>광고</span></label></div>
+                    </div>
+                    <div class="schedule-type">
+                      <div class="label"><span class="label-required">전송시간</span></div>
+                      <div class="input-select"><label><input name="smsScheduleType" type="radio" value="immediate" checked=""><span>즉시</span></label><label><input name="smsScheduleType" type="radio" value="scheduled"><span>예약</span></label></div>
+                    </div>
+                    <div class="schedule-info">
+                      <div class="label"><span class=""></span></div>
+                      <div class="input-select">
+                        <div class="schedule-info-select schedule-info-date">
+                          <div class="uno-datepicker">
+                            <div class="react-datepicker-wrapper">
+                              <div class="react-datepicker__input-container"><button class="input-datepicker  empty " disabled=""><label></label><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt"
+                                    class="svg-inline--fa fa-calendar-alt fa-w-14 icon-calendar" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path fill="currentColor"
+                                      d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z">
+                                    </path>
+                                  </svg></button></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="schedule-info-select schedule-info-time-hour">
+                          <div class="uno-select--is-disabled css-14jk2my-container">
+                            <div class="uno-select__control uno-select__control--is-disabled css-14n7s40-control">
+                              <div class="uno-select__value-container uno-select__value-container--has-value css-1hwfws3">
+                                <div class="uno-select__single-value uno-select__single-value--is-disabled css-107lb6w-singleValue">08</div><input id="react-select-3-input" readonly="" disabled="" tabindex="0" aria-autocomplete="list"
+                                  class="css-62g3xt-dummyInput" value="">
+                              </div>
+                              <div class="uno-select__indicators css-1wy0on6">
+                                <div aria-hidden="true" class="uno-select__indicator uno-select__dropdown-indicator css-tlfecz-indicatorContainer"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sort"
+                                    class="svg-inline--fa fa-sort fa-w-10 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div><span>:</span></div>
+                        <div class="schedule-info-select schedule-info-time-minute">
+                          <div class="uno-select--is-disabled css-14jk2my-container">
+                            <div class="uno-select__control uno-select__control--is-disabled css-14n7s40-control">
+                              <div class="uno-select__value-container uno-select__value-container--has-value css-1hwfws3">
+                                <div class="uno-select__single-value uno-select__single-value--is-disabled css-107lb6w-singleValue">00</div><input id="react-select-4-input" readonly="" disabled="" tabindex="0" aria-autocomplete="list"
+                                  class="css-62g3xt-dummyInput" value="">
+                              </div>
+                              <div class="uno-select__indicators css-1wy0on6">
+                                <div aria-hidden="true" class="uno-select__indicator uno-select__dropdown-indicator css-tlfecz-indicatorContainer"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sort"
+                                    class="svg-inline--fa fa-sort fa-w-10 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                      d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"></path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// app-view-bottom -->
+                </div>
+                <!--// mobile-screen  -->
+                <div class="btnwrap"><button class="btn btn-basic _small _full">문자 전송</button></div>
+              </div>
+              <!--// message-screen-message-send -->
+            </div>
+            <!--// point-status : left -->
+
+            <div class="detail-cont">
+              <div class="page-navi"><span class="title">문자관리</span><span class="title">문자전송</span></div> <!-- modi add //-->
+
+              <div class="target-container">
+                <div class="condition-container">
+                  <div class="condition-container-controller">
+                    <div class="label">
+                      <span>검색조건</span>
+                      <div>
+                        <button class="btn btn-default btn-sm m-r-4">
+                          <span>번호 직접입력</span>
+                        </button>
+                        <button class="btn btn-default btn-sm m-r-4">최근 검색조건</button>
+                      </div>
+                    </div>
+
+                    <div class="btnwrap">
+                      <button class="btn btn-default btn-sm">검색그룹 추가</button>
+                    </div>
+                  </div>
+                  <div class="group-wrap">
+                    <div class="condition-groups">
+                      <div class="condition-group">
+                        <div class="condition-row condition-group-controller">
+                          <button class="btn btn-basic _small">조건 추가</button>
+                          <button class="btn btn-del _small">검색그룹 제거</button>
+                        </div>
+                        <div class="condition-row">
+                          <div class="condition-label"><span>검색조건1</span></div>
+                          <div class="condition-category">
+                            <div class="select css-2b097c-container">
+                              <div class="select-condition-category__control css-1hupqmi-control">
+                                <div class="select-condition-category__value-container css-1hwfws3">
+                                  <div class="select-condition-category__placeholder css-1wa3eu0-placeholder">검색항목 선택</div><input id="react-select-5-input" readonly="" tabindex="0" aria-autocomplete="list" class="css-62g3xt-dummyInput" value="">
+                                </div>
+                                <div class="select-condition-category__indicators css-1wy0on6">
+                                  <div aria-hidden="true" class="select-condition-category__indicator select-condition-category__dropdown-indicator css-tlfecz-indicatorContainer"><svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true"
+                                      focusable="false" class="css-19bqh2r">
+                                      <path
+                                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z">
+                                      </path>
+                                    </svg></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="condition-form">
+                            <div class="null"><span>검색조건을 선택하세요</span></div>
+                          </div>
+                          <div class="condition-include">
+                            <div class="select-condition-include select uno-select--is-disabled css-14jk2my-container">
+                              <div class="uno-select__control uno-select__control--is-disabled css-30d78j-control">
+                                <div class="uno-select__value-container uno-select__value-container--has-value css-1hwfws3">
+                                  <div class="uno-select__single-value uno-select__single-value--is-disabled css-107lb6w-singleValue">포함</div><input id="react-select-6-input" readonly="" disabled="" tabindex="0" aria-autocomplete="list"
+                                    class="css-62g3xt-dummyInput" value="">
+                                </div>
+                                <div class="uno-select__indicators css-1wy0on6">
+                                  <div aria-hidden="true" class="uno-select__indicator uno-select__dropdown-indicator css-tlfecz-indicatorContainer"><svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"
+                                      class="css-19bqh2r">
+                                      <path
+                                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z">
+                                      </path>
+                                    </svg></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="condition-remove-row"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="condition-search">
+                      <div class="condition-search-button"><button class="btn btn-basic _small">검색</button></div>
+                      <div class="condition-search-result"><span>결과 : </span><span>0명</span></div>
+                    </div>
+
+                    <div class="set-target"><button class="btn btn-basic _small">검색된 결과를 대상리스트에 적용</button></div>
+
+                    <div class="set-cnt"><span>대상리스트: <strong>0명</strong>, </span><span>선택인원: <strong>0명</strong></span></div>
+                    <div class="data-table header-style-classic">
+                      <div class="top flex-row items-center flex-between m-b-16"></div>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th class="">
+                              <div class="flex-row items-center"><span>문자전송</span></div>
+                            </th>
+                            <th class="">
+                              <div class="flex-row items-center"><span>고객명</span></div>
+                            </th>
+                            <th class="">
+                              <div class="flex-row items-center"><span>휴대폰번호</span></div>
+                            </th>
+                            <th class="">
+                              <div class="flex-row items-center"><span>마케팅 문자수신여부</span></div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                      <div class="empty">조회결과가 없습니다</div>
+
+                      <div class="flex-row flex-between">
+                        <div class="pagination">
+                          <div class="flex-row items-center">
+                            <div class="page-icon flex-wrap page-prev"><span class="a11y">이전</span></div>
+                            <div class="page-icon flex-wrap selected">1</div>
+                            <div class="page-icon flex-wrap ">2</div>
+                            <div class="page-icon flex-wrap ">3</div>
+                            <div class="page-icon flex-wrap ">4</div>
+                            <div class="page-icon flex-wrap page-next"><span class="a11y">다음</span></div>
+                          </div>
+                          <div class="page-total"><span class="tt">total</span>1 / 4</div>
+                        </div>
+                        <div class="limit-setter flex-row">
+                          <div class="page-icon flex-wrap ">10</div>
+                          <div class="page-icon flex-wrap selected">20</div>
+                          <div class="page-icon flex-wrap ">50</div>
+                          <div class="page-icon flex-wrap ">100</div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <!--// .group-wrap -->
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-wrapper">
+      <div class="toast  "></div>
+    </div>
+  </div>
+
+  <textarea tab-index="-1" aria-hidden="true"
+  style="min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; letter-spacing: normal; line-height: 17.4636px; font-family: &quot;Noto Sans KR&quot;, sans-serif; font-weight: 400; font-size: 12.474px; font-style: normal; tab-size: 8; text-rendering: auto; text-transform: none; width: 263.297px; text-indent: 0px; padding: 4px; border-width: 0px; box-sizing: border-box;"></textarea>
+
+
+</body>
+
+</html>
