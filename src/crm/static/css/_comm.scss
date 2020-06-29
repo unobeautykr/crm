@@ -35,6 +35,9 @@ label {
     color: #0060ff;
   }
 }
+.t-under {
+  text-decoration: underline;
+}
 .null-image {
   text-align: center;
 }
@@ -119,6 +122,12 @@ body {
       font-size: 12.5px !important;
       font-weight: 700 !important;
     }
+    &._ssmall {
+      min-width:30px !important;
+      padding:5px 10px 3px !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+    }
     // &.btn-del, &.btn-danger {
     &.btn-del {
       border: solid 1px #f7685b !important;
@@ -138,7 +147,7 @@ body {
       font-weight: 600;
     }
     &.btn-sm {
-      padding:5px 12px 3px;
+      padding:4px 12px 3px;
       color:#fff;
       font-weight: 700;
     }
@@ -423,8 +432,10 @@ input.text-date {
   .uno-datepicker {
     button.input-datepicker {
       height:auto;
-      padding-top:9px;
-      padding-bottom:9px;
+      // padding-top:9px;
+      // padding-bottom:9px;
+      // padding-right:30px;
+      padding:9px 35px 9px 15px;
       border: solid 1px #dee2ec;
       background: {
         color:#fff;

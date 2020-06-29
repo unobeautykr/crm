@@ -3127,8 +3127,10 @@ html, body {
       padding:20px 0;
       .btn {
         min-width:90px !important;
+        height:36px;
         margin-right:8px;
         color: #273142;
+        vertical-align: middle;
         &.btn-basic {
           background-color: #4a4f70 !important;
           color:#fff;
@@ -3139,7 +3141,7 @@ html, body {
         }
       }
       .uno-datepicker {
-        padding-top:9px;
+        padding-top:0px;
         margin:0 10px;
         > div {
           display: inline-block;

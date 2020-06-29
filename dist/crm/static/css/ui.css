@@ -13,6 +13,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 label.label-required:after { content: '*'; color: #0060ff; }
 
+.t-under { text-decoration: underline; }
+
 .null-image { text-align: center; }
 
 .btnwrap { margin-bottom: 60px; }
@@ -43,13 +45,15 @@ body button._full, body a._full { width: 100%; }
 
 body button._small, body a._small { min-width: 56px !important; padding: 10px 20px 9px !important; font-size: 12.5px !important; font-weight: 700 !important; }
 
+body button._ssmall, body a._ssmall { min-width: 30px !important; padding: 5px 10px 3px !important; font-size: 12px !important; font-weight: 700 !important; }
+
 body button.btn-del, body a.btn-del { border: solid 1px #f7685b !important; background-color: #f7685b !important; color: #fff !important; }
 
 body button:disabled, body a:disabled { border: solid 1px #dee2ec; background-color: #dee2ec !important; }
 
 body button.btn-add, body a.btn-add { width: 84px; height: 34px !important; background-color: #0060ff; font-size: 14px; font-weight: 600; }
 
-body button.btn-sm, body a.btn-sm { padding: 5px 12px 3px; color: #fff; font-weight: 700; }
+body button.btn-sm, body a.btn-sm { padding: 4px 12px 3px; color: #fff; font-weight: 700; }
 
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 50px; padding: 8px 10px 7px; border-radius: 4px; border: solid 1px #dee2ec; font-size: 14px; background-color: #fff; background-image: url("/crm/static/images/icon/ico_select.png"); background-size: 7px; background-repeat: no-repeat; background-position: right 10px center; }
 
@@ -149,7 +153,7 @@ input.text-date { background-color: #fff; background-image: url("/crm/static/ima
 
 .app-body .uno-select__control { border: solid 1px #dee2ec !important; }
 
-.app-body .uno-datepicker button.input-datepicker { height: auto; padding-top: 9px; padding-bottom: 9px; border: solid 1px #dee2ec; background-color: #fff; background-image: url("/crm/static/images/icon/ic-absenteeschedule.png"); background-size: 30px; background-repeat: no-repeat; background-position: right center; }
+.app-body .uno-datepicker button.input-datepicker { height: auto; padding: 9px 35px 9px 15px; border: solid 1px #dee2ec; background-color: #fff; background-image: url("/crm/static/images/icon/ic-absenteeschedule.png"); background-size: 30px; background-repeat: no-repeat; background-position: right center; }
 
 .modal { z-index: 10; }
 
@@ -1378,13 +1382,13 @@ html, body { height: 100%; overflow: auto; }
 
 .ui-body .message-history-container .search-inputs { padding: 20px 0; }
 
-.ui-body .message-history-container .search-inputs .btn { min-width: 90px !important; margin-right: 8px; color: #273142; }
+.ui-body .message-history-container .search-inputs .btn { min-width: 90px !important; height: 36px; margin-right: 8px; color: #273142; vertical-align: middle; }
 
 .ui-body .message-history-container .search-inputs .btn.btn-basic { background-color: #4a4f70 !important; color: #fff; }
 
 .ui-body .message-history-container .search-inputs .btn.btn-primary { background-color: #1b73e8; color: #fff; }
 
-.ui-body .message-history-container .search-inputs .uno-datepicker { padding-top: 9px; margin: 0 10px; }
+.ui-body .message-history-container .search-inputs .uno-datepicker { padding-top: 0px; margin: 0 10px; }
 
 .ui-body .message-history-container .search-inputs .uno-datepicker > div { display: inline-block; }
 
@@ -1431,6 +1435,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 label.label-required:after { content: '*'; color: #0060ff; }
 
+.t-under { text-decoration: underline; }
+
 .null-image { text-align: center; }
 
 .btnwrap { margin-bottom: 60px; }
@@ -1461,13 +1467,15 @@ body button._full, body a._full { width: 100%; }
 
 body button._small, body a._small { min-width: 56px !important; padding: 10px 20px 9px !important; font-size: 12.5px !important; font-weight: 700 !important; }
 
+body button._ssmall, body a._ssmall { min-width: 30px !important; padding: 5px 10px 3px !important; font-size: 12px !important; font-weight: 700 !important; }
+
 body button.btn-del, body a.btn-del { border: solid 1px #f7685b !important; background-color: #f7685b !important; color: #fff !important; }
 
 body button:disabled, body a:disabled { border: solid 1px #dee2ec; background-color: #dee2ec !important; }
 
 body button.btn-add, body a.btn-add { width: 84px; height: 34px !important; background-color: #0060ff; font-size: 14px; font-weight: 600; }
 
-body button.btn-sm, body a.btn-sm { padding: 5px 12px 3px; color: #fff; font-weight: 700; }
+body button.btn-sm, body a.btn-sm { padding: 4px 12px 3px; color: #fff; font-weight: 700; }
 
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 50px; padding: 8px 10px 7px; border-radius: 4px; border: solid 1px #dee2ec; font-size: 14px; background-color: #fff; background-image: url("/crm/static/images/icon/ico_select.png"); background-size: 7px; background-repeat: no-repeat; background-position: right 10px center; }
 
@@ -1567,7 +1575,7 @@ input.text-date { background-color: #fff; background-image: url("/crm/static/ima
 
 .app-body .uno-select__control { border: solid 1px #dee2ec !important; }
 
-.app-body .uno-datepicker button.input-datepicker { height: auto; padding-top: 9px; padding-bottom: 9px; border: solid 1px #dee2ec; background-color: #fff; background-image: url("/crm/static/images/icon/ic-absenteeschedule.png"); background-size: 30px; background-repeat: no-repeat; background-position: right center; }
+.app-body .uno-datepicker button.input-datepicker { height: auto; padding: 9px 35px 9px 15px; border: solid 1px #dee2ec; background-color: #fff; background-image: url("/crm/static/images/icon/ic-absenteeschedule.png"); background-size: 30px; background-repeat: no-repeat; background-position: right center; }
 
 .modal { z-index: 10; }
 
@@ -1992,5 +2000,67 @@ input.text-date { background-color: #fff; background-image: url("/crm/static/ima
 .modal-container > .modal-message-target-search-history-selector .data-table .column-memo .btn-success { border: solid 1px #1b73e8; background-color: #1b73e8 !important; }
 
 .modal-container > .modal-transit-unit { width: 564px !important; height: 650px; }
+
+.modal .modal-container .modal-custom-chart { min-width: 968px; max-width: 1258px; width: 100%; height: 900px; background-color: transparent; box-shadow: none; padding: 0; }
+
+.modal .modal-container .modal-custom-chart .chart-info, .modal .modal-container .modal-custom-chart .chart-conts { float: left; height: 100%; background-color: #fff; border-radius: 4px; box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.2), 0 4px 24px 4px rgba(0, 0, 0, 0.12), 0 12px 16px 2px rgba(0, 0, 0, 0.14); }
+
+.modal .modal-container .modal-custom-chart .chart-info .btn, .modal .modal-container .modal-custom-chart .chart-conts .btn { box-shadow: none; vertical-align: middle; }
+
+.modal .modal-container .modal-custom-chart .chart-info { width: 380px; margin-right: 10px; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust { position: relative; margin: 30px 30px 0; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust .fig { position: absolute; left: 0; top: 0; width: 100px; height: 100px; text-align: center; border-radius: 50%; overflow: hidden; background-image: url("/crm/static/images/common/img-profile.png"); background-size: cover; background-repeat: no-repeat; background-position: center center; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust .fig img { max-width: 100%; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust .desc { margin-left: 130px; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust .desc .name { font-size: 18px; font-weight: 700; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust .desc .name span { font-weight: 500; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust .desc .numb { padding-top: 8px; color: #9cb2cd; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust .desc .btnwrap { margin-bottom: 0; padding-top: 20px; text-align: right; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-info { margin: 35px 30px 30px; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-info .line { margin-top: 32px; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-info .line:first-child { margin-top: 0; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-info .line .btnwrap { margin-bottom: 0; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-info .line .btnwrap .btn { margin-left: 5px; margin-top: -3px; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-info .line .btnwrap .btn:first-child { margin-left: 0; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-info .line dt, .modal .modal-container .modal-custom-chart .chart-info .cust-info .line dd { float: left; width: calc(100% / 3); font-weight: 700; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-info .line dt.cost, .modal .modal-container .modal-custom-chart .chart-info .cust-info .line dd.cost { font-size: 18px; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-info .line dd { text-align: right; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-info .line:after { content: ''; display: block; clear: both; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-detail { border-top: 1px solid rgba(215, 227, 241, 0.5); overflow-x: hidden; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-detail .title { padding: 30px 30px 10px; font-size: 18px; font-weight: 700; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-detail .data-table { border: 0; border-radius: 0; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-detail .data-table th, .modal .modal-container .modal-custom-chart .chart-info .cust-detail .data-table td { min-width: inherit; width: calc(100% / 4); padding: 13px 13px; border-bottom: 0; text-align: left; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-detail .data-table th { padding-left: 30px; color: #9cb2cd; }
+
+.modal .modal-container .modal-custom-chart .chart-info .cust-detail .data-table td { padding-left: 0; }
+
+.modal .modal-container .modal-custom-chart .chart-conts { width: 868px; }
+
+.modal .modal-container .modal-custom-chart .chart-conts .head { padding: 36px 40px 0; }
+
+.modal .modal-container .modal-custom-chart .chart-conts .head:after { left: 0; width: 100%; }
 
 @media (min-width: 481px) { .route.left-nav-opened { left: 230px; padding: 0; } }

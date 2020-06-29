@@ -730,3 +730,154 @@
     height:650px;
   }
 } //.modal-container
+
+// 통합차트
+.modal {
+  .modal-container {
+    .modal-custom-chart {
+      min-width:968px;
+      max-width:1258px;
+      width:100%;
+      height:900px;
+      background-color: transparent;
+      box-shadow: none;
+      padding:0;
+      .chart-info, .chart-conts {
+        float:left;
+        height:100%;
+        // padding:30px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px -4px rgba(0, 0, 0, .2), 0 4px 24px 4px rgba(0, 0, 0, .12), 0 12px 16px 2px rgba(0, 0, 0, .14);
+        .btn {
+          box-shadow: none;
+          vertical-align: middle;
+        }
+      }
+      .chart-info {
+        width:380px;
+        margin-right:10px;
+        .cust {
+          position: relative;
+          margin:30px 30px 0;
+          .fig {
+            position: absolute;
+            left:0;
+            top:0;
+            width:100px;
+            height:100px;
+            text-align: center;
+            border-radius: 50%;
+            overflow: hidden;
+            background: {
+              image:url('/crm/static/images/common/img-profile.png');
+              size:cover;
+              repeat:no-repeat;
+              position: center center;
+            }
+            img {
+              max-width:100%;
+            }
+          }
+          .desc {
+            margin-left:130px;
+            .name {
+              font-size: 18px;
+              font-weight: 700;
+              span {
+                font-weight: 500;
+              }
+            }
+            .numb {
+              padding-top:8px;
+              color: #9cb2cd;
+            }
+            .btnwrap {
+              margin-bottom:0;
+              padding-top:20px;
+              text-align: right;
+            }
+          }
+        }
+        //.cust
+        .cust-info {
+          margin:35px 30px 30px;
+          .line {
+            margin-top:32px;
+            &:first-child {
+              margin-top:0;
+            }
+            .btnwrap {
+              margin-bottom:0;
+              .btn {
+                margin-left:5px;
+                margin-top: -3px;
+                &:first-child {
+                  margin-left:0;
+                }
+              }
+            }
+            dt, dd {
+              float:left;
+              width:calc(100% / 3);
+              font-weight: 700;
+              &.cost {
+                font-size: 18px;
+              }
+            }
+            dd {
+              text-align: right;
+            }
+            &:after {
+              content: '';
+              display: block;
+              clear:both;
+            }
+            &.deposit {
+
+            }
+          }
+        }
+        .cust-detail {
+          border-top:1px solid rgba(215, 227, 241, 0.5);
+          overflow-x: hidden;
+          .title {
+            padding:30px 30px 10px;
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .data-table {
+            border:0;
+            border-radius: 0;
+            th, td {
+              min-width:inherit;
+              width:calc(100% / 4);
+              padding:13px 13px;
+              border-bottom:0;
+              text-align: left;
+            }
+            th {
+              // padding-right:0;
+              padding-left:30px;
+              color: #9cb2cd;
+            }
+            td {
+              padding-left:0;
+            }
+          }
+
+        }
+      }
+      .chart-conts {
+        width:868px;
+        .head {
+          padding:36px 40px 0;
+          &:after {
+            left:0;
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+}
