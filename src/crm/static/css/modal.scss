@@ -1,0 +1,836 @@
+@import "_variables";
+
+.modal-input {
+  input,
+  textarea {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+}
+
+.modal-images {
+  padding: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+
+  .image {
+    width: $screen-xs;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  $chevron-size: 64px;
+
+  .zmdi-chevron-left,
+  .zmdi-chevron-right {
+    color: $brand-primary;
+    font-size: $chevron-size;
+    width: $chevron-size;
+    //@extend .center;
+
+    &:hover {
+      color: $brand-accent;
+    }
+  }
+
+  .index {
+    margin-top: 24px;
+    font-size: 16px;
+    justify-content: center;
+
+    .item {
+      $item-size: 12px;
+      width: $item-size;
+      height: $item-size;
+      border-radius: $item-size / 2;
+      background: $gray-lightest;
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+
+      &.selected {
+        background: $white;
+      }
+    }
+  }
+}
+
+.modal-values {
+  .head .title {
+    color: $brand-primary !important;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 24px;
+    width: 100%;
+    //@extend .f-medium;
+  }
+
+  .values {
+    margin-bottom: 16px;
+  }
+
+  .item {
+    .value {
+      text-align: center;
+      min-width: 96px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.modal-change-password {
+  input {
+    width: 100%;
+  }
+
+  .form-control label {
+    margin-bottom: 8px;
+  }
+
+  .error-form {
+    font-size: 12px;
+    color: $brand-danger;
+  }
+}
+
+.modal-treatment-item-category {
+  .treatment-item {
+    label {
+      margin-bottom: 0;
+    }
+
+    .price {
+      max-width: 80px;
+    }
+
+    .option {
+      align-items: center;
+      //@extend .flex-row;
+
+      label {
+        margin-right: 4px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid $gray-border;
+    }
+  }
+
+  .section {
+    border: 1px solid $brand-primary;
+    padding: 16px;
+
+    > label {
+      font-size: 16px;
+      //@extend .f-bold;
+    }
+  }
+}
+
+.modal-payment-products {
+  .payment-product {
+    padding: 16px;
+    border: 1px solid $brand-primary;
+
+    &:not(:last-child) {
+      margin-top: 16px;
+    }
+  }
+
+  .total-amount {
+    margin-top: 16px;
+    font-size: 16px;
+    color: $brand-primary;
+    //@extend .f-bold;
+  }
+}
+
+.modal-deactivate-clinic {
+  .body {
+    font-size: 12px;
+  }
+}
+
+.modal-edit-clinic-memo {
+  textarea {
+    min-height: 160px;
+  }
+}
+
+.modal-appointments {
+  .desc {
+    margin: 16px 0;
+    font-size: 12px;
+    color: $brand-primary;
+  }
+
+  .data-table table {
+    display: block;
+    overflow: auto;
+  }
+}
+
+.customer-deposits {
+  .list-inline {
+    list-style: none;
+    display: block;
+
+    .list-inline-item {
+      display: inline-block;
+
+      &.summary-amount {
+        margin: 1em 3em 0 1em;
+
+        span {
+          font-size: 2em;
+        }
+      }
+
+      &.summary-cash,
+      &.summary-points {
+        padding: 0 1em;
+
+        span {
+          font-size: 1.2em;
+        }
+      }
+
+      &.summary-cash {
+        border-right-color: #101010;
+        border-right-width: 1px;
+        border-right-style: solid;
+      }
+    }
+  }
+}
+
+.modal-deposit-charge {
+  .flex-row {
+    .form-control:nth-child(odd) {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.modal-container > .modal-surgery {
+  position: absolute;
+  top: calc(4em);
+  min-width: 48em;
+  width: 50em;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  max-height: calc(100vh - 7em);
+  font-size: 1em;
+  text-align: center;
+
+  .col-1 {
+    display: flex;
+    max-width: (100% / 12);
+    flex: 0 0 (100% / 12);
+  }
+
+  .col-2 {
+    display: flex;
+    max-width: (100% / 6);
+    flex: 0 0 (100% / 6);
+  }
+
+  .col-3 {
+    display: flex;
+    max-width: (100% / 4);
+    flex: 0 0 (100% / 4);
+  }
+
+  .col-4 {
+    display: flex;
+    max-width: (100% / 3);
+    flex: 0 0 (100% / 3);
+  }
+
+  .col-5 {
+    display: flex;
+    max-width: (100% / 2.4);
+    flex: 0 0 (100% / 2.4);
+  }
+
+  .col-6 {
+    display: flex;
+    max-width: (100% / 2);
+    flex: 0 0 (100% / 2);
+  }
+
+  .col-7 {
+    display: flex;
+    max-width: (100% / 1.714285714285714);
+    flex: 0 0 (100% / 1.714285714285714);
+  }
+
+  .col-8 {
+    display: flex;
+    max-width: (100% / 1.5);
+    flex: 0 0 (100% / 1.5);
+  }
+
+  .col-9 {
+    display: flex;
+    max-width: (100% / 1.333333333333333);
+    flex: 0 0 (100% / 1.333333333333333);
+  }
+
+  .col-10 {
+    display: flex;
+    max-width: (100% / 1.2);
+    flex: 0 0 (100% / 1.2);
+  }
+
+  .col-11 {
+    display: flex;
+    max-width: (100% / 1.090909090909091);
+    flex: 0 0 (100% / 1.090909090909091);
+  }
+
+  .col-12 {
+    display: flex;
+    max-width: (100% / 1);
+    flex: 0 0 (100% / 1);
+  }
+
+  .row.row-separator {
+    line-height: 0.5em;
+    margin: 0;
+    padding: 0.5em 0 0;
+    min-height: initial;
+
+    div.row-border {
+      border-bottom-width: 1px;
+      border-bottom-style: dotted;
+      border-bottom-color: #ccc;
+    }
+  }
+
+  .category-name.row {
+    background-color: #ebebeb !important;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-right: 0.5em !important;
+
+    .item-label {
+      font-size: 1.0em;
+      font-weight: bold;
+    }
+
+    .btn {
+      font-size: 0.8em;
+    }
+  }
+
+  .item-group,
+  .items-group {
+    margin: 0.5em;
+    padding-right: 1em !important;
+    -moz-animation-delay: 3.5s;
+    -webkit-animation-delay: 3.5s;
+    -o-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+
+    +.item-group {
+      border-bottom: #000000 !important;
+      border-width: 1px;
+      border-bottom-style: solid;
+    }
+
+    div.item-label {
+      justify-content: flex-end;
+
+      span {
+        font-size: 0.9em;
+      }
+    }
+
+    &:hover {
+      background-color: #f8f8f8;
+    }
+    border-radius: 3px;
+    padding: 5px;
+
+    .row {
+      margin: 2.2px 0 0;
+      min-height: 2em;
+      width: 100%;
+    }
+
+    .btn {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn {
+      border-radius: 4px;
+      padding: 0 8px;
+      font-size: 0.9em;
+      height: 2em;
+    }
+
+    .btn.item-pop {
+      font-size: 0.8em;
+    }
+
+    div {
+      align-items: center;
+    }
+
+    .item-label {
+      padding-right: 1em;
+
+      &:hover {
+        cursor: default;
+      }
+    }
+
+    span.label-required:after {
+      color: red;
+      content: "*";
+    }
+
+    span {
+      font-size: 0.9em;
+    }
+
+    input.item-currency,
+    input.item-input,
+    input[type="text"].item-input,
+    select.item-select {
+      font-size: 0.9em;
+      width: 100%;
+      height: 1.8em;
+      border-radius: 5px;
+      border: solid 1px #c7c7c7;
+      padding-left: 0.5em;
+      border-radius: 4px;
+      border: 1px solid #E9E9ED;
+      background-color: white;
+    }
+
+    input[type="text"].item-input {
+      padding-left: 1em;
+    }
+
+    select.item-select {
+      cursor: pointer;
+    }
+
+    div.item-checkbox,
+    input.item-currency,
+    input.item-input,
+    select.item-select {
+      width: 100%;
+    }
+
+    div.item-checkbox {
+      .checkbox {
+        border-radius: 4px;
+        width: 0.1em;
+        height: 0.1em;
+        border: 2px solid #fff;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.16);
+        text-align: center;
+        background: #FFF;
+
+        .checkbox .zmdi-check {
+          font-size: 0.1em;
+          font-weight: 700;
+          color: #400e40;
+          transition: all 0.35s ease;
+        }
+      }
+    }
+  }
+}
+
+.modal-container .modal-message-caller-number .body {
+  font-size: 1em;
+}
+
+.modal-message-caller-number {
+  width: 41em;
+
+  .policy-desc {
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+    padding: 1.5em 0.9em 1em 1em;
+    font-size: 0.8em;
+    width: 45em;
+    word-break: break-word;
+
+    li {
+      list-style-type: disc;
+    }
+
+    li,
+    ul {
+      margin-left: 1em;
+      padding: 0;
+      line-height: 2em;
+    }
+  }
+
+  input,
+  textarea {
+    padding-left: 0.5em !important;
+  }
+
+  .response-desc {
+    padding-left: 0.5em;
+    font-size: 0.8em;
+    color: $oc-green-7;
+
+    .error,
+    .fail {
+      color: $oc-red-7;
+    }
+
+    .success {
+      color: $oc-green-7;
+    }
+  }
+
+  .requesting {
+    height: 100%;
+
+    .wait {
+      display: flex;
+      height: 100%;
+    }
+
+    .cancel {
+      display: none;
+      height: 100%;
+    }
+
+    &:hover {
+      .wait {
+        display: none;
+      }
+
+      .cancel {
+        display: flex;
+      }
+    }
+  }
+
+  .caller-number {
+    .btn {
+      // font-size:.7em
+    }
+  }
+
+  .verification {
+    .btn {
+      // font-size:.7em
+    }
+  }
+
+  .item-group > .row {
+    +.row {
+      margin-top: 0.5em;
+    }
+  }
+
+  .mock-group {
+    padding-left: 2em;
+    background-color: black;
+    height: 7em;
+
+    .mockapi-action {
+      color: white;
+
+      button {
+        color: white;
+        border-color: $oc-gray-7;
+        border-radius: 3px;
+        margin: 0 1em 0 0;
+        height: 2.5em;
+        cursor: pointer;
+      }
+
+      button.red {
+        background-color: $oc-red-9;
+      }
+
+      button.blue {
+        background-color: $oc-blue-9;
+      }
+
+      span {
+        font-size: 0.7em;
+      }
+    }
+
+    .mockapi-logs {
+      &.hidden {
+        display: none;
+        height: 0;
+      }
+      font-size: 0.7em;
+      color: white;
+
+      span {
+        font-size: 0.7em;
+      }
+
+      p {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        line-height: 1em;
+      }
+    }
+  }
+}
+
+.modal-message-screen {
+  // 모달관련 전역 max-height 해제.
+  max-height: none;
+  // 메세지화면은 border를 갖고 있어서 모달 header-body간 margin을 조정함
+  .body {
+    margin-top: 20px;
+  }
+
+  &.auto-notification,
+  &.boilerplate {
+    div.buttons {
+      margin-top: 15px;
+    }
+  }
+  // 문자자동전송 입력화면
+  .message-screen-auto-notification {
+    width: 440px;
+    font-size: 1.0em;
+    height: calc(100vh);
+    max-height: calc(100vh - 12em);
+    @media screen and (max-height: 900px) {
+      max-height: calc(100vh - 11em);
+    }
+    border-color: $oc-gray-5;
+    border-style: solid;
+    border-width: 1px;
+  }
+  // 상용구 입력화면
+  .message-screen-boilerplate {
+    width: 460px;
+    font-size: 1.0em;
+    height: calc(100vh);
+    max-height: calc(100vh - 17em);
+    @media screen and (max-height: 900px) {
+      max-height: calc(100vh - 11em);
+    }
+    border-color: $oc-gray-5;
+    border-style: solid;
+    border-width: 1px;
+    // 상용구메세지의 "항목"
+    // input text타입
+    .title-input {
+      width: 15em;
+
+      input[name="category"] {
+        font-size: 0.9em;
+        padding-left: 0.5em;
+        // 전역으로 설정된 border와 그림자를 조정함
+        border-color: $oc-gray-1;
+
+        &:focus {
+          box-shadow: 1px 1px 4px 0 rgba(181, 176, 176, 0.56);
+        }
+      }
+    }
+  }
+}
+
+.modal-message-target-search-history-selector {
+  .column-search-condition {
+    .contents {
+      width: 100%;
+      padding-left: 1em;
+
+      .row-group {
+        border: 1px solid $oc-gray-1;
+        padding: 0.5em 1em;
+
+        .row-condition {
+          display: flex;
+
+          .label {
+            display: flex;
+            min-width: 13em;
+            border-right: 1px solid $oc-gray-1;
+
+            .category {
+              padding-right: 0.5em;
+            }
+          }
+
+          .query {
+            display: flex;
+            padding-left: 1em;
+          }
+        }
+
+        &+.group-separator {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      .group-separator {
+        display: none;
+      }
+    }
+  }
+
+  .column-memo {
+    button {
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.has-value {
+        background: none;
+        border: none;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.error-manual-input-number {
+  // 직접입력번호 유효성검사
+  .row {
+    display: flex;
+
+    .label {
+      flex-grow: 1;
+      display: flex;
+      font-weight: bold;
+
+      .count {
+        display: flex;
+        padding-left: 0.5em;
+        color: $oc-red-5;
+      }
+    }
+
+    .detail {
+      flex-grow: 1;
+      justify-self: flex-start;
+      font-size: 0.9em;
+      margin-left: 3em;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &+.row {
+      border-top: 1px solid $oc-gray-3;
+      padding-top: 1em;
+    }
+
+    &:last-child {
+      padding-right: 1em;
+      place-content: flex-end;
+      text-align: right;
+      margin-bottom: -30px;
+    }
+  }
+}
+
+.modal-message-send-confirm {
+  width: 30em;
+
+  .body {
+    margin: 1em 1em 1em 0.5em;
+  }
+
+  .row {
+    padding: 0;
+
+    .label {
+      margin-left: 1em;
+      padding-right: 0.5em;
+    }
+
+    .value {
+      font-weight: bold;
+    }
+
+    &.guide {
+      background-color: $oc-gray-1;
+      margin: 1em 0;
+      padding: 1em;
+      border: 1px solid $oc-gray-2;
+      width: 100%;
+      white-space: break-spaces;
+      font-size: 0.8em;
+      line-height: 1.4em;
+    }
+
+    &+.row {
+      padding-top: 0.5em;
+    }
+  }
+}
+
+.modal-message-details.message-type-event {
+  .search-inputs {
+    display: flex;
+    max-width: 30em;
+
+    input,
+    select {
+      min-width: 8em;
+      // background-color:red;
+    }
+
+    .btn {
+      min-width: 5em;
+    }
+  }
+}
+// 펜차트 관련 모달
+.modal-container {
+  .modal-pen-chart-sample {
+    width: 980px;
+
+    .head .title {
+      background: #7b7b7b;
+      color: #fff;
+      font-size: 15px;
+      line-height: 15px;
+      padding: 5px 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .modal-img {
+    display: inline-flex;
+    padding: 0;
+  }
+}

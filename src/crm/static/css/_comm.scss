@@ -119,6 +119,7 @@ body {
       font-size: 12.5px !important;
       font-weight: 700 !important;
     }
+    // &.btn-del, &.btn-danger {
     &.btn-del {
       border: solid 1px #f7685b !important;
       background-color: #f7685b !important;
@@ -194,6 +195,10 @@ input[type=radio] {
   margin-right:10px;
 }
 
+.scrlly-box {
+  width:100%;
+  overflow-y: auto;
+}
 .data-table {
   min-width:100%;
   padding:0 0 10px;
@@ -411,6 +416,26 @@ input.text-date {
     position: right center;
   }
 }
+.app-body {
+  .uno-select__control {
+    border: solid 1px #dee2ec !important;
+  }
+  .uno-datepicker {
+    button.input-datepicker {
+      height:auto;
+      padding-top:9px;
+      padding-bottom:9px;
+      border: solid 1px #dee2ec;
+      background: {
+        color:#fff;
+        image:url('/crm/static/images/icon/ic-absenteeschedule.png');
+        size:30px;
+        repeat:no-repeat;
+        position: right center;
+      }
+    }
+  } //.uno-datepicker
+}
 
 .modal {
   // padding-bottom:5px;
@@ -497,11 +522,12 @@ input.text-date {
       max-width:480px;
     }
     .data-table {
+      padding:0;
       border-radius: 4px;
       border: solid 1px #dee2ec;
       th, td {
         width:auto;
-        padding:17px 0;
+        padding:16px 0 15px;
         border-right:0;
         color: #4a4f70;
         .item-content {
@@ -731,7 +757,6 @@ input.text-date {
   }
 } //.page-navi
 
-
 .pagination {
   position: relative;
   margin:0 auto;
@@ -791,7 +816,7 @@ input.text-date {
   .page-total {
     position: absolute;
     left:15px;
-    top:15px;
+    top:36px;
     .tt {
       display: inline-block;
       margin-right:5px;
@@ -800,6 +825,7 @@ input.text-date {
   }
 } //.pagination
 .limit-setter {
+  padding: 34px 0;
   margin-right:22px;
   .page-icon {
     width:auto;

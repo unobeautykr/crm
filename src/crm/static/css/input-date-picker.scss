@@ -1,0 +1,122 @@
+@import "_variables";
+
+.uno-datepicker{
+  display:flex;
+  button.input-datepicker{
+      height: 3.3em;
+      display:flex;
+      min-width: 11em;
+      background-color: white;
+      border-radius: 3px;
+      border:0;
+      font-weight: 500;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+      padding:0 1em;
+      label{
+        cursor:pointer;
+        display: inline-block;
+        font-size:1.1em;
+        text-align: center;
+        padding-right:.5em;
+      }
+
+      &:disabled{
+        background-color:#f2f2f2;
+        opacity:inherit !important;
+      }
+      .icon-calendar{
+        cursor:pointer;
+        min-width: 1em;
+      }
+      &.empty{
+        // background-color:#f2f2f2;
+        label{
+          color: $oc-gray-6;
+          font-size:1em;
+        }
+
+      }
+  }
+  .range-separator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .5em;
+  }
+  .react-datepicker__month-container{
+      .react-datepicker__week{
+          .react-datepicker__day:nth-child(1){
+            color:$oc-red-9;
+            &.react-datepicker__day--disabled{
+              color:$oc-red-3;
+            }
+          }
+          .react-datepicker__day:nth-child(7){
+            color:$oc-blue-9;
+            &.react-datepicker__day--disabled{
+              color:$oc-blue-3;
+            }
+          }
+          .react-datepicker__day--selected,
+          .react-datepicker__day--keyboard-selected,
+          .react-datepicker__day--in-range{
+            border-radius: 0.1rem;
+            background-color: $oc-gray-2;
+            color:black;
+          }
+          .react-datepicker__day--today{
+            border-radius: 0.1rem;
+            border-color:$oc-gray-2;
+            border-width:1px;
+            border-style:solid;
+          }
+      }
+      .datepicker-container-header{
+          justify-content: space-between;
+          display:flex;
+          padding-bottom:.5em;
+          button.month-previous,
+          button.month-next{
+              color:$oc-gray-6;
+              background-color:unset;
+              border-color:unset;
+              border-width:0;
+              padding:0 1.5em;
+              cursor:pointer;
+              &:disabled{
+                color:$oc-gray-3;
+                cursor: not-allowed;
+              }
+          }
+          button.month-previous{
+            order:0;
+          }
+          button.month-next{
+            order:3;
+          }
+          select.year-select,
+          select.month-select{
+              option {
+                padding:.2em 1em .2em 1em;
+              }
+              font-size:1.1em;
+              height:2em;
+              min-width:calc( 2em );
+              font-weight: bold;
+              cursor:pointer;
+              border-radius: 0;
+              border-radius: 0px;
+              border: 1px solid #E9E9ED;
+          }
+          .flex-order-1{
+              order:1;
+          }
+          .flex-order-2{
+              order:2;
+          }
+      }
+  }
+}

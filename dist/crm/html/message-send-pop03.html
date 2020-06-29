@@ -768,6 +768,7 @@
   <link href="/crm/static/css/routes.css" rel="stylesheet">
   <link href="/crm/static/css/mobilescreen.css" rel="stylesheet">
   <link href="/crm/static/css/modal.css" rel="stylesheet">
+  <link href="/crm/static/css/input-date-picker.css" rel="stylesheet">
 </head>
 
 <body>
@@ -1256,12 +1257,12 @@ left-navigation 마크업 및 클래스 수정
       <div class="toast  "></div>
     </div>
 
-    <!-- 최근 검색조건 pop -->
+    <!-- 전송단가표 pop -->
     <div class="modal modal-overlay">
       <div class="modal-container">
-        <div class="modal-message-target-search-history-selector">
+        <div class="modal-message-target-search-history-selector modal-transit-unit">
           <div class="head flex-row flex-between items-start">
-            <div class="title">최근 검색조건</div><i class="zmdi zmdi-close"></i>
+            <div class="title">전송단가표</div><i class="zmdi zmdi-close"></i>
           </div>
           <div class="body">
             <div class="data-table header-style-classic">
@@ -1269,686 +1270,51 @@ left-navigation 마크업 및 클래스 수정
               <table>
                 <thead>
                   <tr>
-                    <th class="action column-width-px-180">
-                      <div class="flex-row items-center"><span>ACTION</span></div>
+                    <th class="">
+                      <div class="flex-row items-center"><span>타입</span></div>
                     </th>
-                    <th class="column-search-condition  column-width-px-600">
-                      <div class="flex-row items-center"><span>검색조건</span></div>
-                    </th>
-                    <th class="column-memo">
-                      <div class="flex-row items-center"><span>메모</span></div>
+                    <th class="">
+                      <div class="flex-row items-center"><span>건당 단가</span></div>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr class=" row-0">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center  ">SMS</div>
                     </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>생일: </div>
-                              </div>
-                              <div class="query">2020-06-02 ~ 2020-06-11</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center  ">₩ 24</div>
                     </td>
                   </tr>
                   <tr class=" row-1">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center  ">LMS</div>
                     </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>성별: </div>
-                              </div>
-                              <div class="query">여성</div>
-                            </div>
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>고객등급: </div>
-                              </div>
-                              <div class="query">VIP</div>
-                            </div>
-
-                          </div>
-
-
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center  ">₩ 48</div>
                     </td>
                   </tr>
                   <tr class=" row-2">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center  ">MMS</div>
                     </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>성별: </div>
-                              </div>
-                              <div class="query">여성</div>
-                            </div>
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>담당 의사: </div>
-                              </div>
-                              <div class="query">펜8</div>
-                            </div>
-
-                          </div>
-
-
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center  ">₩ 200</div>
                     </td>
                   </tr>
                   <tr class=" row-3">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center  ">알림톡</div>
                     </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>성별: </div>
-                              </div>
-                              <div class="query">여성</div>
-                            </div>
-
-                          </div>
-
-
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-4">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>성별: </div>
-                              </div>
-                              <div class="query">여성</div>
-                            </div>
-
-                          </div>
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>성별: </div>
-                              </div>
-                              <div class="query">여성, 남성</div>
-                            </div>
-
-                          </div>
-
-
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-5">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>성별: </div>
-                              </div>
-                              <div class="query">여성</div>
-                            </div>
-
-                          </div>
-
-
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-6">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-1234-5678</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-7">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>성별: </div>
-                              </div>
-                              <div class="query">여성</div>
-                            </div>
-
-                          </div>
-
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-1234-5678</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-8">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>성별: </div>
-                              </div>
-                              <div class="query">남성</div>
-                            </div>
-
-                          </div>
-
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-1234-5678</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-9">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>성별: </div>
-                              </div>
-                              <div class="query">남성</div>
-                            </div>
-
-                          </div>
-
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-1234-5678</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-10">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-11">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-8426-8026</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-12">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-8426-8026</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-13">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-8426-8026</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-14">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-8426-8026</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-15">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-1234-1233</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-16">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-1234-1234</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-17">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>휴대폰번호: </div>
-                              </div>
-                              <div class="query">01084268026</div>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-18">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-                            <div class="row-condition">
-                              <div class="label">
-                                <div>번호 직접입력</div>
-                              </div>
-                              <div class="query">010-8426-8026</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
-                    </td>
-                  </tr>
-                  <tr class=" row-19">
-                    <td rowspan="1" class="action column-width-px-180  ">
-                      <div class="item-content center      ">
-                        <button class="btn btn-sm btn-primary m-r-4" data-type="select">선택</button>
-                        <button class="btn btn-sm btn-danger m-r-4" data-type="delete">삭제</button>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-search-condition  column-width-px-600  ">
-                      <div class="item-content center      ">
-                        <div class="contents">
-
-                          <div class="group-separator">+</div>
-                          <div class="row-group">
-
-                            <div class="row-condition">
-                              <div class="label">
-                                <div class="category">고객 조건</div>
-                                <div>휴대폰번호: </div>
-                              </div>
-                              <div class="query">01084268026</div>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td rowspan="1" class="column-memo  ">
-                      <div class="item-content center      "><button class="btn btn-sm btn-success" data-type="memo">메모추가</button></div>
+                    <td rowspan="1" class="  ">
+                      <div class="item-content center
+                                  ">₩ 29</div>
                     </td>
                   </tr>
                 </tbody>
               </table>
-
             </div>
-            <!-- data-table -->
-
-            <div class="flex-row flex-between">
-              <div class="pagination">
-                <div class="flex-row items-center">
-                  <div class="page-icon flex-wrap page-prev"><span class="a11y">이전</span></div>
-                  <div class="page-icon flex-wrap selected">1</div>
-                  <div class="page-icon flex-wrap ">2</div>
-                  <div class="page-icon flex-wrap ">3</div>
-                  <div class="page-icon flex-wrap ">4</div>
-                  <div class="page-icon flex-wrap page-next"><span class="a11y">다음</span></div>
-                </div>
-                <div class="page-total"><span class="tt">total</span>1 / 4</div>
-              </div>
-              <div class="limit-setter flex-row">
-                <div class="page-icon flex-wrap ">10</div>
-                <div class="page-icon flex-wrap selected">20</div>
-                <div class="page-icon flex-wrap ">50</div>
-                <div class="page-icon flex-wrap ">100</div>
-              </div>
-            </div>
-
           </div>
           <div class="buttons">
             <div class="flex-row"><button class="btn btn-default">닫기</button></div>
@@ -1956,26 +1322,7 @@ left-navigation 마크업 및 클래스 수정
         </div>
       </div>
     </div>
-    <!--// 최근 검색조건 pop -->
-
-    <!-- 메모추가 pop -->
-    <div class="modal modal-overlay">
-      <div class="modal-container">
-        <div class="modal-input">
-          <div class="head flex-row flex-between items-start">
-            <div class="title ">메모추가</div>
-          </div>
-          <div class="body pre-line undefined"></div>
-          <div class="inputs">
-            <div class="form-control"><label></label><input class="model-input-0" placeholder="메모를 입력하세요" value=""></div>
-          </div>
-          <div class="buttons">
-            <div class="flex-row"><button class="btn btn-default">취소</button><button class="btn btn-primary">확인</button></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--// 메모추가 pop -->
+    <!--// 전송단가표 pop -->
 
   </div>
 
