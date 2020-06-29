@@ -35,6 +35,9 @@ label {
     color: #0060ff;
   }
 }
+.null-image {
+  text-align: center;
+}
 .btnwrap {
   margin-bottom:60px;
 }
@@ -51,86 +54,93 @@ button {
   right:0;
   top:0;
 }
-button, a {
-  &.btn, &.btn-primary {
-    display: inline-block;
-    background-color: transparent;
-    padding:0;
-    margin:0;
-    border:0;
-    border-radius: 4px;
-    min-width:60px;
-    height:auto;
-    background-color: #273142;
-    box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1);
-    color: #dee2ec;
-  }
-  &.btn-normal {
-    font-size: 18px;
-    font-weight: 700;
-    padding:21px 6px 20px;
-    border:1px solid #dee2ec !important;
-    background-color: #ffffff;
-    color:#1b73e8;
-    &:not(.disabled) {
-      background-color: #ffffff !important;
+body {
+  button, a {
+    &.btn, &.btn-primary {
+      display: inline-block;
+      background-color: transparent;
+      padding:0;
+      margin:0;
+      border:0;
+      border-radius: 4px;
+      min-width:60px;
+      height:auto;
+      background-color: #273142;
+      box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1);
+      color: #dee2ec;
+    }
+    &.btn-normal {
+      font-size: 18px;
+      font-weight: 700;
+      padding:21px 6px 20px;
+      border:1px solid #dee2ec !important;
+      background-color: #ffffff;
+      color:#1b73e8;
+      &:not(.disabled) {
+        background-color: #ffffff !important;
+      }
+      &:disabled {
+        border: solid 1px #dee2ec;
+        background-color: #dee2ec !important;
+      }
+    }
+    &.btn-basic {
+      font-size: 18px;
+      font-weight: 700;
+      padding:21px 6px 20px;
+      border: solid 1px #1b73e8;
+      background-color: #1b73e8;
+      color:#fff;
+      &:not(.disabled) {
+        background-color: #1b73e8 !important;
+      }
+      &:disabled {
+        border: solid 1px #dee2ec;
+        background-color: #dee2ec !important;
+      }
+    }
+    &.btn-cancel {
+      border: solid 1px #dee2ec;
+      background-color: #dee2ec !important;
+      color:#fff;
+      box-shadow: none;
+    }
+    &.btn-success {
+      background-color: #2ed47a !important;
+      color:#fff;
+      font-weight: 700;
+    }
+    &._full {
+      width:100%;
+    }
+    &._small {
+      min-width:56px !important;
+      padding:10px 20px 9px !important;
+      font-size: 12.5px !important;
+      font-weight: 700 !important;
+    }
+    &.btn-del {
+      border: solid 1px #f7685b !important;
+      background-color: #f7685b !important;
+      color:#fff !important;
     }
     &:disabled {
       border: solid 1px #dee2ec;
       background-color: #dee2ec !important;
     }
-  }
-  &.btn-basic {
-    font-size: 18px;
-    font-weight: 700;
-    padding:21px 6px 20px;
-    border: solid 1px #1b73e8;
-    background-color: #1b73e8;
-    color:#fff;
-    &:not(.disabled) {
-      background-color: #1b73e8 !important;
-    }
-    &:disabled {
-      border: solid 1px #dee2ec;
-      background-color: #dee2ec !important;
-    }
-  }
-  &.btn-cancel {
-    border: solid 1px #dee2ec;
-    background-color: #dee2ec !important;
-    color:#fff;
-    box-shadow: none;
-  }
-  &.btn-success {
-    background-color: #2ed47a !important;
-    color:#fff;
-    font-weight: 700;
-  }
-  &._full {
-    width:100%;
-  }
-  &._small {
-    min-width:56px !important;
-    padding:10px 20px 9px !important;
-    font-size: 12.5px !important;
-    font-weight: 700 !important;
-  }
-  &.btn-del {
-    border: solid 1px #f7685b !important;
-    background-color: #f7685b !important;
-    color:#fff !important;
-  }
-  &:disabled {
-    border: solid 1px #dee2ec;
-    background-color: #dee2ec !important;
-  }
 
-  &.btn-add {
-    width: 84px;
-    height: 34px !important;
-    background-color: #0060ff;
-    font-size: 14px;
-    font-weight: 600;
+    &.btn-add {
+      width: 84px;
+      height: 34px !important;
+      background-color: #0060ff;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &.btn-sm {
+      padding:5px 12px 3px;
+      color:#fff;
+      font-weight: 700;
+    }
   }
 }
 select {
@@ -501,6 +511,11 @@ input.text-date {
           border-right:0;
         }
       }
+      tbody {
+        tr:nth-child(even) {
+          background-color: #f9fbff;
+        }
+      }
     }
     > div {
       .buttons {
@@ -716,6 +731,7 @@ input.text-date {
   }
 } //.page-navi
 
+
 .pagination {
   position: relative;
   margin:0 auto;
@@ -783,7 +799,6 @@ input.text-date {
     }
   }
 } //.pagination
-
 .limit-setter {
   margin-right:22px;
   .page-icon {
@@ -806,6 +821,14 @@ input.text-date {
     }
   }
 } //.limit-setter
+
+.data-table .limit-setter,
+.data-table .pagination {
+  padding: 36px 0;
+  .page-total {
+    top: 34px;
+  }
+}
 
 .form-control {
   &.required label {

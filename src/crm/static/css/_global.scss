@@ -3682,7 +3682,12 @@ html, body {
     .sms-list {
       margin-bottom:40px;
     }
-  }
+  } //.sms-use-list
+
+  .point-histories {
+    padding:20px 20px 60px;
+  } // .point-histories
+
 } //.ui-body
 .modal {
   .modal-message-details {
@@ -3732,7 +3737,78 @@ html, body {
       }
     }
   }
-
+} //.modal-message-details
+.modal-container {
+  >.modal-message-boilerplate-selector {
+    width:868px !important;
+    height:750px;
+    .data-table {
+      table {
+        background-color: transparent;
+      }
+      td.title-and-content {
+        .item-content {
+          .contents {
+            border:0;
+            margin-right:0;
+            max-width:80%;
+            display: block;
+            white-space: normal;
+            .label, .text {
+              padding:0;
+              min-width:inherit;
+            }
+            .label {
+              font-weight: 700;
+            }
+            .text {
+              border-left:0;
+              white-space: pre-line;
+            }
+          }
+        }
+      }
+      .category {
+        .item-content {
+          justify-content: center;
+          padding-left:0;
+          text-align: center;
+        }
+      }
+    }
+  }
+  //>.modal-message-boilerplate-selector
+  >.modal-message-target-search-history-selector {
+    width:868px !important;
+    height:750px;
+    .data-table {
+      .action {
+        width: 130px;
+      }
+      .column-memo {
+        width: 130px;
+      }
+      td.title-and-content {
+        .item-content {
+          .contents {
+            border:0;
+            margin-right:0;
+            max-width:80%;
+            display: block;
+            white-space: normal;
+          }
+        }
+      }
+      .column-search-condition {
+        .item-content {
+          // justify-content: center;
+          padding-left:0;
+          text-align: left;
+        }
+      }
+    }
+  }
+  //>.modal-message-target-search-history-selector
 }
 
 
