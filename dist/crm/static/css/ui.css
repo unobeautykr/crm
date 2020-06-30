@@ -73,6 +73,16 @@ input::-ms-clear { display: none; }
 
 input[type=radio] { vertical-align: middle; margin-top: -2px; margin-right: 10px; }
 
+.tabwrap { display: block; }
+
+.tabwrap:after { content: ''; display: block; clear: both; }
+
+.tabwrap > ul > li { float: left; }
+
+.tabwrap > ul > li a { display: block; border-bottom: 2px solid #fff; padding-bottom: 6px; font-size: 15px; }
+
+.tabwrap > ul > li.selected a, .tabwrap > ul > li:hover a { border-bottom: 2px solid #0060ff; font-weight: 700; color: #0060ff; }
+
 .scrlly-box { width: 100%; overflow-y: auto; }
 
 .data-table { min-width: 100%; padding: 0 0 10px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
@@ -1495,6 +1505,16 @@ input::-ms-clear { display: none; }
 
 input[type=radio] { vertical-align: middle; margin-top: -2px; margin-right: 10px; }
 
+.tabwrap { display: block; }
+
+.tabwrap:after { content: ''; display: block; clear: both; }
+
+.tabwrap > ul > li { float: left; }
+
+.tabwrap > ul > li a { display: block; border-bottom: 2px solid #fff; padding-bottom: 6px; font-size: 15px; }
+
+.tabwrap > ul > li.selected a, .tabwrap > ul > li:hover a { border-bottom: 2px solid #0060ff; font-weight: 700; color: #0060ff; }
+
 .scrlly-box { width: 100%; overflow-y: auto; }
 
 .data-table { min-width: 100%; padding: 0 0 10px; border-radius: 4px; border: solid 1px #dee2ec; background-color: #ffffff; }
@@ -2059,8 +2079,12 @@ input.text-date { background-color: #fff; background-image: url("/crm/static/ima
 
 .modal .modal-container .modal-custom-chart .chart-conts { width: 868px; }
 
-.modal .modal-container .modal-custom-chart .chart-conts .head { padding: 36px 40px 0; }
+.modal .modal-container .modal-custom-chart .chart-conts .head { margin: 36px 40px 0; }
 
-.modal .modal-container .modal-custom-chart .chart-conts .head:after { left: 0; width: 100%; }
+.modal .modal-container .modal-custom-chart .chart-conts .head:after { display: none; }
+
+.modal .modal-container .modal-custom-chart .chart-conts .tabwrap { padding: 0 40px; border-bottom: 1px solid #d7e3f1; }
+
+.modal .modal-container .modal-custom-chart .chart-conts .tabwrap li { margin-right: 50px; }
 
 @media (min-width: 481px) { .route.left-nav-opened { left: 230px; padding: 0; } }

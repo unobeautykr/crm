@@ -871,12 +871,18 @@
       .chart-conts {
         width:868px;
         .head {
-          padding:36px 40px 0;
+          margin:36px 40px 0;
           &:after {
-            left:0;
-            width:100%;
+						display: none;
           }
         }
+				.tabwrap {
+					padding:0 40px;
+					border-bottom:1px solid #d7e3f1;
+					li {
+						margin-right:50px;
+					}
+				}
       }
     }
   }

@@ -586,10 +586,41 @@ left-navigation 마크업 및 클래스 수정
           </div>
           <!--// .chart-info -->
           <div class="chart-conts">
-            <div class="head flex-row flex-between items-start">
+            <div class="head flex-row">
               <div class="title ">예약</div><i class="zmdi zmdi-close"></i>
-              
-            </div>
+						</div>
+
+						<div class="tabwrap">
+							<ul>
+								<li class="tabs selected"><a href="#">예약</a></li>
+								<li class="tabs"><a href="#">상담</a></li>
+								<li class="tabs"><a href="#">진료</a></li>
+								<li class="tabs"><a href="#">수납</a></li>
+								<li class="tabs"><a href="#">문자</a></li>
+								<li class="tabs"><a href="#">펜차트</a></li>
+							</ul>
+						</div>
+						<!--// tabwrap -->
+
+						<div class="data-table">
+							<table>
+								<thead>
+									<tr>
+										<th>상태</th>
+										<th>예약일</th>
+										<th>초진/재진</th>
+										<th>방문여부</th>
+										<th>내원경로</th>
+										<th>부서명</th>
+										<th>세부부서명</th>
+										<th>상담사</th>
+										<th>의사</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
           </div>
           <!--// .chart-conts -->
 
@@ -599,83 +630,6 @@ left-navigation 마크업 및 클래스 수정
     <!--// 통합차트 pop -->
 
   </div>
-  <!-- <script>
-    ! function(e) {
-      function r(r) {
-        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
-        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
-        for (c && c(r); s.length;) s.shift()();
-        return u.push.apply(u, f || []), t()
-      }
-
-      function t() {
-        for (var e, r = 0; r < u.length; r++) {
-          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
-            var i = t[l];
-            0 !== o[i] && (n = !1)
-          }
-          n && (u.splice(r--, 1), e = a(a.s = t[0]))
-        }
-        return e
-      }
-      var n = {},
-        o = {
-          1: 0
-        },
-        u = [];
-
-      function a(r) {
-        if (n[r]) return n[r].exports;
-        var t = n[r] = {
-          i: r,
-          l: !1,
-          exports: {}
-        };
-        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
-      }
-      a.m = e, a.c = n, a.d = function(e, r, t) {
-        a.o(e, r) || Object.defineProperty(e, r, {
-          enumerable: !0,
-          get: t
-        })
-      }, a.r = function(e) {
-        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
-          value: "Module"
-        }), Object.defineProperty(e, "__esModule", {
-          value: !0
-        })
-      }, a.t = function(e, r) {
-        if (1 & r && (e = a(e)), 8 & r) return e;
-        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
-        var t = Object.create(null);
-        if (a.r(t), Object.defineProperty(t, "default", {
-            enumerable: !0,
-            value: e
-          }), 2 & r && "string" != typeof e)
-          for (var n in e) a.d(t, n, function(r) {
-            return e[r]
-          }.bind(null, n));
-        return t
-      }, a.n = function(e) {
-        var r = e && e.__esModule ? function() {
-          return e.default
-        } : function() {
-          return e
-        };
-        return a.d(r, "a", r), r
-      }, a.o = function(e, r) {
-        return Object.prototype.hasOwnProperty.call(e, r)
-      }, a.p = "/";
-      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
-        i = l.push.bind(l);
-      l.push = r, l = l.slice();
-      for (var f = 0; f < l.length; f++) r(l[f]);
-      var c = i;
-      t()
-    }([])
-  </script>
-  <script src="/static/js/2.59decae5.chunk.js"></script>
-  <script src="/static/js/main.25d03fb0.chunk.js"></script> -->
 </body>
 
 </html>

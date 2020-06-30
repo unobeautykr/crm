@@ -204,6 +204,33 @@ input[type=radio] {
   margin-right:10px;
 }
 
+.tabwrap {
+	display: block;
+	&:after {
+		content: '';
+		display: block;
+		clear:both;
+	}
+	> ul {
+		> li {
+			float:left;
+			a {
+				display: block;
+				border-bottom:2px solid #fff;
+				padding-bottom:6px;
+				font-size: 15px;
+			}
+			&.selected, &:hover {
+				a {
+					border-bottom:2px solid #0060ff;
+					font-weight: 700;
+					color: #0060ff;
+				}
+			}
+		}
+	}
+}
+
 .scrlly-box {
   width:100%;
   overflow-y: auto;
@@ -283,7 +310,6 @@ input[type=radio] {
     }
   }
 } //.data-table
-
 
 // datepicker
 .react-datepicker {
