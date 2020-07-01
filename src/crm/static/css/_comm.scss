@@ -147,9 +147,11 @@ body {
       font-weight: 600;
     }
     &.btn-sm {
-      padding:4px 12px 3px;
+      padding:4px 10px 3px;
       color:#fff;
       font-weight: 700;
+			background-color: #273142;
+			line-height: normal;
     }
   }
 }
@@ -183,6 +185,9 @@ input:not([type=radio]):not([type=checkbox]), input.flex-fill, textarea {
   &:focus {
     color:#000;
   }
+	&:disabled {
+		background-color: #efeff4 !important;
+	}
 }
 input::-ms-clear { display: none; }
 ::-webkit-input-placeholder {
@@ -229,6 +234,19 @@ input[type=radio] {
 			}
 		}
 	}
+} // .tabwrap
+
+h2.title {
+	display: block;
+	font-size: 17px;
+	font-weight: 600;
+	padding-bottom:20px;
+} //h2.title
+
+.card {
+	position: relative;
+	box-shadow: none;
+	border: solid 1px #d7e3f1;
 }
 
 .scrlly-box {

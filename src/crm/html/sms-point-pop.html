@@ -2,19 +2,8 @@
 <html lang="en">
 <head>
   <!-- page head -->
-  <meta charset="utf-8">
-<link rel="icon" href="/favicon.png">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#000000">
-<meta name="description" content="Web site created using create-react-app">
-<link rel="apple-touch-icon" href="/logo192.png">
-<link rel="manifest" href="/manifest.json">
-<title>CRM - 펜1</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-<link href="/crm/static/css/base.css" rel="stylesheet">
-<link href="/crm/static/css/main.css" rel="stylesheet">
-<link href="/crm/static/css/ui.css" rel="stylesheet">
-
+  @@include('../inc/pagehead.inc',{
+  })
   <!--// page head -->
   <style type="text/css">
     svg:not(:root).svg-inline--fa {
@@ -513,163 +502,15 @@
   <div id="app">
     <div class="overlay left-navigation-overlay"></div>
     <!-- header-bar & ui-header -->
-		<!-- header-bar -->
-<div class="header-bar flex-row flex-between ui-header"> <!-- add class=ui-header //-->
-  <div class="header-items left flex-wrap">
-    <h1 class="title">바비톡 성형외과</h1>  <!--modi //-->
-    <button class="btn btn-close"><span class="a11y">사이드 닫기/열기</span></button>  <!--modi //-->
-  </div>
-  <div class="flex-row items-center flex-between flex-fill">
-    <div class="customer-search-bar flex-row items-center">
-      <input placeholder="고객명, 차트번호, 전화번호, 주민번호" class="flex-fill" value="">
-      <div class="buttons flex-row flex-wrap">
-        <button class="btn btn-accent m-l-8">검색</button>  <!--modi //-->
-        <button class="btn btn-accent m-l-8">고객등록</button>  <!--modi //-->
-      </div>
-    </div>
-    <div class="header-items right">
-      <div class="me _language">
-        <button class="btn btn-lang">언어변환</button>
-        <div class="lang">
-          <ul>
-            <li><a href="#">한글</a></li>
-            <li><a href="#">영문</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="me _sched">
-        <button class="btn btn-sched"><span class="alram"></span>부재일정확인</button>
-      </div>
-      <div class="me _info">
-        <p class="fig"></p>
-        <p>park</p>
-        <p class="email"><a href="mailto:test1@gmail.com">test1test1test1@gmail.com</a></p>
-      </div>
-      <div class="me _power">
-        <button class="btn btn-logout">로그아웃</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!--// header-bar -->
-
+		@@include('../inc/header.inc',{
+		})
     <!--// header-bar & ui-header -->
 
     <!-- app-body & ui-body -->
     <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
       <!-- left navigation -->
-  		<!--
-left-navigation 마크업 및 클래스 추가/수정
-//-->
-<div class="left-navigation flex flex-wrap ">
-  <div class="flex-wrap clinic-name">펜1</div>
-  <div class="ver-scroll flex-fill">
-    <div class="menu depth-0">
-      <div class="menu-item selected">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-home"></i>현황판 (홈)</span></div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-calender"></i>예약 캘린더</span></div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-consult"></i>상담문의 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">상담문의</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">담당자 배정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">연동설정</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-msg"></i>문자 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">문자 전송</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">문자 충전</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">전송내역 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">충전내역 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">문자코드 설정</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-inq"></i>조회</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">고객 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">예약 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">상담 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">진료 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">수납 조회</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-stat"></i>통계</span></div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-setting"></i>환경 설정</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">고객코드 설정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">예약캘린더 설정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">상담코드 설정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">수납코드 설정</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-hospital"></i>병원 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">조직 관리</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">직원 관리</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">병원 정보</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">펜차트 샘플함</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--
-left-navigation 마크업 및 클래스 수정
-//-->
-
+  		@@include('../inc/leftnavigation.inc',{
+  		})
       <!--// left navigation -->
 
 			<div class="flex-fill left-nav-opened route">
@@ -791,6 +632,56 @@ left-navigation 마크업 및 클래스 수정
     <div class="toast-wrapper">
       <div class="toast  "></div>
     </div>
+
+		<!-- 문자 전송 단가표 pop -->
+		<div class="modal modal-overlay">
+			<div class="modal-container">
+				<div class="modal-slot">
+					<div class="head flex-row flex-between items-start">
+						<div class="title ">문자 전송 단가표</div><i class="zmdi zmdi-close"></i>
+					</div>
+					<table border="1">
+						<thead>
+							<tr>
+								<th>대분류</th>
+								<th>소분류</th>
+								<th>건당 단가(VAT 미포함)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">문자</td>
+								<td>단문(SMS)</td>
+								<td>7원</td>
+							</tr>
+							<tr>
+								<td>장문(LMS)</td>
+								<td>30원</td>
+							</tr>
+							<tr>
+								<td>멀티메시지(MMS)</td>
+								<td>100원</td>
+							</tr>
+							<tr>
+								<td rowspan="3">카카오톡</td>
+								<td>알림톡</td>
+								<td>7원</td>
+							</tr>
+							<tr>
+								<td>친구톡</td>
+								<td>30원</td>
+							</tr>
+							<tr>
+								<td>..</td>
+								<td>100원</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--// 문자 전송 단가표 pop -->
+
   </div>
   <!-- <script>
     ! function(e) {

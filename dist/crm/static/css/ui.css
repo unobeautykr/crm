@@ -53,7 +53,7 @@ body button:disabled, body a:disabled { border: solid 1px #dee2ec; background-co
 
 body button.btn-add, body a.btn-add { width: 84px; height: 34px !important; background-color: #0060ff; font-size: 14px; font-weight: 600; }
 
-body button.btn-sm, body a.btn-sm { padding: 4px 12px 3px; color: #fff; font-weight: 700; }
+body button.btn-sm, body a.btn-sm { padding: 4px 10px 3px; color: #fff; font-weight: 700; background-color: #273142; line-height: normal; }
 
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 50px; padding: 8px 10px 7px; border-radius: 4px; border: solid 1px #dee2ec; font-size: 14px; background-color: #fff; background-image: url("/crm/static/images/icon/ico_select.png"); background-size: 7px; background-repeat: no-repeat; background-position: right 10px center; }
 
@@ -62,6 +62,8 @@ select::-ms-expand { display: none; }
 input:not([type=radio]):not([type=checkbox]), input.flex-fill, textarea { min-height: 10px; padding: 15px 15px 14px; border-radius: 4px; background-color: #f3f8ff; color: #000; }
 
 input:not([type=radio]):not([type=checkbox]):focus, input.flex-fill:focus, textarea:focus { color: #000; }
+
+input:not([type=radio]):not([type=checkbox]):disabled, input.flex-fill:disabled, textarea:disabled { background-color: #efeff4 !important; }
 
 input::-ms-clear { display: none; }
 
@@ -82,6 +84,10 @@ input[type=radio] { vertical-align: middle; margin-top: -2px; margin-right: 10px
 .tabwrap > ul > li a { display: block; border-bottom: 2px solid #fff; padding-bottom: 6px; font-size: 15px; }
 
 .tabwrap > ul > li.selected a, .tabwrap > ul > li:hover a { border-bottom: 2px solid #0060ff; font-weight: 700; color: #0060ff; }
+
+h2.title { display: block; font-size: 17px; font-weight: 600; padding-bottom: 20px; }
+
+.card { position: relative; box-shadow: none; border: solid 1px #d7e3f1; }
 
 .scrlly-box { width: 100%; overflow-y: auto; }
 
@@ -1430,6 +1436,70 @@ html, body { height: 100%; overflow: auto; }
 
 .ui-body .point-histories { padding: 20px 20px 60px; }
 
+.ui-body .point-histories .card { width: 1000px; border-radius: 4px; }
+
+.ui-body .point-histories .point-balance { padding-top: 7px; }
+
+.ui-body .point-histories .point-balance .card { padding: 20px 20px; margin-bottom: 20px; }
+
+.ui-body .point-histories .point-balance .card .route-top { margin-bottom: 10px; }
+
+.ui-body .point-histories .point-balance .card .route-top .title { font-size: 14px; font-weight: 600; }
+
+.ui-body .point-histories .point-balance .card .btnwrap { position: absolute; right: 20px; top: 31px; margin-bottom: 0; }
+
+.ui-body .point-histories .point-balance .point-balance-desc span { font-size: 24px; }
+
+.ui-body .point-histories .point-account-info .title { font-size: 14px; font-weight: 600; }
+
+.ui-body .point-histories .point-account-info .route-top { margin-bottom: 10px; }
+
+.ui-body .point-histories .point-account-info .point-deposit-info span { font-size: 24px; }
+
+.ui-body .point-histories .point-account-info .point-deposit-info span + span { margin-left: 10px; font-weight: 400; }
+
+.ui-body .point-histories .point-account-info .point-deposit-info .help { color: #9cb2cd; }
+
+.ui-body .point-histories .point-apply .title { font-size: 17px; font-weight: 600; }
+
+.ui-body .point-histories .point-apply .route-top { margin-bottom: 20px; }
+
+.ui-body .point-histories .point-apply .card { padding: 0; background-color: transparent; border: 0; }
+
+.ui-body .point-histories .point-apply .payment-info-confirm, .ui-body .point-histories .point-apply .point-apply-input { float: left; min-height: 607px; padding: 30px 20px; border-radius: 4px; border: solid 1px #d7e3f1; background-color: #fff; }
+
+.ui-body .point-histories .point-apply .payment-info-confirm .route-top, .ui-body .point-histories .point-apply .point-apply-input .route-top { margin-bottom: 15px; }
+
+.ui-body .point-histories .point-apply .payment-info-confirm .form-control, .ui-body .point-histories .point-apply .point-apply-input .form-control { padding-top: 0; margin-top: 0; margin-bottom: 0; }
+
+.ui-body .point-histories .point-apply .payment-info-confirm .form-control > label, .ui-body .point-histories .point-apply .point-apply-input .form-control > label { margin-bottom: 8px; font-size: 14px; }
+
+.ui-body .point-histories .point-apply .payment-info-confirm .form-control input[type=radio], .ui-body .point-histories .point-apply .point-apply-input .form-control input[type=radio] { margin-right: 5px; }
+
+.ui-body .point-histories .point-apply .payment-info-confirm .regions .form-control, .ui-body .point-histories .point-apply .point-apply-input .regions .form-control { padding-top: 20px; }
+
+.ui-body .point-histories .point-apply .payment-info-confirm input:not([type=radio]):not([type=checkbox]), .ui-body .point-histories .point-apply .payment-info-confirm textarea, .ui-body .point-histories .point-apply .point-apply-input input:not([type=radio]):not([type=checkbox]), .ui-body .point-histories .point-apply .point-apply-input textarea { padding: 9px 20px 8px; font-size: 14px; background-color: #efeff4; }
+
+.ui-body .point-histories .point-apply .payment-info-confirm { width: 360px; margin-right: 20px; }
+
+.ui-body .point-histories .point-apply .payment-info-confirm .form-control .btn-sm { margin-left: 10px; }
+
+.ui-body .point-histories .point-apply .point-apply-input { width: 618px; }
+
+.ui-body .point-histories .point-apply .point-apply-input .price-btn { margin: 20px 0; }
+
+.ui-body .point-histories .point-apply .point-apply-input .price-btn .btn-sm { min-width: 40px; padding: 9px 17px 8px; border-radius: 4px; border: solid 1px #484760; background-color: #ffffff; color: #484760; font-size: 14px; height: auto; font-weight: 400; }
+
+.ui-body .point-histories .point-apply .point-apply-input input:not([type=radio]):not([type=checkbox]), .ui-body .point-histories .point-apply .point-apply-input textarea { background-color: transparent; }
+
+.ui-body .point-histories .point-apply .point-apply-input .form-control { margin-bottom: 20px; }
+
+.ui-body .point-histories .point-apply .point-apply-input .help { margin-top: 40px; }
+
+.ui-body .point-histories .point-apply .point-apply-input .help > p:first-child { padding-bottom: 10px; color: #4a4f70; font-weight: 700; font-size: 14px; }
+
+.ui-body .point-histories .point-apply .point-apply-input .help p { font-size: 13px; line-height: 1.8; }
+
 .app-body .flex-fill .home .right-panel > .header:after, .app-body .flex-fill .home .notices .notice .top:after { content: ""; display: block; clear: both; }
 
 .app-body .flex-fill .home .right-panel > .header:after, .app-body .flex-fill .home .notices .notice .top:after { content: ""; display: block; clear: both; }
@@ -1485,7 +1555,7 @@ body button:disabled, body a:disabled { border: solid 1px #dee2ec; background-co
 
 body button.btn-add, body a.btn-add { width: 84px; height: 34px !important; background-color: #0060ff; font-size: 14px; font-weight: 600; }
 
-body button.btn-sm, body a.btn-sm { padding: 4px 12px 3px; color: #fff; font-weight: 700; }
+body button.btn-sm, body a.btn-sm { padding: 4px 10px 3px; color: #fff; font-weight: 700; background-color: #273142; line-height: normal; }
 
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 50px; padding: 8px 10px 7px; border-radius: 4px; border: solid 1px #dee2ec; font-size: 14px; background-color: #fff; background-image: url("/crm/static/images/icon/ico_select.png"); background-size: 7px; background-repeat: no-repeat; background-position: right 10px center; }
 
@@ -1494,6 +1564,8 @@ select::-ms-expand { display: none; }
 input:not([type=radio]):not([type=checkbox]), input.flex-fill, textarea { min-height: 10px; padding: 15px 15px 14px; border-radius: 4px; background-color: #f3f8ff; color: #000; }
 
 input:not([type=radio]):not([type=checkbox]):focus, input.flex-fill:focus, textarea:focus { color: #000; }
+
+input:not([type=radio]):not([type=checkbox]):disabled, input.flex-fill:disabled, textarea:disabled { background-color: #efeff4 !important; }
 
 input::-ms-clear { display: none; }
 
@@ -1514,6 +1586,10 @@ input[type=radio] { vertical-align: middle; margin-top: -2px; margin-right: 10px
 .tabwrap > ul > li a { display: block; border-bottom: 2px solid #fff; padding-bottom: 6px; font-size: 15px; }
 
 .tabwrap > ul > li.selected a, .tabwrap > ul > li:hover a { border-bottom: 2px solid #0060ff; font-weight: 700; color: #0060ff; }
+
+h2.title { display: block; font-size: 17px; font-weight: 600; padding-bottom: 20px; }
+
+.card { position: relative; box-shadow: none; border: solid 1px #d7e3f1; }
 
 .scrlly-box { width: 100%; overflow-y: auto; }
 
