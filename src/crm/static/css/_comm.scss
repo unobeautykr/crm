@@ -24,6 +24,9 @@ input:-webkit-autofill:active {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
+.c-red {
+	color: #f7685b !important;
+}
 .error {
   display: block;
   color: #f7685b;
@@ -149,7 +152,7 @@ body {
       font-weight: 600;
     }
     &.btn-sm {
-      padding:4px 10px 3px;
+      padding:5px 10px 6px;
       color:#fff;
       font-weight: 700;
 			background-color: #273142;
@@ -166,6 +169,7 @@ select {
   border-radius: 4px;
   border: solid 1px #dee2ec;
   font-size: 14px;
+	vertical-align: middle;
   background :{
     color:#fff;
     image:url('/crm/static/images/icon/ico_select.png');
@@ -451,7 +455,7 @@ h2.title {
 } //.react-datepicker-popper
 .react-datepicker__input-container {
   input[type=text] {
-    padding: 9px 40px 9px 20px !important;
+    padding: 8px 38px 9px 20px !important;
     font-size: 14px;
     background: {
       color:#fff;

@@ -875,6 +875,8 @@
       }
       .chart-conts {
         width:868px;
+				padding-bottom:200px;
+				overflow: hidden;
         .head {
           margin:36px 40px 0;
           &:after {
@@ -888,7 +890,63 @@
 						margin-right:50px;
 					}
 				}
-				.data-table {}
+				.chart-page {
+					padding:40px;
+					max-height:100%;
+					overflow-y: auto;
+					.data-input {
+						.title {
+							position: relative;
+							width:100%;
+							padding-bottom:36px;
+							font-size: 18px;
+						  font-weight: 500;
+						  color: #273142;
+							border-bottom:1px solid rgba(215, 227, 241, 0.5);
+							.right {
+								position: absolute;
+								right:0;
+								top:-7px;
+							}
+						}
+					}
+					.data-table {
+						border:0;
+						.title {
+							margin-top:30px;
+							font-size: 18px;
+						  font-weight: 500;
+						  color: #273142;
+						}
+						table {
+							td {
+								text-align: center;
+							}
+						}
+					}
+					.form-control {
+						label {
+							font-size: 14px;
+							font-weight: 700;
+						}
+					}
+					&.customer-appointments {
+						.radios.flex-row {
+							font-size: 14px;
+						}
+						.form-double {
+							.form-control {
+								float:left;
+								margin-bottom:30px;
+							}
+							&:after {
+								content: '';
+								display: block;
+								clear:both;
+							}
+						}
+					} //&.customer-appointments
+				} //.chart-page
       }
     }
   }

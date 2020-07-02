@@ -602,38 +602,194 @@ left-navigation 마크업 및 클래스 수정
 						</div>
 						<!--// tabwrap -->
 
-            <div class="tabcontents">
+            <div class="customer-appointments chart-page">
+							<div class="data-input">
+								<div class="title">
+									예약입력
+									<div class="right">
+										<button class="btn btn-basic _small">신규예약입력</button>
+									</div>
+								</div>
+								<div class="card">
+									<div class="form-control">
+										<label class="label-required">초/재진</label>
+										<div class="radios flex-row">
+											<div class="radio-item flex-row items-center flex-wrap m-r-32"><input type="radio" name="firstVisit" value="true">초진</div>
+											<div class="radio-item flex-row items-center flex-wrap m-r-16"><input type="radio" name="firstVisit" value="false">재진</div>
+										</div>
+									</div>
+									<div class="form-double">
+										<div class="form-control m-r-32">
+											<label class="label-required">세부부서</label><select>
+												<option value="-1" disabled="">-</option>
+												<option value="0" class="">상담실1 - 상담실1-1</option>
+												<option value="1" class="display-none">상담실2 - 상담실2-1</option>
+												<option value="2" class="">상담실2 - 상담실2-2</option>
+												<option value="3" class="">테스트 - 부서이름이 왜이리 길어!</option>
+												<option value="4" class="">테스트 - 우히히히힣</option>
+												<option value="5" class="">테스트 - 이러면 넘어갈 것인가?</option>
+												<option value="6" class="">상담실3 - 상담실3-1</option>
+												<option value="7" class="">상담실3 - 상담실3-2</option>
+												<option value="8" class="">상담실3 - 상담실3-3</option>
+												<option value="9" class="">상담실3 - 상담실3-4</option>
+												<option value="10" class="">상담실3 - 상담실3-5</option>
+												<option value="11" class=""> - </option>
+											</select>
+										</div>
+										<div class="form-control">
+											<label class="label-required">예약일</label>
+											<div class="react-datepicker-wrapper">
+												<div class="react-datepicker__input-container"><input type="text" class="" value=""></div>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-double">
+										<div class="form-control"><label class="label-required">진료 시작</label><select>
+												<option disabled="" value="">-</option>
+												<option value="08:00">08:00</option>
+												<option value="08:10">08:10</option>
+												<option value="08:20">08:20</option>
+												<option value="08:30">08:30</option>
+												<option value="08:40">08:40</option>
+												<option value="08:50">08:50</option>
+												<option value="09:00">09:00</option>
+											</select>
+										</div>
+										<div class="form-control"><label class="label-required">예상 진료 시간</label><select>
+												<option disabled="" value="">-</option>
+												<option value="10">10분</option>
+												<option value="20">20분</option>
+												<option value="30">30분</option>
+												<option value="40">40분</option>
+												<option value="50">50분</option>
+												<option value="60">60분</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-double">
+										<div class="form-control"><label>의사</label><select>
+												<option disabled="" value="-1">-</option>
+												<option value="0">펜8</option>
+											</select>
+										</div>
+										<div class="form-control"><label>상담사</label><select>
+												<option disabled="" value="-1">-</option>
+												<option value="0">상담이</option>
+												<option value="1">강상담아</option>
+												<option value="2">이상담</option>
+												<option value="3">상담ㅎㅎ</option>
+											</select>
+										</div>
+										<div class="form-control"><label>내원경로</label><select>
+												<option disabled="" value="-1">-</option>
+												<option value="0">홈페이지</option>
+												<option value="1">지인소개</option>
+												<option value="2">바비톡</option>
+												<option value="3"></option>
+											</select>
+										</div>
+									</div>
+
+									<div class="flex-row items-center">
+										<div class="form-control flex-wrap m-r-24"><label>상담/진료항목</label><select>
+												<option value="0" class="">테스트 시수술</option>
+												<option value="1" class="">필러3</option>
+												<option value="2" class="">테스트4</option>
+												<option value="3" class="">테스트</option>
+												<option value="4" class="">필러2</option>
+												<option value="5" class="">테스트3</option>
+												<option value="6" class="">테스트2</option>
+												<option value="7" class="">테스트항목</option>
+												<option value="8" class="">보톡스</option>
+												<option value="9" class="">필러</option>
+												<option value="10" class="">필러</option>
+											</select></div>
+										<div class="form-control flex-fill"><label>세부항목</label><select>
+												<option value="0" class="">세부항목</option>
+												<option value="1" class="">세부항목2</option>
+											</select></div><button class="btn btn-danger flex-wrap">삭제</button>
+									</div><button class="btn btn-primary btn-block m-b-40">진료 항목 추가</button>
+									<div class="form-control"><label>메모</label><textarea></textarea></div>
+									<div class="functions flex-row m-t-16"><button class="btn btn-warning m-r-8">초기화</button><button class="btn btn-primary">저장</button></div>
+								</div>
+							</div>
+							<div class="data-table">
+								<div class="title">예약내역</div>
+								<table>
+									<thead>
+										<tr>
+											<th>상태</th>
+											<th>예약일</th>
+											<th>초진/재진</th>
+											<th>방문여부</th>
+											<th>내원경로</th>
+											<th>부서명</th>
+											<th>세부부서명</th>
+											<th>상담사</th>
+											<th>의사</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="item-content center ">
+													예약
+													<button class="btn btn-primary btn-sm m-l-8">수정</button>
+												</div>
+											</td>
+											<td>2020-03-24<br>14:00-15:00</td>
+											<td>초진</td>
+											<td>미방문</td>
+											<td>바비톡</td>
+											<td>부서1</td>
+											<td>세부부서2</td>
+											<td>김성현</td>
+											<td>박효근</td>
+										</tr>
+										<tr>
+											<td><span class="c-red">예약취소</span></td>
+											<td>2020-03-24<br>14:00-15:00</td>
+											<td>초진</td>
+											<td>미방문</td>
+											<td>-</td>
+											<td>부서1</td>
+											<td>세부부서2</td>
+											<td>김성현</td>
+											<td>박효근</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="item-content center ">
+													예약
+													<button class="btn btn-primary btn-sm m-l-8">수정</button>
+												</div>
+											</td>
+											<td>2020-03-24<br>14:00-15:00</td>
+											<td>초진</td>
+											<td>미방문</td>
+											<td>바비톡</td>
+											<td>부서1</td>
+											<td>세부부서2</td>
+											<td>김성현</td>
+											<td>박효근</td>
+										</tr>
+										<tr>
+											<td><span class="c-red">예약취소</span></td>
+											<td>2020-03-24<br>14:00-15:00</td>
+											<td>초진</td>
+											<td>미방문</td>
+											<td>-</td>
+											<td>부서1</td>
+											<td>세부부서2</td>
+											<td>김성현</td>
+											<td>박효근</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
             </div>
-						<div class="data-table">
-							<table>
-								<thead>
-									<tr>
-										<th>상태</th>
-										<th>예약일</th>
-										<th>초진/재진</th>
-										<th>방문여부</th>
-										<th>내원경로</th>
-										<th>부서명</th>
-										<th>세부부서명</th>
-										<th>상담사</th>
-										<th>의사</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>예약</td>
-										<td>2020-03-24<br>14:00-15:00</td>
-										<td>초진</td>
-										<td>미방문</td>
-										<td>바비톡</td>
-										<td>부서1</td>
-										<td>세부부서2</td>
-										<td>김성현</td>
-										<td>박효근</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
           </div>
           <!--// .chart-conts -->
 
