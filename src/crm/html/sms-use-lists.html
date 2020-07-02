@@ -519,8 +519,25 @@
           <div class="sms-list">
             <div class="route-top"><span class="title">문자 충전금 사용 내역</span></div>
             <div class="flex-row items-center flex-between flex-fill">
-              <div class="flex-row items-center"><button class="btn btn-primary btn-sm m-r-8">이번주</button><button class="btn btn-primary btn-sm m-r-8">이번달</button><button class="btn btn-primary btn-sm m-r-8">기간 선택</button></div>
-              <div class="right"><button class="btn btn-primary btn-sm m-r-8">엑셀 다운로드</button></div>
+              <div class="flex-row items-center">
+                <button class="btn btn-normal _small m-r-8">이번주</button> <!-- modi //-->
+                <button class="btn btn-primary _small m-r-8">이번달</button> <!-- modi //-->
+                <button class="btn btn-primary _small m-r-8">기간 선택</button> <!-- modi //-->
+              </div>
+              <div class="react-datepicker-wrapper">
+                <div class="react-datepicker__input-container">
+                  <input type="text" class="text-center" value="2020년 07월 2일">
+                </div>
+              </div>
+              <div class="react-datepicker-wrapper">
+                <div class="react-datepicker__input-container">
+                  <input type="text" class="text-center react-datepicker-ignore-onclickoutside" value="2020년 07월 2일">
+                </div>
+              </div>
+
+              <div class="right">
+                <button class="btn btn-normal _small">엑셀 다운로드</button> <!-- modi //-->
+              </div>
             </div>
             <div class="data-table">
               <div class="top flex-row items-center flex-between m-b-16"></div>
@@ -767,36 +784,80 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="flex-row flex-between">
-                <div class="pagination">
-                  <div class="flex-row items-center">
-                    <div class="page-icon flex-wrap selected">1</div>
-                    <div class="page-icon flex-wrap ">2</div>
-                    <div class="page-icon flex-wrap ">3</div>
-                    <div class="page-icon flex-wrap ">4</div>
-                    <div class="page-icon flex-wrap ">5</div>
-                    <div class="page-icon flex-wrap ">6</div>
-                    <div class="page-icon flex-wrap ">7</div>
-                    <div class="page-icon flex-wrap ">8</div>
-                    <div class="page-icon flex-wrap ">9</div>
-                  </div>
-                  <div class="c-red f-medium m-t-16">1 / 9</div>
+            </div>
+
+            <!-- pagination -->
+            <div class="flex-row flex-between">
+              <div class="pagination">
+                <div class="flex-row items-center">
+                  <div class="page-icon flex-wrap page-prev"><span class="a11y">이전</span></div>
+                  <div class="page-icon flex-wrap selected">1</div>
+                  <div class="page-icon flex-wrap ">2</div>
+                  <div class="page-icon flex-wrap ">3</div>
+                  <div class="page-icon flex-wrap ">4</div>
+                  <div class="page-icon flex-wrap page-next"><span class="a11y">다음</span></div>
                 </div>
-                <div class="limit-setter flex-row">
-                  <div class="page-icon flex-wrap selected">10</div>
-                  <div class="page-icon flex-wrap ">20</div>
-                  <div class="page-icon flex-wrap ">50</div>
-                  <div class="page-icon flex-wrap ">100</div>
-                </div>
+                <div class="page-total"><span class="tt">total</span>1 / 4</div>
+              </div>
+              <div class="limit-setter flex-row">
+                <div class="page-icon flex-wrap ">10</div>
+                <div class="page-icon flex-wrap selected">20</div>
+                <div class="page-icon flex-wrap ">50</div>
+                <div class="page-icon flex-wrap ">100</div>
               </div>
             </div>
+            <!--// pagination -->
           </div>
+          <!--// sms-list -->
+
           <div class="sms-list">
             <div class="route-top"><span class="title">충전/환불 내역</span></div>
             <div class="flex-row items-center flex-between flex-fill">
-              <div class="flex-row items-center"><button class="btn btn-primary btn-sm m-r-8">이번주</button><button class="btn btn-primary btn-sm m-r-8">이번달</button><button class="btn btn-primary btn-sm m-r-8">기간 선택</button></div>
-              <div class="right"><button class="btn btn-primary btn-sm m-r-8">엑셀 다운로드</button></div>
+              <div class="flex-row items-center">
+                <button class="btn btn-normal _small m-r-8">이번주</button> <!-- modi //-->
+                <button class="btn btn-primary _small m-r-8">이번달</button> <!-- modi //-->
+                <button class="btn btn-primary _small m-r-8">기간 선택</button> <!-- modi //-->
+              </div>
+              <div class="react-datepicker-wrapper">
+                <div class="react-datepicker__input-container">
+                  <input type="text" class="text-center" value="2020년 07월 2일">
+                </div>
+              </div>
+              -
+              <div class="react-datepicker-wrapper">
+                <div class="react-datepicker__input-container">
+                  <input type="text" class="text-center react-datepicker-ignore-onclickoutside" value="2020년 07월 2일">
+                </div>
+              </div>
+
+              <div class="right">
+                <button class="btn btn-normal _small">엑셀 다운로드</button> <!-- modi //-->
+              </div>
             </div>
+
+            <div class="flex-row items-center flex-between flex-fill">
+              <div class="flex-row items-center">
+                <button class="btn btn-normal _small m-r-8">이번주</button> <!-- modi //-->
+                <button class="btn btn-primary _small m-r-8">이번달</button> <!-- modi //-->
+              </div>
+              <div class="date-functions flex-row items-center">
+                <button class="btn btn-left"><span class="a11y">이전</span></button>
+                <div class="react-datepicker-wrapper">
+                  <div class="react-datepicker__input-container">
+                    <input type="text" class="text-center" value="2020년 06월 9일(월)">
+                    -
+                    <input type="text" class="text-center" value="2020년 06월 9일(월)">
+                  </div>
+                </div>
+                <button class="btn btn-right"><span class="a11y">다음</span></button>
+              </div>
+
+              <div class="right">
+                <button class="btn btn-normal _small">엑셀 다운로드</button> <!-- modi //-->
+              </div>
+            </div>
+
+
             <div class="data-table">
               <div class="top flex-row items-center flex-between m-b-16"></div>
               <table>
@@ -1042,26 +1103,30 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="flex-row flex-between">
-                <div class="pagination">
-                  <div class="flex-row items-center">
-                    <div class="page-icon flex-wrap selected">1</div>
-                    <div class="page-icon flex-wrap ">2</div>
-                    <div class="page-icon flex-wrap ">3</div>
-                    <div class="page-icon flex-wrap ">4</div>
-                    <div class="page-icon flex-wrap ">5</div>
-                    <div class="page-icon flex-wrap ">6</div>
-                  </div>
-                  <div class="c-red f-medium m-t-16">1 / 6</div>
+            </div>
+
+            <!-- pagination -->
+            <div class="flex-row flex-between">
+              <div class="pagination">
+                <div class="flex-row items-center">
+                  <div class="page-icon flex-wrap page-prev"><span class="a11y">이전</span></div>
+                  <div class="page-icon flex-wrap selected">1</div>
+                  <div class="page-icon flex-wrap ">2</div>
+                  <div class="page-icon flex-wrap ">3</div>
+                  <div class="page-icon flex-wrap ">4</div>
+                  <div class="page-icon flex-wrap page-next"><span class="a11y">다음</span></div>
                 </div>
-                <div class="limit-setter flex-row">
-                  <div class="page-icon flex-wrap selected">10</div>
-                  <div class="page-icon flex-wrap ">20</div>
-                  <div class="page-icon flex-wrap ">50</div>
-                  <div class="page-icon flex-wrap ">100</div>
-                </div>
+                <div class="page-total"><span class="tt">total</span>1 / 4</div>
+              </div>
+              <div class="limit-setter flex-row">
+                <div class="page-icon flex-wrap ">10</div>
+                <div class="page-icon flex-wrap selected">20</div>
+                <div class="page-icon flex-wrap ">50</div>
+                <div class="page-icon flex-wrap ">100</div>
               </div>
             </div>
+            <!--// pagination -->
+
           </div>
         </div>
       </div>

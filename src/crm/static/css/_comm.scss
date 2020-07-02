@@ -69,7 +69,8 @@ body {
       min-width:60px;
       height:auto;
       background-color: #273142;
-      box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1);
+      // box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1);
+      box-shadow: none;
       color: #dee2ec;
     }
     &.btn-normal {
@@ -79,6 +80,7 @@ body {
       border:1px solid #dee2ec !important;
       background-color: #ffffff;
       color:#1b73e8;
+      color: #273142;
       &:not(.disabled) {
         background-color: #ffffff !important;
       }
@@ -871,7 +873,7 @@ input.text-date {
   .page-total {
     position: absolute;
     left:15px;
-    top:36px;
+    top:39px;
     .tt {
       display: inline-block;
       margin-right:5px;

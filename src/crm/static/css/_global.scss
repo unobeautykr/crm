@@ -517,6 +517,12 @@ html, body {
           &:after {
             @extend %clearer;
           }
+          .react-datepicker__input-container {
+            input[type=text] {
+              background:none;
+              padding: 9px 20px 9px 20px !important;
+            }
+          }
         }
       }
 
@@ -1324,6 +1330,7 @@ html, body {
         height: 36px;
         border: solid 1px #dee2ec;
         background-color: #ffffff;
+        color: #273142;
         &.btn-left {
           background: {
             image:url('/crm/static/images/icon/arrow.png');
@@ -3198,11 +3205,81 @@ html, body {
     }
   } //.message-codes
   .sms-use-list {
+    max-width:722px;
     padding:20px 20px 60px;
     .sms-list {
       margin-bottom:40px;
+      .react-datepicker-wrapper {
+        .react-datepicker__input-container input[type=text] {
+          width:140px;
+          background : {
+            color: transparent;
+            position: right 0px top 2px;
+          }
+          border:0;
+          padding:9px 13px 9px 8px !important;
+          text-align: left;
+        }
+      }
+      .right {
+        .btn {
+          border-color:#484760 !important;
+        }
+      }
+      .data-table {
+        margin-top:20px;
+      }
+      .pagination {
+        padding:20px 0;
+      }
+      .page-total {
+        top:24px;
+      }
+      .limit-setter {
+        padding:18px 0;
+      }
+      .date-functions {
+        max-width:60%;
+        .btn {
+          display: inline-block;
+          min-width: 36px;
+          height: 36px;
+          border: solid 1px #dee2ec;
+          background-color: #ffffff;
+          color: #273142;
+          &.btn-left {
+            background: {
+              image:url('/crm/static/images/icon/arrow.png');
+              size:7px;
+              repeat:no-repeat;
+              position: center center;
+            }
+          }
+          &.btn-right {
+            background: {
+              image:url('/crm/static/images/icon/arrow_2.png');
+              size:7px;
+              repeat:no-repeat;
+              position: center center;
+            }
+          }
+        }
+        .react-datepicker__input-container {
+          input[type=text] {
+            width:145px;
+            padding:9px 5px !important;
+            background: none;
+            text-align: center;
+          }
+        }
+      }
     }
   } //.sms-use-list
+
+  .message-codes {
+    max-width:722px;
+    padding:20px 20px 60px;
+  } //.message-codes
 
   .point-histories {
     padding:20px 20px 60px;

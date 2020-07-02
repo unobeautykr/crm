@@ -23,9 +23,9 @@ button { display: inline-block; background-color: transparent; padding: 0; margi
 
 ._right { position: absolute; right: 0; top: 0; }
 
-body button.btn, body button.btn-primary, body a.btn, body a.btn-primary { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px; min-width: 60px; height: auto; background-color: #273142; box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); color: #dee2ec; }
+body button.btn, body button.btn-primary, body a.btn, body a.btn-primary { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px; min-width: 60px; height: auto; background-color: #273142; box-shadow: none; color: #dee2ec; }
 
-body button.btn-normal, body a.btn-normal { font-size: 18px; font-weight: 700; padding: 21px 6px 20px; border: 1px solid #dee2ec !important; background-color: #ffffff; color: #1b73e8; }
+body button.btn-normal, body a.btn-normal { font-size: 18px; font-weight: 700; padding: 21px 6px 20px; border: 1px solid #dee2ec !important; background-color: #ffffff; color: #1b73e8; color: #273142; }
 
 body button.btn-normal:not(.disabled), body a.btn-normal:not(.disabled) { background-color: #ffffff !important; }
 
@@ -299,7 +299,7 @@ input.text-date { background-color: #fff; background-image: url("/crm/static/ima
 
 .pagination .page-icon.page-next { margin-left: 5px; background-image: url("/crm/static/images/icon/arrow_2.png"); background-size: 8px; }
 
-.pagination .page-total { position: absolute; left: 15px; top: 36px; }
+.pagination .page-total { position: absolute; left: 15px; top: 39px; }
 
 .pagination .page-total .tt { display: inline-block; margin-right: 5px; color: #9cb2cd; }
 
@@ -479,6 +479,8 @@ html, body { height: 100%; overflow: auto; }
 .app-body .flex-fill .home .flex-row { min-height: 100%; }
 
 .app-body .flex-fill .home .flex-row.appointments-by-status { height: auto; min-height: auto; margin-top: 20px; }
+
+.app-body .flex-fill .home .right-panel > .header .react-datepicker__input-container input[type=text] { background: none; padding: 9px 20px 9px 20px !important; }
 
 .app-body .flex-fill .home .form-control { padding-left: 20px; padding-right: 20px; }
 
@@ -750,7 +752,7 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .right-panel .date-functions { float: left; max-width: 50%; }
 
-.app-body .right-panel .date-functions .btn { display: inline-block; min-width: 36px; height: 36px; border: solid 1px #dee2ec; background-color: #ffffff; }
+.app-body .right-panel .date-functions .btn { display: inline-block; min-width: 36px; height: 36px; border: solid 1px #dee2ec; background-color: #ffffff; color: #273142; }
 
 .app-body .right-panel .date-functions .btn.btn-left { background-image: url("/crm/static/images/icon/arrow.png"); background-size: 7px; background-repeat: no-repeat; background-position: center center; }
 
@@ -1430,9 +1432,33 @@ html, body { height: 100%; overflow: auto; }
 
 .ui-body .message-codes .message-caller-numbers, .ui-body .message-codes .message-boilerplate, .ui-body .message-codes .message-auto-notification { margin-bottom: 40px; }
 
-.ui-body .sms-use-list { padding: 20px 20px 60px; }
+.ui-body .sms-use-list { max-width: 722px; padding: 20px 20px 60px; }
 
 .ui-body .sms-use-list .sms-list { margin-bottom: 40px; }
+
+.ui-body .sms-use-list .sms-list .react-datepicker-wrapper .react-datepicker__input-container input[type=text] { width: 140px; background-color: transparent; background-position: right 0px top 2px; border: 0; padding: 9px 13px 9px 8px !important; text-align: left; }
+
+.ui-body .sms-use-list .sms-list .right .btn { border-color: #484760 !important; }
+
+.ui-body .sms-use-list .sms-list .data-table { margin-top: 20px; }
+
+.ui-body .sms-use-list .sms-list .pagination { padding: 20px 0; }
+
+.ui-body .sms-use-list .sms-list .page-total { top: 24px; }
+
+.ui-body .sms-use-list .sms-list .limit-setter { padding: 18px 0; }
+
+.ui-body .sms-use-list .sms-list .date-functions { max-width: 60%; }
+
+.ui-body .sms-use-list .sms-list .date-functions .btn { display: inline-block; min-width: 36px; height: 36px; border: solid 1px #dee2ec; background-color: #ffffff; color: #273142; }
+
+.ui-body .sms-use-list .sms-list .date-functions .btn.btn-left { background-image: url("/crm/static/images/icon/arrow.png"); background-size: 7px; background-repeat: no-repeat; background-position: center center; }
+
+.ui-body .sms-use-list .sms-list .date-functions .btn.btn-right { background-image: url("/crm/static/images/icon/arrow_2.png"); background-size: 7px; background-repeat: no-repeat; background-position: center center; }
+
+.ui-body .sms-use-list .sms-list .date-functions .react-datepicker__input-container input[type=text] { width: 145px; padding: 9px 5px !important; background: none; text-align: center; }
+
+.ui-body .message-codes { max-width: 722px; padding: 20px 20px 60px; }
 
 .ui-body .point-histories { padding: 20px 20px 60px; }
 
@@ -1527,9 +1553,9 @@ button { display: inline-block; background-color: transparent; padding: 0; margi
 
 ._right { position: absolute; right: 0; top: 0; }
 
-body button.btn, body button.btn-primary, body a.btn, body a.btn-primary { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px; min-width: 60px; height: auto; background-color: #273142; box-shadow: 0 4px 10px 0 rgba(0, 96, 255, 0.1); color: #dee2ec; }
+body button.btn, body button.btn-primary, body a.btn, body a.btn-primary { display: inline-block; background-color: transparent; padding: 0; margin: 0; border: 0; border-radius: 4px; min-width: 60px; height: auto; background-color: #273142; box-shadow: none; color: #dee2ec; }
 
-body button.btn-normal, body a.btn-normal { font-size: 18px; font-weight: 700; padding: 21px 6px 20px; border: 1px solid #dee2ec !important; background-color: #ffffff; color: #1b73e8; }
+body button.btn-normal, body a.btn-normal { font-size: 18px; font-weight: 700; padding: 21px 6px 20px; border: 1px solid #dee2ec !important; background-color: #ffffff; color: #1b73e8; color: #273142; }
 
 body button.btn-normal:not(.disabled), body a.btn-normal:not(.disabled) { background-color: #ffffff !important; }
 
@@ -1803,7 +1829,7 @@ input.text-date { background-color: #fff; background-image: url("/crm/static/ima
 
 .pagination .page-icon.page-next { margin-left: 5px; background-image: url("/crm/static/images/icon/arrow_2.png"); background-size: 8px; }
 
-.pagination .page-total { position: absolute; left: 15px; top: 36px; }
+.pagination .page-total { position: absolute; left: 15px; top: 39px; }
 
 .pagination .page-total .tt { display: inline-block; margin-right: 5px; color: #9cb2cd; }
 
@@ -2098,6 +2124,8 @@ input.text-date { background-color: #fff; background-image: url("/crm/static/ima
 .modal-container > .modal-message-target-search-history-selector .data-table .column-memo .btn-success { border: solid 1px #1b73e8; background-color: #1b73e8 !important; }
 
 .modal-container > .modal-transit-unit { width: 564px !important; height: 650px; }
+
+.modal-container .modal-unit-cost { width: 564px; }
 
 .modal .modal-container .modal-custom-chart { min-width: 968px; max-width: 1258px; width: 100%; height: 900px; background-color: transparent; box-shadow: none; padding: 0; }
 
