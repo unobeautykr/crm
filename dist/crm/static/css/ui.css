@@ -844,6 +844,8 @@ html, body { height: 100%; overflow: auto; }
 
 .search-bar .search-item input:not([type=radio]):not([type=checkbox]), .search-bar .search-item input.flex-fill, .search-bar .search-item input { min-width: 300px; padding: 13px 15px 12px 50px; border-color: #dee2ec; background-color: #fff; background-image: url("/crm/static/images/icon/ic-search.png"); background-size: 19px; background-repeat: no-repeat; background-position: left 15px center; }
 
+.search-bar .search-item .react-datepicker__input-container input:not([type=radio]):not([type=checkbox]), .search-bar .search-item .react-datepicker__input-container input.flex-fill, .search-bar .search-item .react-datepicker__input-container input { background-image: none; }
+
 .search-bar .search-item select { min-width: 150px; height: 46px; color: #9cb2cd; }
 
 .search-bar .search-item button { font-size: 14px; }
@@ -1248,7 +1250,7 @@ html, body { height: 100%; overflow: auto; }
 
 .counselors .search-bar { padding: 17px 20px; background-color: #fff; border-radius: 4px; }
 
-.counselors .search-bar .search-btns { display: inline-block; }
+.counselors .search-bar .search-btns { display: inline-block; margin-bottom: 8px; }
 
 .counselors .search-bar .search-btns .btn { box-shadow: none; }
 

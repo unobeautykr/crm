@@ -1535,6 +1535,11 @@ html, body {
 				position:left 15px center;
 			}
     }
+		.react-datepicker__input-container {
+			input:not([type=radio]):not([type=checkbox]), input.flex-fill, input {
+				background-image:none;
+			}
+		}
     select {
       min-width:150px;
       height: 46px;
@@ -2704,6 +2709,7 @@ html, body {
     border-radius: 4px;
     .search-btns {
       display: inline-block;
+			margin-bottom: 8px;
       .btn {
         box-shadow: none;
         &.btn-normal {
