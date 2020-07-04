@@ -628,211 +628,331 @@ left-navigation 마크업 및 클래스 수정
     <!-- 통합차트 pop -->
     <div class="modal modal-overlay">
       <div class="modal-container">
-        <div class="modal-slot">
-          <div class="head flex-row flex-between items-start">
-            <div class="title "> 박지웅_20200624_0052님의 통합차트</div><i class="zmdi zmdi-close"></i>
-          </div>
-          <div class="m-t-16">
-            <div class="customer-chart">
-              <div class="tabs flex-row">
-                <div class="tab  ">예수금</div>
-                <div class="tab selected ">정보</div>
-                <div class="tab  ">예약</div>
-                <div class="tab  ">상담</div>
-                <div class="tab  ">진료</div>
-                <div class="tab  ">수납</div>
-                <div class="tab  ">문자</div>
-                <div class="tab  ">펜차트</div>
-              </div>
-              <div class="customer-chart-info chart-page">
-                <div class="header">
-                  <div class="title">정보</div>
+        <div class="modal-slot modal-custom-chart">
+          <div class="chart-info">
+            <div class="cust">
+              <p class="fig"><img src="http://blogfiles.naver.net/MjAyMDA0MDRfMjIx/MDAxNTg1OTcwNjI2MjI4.Mu1u1FTb9fckGQlwXwRChL6VhIhrA2k9IKZCwEydul8g.diayEtlya1_1KS8vh7dV7ElpU1H9wr4oEFaLlfdNCCsg.JPEG.d2bear/%C1%D6%C1%F6%C8%C601.jpg" alt=""></p>
+              <div class="desc">
+                <p class="name">박지웅 <span>(만 29세)</span></p>
+                <p class="numb">(20200528_011)</p>
+                <div class="btnwrap">
+                  <a href="#" class="btn btn-basic _small">문자보내기</a>
+                  <a href="#" class="btn btn-normal _small">전화</a>
                 </div>
-                <div class="card">
-                  <div class="card-title">기본 정보</div>
-                  <div class="form-control required"><label>내/외국인</label>
-                    <div class="radios flex-row">
-                      <div class="radio-item flex-row items-center flex-wrap m-r-16"><input class="m-r-4" type="radio" name="type" value="domestic">내국인</div>
-                      <div class="radio-item flex-row items-center flex-wrap m-r-16"><input class="m-r-4" type="radio" name="type" value="foreigner">외국인</div>
-                    </div>
-                  </div>
-                  <div class="form-control required"><label>이름</label><input value="박지웅"></div>
-                  <div class="form-control"><label>차트번호</label>
-                    <div>20200624_0052</div>
-                  </div>
-                  <div class="form-control"><label>생년월일</label>
-                    <div class="react-datepicker-wrapper">
-                      <div class="react-datepicker__input-container"><input type="text" class="" value="2020/06/16"></div>
-                    </div>
-                  </div>
-                  <div class="form-control required"><label>성별</label>
-                    <div class="radios flex-row">
-                      <div class="radio-item flex-row items-center flex-wrap m-r-16"><input class="m-r-4" type="radio" name="sex" value="male">남성</div>
-                      <div class="radio-item flex-row items-center flex-wrap m-r-16"><input class="m-r-4" type="radio" name="sex" value="female">여성</div>
-                    </div>
-                  </div>
-                  <div class="form-control required"><label>전화번호</label>
-                    <div class="phone undefined"><input class="block" value="01040571181"></div>
-                  </div>
-                  <div class="form-control required"><label>문자수신여부</label>
-                    <div class="radios flex-row">
-                      <div class="radio-item flex-row items-center flex-wrap m-r-16"><input class="m-r-4" type="radio" name="smsEnabled" value="true">동의</div>
-                      <div class="radio-item flex-row items-center flex-wrap m-r-16"><input class="m-r-4" type="radio" name="smsEnabled" value="false">거부</div>
-                    </div>
-                  </div>
-                  <div class="form-control required"><label>이벤트 문자수신여부</label>
-                    <div class="radios flex-row">
-                      <div class="radio-item flex-row items-center flex-wrap m-r-16"><input class="m-r-4" type="radio" name="eventSmsEnabled" value="true">동의</div>
-                      <div class="radio-item flex-row items-center flex-wrap m-r-16"><input class="m-r-4" type="radio" name="eventSmsEnabled" value="false">거부</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-title">부가 정보</div>
-                  <div class="form-control"><label>관심항목</label><button class="btn btn-primary btn-block m-t-16">관심항목 추가</button></div>
-                  <div class="form-control"><label>주소</label><input value=""></div>
-                  <div class="form-control"><label>소개자</label>
-                    <div class="flex-row"><input disabled="" class="recommender flex-fill m-r-16" value="-"><button class="btn btn-primary flex-wrap">조회</button></div>
-                  </div>
-                  <div class="form-control"><label>직업</label><select>
-                      <option disabled="" value="-1">-</option>
-                      <option value="0">ddd</option>
-                      <option value="1">공무원</option>
-                      <option value="2">학생</option>
-                      <option value="3">무직</option>
-                      <option value="4">프리랜서</option>
-                    </select></div>
-                  <div class="form-control"><label>내원경로</label><select>
-                      <option disabled="" value="-1">-</option>
-                      <option value="0">홈페이지</option>
-                      <option value="1">지인소개</option>
-                      <option value="2">바비톡</option>
-                      <option value="3"></option>
-                    </select></div>
-                  <div class="form-control"><label>등급</label><select>
-                      <option disabled="" value="-1">-</option>
-                      <option value="0">VIP</option>
-                      <option value="1">VVIP</option>
-                      <option value="2">GOLD</option>
-                      <option value="3">silver</option>
-                    </select></div>
-                  <div class="form-control"><label>불만사항</label><select>
-                      <option disabled="" value="-1">-</option>
-                      <option value="0">시술불만</option>
-                      <option value="1">상담불만</option>
-                      <option value="2">가격불만</option>
-                      <option value="3">진료불만</option>
-                    </select></div>
-                  <div class="form-control"><label>국가/지역</label><select>
-                      <option disabled="" value="-1">-</option>
-                      <option value="0">대한민국</option>
-                      <option value="1">일본</option>
-                      <option value="2">중국</option>
-                      <option value="3">태국</option>
-                    </select></div>
-                  <div class="form-control"><label>상담사</label><select>
-                      <option disabled="" value="-1">-</option>
-                      <option value="0">상담이</option>
-                      <option value="1">강상담아</option>
-                      <option value="2">이상담</option>
-                      <option value="3">상담ㅎㅎ</option>
-                    </select></div>
-                  <div class="form-control"><label>의사</label><select>
-                      <option disabled="" value="-1">-</option>
-                      <option value="0">펜8</option>
-                    </select></div>
-                  <div class="form-control"><label>메모</label><textarea></textarea></div>
-                </div>
-                <div class="functions flex-row m-t-16"><button class="btn btn-warning m-r-8">초기화</button><button class="btn btn-primary ">저장</button></div>
               </div>
             </div>
+            <div class="cust-info">
+              <dl class="line">
+                <dt>예수금</dt>
+                <dd class="cost c-blue t-under">200,000원</dd>
+                <dd class="btnwrap">
+                  <a href="#" class="btn btn-normal _ssmall">차감</a>
+                  <a href="#" class="btn btn-basic _ssmall">충전</a>
+                </dd>
+              </dl>
+              <dl class="line">
+                <dt>총 수납액</dt>
+                <dd class="cost">3,600,000원</dd>
+                <dd class="btnwrap"></dd>
+              </dl>
+              <dl class="line">
+                <dt>미수액</dt>
+                <dd class="cost c-blue t-under">0원</dd>
+                <dd class="btnwrap">
+                  <a href="#" class="btn btn-normal _ssmall">수납</a>
+                </dd>
+              </dl>
+            </div>
+            <div class="cust-detail">
+              <p class="title">기본정보</p>
+              <div class="data-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>내/외국인</th>
+                      <td>내국인</td>
+                      <th>이름</th>
+                      <td>박지웅</td>
+                    </tr>
+                    <tr>
+                      <th>성별</th>
+                      <td>여성</td>
+                      <th>생년월일</th>
+                      <td>1991-08-26</td>
+                    </tr>
+                    <tr>
+                      <th>전화번호</th>
+                      <td colspan="3">010-8426-8026</td>
+                    </tr>
+                    <tr>
+                      <th>문자수신</th>
+                      <td>동의</td>
+                      <th>마케팅수신</th>
+                      <td>거부</td>
+                    </tr>
+                    <tr>
+                      <th>관심항목</th>
+                      <td colspan="3">필러/보톡스/쁘띠, 눈, 코, 가슴성형</td>
+                    </tr>
+                    <tr>
+                      <th>내원경로</th>
+                      <td>바비톡</td>
+                      <th>소개자</th>
+                      <td>이화연</td>
+                    </tr>
+                    <tr>
+                      <th>주소</th>
+                      <td colspan="3">서울시 강남구 역삼로3길 13 케어랩스빌딩</td>
+                    </tr>
+                    <tr>
+                      <th>직업</th>
+                      <td>-</td>
+                      <th>등급</th>
+                      <td>vip</td>
+                    </tr>
+                    <tr>
+                      <th>국가/지역</th>
+                      <td colspan="3">대한민국/서울</td>
+                    </tr>
+                    <tr>
+                      <th>불만사항</th>
+                      <td colspan="3">-</td>
+                    </tr>
+                    <tr>
+                      <th>메모</th>
+                      <td colspan="3">바비톡 직원★ 진상이지만 친절하게 대해주세요.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
           </div>
-          <div class="buttons">
-            <div class="flex-row"><button class="btn-primary">닫기</button></div>
+          <!--// .chart-info -->
+          <div class="chart-conts">
+            <div class="head flex-row">
+              <div class="title ">상담</div><i class="zmdi zmdi-close"></i>
+						</div>
+
+						<div class="tabwrap">
+							<ul>
+								<li class="tabs"><a href="#">예약</a></li>
+								<li class="tabs selected"><a href="#">상담</a></li>
+								<li class="tabs"><a href="#">진료</a></li>
+								<li class="tabs"><a href="#">수납</a></li>
+								<li class="tabs"><a href="#">문자</a></li>
+								<li class="tabs"><a href="#">펜차트</a></li>
+							</ul>
+						</div>
+						<!--// tabwrap -->
+
+            <div class="customer-appointments chart-page">
+							<div class="data-input">
+								<div class="title">
+									상담입력
+									<div class="right">
+										<button class="btn btn-basic _small">상담예약입력</button>
+										<button class="btn btn-cancel _small">입력취소</button>
+										<button class="btn btn-basic _small">저장</button>
+									</div>
+								</div>
+								<!-- <div class="card" style="display:none;"> -->
+								<div class="card">
+                  <div class="form-control">
+                    <label class="label-required">상담일</label>
+                    <div class="react-datepicker-wrapper">
+                      <div class="react-datepicker__input-container"><input type="text" class="" value=""></div>
+                    </div>
+                  </div>
+                  <div class="form-double">
+  									<div class="form-control m-r-32">
+                      <label class="label-required">상담사</label>
+                      <select>
+                        <option disabled="" value="-1">-</option>
+                        <option value="0">상담이</option>
+                        <option value="1">강상담아</option>
+                        <option value="2">이상담</option>
+                        <option value="3">상담ㅎㅎ</option>
+                      </select>
+                    </div>
+                    <div class="form-control">
+                      <label>의사</label>
+                      <select>
+                        <option disabled="" value="-1">-</option>
+                        <option value="0">펜8</option>
+                      </select>
+                    </div>
+                  </div>
+
+									<div class="form-wide items-center">
+										<div class="form-control">
+                      <label>시/수술항목</label>
+                      <select>
+												<option value="0" class="">상담/진료항목</option>
+												<option value="0" class="">테스트 시수술</option>
+												<option value="1" class="">필러3</option>
+												<option value="2" class="">테스트4</option>
+												<option value="3" class="">테스트</option>
+												<option value="4" class="">필러2</option>
+												<option value="5" class="">테스트3</option>
+												<option value="6" class="">테스트2</option>
+												<option value="7" class="">테스트항목</option>
+												<option value="8" class="">보톡스</option>
+												<option value="9" class="">필러</option>
+												<option value="10" class="">필러</option>
+											</select>
+
+                      <button class="btn btn-danger _small">삭제</button>
+                    </div>
+										<div class="form-control">
+                      <!-- <label>세부항목</label> -->
+                      <select>
+												<option value="0" class="">세부항목</option>
+												<option value="1" class="">세부항목2</option>
+											</select>
+
+                      <button class="btn btn-danger _small" disabled>삭제</button>
+                    </div>
+									</div>
+                  <div class="btnwrap">
+                    <button class="btn btn-basic _small _full">관심항목 추가</button>
+                    <!-- <button class="btn btn-basic _small _full">진료 항목 추가</button> -->
+                  </div>
+
+                  <div class="form-control">
+                    <label>상담 결과</label>
+                    <select>
+                      <option disabled="" value="-1">-</option>
+                      <option value="0">재방문예정</option>
+                      <option value="1">수술예정</option>
+                    </select>
+                  </div>
+
+                  <div class="form-wide">
+  									<div class="form-control">
+                      <label class="label-required">상담내용</label>
+                      <textarea></textarea>
+                    </div>
+  									<div class="functions m-t-16">
+                      <button class="btn btn-normal _small m-r-8">초기화</button>
+                      <button class="btn btn-basic _small">저장</button>
+                    </div>
+                  </div>
+								</div>
+							</div>
+							<div class="data-table">
+								<div class="title">상담내역</div>
+                <div class="scrlly-box">
+  								<table>
+                    <thead>
+                      <tr>
+                        <th>
+                          <div class="flex-row items-center">
+                            <span>문자 전송 <div class="checkbox m-a "></div></span> <!-- modi //-->
+                          </div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>상태</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>상담일</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>고객</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>차트번호</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>생년월일</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>성별</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>전화번호</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>상담사</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>의사</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>상담/진료항목</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>세부항목</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>상담 결과</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>메모</span></div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="checkbox  m-a "></div>
+                        </td>
+                        <td>
+                          <div class="item-content center ">
+                            <button class="btn btn-primary btn-sm">수정</button>
+                          </div>
+                        </td>
+                        <td>2020-03-24</td>
+                        <td>고객명</td>
+                        <td>20200624_0052</td>
+                        <td>2020-03-24</td>
+                        <td>여성</td>
+                        <td>000-0000-0000</td>
+                        <td>상담사</td>
+                        <td>의사</td>
+                        <td>상담/진료항목</td>
+                        <td>세부항목</td>
+                        <td>상담 결과</td>
+                        <td>메모메모메모메모메모</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox  m-a "></div>
+                        </td>
+                        <td>
+                          <div class="item-content center ">
+                            <button class="btn btn-primary btn-sm">수정</button>
+                          </div>
+                        </td>
+                        <td>2020-03-24</td>
+                        <td>고객명</td>
+                        <td>20200624_0052</td>
+                        <td>2020-03-24</td>
+                        <td>여성</td>
+                        <td>000-0000-0000</td>
+                        <td>상담사</td>
+                        <td>의사</td>
+                        <td>상담/진료항목</td>
+                        <td>세부항목</td>
+                        <td>상담 결과</td>
+                        <td>-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="empty">조회결과가 없습니다</div>
+
+                </div>
+							</div>
+            </div>
           </div>
+          <!--// .chart-conts -->
+
         </div>
       </div>
     </div>
     <!--// 통합차트 pop -->
 
   </div>
-  <!-- <script>
-    ! function(e) {
-      function r(r) {
-        for (var n, a, l = r[0], i = r[1], f = r[2], p = 0, s = []; p < l.length; p++) a = l[p], Object.prototype.hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
-        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
-        for (c && c(r); s.length;) s.shift()();
-        return u.push.apply(u, f || []), t()
-      }
-
-      function t() {
-        for (var e, r = 0; r < u.length; r++) {
-          for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
-            var i = t[l];
-            0 !== o[i] && (n = !1)
-          }
-          n && (u.splice(r--, 1), e = a(a.s = t[0]))
-        }
-        return e
-      }
-      var n = {},
-        o = {
-          1: 0
-        },
-        u = [];
-
-      function a(r) {
-        if (n[r]) return n[r].exports;
-        var t = n[r] = {
-          i: r,
-          l: !1,
-          exports: {}
-        };
-        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
-      }
-      a.m = e, a.c = n, a.d = function(e, r, t) {
-        a.o(e, r) || Object.defineProperty(e, r, {
-          enumerable: !0,
-          get: t
-        })
-      }, a.r = function(e) {
-        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
-          value: "Module"
-        }), Object.defineProperty(e, "__esModule", {
-          value: !0
-        })
-      }, a.t = function(e, r) {
-        if (1 & r && (e = a(e)), 8 & r) return e;
-        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
-        var t = Object.create(null);
-        if (a.r(t), Object.defineProperty(t, "default", {
-            enumerable: !0,
-            value: e
-          }), 2 & r && "string" != typeof e)
-          for (var n in e) a.d(t, n, function(r) {
-            return e[r]
-          }.bind(null, n));
-        return t
-      }, a.n = function(e) {
-        var r = e && e.__esModule ? function() {
-          return e.default
-        } : function() {
-          return e
-        };
-        return a.d(r, "a", r), r
-      }, a.o = function(e, r) {
-        return Object.prototype.hasOwnProperty.call(e, r)
-      }, a.p = "/";
-      var l = this["webpackJsonpcarelabs-admin"] = this["webpackJsonpcarelabs-admin"] || [],
-        i = l.push.bind(l);
-      l.push = r, l = l.slice();
-      for (var f = 0; f < l.length; f++) r(l[f]);
-      var c = i;
-      t()
-    }([])
-  </script>
-  <script src="/static/js/2.59decae5.chunk.js"></script>
-  <script src="/static/js/main.25d03fb0.chunk.js"></script> -->
 </body>
 
 </html>

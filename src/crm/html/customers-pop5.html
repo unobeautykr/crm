@@ -2,19 +2,8 @@
 <html lang="en">
 <head>
   <!-- page head -->
-  <meta charset="utf-8">
-<link rel="icon" href="/favicon.png">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#000000">
-<meta name="description" content="Web site created using create-react-app">
-<link rel="apple-touch-icon" href="/logo192.png">
-<link rel="manifest" href="/manifest.json">
-<title>CRM - 펜1</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-<link href="/crm/static/css/base.css" rel="stylesheet">
-<link href="/crm/static/css/main.css" rel="stylesheet">
-<link href="/crm/static/css/ui.css" rel="stylesheet">
-
+  @@include('../inc/pagehead.inc',{
+  })
   <!--// page head -->
 </head>
 
@@ -23,163 +12,15 @@
   <div id="app">
     <div class="overlay left-navigation-overlay"></div>
     <!-- header-bar & ui-header -->
-		<!-- header-bar -->
-<div class="header-bar flex-row flex-between ui-header"> <!-- add class=ui-header //-->
-  <div class="header-items left flex-wrap">
-    <h1 class="title">바비톡 성형외과</h1>  <!--modi //-->
-    <button class="btn btn-close"><span class="a11y">사이드 닫기/열기</span></button>  <!--modi //-->
-  </div>
-  <div class="flex-row items-center flex-between flex-fill">
-    <div class="customer-search-bar flex-row items-center">
-      <input placeholder="고객명, 차트번호, 전화번호, 주민번호" class="flex-fill" value="">
-      <div class="buttons flex-row flex-wrap">
-        <button class="btn btn-accent m-l-8">검색</button>  <!--modi //-->
-        <button class="btn btn-accent m-l-8">고객등록</button>  <!--modi //-->
-      </div>
-    </div>
-    <div class="header-items right">
-      <div class="me _language">
-        <button class="btn btn-lang">언어변환</button>
-        <div class="lang">
-          <ul>
-            <li><a href="#">한글</a></li>
-            <li><a href="#">영문</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="me _sched">
-        <button class="btn btn-sched"><span class="alram"></span>부재일정확인</button>
-      </div>
-      <div class="me _info">
-        <p class="fig"></p>
-        <p>park</p>
-        <p class="email"><a href="mailto:test1@gmail.com">test1test1test1@gmail.com</a></p>
-      </div>
-      <div class="me _power">
-        <button class="btn btn-logout">로그아웃</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!--// header-bar -->
-
+		@@include('../inc/header.inc',{
+		})
     <!--// header-bar & ui-header -->
 
     <!-- app-body & ui-body -->
     <div class="flex-row app-body ui-body"> <!-- modi add class=ui-body //-->
       <!-- left navigation -->
-  		<!--
-left-navigation 마크업 및 클래스 추가/수정
-//-->
-<div class="left-navigation flex flex-wrap ">
-  <div class="flex-wrap clinic-name">펜1</div>
-  <div class="ver-scroll flex-fill">
-    <div class="menu depth-0">
-      <div class="menu-item selected">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-home"></i>현황판 (홈)</span></div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-calender"></i>예약 캘린더</span></div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-consult"></i>상담문의 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">상담문의</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">담당자 배정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">연동설정</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-msg"></i>문자 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">문자 전송</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">문자 충전</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">전송내역 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">충전내역 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">문자코드 설정</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-inq"></i>조회</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">고객 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">예약 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">상담 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">진료 조회</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">수납 조회</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-stat"></i>통계</span></div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-setting"></i>환경 설정</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">고객코드 설정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">예약캘린더 설정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">상담코드 설정</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">수납코드 설정</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="menu-item ">
-        <div class="title flex-row"><span class="text flex-fill"><i class="ico ic-hospital"></i>병원 관리</span><i class="zmdi c-primary flex-wrap zmdi-chevron-up"></i></div>
-        <div class="menu depth-1">
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">조직 관리</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">직원 관리</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">병원 정보</span></div>
-          </div>
-          <div class="menu-item ">
-            <div class="title flex-row"><span class="text flex-fill">펜차트 샘플함</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--
-left-navigation 마크업 및 클래스 수정
-//-->
-
+  		@@include('../inc/leftnavigation.inc',{
+  		})
       <!--// left navigation -->
 
       <div class="flex-fill left-nav-opened route">
@@ -452,6 +293,150 @@ left-navigation 마크업 및 클래스 수정
                       "></div>
                   </td>
                 </tr>
+                <tr class=" row-2">
+                  <td>
+                    <div class="checkbox  m-a "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center "><button class="btn btn-primary btn-sm">수정</button></div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">2020-06-23</div>
+                  </td>
+                  <td class="text-underline c-primary">
+                    <div class="item-content center ">김세인</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">20200623_205</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">내국인</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">2020-06-01</div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">여성</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">01020616396</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">지인소개</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">수신</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">수신</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">
+                      <div>
+
+                        <div>필러</div>                        <div>테스트항목</div>
+
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">서울시 강남구 대치동 </div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">무직</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">고죠르디</div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">GOLD</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">상담불만</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">일본</div>
+                  </td>
+                  <td>
+                    <div class="item-content
+
+                        pre-line                      ">점심시간에만 통화 가능</div>
+                  </td>
+                </tr>
+                <tr class=" row-3">
+                  <td>
+                    <div class="checkbox  m-a "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center "><button class="btn btn-primary btn-sm">수정</button></div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">2020-06-13</div>
+                  </td>
+                  <td class="text-underline c-primary">
+                    <div class="item-content center ">저스틴</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">20200613_145</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">내국인</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">2020-06-10</div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">남성</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">01062374680</div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">수신</div>
+                  </td>
+                  <td>
+                    <div class="item-content center ">수신안함</div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content center "></div>
+                  </td>
+                  <td>
+                    <div class="item-content "></div>
+                  </td>
+                </tr>
               </tbody>
             </table>
             <div class="flex-row flex-between">
@@ -587,16 +572,16 @@ left-navigation 마크업 및 클래스 수정
           <!--// .chart-info -->
           <div class="chart-conts">
             <div class="head flex-row">
-              <div class="title ">예약</div><i class="zmdi zmdi-close"></i>
+              <div class="title ">문자</div><i class="zmdi zmdi-close"></i>
 						</div>
 
 						<div class="tabwrap">
 							<ul>
-								<li class="tabs selected"><a href="#">예약</a></li>
+								<li class="tabs"><a href="#">예약</a></li>
 								<li class="tabs"><a href="#">상담</a></li>
 								<li class="tabs"><a href="#">진료</a></li>
 								<li class="tabs"><a href="#">수납</a></li>
-								<li class="tabs"><a href="#">문자</a></li>
+								<li class="tabs selected"><a href="#">문자</a></li>
 								<li class="tabs"><a href="#">펜차트</a></li>
 							</ul>
 						</div>
@@ -605,222 +590,141 @@ left-navigation 마크업 및 클래스 수정
             <div class="customer-appointments chart-page">
 							<div class="data-input">
 								<div class="title">
-									예약입력
+									문자입력
 									<div class="right">
-										<button class="btn btn-basic _small">상담예약입력</button>
+										<button class="btn btn-basic _small">새문자전송예약</button>
 										<button class="btn btn-cancel _small">입력취소</button>
 										<button class="btn btn-basic _small">저장</button>
 									</div>
 								</div>
-								<!-- <div class="card" style="display:none;"> -->
-								<div class="card">
-									<div class="form-control">
-										<label class="label-required">초/재진</label>
-										<div class="radios flex-row">
-											<div class="radio-item flex-row items-center flex-wrap m-r-32"><input type="radio" name="firstVisit" value="true">초진</div>
-											<div class="radio-item flex-row items-center flex-wrap m-r-16"><input type="radio" name="firstVisit" value="false">재진</div>
-										</div>
-									</div>
-									<div class="form-double">
-										<div class="form-control m-r-32">
-											<label class="label-required">세부부서</label><select>
-												<option value="-1" disabled="">-</option>
-												<option value="0" class="">상담실1 - 상담실1-1</option>
-												<option value="1" class="display-none">상담실2 - 상담실2-1</option>
-												<option value="2" class="">상담실2 - 상담실2-2</option>
-												<option value="3" class="">테스트 - 부서이름이 왜이리 길어!</option>
-												<option value="4" class="">테스트 - 우히히히힣</option>
-												<option value="5" class="">테스트 - 이러면 넘어갈 것인가?</option>
-												<option value="6" class="">상담실3 - 상담실3-1</option>
-												<option value="7" class="">상담실3 - 상담실3-2</option>
-												<option value="8" class="">상담실3 - 상담실3-3</option>
-												<option value="9" class="">상담실3 - 상담실3-4</option>
-												<option value="10" class="">상담실3 - 상담실3-5</option>
-												<option value="11" class=""> - </option>
-											</select>
-										</div>
-										<div class="form-control">
-											<label class="label-required">예약일</label>
-											<div class="react-datepicker-wrapper">
-												<div class="react-datepicker__input-container"><input type="text" class="" value=""></div>
-											</div>
-										</div>
-									</div>
 
-									<div class="form-double">
-										<div class="form-control m-r-32">
-                      <label class="label-required">진료 시작</label>
-                      <select>
-												<option disabled="" value="">-</option>
-												<option value="08:00">08:00</option>
-												<option value="08:10">08:10</option>
-												<option value="08:20">08:20</option>
-												<option value="08:30">08:30</option>
-												<option value="08:40">08:40</option>
-												<option value="08:50">08:50</option>
-												<option value="09:00">09:00</option>
-											</select>
-										</div>
-										<div class="form-control"><label class="label-required">예상 진료 시간</label><select>
-												<option disabled="" value="">-</option>
-												<option value="10">10분</option>
-												<option value="20">20분</option>
-												<option value="30">30분</option>
-												<option value="40">40분</option>
-												<option value="50">50분</option>
-												<option value="60">60분</option>
-											</select>
-										</div>
-									</div>
-
-									<div class="form-double">
-										<div class="form-control m-r-32">
-                      <label>의사</label>
-                      <select>
-												<option disabled="" value="-1">-</option>
-												<option value="0">펜8</option>
-											</select>
-										</div>
-										<div class="form-control m-r-32">
-                      <label>상담사</label>
-                      <select>
-												<option disabled="" value="-1">-</option>
-												<option value="0">상담이</option>
-												<option value="1">강상담아</option>
-												<option value="2">이상담</option>
-												<option value="3">상담ㅎㅎ</option>
-											</select>
-										</div>
-										<div class="form-control"><label>내원경로</label><select>
-												<option disabled="" value="-1">-</option>
-												<option value="0">홈페이지</option>
-												<option value="1">지인소개</option>
-												<option value="2">바비톡</option>
-												<option value="3"></option>
-											</select>
-										</div>
-									</div>
-
-									<div class="form-wide items-center">
-										<div class="form-control">
-                      <!-- <label>상담/진료항목</label> -->
-                      <select>
-												<option value="0" class="">상담/진료항목</option>
-												<option value="0" class="">테스트 시수술</option>
-												<option value="1" class="">필러3</option>
-												<option value="2" class="">테스트4</option>
-												<option value="3" class="">테스트</option>
-												<option value="4" class="">필러2</option>
-												<option value="5" class="">테스트3</option>
-												<option value="6" class="">테스트2</option>
-												<option value="7" class="">테스트항목</option>
-												<option value="8" class="">보톡스</option>
-												<option value="9" class="">필러</option>
-												<option value="10" class="">필러</option>
-											</select>
-
-                      <button class="btn btn-danger _small">삭제</button>
+                <div class="card">
+                  <div class="customer form-double">
+                    <div class="form-control m-r-32"><label>전화번호</label><input disabled="" value="01088489152"></div>
+                    <div class="form-control m-r-32"><label>문자수신여부</label>
+                      <div>동의</div>
                     </div>
-										<div class="form-control">
-                      <!-- <label>세부항목</label> -->
-                      <select>
-												<option value="0" class="">세부항목</option>
-												<option value="1" class="">세부항목2</option>
-											</select>
-
-                      <button class="btn btn-danger _small" disabled>삭제</button>
-                    </div>
-									</div>
-                  <div class="btnwrap">
-                    <button class="btn btn-basic _small _full">관심항목 추가</button>
-                    <!-- <button class="btn btn-basic _small _full">진료 항목 추가</button> -->
-                  </div>
-
-                  <div class="form-wide">
-  									<div class="form-control">
-                      <label>메모</label>
-                      <textarea></textarea>
+                    <div class="form-control"><label>마케팅 문자수신여부</label>
+                      <div>동의</div>
                     </div>
                   </div>
-									<div class="functions m-t-16">
+                  <div class="sms-notification">
+                    <div class="form-control">
+                      <label class="label-required">문자타입</label>
+                      <div class="radios flex-row">
+                        <div class="radio-item flex-row items-center flex-wrap m-r-16">
+                          <input class="m-r-4" type="radio" name="smsType" value="normal">일반
+                        </div>
+                        <div class="radio-item flex-row items-center flex-wrap m-r-16">
+                          <input class="m-r-4" type="radio" name="smsType" value="event">이벤트
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-control">
+                      <label class="label-required">발신번호</label>
+                      <select>
+                        <option value="-1">-</option>
+                        <option value="0">0211112222</option>
+                        <option value="1">01084268026</option>
+                        <option value="2">01084268026</option>
+                        <option value="3">01062374680</option>
+                        <option value="4">01040571181</option>
+                        <option value="5">01072770184</option>
+                      </select>
+                    </div>
+                    <div class="form-control">
+                      <label class="label-required">전송타입</label>
+                      <div class="radios flex-row">
+                        <div class="radio-item flex-row flex-wrap m-r-16">
+                          <input class="m-r-4" type="radio" name="smsScheduleType" value="scheduled">예약발송
+                        </div>
+                        <div class="radio-item flex-row flex-wrap m-r-16">
+                          <input class="m-r-4" type="radio" name="smsScheduleType" value="immediate">즉시발송
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-control">
+                      <label>상용구</label>
+                      <button class="btn btn-basic _ssmall">불러오기</button>
+                    </div>
+                    <div class="form-control">
+                      <label>제목</label><input type="text" value="" class="flex-fill">
+                      <div class="help">0/40</div>
+                    </div>
+                    <div class="form-control required">
+                      <label>내용</label><textarea></textarea>
+                      <div class="help">LMS 0/2000</div>
+                    </div>
+                    <div class="form-control">
+                      <label>새 이미지 첨부</label>
+                      <button class="btn btn-basic _small">새 이미지 첨부</button>
+                      <input type="file" accept="image/jpg;image/png" class="display-none">
+                    </div>
+                  </div>
+                  <div class="functions flex-row m-t-16">
                     <button class="btn btn-normal _small m-r-8">초기화</button>
                     <button class="btn btn-basic _small">저장</button>
                   </div>
-								</div>
+                </div>
+
 							</div>
 							<div class="data-table">
-								<div class="title">예약내역</div>
-								<table>
-									<thead>
-										<tr>
-											<th>상태</th>
-											<th>예약일</th>
-											<th>초진/재진</th>
-											<th>방문여부</th>
-											<th>내원경로</th>
-											<th>부서명</th>
-											<th>세부부서명</th>
-											<th>상담사</th>
-											<th>의사</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												<div class="item-content center ">
-													예약
-													<button class="btn btn-primary btn-sm m-l-8">수정</button>
-												</div>
-											</td>
-											<td>2020-03-24<br>14:00-15:00</td>
-											<td>초진</td>
-											<td>미방문</td>
-											<td>바비톡</td>
-											<td>부서1</td>
-											<td>세부부서2</td>
-											<td>김성현</td>
-											<td>박효근</td>
-										</tr>
-										<tr>
-											<td><span class="c-red">예약취소</span></td>
-											<td>2020-03-24<br>14:00-15:00</td>
-											<td>초진</td>
-											<td>미방문</td>
-											<td>-</td>
-											<td>부서1</td>
-											<td>세부부서2</td>
-											<td>김성현</td>
-											<td>박효근</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="item-content center ">
-													예약
-													<button class="btn btn-primary btn-sm m-l-8">수정</button>
-												</div>
-											</td>
-											<td>2020-03-24<br>14:00-15:00</td>
-											<td>초진</td>
-											<td>미방문</td>
-											<td>바비톡</td>
-											<td>부서1</td>
-											<td>세부부서2</td>
-											<td>김성현</td>
-											<td>박효근</td>
-										</tr>
-										<tr>
-											<td><span class="c-red">예약취소</span></td>
-											<td>2020-03-24<br>14:00-15:00</td>
-											<td>초진</td>
-											<td>미방문</td>
-											<td>-</td>
-											<td>부서1</td>
-											<td>세부부서2</td>
-											<td>김성현</td>
-											<td>박효근</td>
-										</tr>
-									</tbody>
-								</table>
+								<div class="title">문자전송내역</div>
+                <div class="scrlly-box">
+  								<table>
+                    <thead>
+                      <tr>
+                        <th>
+                          <div class="flex-row items-center"><span>상태</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>예약일</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>생성</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>고객</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>차트번호</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>전화번호</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>발신번호</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>전송상황</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>전송타입</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>제목/내용</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>이미지</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>문자타입</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>메모</span></div>
+                        </th>
+                        <th>
+                          <div class="flex-row items-center"><span>전송실패사유</span></div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                  </table>
+                  <div class="empty">조회결과가 없습니다</div>
+
+                </div>
 							</div>
             </div>
           </div>

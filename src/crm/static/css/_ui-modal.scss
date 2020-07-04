@@ -377,6 +377,7 @@
     min-width:580px;
     // max-width:580px;
     width:580px;
+    height:900px;
     .head {
       &:after {
         display: none;
@@ -448,6 +449,10 @@
     }
     .request-data {
       max-height:inherit;
+      table {
+
+        border-radius: 4px;
+      }
     }
     .unresponsive-data {
       table {
@@ -464,12 +469,13 @@
     .handling-data {
       .dim {
         height:100%;
-        background-color: rgba(255,255,255, .5);
+        // background-color: rgba(255,255,255, .5);
+        background-color: inherit;
         text-align: left;
         div {
           top:inherit;
           transform: translateY(0);
-          padding-left:60px;
+          padding-left:40px;
           font-size: 12px;
           color: #f7685b;
         }
@@ -480,6 +486,16 @@
       }
       select {
         width:100%;
+      }
+      &._dim {
+        > span, p.title {
+          color: #ceced7;
+        }
+        textarea, select {
+          border: solid 1px #dee2ec;
+          background-color: #efeff4;
+          color: #ceced7;
+        }
       }
     }
   }
@@ -895,34 +911,54 @@
 					max-height:100%;
 					overflow-y: auto;
 					.data-input {
+            border-bottom:1px solid rgba(215, 227, 241, 0.5);
 						.title {
 							position: relative;
 							width:100%;
-							padding-bottom:36px;
+							padding-bottom:26px;
 							font-size: 18px;
 						  font-weight: 500;
 						  color: #273142;
-							border-bottom:1px solid rgba(215, 227, 241, 0.5);
+							// border-bottom:1px solid rgba(215, 227, 241, 0.5);
 							.right {
 								position: absolute;
 								right:0;
-								top:-7px;
+								top:-9px;
+                .btn {
+                  min-width:80px !important;
+                }
 							}
 						}
 					}
+          .card {
+            border:0;
+            padding:0;
+            padding-bottom:30px;
+          }
 					.data-table {
 						border:0;
 						.title {
 							margin-top:30px;
+							margin-bottom:10px;
 							font-size: 18px;
 						  font-weight: 500;
 						  color: #273142;
 						}
 						table {
+              th {
+                padding-left:10px;
+                padding-right:10px;
+                border-bottom:0;
+              }
 							td {
+                padding-left:10px;
+                padding-right:10px;
 								text-align: center;
 							}
 						}
+            .scrlly-box {
+              margin-right:-40px;
+            }
 					}
 					.form-control {
 						label {
@@ -934,10 +970,35 @@
 						.radios.flex-row {
 							font-size: 14px;
 						}
+            .form-control {
+              width:100%;
+              max-width:200px;
+              margin-bottom:30px;
+              select {
+                width:100%;
+              }
+              .react-datepicker-wrapper,
+              input:not([type=radio]):not([type=checkbox]),
+              input.flex-fill {
+                width:100%;
+                max-width:200px;
+                padding: 9px 10px 8px;
+                &:disabled {
+                  padding: 9px 10px 8px !important;
+                }
+              }
+              textarea {
+                width:100%;
+                max-width:538px;
+                min-height:90px;
+              }
+            }
 						.form-double {
 							.form-control {
 								float:left;
-								margin-bottom:30px;
+                select {
+                  width:100%;
+                }
 							}
 							&:after {
 								content: '';
@@ -945,7 +1006,53 @@
 								clear:both;
 							}
 						}
+            .form-wide {
+              .form-control {
+                width:100%;
+                max-width:550px;
+                margin-bottom:12px;
+                select {
+                  width: 84%;
+                  margin-right:10px;
+                }
+              }
+            }
+            .btnwrap {
+              margin-bottom:28px;
+              .btn-basic {
+                max-width:440px;
+                font-size: 14px !important;
+              }
+            }
+            .functions {
+              .btn {
+                width:100%;
+                max-width:80px;
+              }
+            }
 					} //&.customer-appointments
+          .chart-page {
+            padding:0;
+          }
+          .customer-payments {
+            .card {
+              .form-control {
+                margin-right:10px;
+                &:last-child {
+                  margin-left:0;
+                }
+                input:not([type=radio]):not([type=checkbox]),
+                input.flex-fill, textarea {
+                  padding:8px 10px 7px;
+                }
+              }
+            }
+          } //.customer-payments
+          .sms-notification {
+            .form-control {
+              max-width:100%;
+            }
+          }
 				} //.chart-page
       }
     }
