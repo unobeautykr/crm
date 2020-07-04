@@ -76,6 +76,10 @@ body {
       box-shadow: none;
       color: #dee2ec;
     }
+		&.btn-primary {
+			color:#fff !important;
+			font-weight: 700 !important;
+		}
     &.btn-normal {
       font-size: 18px;
       font-weight: 700;
@@ -145,7 +149,7 @@ body {
     }
     &.btn-danger {
       border: solid 1px #f7685b;
-      background-color: #f7685b;
+      background-color: #f7685b !important;
       &:disabled {
         border: solid 1px #9cb2cd;
         background-color: #fff !important;
@@ -156,12 +160,12 @@ body {
     &.btn-add {
       width: 84px;
       height: 34px !important;
-      background-color: #0060ff;
+      background-color: #0060ff !important;
       font-size: 14px;
       font-weight: 600;
     }
     &.btn-sm {
-      padding:5px 10px 6px;
+      padding:6px 10px 5px;
       color:#fff;
       font-weight: 700;
 			background-color: #273142;
@@ -284,6 +288,9 @@ h2.title {
   border-radius: 4px;
   border: solid 1px #dee2ec;
   background-color: #ffffff;
+	table {
+		background: transparent;
+	}
   thead {
     .checkbox {
       width: 16px;
@@ -345,6 +352,7 @@ h2.title {
     padding: 60px 0;
     font-weight: 700;
     background-color: #fff;
+		color:#9cb2cd;
   }
   .btn {
     min-width:44px;
@@ -594,23 +602,23 @@ i.zmdi-close {
         // font-size: 16px;
         // font-weight: normal;
         max-width:calc(100% - 40px);
-        font-size: 16px;
-        // font-weight: 700;
+        font-size: 22px;
+        font-weight: 700;
         letter-spacing: -0.08px;
         line-height: 1.4;
         color: #000000;
         word-break: keep-all;
       }
       &:after {
-        display: none;
-        // content: '';
-        // display: block;
-        // position: absolute;
-        // left:-30px;
-        // bottom:0;
-        // width:calc(100% + 60px);
-        // height:1px;
-        // background-color: #d7e3f1;
+        // display: none;
+        content: '';
+        display: block;
+        position: absolute;
+        left:-30px;
+        bottom:0;
+        width:calc(100% + 60px);
+        height:1px;
+        background-color: #d7e3f1;
       }
     }
     .body {
@@ -633,6 +641,15 @@ i.zmdi-close {
     &.modal-findpwd {
       min-width:460px;
       max-width:480px;
+			.head {
+				.title {
+					font-size: 14px;
+					font-weight: 500;
+				}
+				&:after {
+					display: none;
+				}
+			}
     }
     .data-table {
       padding:0;
@@ -875,7 +892,7 @@ i.zmdi-close {
 .pagination {
   position: relative;
   margin:0 auto;
-  padding: 36px 0;
+  padding: 36px 0 10px;
   max-width:80%;
   width:calc(100% - 270px);
   .flex-row {
@@ -965,7 +982,7 @@ i.zmdi-close {
 
 .data-table .limit-setter,
 .data-table .pagination {
-  padding: 36px 0;
+  padding: 36px 0 10px;
   .page-total {
     top: 34px;
   }
