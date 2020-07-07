@@ -388,7 +388,7 @@ html, body { overflow-y: hidden; }
 
 .header-bar .me._sched { padding-left: 22px; padding-right: 22px; }
 
-.header-bar .me._sched .btn-sched { position: relative; max-width: 63px; padding-top: 34px; font-size: 12px; color: #9cb2cd; background-color: #fff; background-image: url("/crm/static/images/icon/ic-absenteeschedule.png"); background-size: 34px; background-repeat: no-repeat; background-position: center top; }
+.header-bar .me._sched .btn-sched { position: relative; width: 70px; padding-top: 34px; font-size: 12px; color: #9cb2cd; background-color: #fff; background-image: url("/crm/static/images/icon/ic-absenteeschedule.png"); background-size: 34px; background-repeat: no-repeat; background-position: center top; }
 
 .header-bar .me._sched .btn-sched .alram { display: block; position: absolute; right: 16px; top: 4px; width: 10px; height: 10px; border: solid 2px #ffffff; background-color: #0060ff; border-radius: 50%; }
 
