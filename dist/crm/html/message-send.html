@@ -1032,7 +1032,7 @@ left-navigation 마크업 및 클래스 수정
                       <div class="message-bubble-content">
                         <div class="message-bubble-text">
                           <div class="message-contents">
-                            <div class="content-input"><textarea class="message-contents  message-textarea " name="contents" placeholder="문자내용을 입력하세요. 90bytes 초과시 장문(LMS)으로 전송됩니다." style="height: 42px;"></textarea></div>
+                            <div class="content-input"><textarea class="message-contents  message-textarea " name="contents" placeholder="문자내용을 입력하세요. 90bytes 초과시 장문(LMS)으로 전송됩니다." style="height: 500px;"></textarea></div>
                             <div class="content-status"><span class="message-type">SMS</span><span class="content-bytes">0</span><span class="content-max-bytes">&nbsp;/&nbsp;90&nbsp;byte</span></div>
                           </div>
                         </div>
@@ -1179,12 +1179,20 @@ left-navigation 마크업 및 클래스 수정
                   <div class="condition-container-controller">
                     <div class="label">
                       <span>검색조건</span>
-                      <div>
+											<div class="radios flex-row">
+                        <div class="radio-item flex-row items-center flex-wrap m-r-24">
+                          <input class="m-r-4" type="radio" name="smsType" value="normal">번호 직접입력
+                        </div>
+                        <div class="radio-item flex-row items-center flex-wrap m-r-16">
+                          <input class="m-r-4" type="radio" name="smsType" value="event">최근 검색조건
+                        </div>
+                      </div>
+                      <!-- <div>
                         <button class="btn btn-default btn-sm m-r-4">
                           <span>번호 직접입력</span>
                         </button>
                         <button class="btn btn-default btn-sm m-r-4">최근 검색조건</button>
-                      </div>
+                      </div> -->
                     </div>
 
                     <div class="btnwrap">

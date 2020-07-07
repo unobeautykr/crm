@@ -644,19 +644,29 @@
       <div class="modal-container">
         <div class="modal-event-registration">
         <div class="head flex-row flex-between items-start">
-          <div class="title">상담문의 대량등록</div><i class="zmdi zmdi-close"></i>
+          <div class="title">이벤트 대량등록</div><i class="zmdi zmdi-close"></i>
         </div>
         <div class="body">
-          <div class="danger-confrim m-b-8">※대량등록 방법</div>
-          <div class="m-b-8"><span class="m-r-8">1. 양식을 다운로드 하세요.</span><button><a href="/static/media/requests_form.3835f9a6.xlsx">대량등록 양식 다운로드</a></button></div>
-          <div><span>2. 다운로드 받은 엑셀에 정보를 입력하세요.</span></div>
-          <div class="m-b-8"><span>*양식과 다르게 입력 시, 조회/통계 데이터에 오류가 생길 수 있습니다.</span></div>
-          <div class="m-b-16"><span>3. 입력한 엑셀 파일을 첨부하고 등록버튼을 클릭하세요.</span></div>
+          <div class="danger-confrim m-b-8">* 대량등록 방법</div>
+          <div class="m-b-16">
+						<span class="m-r-8">1. 양식을 다운로드 하세요.</span>
+					</div>
+          <div class="m-b-16">
+						<span>2. 다운로드 받은 엑셀에 정보를 입력하세요.</span>
+						<span class="help">(양식과 다르게 입력 시, 조회/통계 데이터에 오류가 생길 수 있습니다.)</span>
+					</div>
+          <div class="m-b-8"><span>3. 입력한 엑셀 파일을 첨부하고 등록버튼을 클릭하세요.</span></div>
+					<div class="m-b-40">
+						<button><a href="/static/media/requests_form.3835f9a6.xlsx">대량등록 양식 다운로드</a></button>
+					</div>
+
+					<div class="m-t-8 m-b-8">* 대량등록 방법</div>
           <div class="flex-row">
-            <input class="m-r-8" value="">
+            <input class="m-r-8" value="" placeholder="매체명 입력">
             <button class="btn btn-primary flex-wrap m-r-8">파일첨부</button>
             <input type="file" class="display-none">
-            <button class="btn btn-del">제거</button></div>
+            <button class="btn btn-del">제거</button>
+					</div>
         </div>
         <div class="buttons">
           <div class="flex-row">

@@ -81,7 +81,7 @@
       min-width:580px;
       padding:0;
       .head {
-        padding:30px 30px 14px;
+        margin:30px 30px 14px;
         // border: solid 1px #d7e3f1;
         .title {
           font-size: 22px;
@@ -99,6 +99,14 @@
           background-color: #0060ff;
         }
       }
+			.data-table {
+				td {
+					text-align: center;
+				}
+				tbody tr:nth-child(even) {
+			    background-color: inherit;
+				}
+			}
     }
   }
 } //.modal-frequently-authority
@@ -153,6 +161,7 @@
     &>.modal-surgery {
       min-width:580px;
       width:580px;
+			height:900px;
       .row {
         text-align:left;
         &.category-name {
@@ -315,6 +324,10 @@
 .modal .modal-container {
   .modal-event-registration, .modal-consulting-evnt {
     min-width:580px;
+		height:900px;
+		.body {
+			min-height:700px;
+		}
   }
 }
 .modal .modal-container {
@@ -322,9 +335,10 @@
     .body {
       padding-bottom:60px;
       font-size: 14px;
+			font-weight: 700;
       color:#4a4f70;
       > div {
-        margin-bottom:15px !important;
+        // margin-bottom:15px !important;
         button {
           > a {
             display: inline-block;
@@ -341,10 +355,17 @@
         display: block;
         color:#9cb2cd;
       }
+			.help {
+				margin-top:0;
+				margin-left:11px;
+				font-weight: 500;
+				color: #9cb2cd;
+			}
       .flex-row {
-        padding-top:20px;
+        // padding-top:20px;
         input{
           padding:9px 15px;
+					background-color: #fff;
         }
         .btn {
           min-width:80px;
@@ -354,6 +375,9 @@
         }
       }
     }
+		.buttons .btn {
+			min-width:80px;
+		}
   } //.modal-event-registration
   .modal-consulting-evnt {
     .form-control {
@@ -564,7 +588,8 @@
         padding:8px 25px;
         background-color: #fff;
         border: solid 1px #dee2ec;
-        color: #9cb2cd;
+        // color: #9cb2cd;
+				color:#fff;
         // &:hover,
         &.on {
           background-color: #f7685b;
@@ -573,6 +598,7 @@
       }
     }
     .btn-primary.btn-block {
+			width: calc(100% - 93px);
       padding:9px 0;
       background-color: #0060ff;
       font-weight:700;
@@ -751,6 +777,23 @@
   }
   //.modal-unit-cost
 } //.modal-container
+
+// 차트샘플
+.modal {
+  .modal-container {
+    .modal-pen-chart {
+			.head {
+				&:after {
+					display: none;
+				}
+				.title {
+					font-size: 16px;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
 
 // 통합차트
 .modal {
