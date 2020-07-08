@@ -300,9 +300,6 @@ html, body {
 }
 .app-body {
   &.ui-body {
-    // position: relative;
-    // height:100%;
-    // width:100%;
     top:70px;
     .left-navigation {
       z-index: 1;
@@ -421,6 +418,30 @@ html, body {
       margin-right:0;
       background-color: #ffffff;
       border-right:1px solid #d7e3f1;
+
+      .btn-fold {
+        display: block;
+        width:100%;
+        padding:9px 9px 9px 30px;
+        border-bottom:1px solid #d7e3f1;
+        text-align: left;
+        font-size: 11px;
+        font-weight: 700;
+        color: #9cb2cd;
+        background: {
+          color: #f9fbff;
+          image:url('/crm/static/images/icon/icon-foldarrow.png');
+          repeat:no-repeat;
+          size:11px;
+          position: left 9px center;
+        }
+				&.full {
+					background: {
+						color: #f9fbff;
+						image:url('/crm/static/images/icon/icon-spreadarrow.png');
+					}
+				}
+      }
     }
     .right-panel {
       min-width:auto;
@@ -792,10 +813,11 @@ html, body {
         content: '';
         position: fixed;
         left:230px;
-        bottom:0;
+        top:70px;
         display: block;
         width:340px;
         height:100%;
+				height:calc(100% - 70px);
         background-color: #ffffff;
         border-right:1px solid #d7e3f1;
         z-index: 0;
@@ -803,17 +825,27 @@ html, body {
     }
     .left-panel {
       position: relative;
-      padding:20px 16px;
+      padding:60px 16px;
+			.btn-fold {
+				position: absolute;
+				top:0;
+				left:0;
+			}
+			&.short {
+				width:94px;
+				label {
+					margin-bottom:10px;
+				}
+				.folding-cnt {
+					display: none;
+				}
+			}
     }
     .right-panel {
       position: relative;
       // max-width:1481px;
       padding:30px 0 0;
       .route-top {
-        // position: absolute;
-        // top:30px;
-        // right:40px;
-        // margin-bottom:0;
         display: inline-block;
         margin-bottom:0;
         padding:0 0 0 22px;
@@ -823,8 +855,6 @@ html, body {
         top:20px;
         right:40px;
         margin-bottom:0;
-        // padding-left:20px;
-        // padding-bottom:20px;
         .date-functions {
           button {
             width: 46px;

@@ -186,7 +186,10 @@ left-navigation 마크업 및 클래스 수정
 
         <div class="appointment-boards route flex-row">
           <div class="left-panel flex-wrap">
-            <div>
+						<p><button class="btn btn-fold">접기</button></p>
+						<p><button class="btn btn-fold full">펼치기</button></p>
+            <label class="title">캘린더</label>
+            <div class="folding-cnt">
               <div class="react-datepicker">
                 <div class="react-datepicker__triangle"></div>
                 <button type="button" class="react-datepicker__navigation react-datepicker__navigation--previous" aria-label="Previous Month">Previous Month</button>
@@ -284,7 +287,7 @@ left-navigation 마크업 및 클래스 수정
             <div class="filters form-control">
               <label>필터</label>
               <!-- add modi -->
-              <div class="filter-wrap">
+              <div class="filter-wrap folding-cnt">
                 <div class="filter">
                   <select>
                     <option value="-1">전체 부서</option>
@@ -316,14 +319,14 @@ left-navigation 마크업 및 클래스 수정
             <!-- <div class="hr m-t-16 m-b-16"></div> modi 삭제 -->
             <div class="appointments-find-by form-control">
               <label>검색</label>
-              <div class="flex-row items-center">
+              <div class="flex-row items-center folding-cnt">
                 <input class="flex-fill" placeholder="고객명, 차트번호, 전화번호" value="">
                 <button class="btn btn-search"><span class="a11y">검색</span></button> <!-- modi //-->
               </div>
             </div>
             <!-- <div class="hr m-t-16 m-b-16"></div> modi 삭제 -->
 
-            <div class="regions">
+            <div class="regions folding-cnt">
               <div class="region">
                 <div class="box status scheduled"></div>
                 <div>예약</div>

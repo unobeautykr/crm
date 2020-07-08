@@ -486,6 +486,10 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .flex-fill .left-panel { width: 340px; min-height: 100%; padding-bottom: 60px; margin-right: 0; background-color: #ffffff; border-right: 1px solid #d7e3f1; }
 
+.app-body .flex-fill .left-panel .btn-fold { display: block; width: 100%; padding: 9px 9px 9px 30px; border-bottom: 1px solid #d7e3f1; text-align: left; font-size: 11px; font-weight: 700; color: #9cb2cd; background-color: #f9fbff; background-image: url("/crm/static/images/icon/icon-foldarrow.png"); background-repeat: no-repeat; background-size: 11px; background-position: left 9px center; }
+
+.app-body .flex-fill .left-panel .btn-fold.full { background-color: #f9fbff; background-image: url("/crm/static/images/icon/icon-spreadarrow.png"); }
+
 .app-body .flex-fill .right-panel { min-width: auto; height: 100%; min-height: 100%; padding: 17px 20px 20px; background-color: #f3f8ff; }
 
 .app-body .flex-fill .form-control { padding-top: 30px; margin-bottom: 14px; }
@@ -598,9 +602,17 @@ html, body { height: 100%; overflow: auto; }
 
 .app-body .appointment-boards.route { padding: 0; height: 100%; min-height: 100%; background-color: #f3f8ff; }
 
-.app-body .appointment-boards.route:before { content: ''; position: fixed; left: 230px; bottom: 0; display: block; width: 340px; height: 100%; background-color: #ffffff; border-right: 1px solid #d7e3f1; z-index: 0; }
+.app-body .appointment-boards.route:before { content: ''; position: fixed; left: 230px; top: 70px; display: block; width: 340px; height: 100%; height: calc(100% - 70px); background-color: #ffffff; border-right: 1px solid #d7e3f1; z-index: 0; }
 
-.app-body .appointment-boards .left-panel { position: relative; padding: 20px 16px; }
+.app-body .appointment-boards .left-panel { position: relative; padding: 60px 16px; }
+
+.app-body .appointment-boards .left-panel .btn-fold { position: absolute; top: 0; left: 0; }
+
+.app-body .appointment-boards .left-panel.short { width: 94px; }
+
+.app-body .appointment-boards .left-panel.short label { margin-bottom: 10px; }
+
+.app-body .appointment-boards .left-panel.short .folding-cnt { display: none; }
 
 .app-body .appointment-boards .right-panel { position: relative; padding: 30px 0 0; }
 
